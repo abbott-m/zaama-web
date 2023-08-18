@@ -1,9 +1,18 @@
 import React from "react";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
+import About from "./components/About";
+import Sponsors from "./components/Sponsors";
+import Hero from "./components/Hero";
 
 const Home = () => {
   return (
-    <main className="py-5">
-      <h1 className="font-medium text-center">Welcome to Zaama's home page</h1>
+    <main className="">
+      <Navbar />
+      <Hero />
+      <About />
+      <Sponsors />
+      <Footer />
     </main>
   );
 };

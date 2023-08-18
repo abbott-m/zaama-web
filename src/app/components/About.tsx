@@ -1,0 +1,32 @@
+import Image from "next/image";
+import React from "react";
+
+const About = () => {
+  return (
+    <section
+      id="about"
+      className="bg-[#E91C24] flex gap-10 px-4 py-10 sm:px-28 sm:py-16"
+    >
+      <div className="">
+        <Image src="/z_web_3d.png" alt="about-zaama" width={500} height={300} />
+      </div>
+      <div className="text-white">
+        <p className="text-xl font-bold mb-3">About Us</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi vitae
+          aut delectus sapiente natus alias accusantium tempore, velit dolorum
+          ipsa debitis, repellendus, maiores laboriosam non pariatur! Quibusdam
+          vel recusandae dolor.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem ad,
+          corporis exercitationem officiis quibusdam ab corrupti enim, doloribus
+          alias, nesciunt quidem necessitatibus totam aliquam esse? Possimus rem
+          deleniti ullam vitae.
+        </p>
+      </div>
+    </section>
+  );
+};
+
+export default About;
