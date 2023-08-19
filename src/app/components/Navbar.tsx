@@ -118,47 +118,48 @@ const Navbar = () => {
           </svg>
         )}
       </div>
-      {/* <p className="text-white">{JSON.stringify(isNavbarOpen)}</p> */}
-      {isNavbarOpen && (
-        <ul className="text-center  mt-5">
-          <li className="text-white uppercase mb-3 text-lg">
-            <Link
-              href="#about"
-              className="transition duration-100 hover:text-[#95f4d4]"
-            >
-              About{" "}
-            </Link>
-          </li>
-          <li className="text-white uppercase mb-3 text-lg">
-            {" "}
-            <Link
-              href="#store"
-              className="transition duration-100 hover:text-[#95f4d4]"
-            >
-              Store{" "}
-            </Link>
-          </li>
-          <li className="text-white uppercase mb-3 text-lg">
-            {" "}
-            <Link
-              href="#sponsors"
-              className="transition duration-100 hover:text-[#95f4d4]"
-            >
-              Sponsors{" "}
-            </Link>
-          </li>
-          <li className="text-white uppercase mb-3 text-lg">
-            {" "}
-            <Link
-              href="#FAQ"
-              className="transition duration-100 hover:text-[#95f4d4]"
-            >
-              FAQ{" "}
-            </Link>
-          </li>
-          <li className="text-white uppercase mb-3 text-lg"> ...</li>
-        </ul>
-      )}
+      <ul
+        className={`text-center  mt-5 transition-all duration-300  ${
+          isNavbarOpen ? "max-h-48 " : " max-h-0 overflow-hidden"
+        }`}
+      >
+        <li className="text-white uppercase mb-3 text-lg">
+          <Link
+            href="#about"
+            className="transition duration-100 hover:text-[#95f4d4]"
+          >
+            About{" "}
+          </Link>
+        </li>
+        <li className="text-white uppercase mb-3 text-lg">
+          {" "}
+          <Link
+            href="#store"
+            className="transition duration-100 hover:text-[#95f4d4]"
+          >
+            Store{" "}
+          </Link>
+        </li>
+        <li className="text-white uppercase mb-3 text-lg">
+          {" "}
+          <Link
+            href="#sponsors"
+            className="transition duration-100 hover:text-[#95f4d4]"
+          >
+            Sponsors{" "}
+          </Link>
+        </li>
+        <li className="text-white uppercase mb-3 text-lg">
+          {" "}
+          <Link
+            href="#FAQ"
+            className="transition duration-100 hover:text-[#95f4d4]"
+          >
+            FAQ{" "}
+          </Link>
+        </li>
+        <li className="text-white uppercase mb-3 text-lg"> ...</li>
+      </ul>
     </nav>
   );
 };

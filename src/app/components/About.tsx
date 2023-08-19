@@ -5,7 +5,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="bg-[#E91C24] flex flex-col gap-10 px-4 py-10 sm:px-28 sm:py-16 md:flex-row"
+      className="bg-[#E91C24] flex flex-col gap-10 px-4 py-14 sm:px-28 sm:py-20 md:flex-row"
     >
       <div className="">
         <Image src="/z_web_3d.png" alt="about-zaama" width={500} height={300} />
