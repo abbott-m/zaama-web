@@ -4,7 +4,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="text-center">
+    <section className="text-center p-2">
       <Image
         src="/zaama-logo.gif"
         alt="saama-logo"
@@ -16,7 +16,7 @@ const Hero = () => {
         <Image
           src="/zaama-arrow-down.png"
           alt="saama-logo"
-          width={100}
+          width={50}
           height={400}
           className="mx-auto"
         />

@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className=" bg-[#282828] text-white flex flex-col  justify-center items-center px-4 py-10 gap-10   sm:flex-row  sm:items-start sm:px-28 sm:py-16 md:gap-20">
       <div>
-        <p className="font-semibold text-lg uppercase mb-3 tracking-wide whitespace-nowrap">
+        <p className="font-semibold text-lg uppercase mb-3 tracking-wide whitespace-nowrap text-center md:text-left">
           mailing list
         </p>
         <div className="w-72 h-12 border-2 border-[#00C986] rounded-md flex gap-2 justify-between items-center px-[6px] ">

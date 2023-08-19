@@ -15,7 +15,7 @@ import Link from "next/link";
 const Navbar = () => {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
   return (
-    <nav className="p-4 md:py-10">
+    <nav className="p-4 mb-5 md:py-10">
       {/* <Swiper
         loop={true}
         speed={1200}
