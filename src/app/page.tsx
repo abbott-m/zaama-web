@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import About from "./components/About";
 import Sponsors from "./components/Sponsors";
 import Hero from "./components/Hero";
+import FAQ from "./components/FAQ";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <Navbar />
       <Hero />
       <About />
+      <FAQ />
       <Sponsors />
       <Footer />
     </main>

@@ -13,6 +13,9 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        zaama_green: "#00C986",
+      },
       animation: {
         marquee: "marquee 30s linear infinite",
         marquee2: "marquee2 30s linear infinite",

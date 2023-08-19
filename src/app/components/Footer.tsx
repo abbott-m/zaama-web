@@ -9,13 +9,13 @@ const Footer = () => {
         <p className="font-semibold text-lg uppercase mb-3 tracking-wide whitespace-nowrap text-center md:text-left">
           mailing list
         </p>
-        <div className="w-72 h-12 border-2 border-[#00C986] rounded-md flex gap-2 justify-between items-center px-[6px] ">
+        <div className="w-72 h-12 border-2 border-zaama_green rounded-md flex gap-2 justify-between items-center px-[6px] ">
           <input
             type="text"
             placeholder="Email address"
             className=" outline-none w-full h-full bg-transparent pl-2 placeholder:text-[#72a191]"
           />
-          <button className="h-2/3 px-4  bg-[#00C986] rounded-sm transition duration-100 hover:bg-[#17b27e]">
+          <button className="h-2/3 px-4  bg-zaama_green rounded-sm transition duration-100 hover:bg-[#17b27e]">
             Subscribe
           </button>
         </div>

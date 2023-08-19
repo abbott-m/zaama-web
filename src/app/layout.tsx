@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${syneMono.className} bg-black/90`}>{children}</body>
+      <body className={`${syneMono.className} bg-[#1b1b1b]`}>{children}</body>
     </html>
   );
 }
