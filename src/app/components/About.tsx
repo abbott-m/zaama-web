@@ -5,7 +5,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="bg-[#232323] flex flex-col items-center gap-14 px-5 py-14 sm:px-10  sm:py-20 lg:flex-row md:py-36 md:px-20 lg:px-36 selection:bg-zaama_red/50"
+      className="bg-[#232323] flex flex-col items-center gap-14 px-5 py-14 sm:px-10  sm:py-20 lg:flex-row md:py-36 md:px-20 lg:px-28 selection:bg-zaama_red/50"
     >
       <div className="  relative w-full h-80  lg:w-1/2">
         <Image
