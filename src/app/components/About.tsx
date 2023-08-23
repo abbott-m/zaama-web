@@ -5,30 +5,41 @@ const About = () => {
   return (
     <section
       id="about"
-      className="bg-[#E91C24] flex flex-col gap-10 px-4 py-14 sm:px-28 sm:py-20 md:flex-row"
+      className="bg-[#232323] flex flex-col items-center gap-14 px-5 py-14 sm:px-10  sm:py-20 lg:flex-row md:py-36 md:px-20 lg:px-36 selection:bg-zaama_red/50"
     >
-      <div className="text-center">
+      <div className="  relative w-full h-80  lg:w-1/2">
         <Image
-          src="/z_web_3d.png"
+          src="/zaama-tape.png"
           alt="about-zaama"
-          width={300}
-          height={300}
-          className="inline-block md:w-96SSS"
+          fill
+          objectFit="contain"
+          className=" animate-bounce-slow "
         />
       </div>
-      <div className="text-white">
-        <p className="text-xl font-bold mb-3">About Us</p>
-        <p className="mb-3">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi vitae
-          aut delectus sapiente natus alias accusantium tempore, velit dolorum
-          ipsa debitis, repellendus, maiores laboriosam non pariatur! Quibusdam
-          vel recusandae dolor.
+      <div className=" text-justify lg:w-3/4">
+        <p className="text-3xl text-zaama_red uppercase tracking-wide font-bold mb-5 text-center ">
+          About Us
         </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem ad,
-          corporis exercitationem officiis quibusdam ab corrupti enim, doloribus
-          alias, nesciunt quidem necessitatibus totam aliquam esse? Possimus rem
-          deleniti ullam vitae.
+        <p className="mb-3 leading-8 text-white">
+          Zaama Disco is an art of LIFE for the youth of Ghana and beyond the
+          world. A combination of ARTS, FASHION, AND MUSIC from different
+          backgrounds forming the army of Blacko Tribe. Zaama Disco is also
+          intended to inculcate a spirit of adventure, co-operation, creation of
+          excellence in the domain of art and culture and feelings of
+          fraternity, patriotism, unity and brotherhood.
+        </p>
+        <p className=" mb-3 leading-8 text-white">
+          We are putting together a fantastic production and visual experience
+          planned along with a power packed line up of professionals and best
+          artists across west Africa and the world. We will stream it in all
+          virtual platforms with an aim to entertain, network with their people,
+          uplift their spirit in the comfort of their homes and encourage the
+          social distancing rules.
+        </p>
+        <p className="leading-8 text-white">
+          Our aim is simply to bring together different people of different
+          culture under one platform to celebrate their unique lifestyles whiles
+          engaging amongst each other.
         </p>
       </div>
     </section>

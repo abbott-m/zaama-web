@@ -15,10 +15,13 @@ const config: Config = {
       },
       colors: {
         zaama_green: "#00C986",
+        zaama_red: "#E91C24",
+        zaama_orange: "#FF7700",
       },
       animation: {
         marquee: "marquee 30s linear infinite",
         marquee2: "marquee2 30s linear infinite",
+        "bounce-slow": "bounce 2s linear infinite",
       },
       keyframes: {
         marquee: {
