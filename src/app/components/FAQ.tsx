@@ -26,7 +26,7 @@ const FAQ = () => {
   console.log("current", checkboxRef.current?.checked);
   return (
     <section className=" px-5 pt-14 sm:px-28 sm:pt-20 ">
-      <p className="text-center text-2xl font-semibold mb-7 text-zaama_green">
+      <p className="text-center text-xl font-medium mb-8 text-zaama_yellow uppercase md:text-2xl">
         Frequently Asked Questions
       </p>
       {faq.map((item) => (
@@ -39,7 +39,7 @@ const FAQ = () => {
               ref={checkboxRef}
               className="peer sr-only"
             />{" "}
-            <p className="py-3 px-4 w-full flex justify-between items-center text-white font-medium rounded-md border border-zaama_green cursor-pointer hover:bg-zaama_green/20 peer-checked:text-zaama_green peer-checked:bg-zaama_green/20 ">
+            <p className="py-3 px-4 w-full flex justify-between items-center text-white font-medium rounded-md border border-white cursor-pointer hover:bg-zaamatext-zaama_red/20 peer-checked:text-zaama_red peer-checked:border-zaama_red peer-checked:bg-zaama_red/20  ">
               <span>{item.question}</span>
               {/* {checkboxRef.current} */}
               {/* {checkboxRef.current?.checked ? (
@@ -52,7 +52,7 @@ const FAQ = () => {
                 </span>
               )} */}
             </p>
-            <p className="hidden font-light text-white py-5 px-6 peer-checked:block">
+            <p className="hidden font-light text-white py-5 px-6  peer-checked:block">
               {item.answer}
             </p>
           </label>

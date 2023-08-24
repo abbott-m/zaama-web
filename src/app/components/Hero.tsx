@@ -14,11 +14,11 @@ const Hero = () => {
       />
       <Link href="/#about">
         <Image
-          src="/zaama-arrow-down.png"
+          src="/images/zaama-arrow-down.png"
           alt="saama-logo"
           width={50}
           height={400}
-          className="mx-auto"
+          className="mx-auto transition duration-150  animate-bounce hover:animate-none"
         />
       </Link>
     </section>

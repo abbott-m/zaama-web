@@ -9,14 +9,12 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "ticket-1": "url(/images/ticket-1.png)",
       },
       colors: {
         zaama_green: "#00C986",
         zaama_red: "#E91C24",
-        zaama_orange: "#FF7700",
+        zaama_yellow: "#FFE4AE",
       },
       animation: {
         marquee: "marquee 30s linear infinite",

@@ -9,18 +9,18 @@ const About = () => {
     >
       <div className="  relative w-full h-80  lg:w-1/2">
         <Image
-          src="/zaama-tape.png"
+          src="/images/zaama-tape.png"
           alt="about-zaama"
           fill
           objectFit="contain"
           className=" animate-bounce-slow "
         />
       </div>
-      <div className=" text-justify lg:w-3/4">
-        <p className="text-3xl text-zaama_red uppercase tracking-wide font-bold mb-5 text-center ">
+      <div className=" text-justify  lg:w-3/4">
+        <p className="text-xl text-zaama_yellow uppercase tracking-wide font-medium mb-5 text-center md:text-2xl ">
           About Us
         </p>
-        <p className="mb-3 leading-8 text-white">
+        <p className="mb-3 leading-8 text-white ">
           Zaama Disco is an art of LIFE for the youth of Ghana and beyond the
           world. A combination of ARTS, FASHION, AND MUSIC from different
           backgrounds forming the army of Blacko Tribe. Zaama Disco is also
@@ -28,7 +28,7 @@ const About = () => {
           excellence in the domain of art and culture and feelings of
           fraternity, patriotism, unity and brotherhood.
         </p>
-        <p className=" mb-3 leading-8 text-white">
+        <p className=" mb-3 leading-8 text-white ">
           We are putting together a fantastic production and visual experience
           planned along with a power packed line up of professionals and best
           artists across west Africa and the world. We will stream it in all
@@ -36,7 +36,7 @@ const About = () => {
           uplift their spirit in the comfort of their homes and encourage the
           social distancing rules.
         </p>
-        <p className="leading-8 text-white">
+        <p className="leading-8 text-white ">
           Our aim is simply to bring together different people of different
           culture under one platform to celebrate their unique lifestyles whiles
           engaging amongst each other.

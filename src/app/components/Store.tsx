@@ -2,21 +2,19 @@ import React from "react";
 
 const Store = () => {
   return (
-    <section className="bg-[#101010] px-5 py-20 sm:px-10 md:px-20">
+    <section className=" bg-gradient-to-tr from-[#242424]  to-[#2a2a2a] px-5 py-20 sm:px-10 md:px-20">
       <div className="mb-10   md:text-left ">
-        <p className="text-sm text-zaama_red tracking-widest font-semibold title-font mb-1">
-          Zaama Store
+        <p className="text-center text-xl font-medium mb-7 text-zaama_yellow uppercase md:text-2xl md:text-left">
+          Our Store
         </p>
-        <p className=" text-2xl mb-4 font-medium title-font text-white md:text-3xl">
-          Download Zaama App
-        </p>
-        <p className="sm:w-3/5 text-gray-300">
+
+        <p className=" text-gray-300 text-center selection:bg-zaama_red/50 sm:w-4/5 sm:mx-auto md:text-left md:mx-0 md:w-3/6">
           Download Zaama app to order for your merch Lorem ipsum dolor sit amet
           consectetur, adipisicing elit. Repellendus, inventore.
         </p>
       </div>
-      <div className=" flex gap-5">
-        <button className="bg-gray-100 inline-flex  py-3 px-5 rounded-lg items-center hover:bg-gray-200 focus:outline-none">
+      <div className=" flex gap-5 flex-col items-center justify-center sm:flex-row md:justify-start">
+        <button className="bg-gray-100 inline-flex  py-2 px-5 rounded-lg items-center w-48 hover:bg-gray-200 focus:outline-none">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -26,13 +24,15 @@ const Store = () => {
             <path d="M99.617 8.057a50.191 50.191 0 00-38.815-6.713l230.932 230.933 74.846-74.846L99.617 8.057zM32.139 20.116c-6.441 8.563-10.148 19.077-10.148 30.199v411.358c0 11.123 3.708 21.636 10.148 30.199l235.877-235.877L32.139 20.116zM464.261 212.087l-67.266-37.637-81.544 81.544 81.548 81.548 67.273-37.64c16.117-9.03 25.738-25.442 25.738-43.908s-9.621-34.877-25.749-43.907zM291.733 279.711L60.815 510.629c3.786.891 7.639 1.371 11.492 1.371a50.275 50.275 0 0027.31-8.07l266.965-149.372-74.849-74.847z"></path>
           </svg>
           <span className="ml-4 flex items-start flex-col leading-none">
-            <span className="text-xs text-gray-700 mb-1 font-semibold">
+            <span className="text-xs text-gray-700 mb-1 font-semibold whitespace-nowrap">
               GET IT ON
             </span>
-            <span className="title-font font-semibold">Google Play</span>
+            <span className=" font-semibold whitespace-nowrap">
+              Google Play
+            </span>
           </span>
         </button>
-        <button className="bg-gray-100 inline-flex font-semibold py-3 px-5 rounded-lg items-center hover:bg-gray-200 focus:outline-none">
+        <button className="bg-gray-100 inline-flex font-semibold py-2 px-5 rounded-lg items-center w-48 hover:bg-gray-200 focus:outline-none">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -43,10 +43,10 @@ const Store = () => {
             <path d="M212.1 0c-15.76.64-34.67 10.35-45.97 23.58-9.6 11.13-19 29.68-16.52 48.38a2.5 2.5 0 002.29 2.17c1.06.08 2.15.12 3.23.12 15.41 0 32.04-8.52 43.4-22.25 11.94-14.5 17.99-33.1 16.16-49.77A2.52 2.52 0 00212.1 0z"></path>
           </svg>
           <span className="ml-4 flex items-start flex-col leading-none">
-            <span className="text-xs text-gray-700 mb-1 font-semibold">
+            <span className="text-xs text-gray-700 mb-1 font-semibold whitespace-nowrap">
               Download on the
             </span>
-            <span className="title-font font-semibold">App Store</span>
+            <span className=" font-semibold whitespace-nowrap">App Store</span>
           </span>
         </button>
       </div>

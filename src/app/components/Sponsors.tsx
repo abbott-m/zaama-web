@@ -8,42 +8,42 @@ const Sponsors = () => {
       className="flex flex-wrap items-center justify-center my-5 gap-5  px-4 py-10  sm:px-28 sm:py-24 md:gap-8"
     >
       <Image
-        src="/Blache_logo.png"
+        src="/images/Blache_logo.png"
         alt="Blach-logo"
         width={110}
         height={110}
         className="md:w-36"
       />
       <Image
-        src="/Blache_logo.png"
+        src="/images/Blache_logo.png"
         alt="Blach-logo"
         width={110}
         height={110}
         className="md:w-36"
       />
       <Image
-        src="/Blache_logo.png"
+        src="/images/Blache_logo.png"
         alt="Blach-logo"
         width={110}
         height={110}
         className="md:w-36"
       />
       <Image
-        src="/Blache_logo.png"
+        src="/images/Blache_logo.png"
         alt="Blach-logo"
         width={110}
         height={110}
         className="md:w-36"
       />
       <Image
-        src="/Blache_logo.png"
+        src="/images/Blache_logo.png"
         alt="Blach-logo"
         width={110}
         height={110}
         className="md:w-36"
       />
       <Image
-        src="/Blache_logo.png"
+        src="/images/Blache_logo.png"
         alt="Blach-logo"
         width={110}
         height={110}
