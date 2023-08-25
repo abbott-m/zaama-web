@@ -11,8 +11,11 @@ const Sponsors = () => {
         Our Sponsors
       </p>
       <div className="flex flex-wrap items-center justify-center my-5 gap-5 md:gap-10">
-        {[1, 2, 3, 4, 5].map(() => (
-          <div className="w-36 h-36 bg- bg-gradient-to-tr from-[#1c1c1c] to-[#4a4a4a] rounded-full flex justify-center items-center p-2 shadow-md shadow-[#6c6c6c]">
+        {[1, 2, 3, 4, 5].map((item, index) => (
+          <div
+            key={index}
+            className="w-36 h-36 bg- bg-gradient-to-tr from-[#1c1c1c] to-[#4a4a4a] rounded-full flex justify-center items-center p-2 shadow-md shadow-[#6c6c6c]"
+          >
             <Image
               src="/images/Blache_logo.png"
               alt="Blach-logo"

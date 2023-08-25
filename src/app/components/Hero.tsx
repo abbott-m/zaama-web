@@ -4,7 +4,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="text-center px-5 pt-20  sm:px-10  md:px-20">
+    <section className="text-center px-5 pt-20 select-none sm:px-10  md:px-20">
       <Image
         src="/images/zaama-white-logo.png"
         alt="saama-logo"

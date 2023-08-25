@@ -23,7 +23,6 @@ const FAQ = () => {
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias, nihil! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse, totam! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse, totam!",
     },
   ];
-  console.log("current", checkboxRef.current?.checked);
   return (
     <section
       id="faq"
