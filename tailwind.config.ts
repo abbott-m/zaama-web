@@ -10,11 +10,13 @@ const config: Config = {
     extend: {
       backgroundImage: {
         "ticket-1": "url(/images/ticket-1.png)",
+        "bg-four": "url(/images/bg-4.png)",
       },
       colors: {
         zaama_green: "#00C986",
         zaama_red: "#E91C24",
         zaama_yellow: "#FFE4AE",
+        zaama_orange: "#FF7700",
       },
       animation: {
         marquee: "marquee 30s linear infinite",

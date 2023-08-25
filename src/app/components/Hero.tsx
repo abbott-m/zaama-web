@@ -6,13 +6,13 @@ const Hero = () => {
   return (
     <section className="text-center p-2">
       <Image
-        src="/zaama-logo.gif"
+        src="/images/zaama-logo.gif"
         alt="saama-logo"
         width={300}
         height={400}
         className="mx-auto"
       />
-      <Link href="/#about">
+      <Link href="/#tickets">
         <Image
           src="/images/zaama-arrow-down.png"
           alt="saama-logo"

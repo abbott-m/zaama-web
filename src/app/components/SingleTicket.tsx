@@ -1,15 +1,54 @@
 import React from "react";
 
-const SingleTicket = ({}) => {
+type singleTicketProps = {
+  color: string;
+  packageName: string;
+  price: string;
+  perks: string[];
+};
+
+const SingleTicket = ({
+  color,
+  packageName,
+  price,
+  perks,
+}: singleTicketProps) => {
   return (
-    <div className="w-80 h-[520px] relative bg-ticket-1 bg-contain bg-no-repeat text-zaama_yellow pt-14 px-3 ">
-      <ul className="text-center mb-4">
-        <li className="mb-1">VIP Access</li>
-        <li className="mb-1"> Party Bands</li>
-        <li className="mb-1">Cocktail Arena</li>
+    // <div className="w-80 h-[520px] relative bg-ticket-1 bg-contain bg-no-repeat text-zaama_yellow pt-14 px-3 ">
+    //   <ul className="text-center mb-4">
+    //     <li className="mb-1">VIP Access</li>
+    //     <li className="mb-1"> Party Bands</li>
+    //     <li className="mb-1">Cocktail Arena</li>
+    //   </ul>
+    //   <p className="text-center font-extrabold text-3xl mb-3">$70</p>
+    //   <p className="uppercase font-semibold text-xl text-center">VIP</p>
+    // </div>
+    <div
+      className={`w-72 h-96  px-2 py-4 flex flex-col justify-center items-center rounded-lg bg-[#1d1d1d]  transition duration-100 hover:scale-105  hover:text-gray-200 group ${
+        color === "red"
+          ? "hover:bg-zaama_red/60"
+          : color === "green"
+          ? "hover:bg-zaama_green/60"
+          : "hover:bg-zaama_orange/60"
+      }`}
+    >
+      <p className="uppercase text-lg text-center mb-3">{packageName}</p>
+      <p className="text-center text-3xl mb-5 md:text-4xl">${price}</p>
+
+      <ul className=" text-sm mb-5 selection:bg-gray-200">
+        {perks.map((item, index) => (
+          <li key={index} className="mb-1 flex gap-3 items-center">
+            <span className=" w-[6px] h-[6px] inline-block rounded-full bg-white "></span>
+            {item}
+          </li>
+        ))}
       </ul>
-      <p className="text-center font-extrabold text-3xl mb-3">$70</p>
-      <p className="uppercase font-semibold text-xl text-center">VIP</p>
+
+      <button
+        className={`rounded-sm text-sm w-44 h-10 font-semibold border border-gray-400  uppercase hover:bg-[#181818]/20  `}
+      >
+        Get Ticket
+      </button>
     </div>
   );
 };

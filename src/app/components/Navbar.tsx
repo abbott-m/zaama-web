@@ -74,15 +74,6 @@ const Navbar = () => {
         </div>
       </article> */}
 
-      {/* <ul className="my-3">
-        <Image
-          src="/zaama-logo.gif"
-          width={50}
-          height={50}
-          alt="zaama logo"
-          unoptimized
-        />
-      </ul> */}
       <div className="text-center mb-2">
         {!isNavbarOpen ? (
           <svg

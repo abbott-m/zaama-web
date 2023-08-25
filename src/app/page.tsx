@@ -16,9 +16,8 @@ const Home = () => {
       <Ticket />
       <About />
       <Store />
-
-      <FAQ />
       <Sponsors />
+      <FAQ />
       <Footer />
     </main>
   );
