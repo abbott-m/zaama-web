@@ -4,13 +4,13 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="text-center p-2">
+    <section className="text-center px-5 pt-20  sm:px-10  md:px-20">
       <Image
-        src="/images/zaama-logo.gif"
+        src="/images/zaama-white-logo.png"
         alt="saama-logo"
         width={300}
         height={400}
-        className="mx-auto"
+        className="mx-auto mb-14"
       />
       <Link href="/#tickets">
         <Image

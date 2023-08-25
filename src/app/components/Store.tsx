@@ -17,7 +17,7 @@ const Store = () => {
         </p>
       </div>
       <div className="text-gray-800 flex gap-5 flex-col items-center justify-center sm:flex-row md:justify-start">
-        <button className="bg-gray-100 inline-flex  py-2 px-5 rounded-lg items-center w-48 hover:bg-gray-200 focus:outline-none">
+        <button className="bg-gray-100 inline-flex  py-2 px-5 rounded-lg items-center w-48 hover:bg-gray-200 outline-none">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -35,7 +35,7 @@ const Store = () => {
             </span>
           </span>
         </button>
-        <button className="bg-gray-100 inline-flex font-semibold py-2 px-5 rounded-lg items-center w-48 hover:bg-gray-200 focus:outline-none">
+        <button className="bg-gray-100 inline-flex font-semibold py-2 px-5 rounded-lg items-center w-48 hover:bg-gray-200 outline-none">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
