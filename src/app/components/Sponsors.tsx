@@ -5,7 +5,7 @@ const Sponsors = () => {
   return (
     <section
       id="sponsors"
-      className=" px-4 py-10 bg-bg-four bg-bottom bg-auto sm:px-14 sm:py-24  md:gap-8 "
+      className=" px-4 py-10 bg-bg-four bg-top bg-cover sm:px-14 sm:py-24  md:bg-bottom md:gap-8 "
     >
       <p className="text-center text-xl font-medium mb-8 tracking-wider text-zaama_yellow uppercase md:text-2xl md:mb-10">
         Our Sponsors

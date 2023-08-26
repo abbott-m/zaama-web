@@ -7,8 +7,17 @@ import Footer from "./components/Footer";
 const syneMono = Syne_Mono({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
-  title: "Zaama",
-  description: "",
+  metadataBase: new URL("https://i.postimg.cc"),
+  title: "Zaama Disco",
+  description:
+    "An annual event that seeks to drive the Ghanaian youth with one voice for change through entertainment.",
+  openGraph: {
+    title: "Zaama Disco",
+    description:
+      "An annual event that seeks to drive the Ghanaian youth with one voice for change through entertainment.",
+    images: "/9M1jmk6c/open-graph.png",
+    url: "https://zaamaweb.netlify.app/",
+  },
 };
 
 export default function RootLayout({
