@@ -58,6 +58,15 @@ const Store = () => {
           </button>
         </div>
       </div>
+      <div className=" hidden md:w-5/12 md:block ">
+        <Image
+          src="/images/zaama-mobile.png"
+          alt="zaama-mobile"
+          width={250}
+          height={200}
+          className="mx-auto"
+        />
+      </div>
     </section>
   );
 };
