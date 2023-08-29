@@ -6,3 +6,9 @@
 body {
   scroll-behavior: smooth;
 }
+.swiper-wrapper {
+  @apply pb-14;
+}
+/* .swiper-pagination-bullet {
+  @apply w-40 h-40 bg-green-300 rounded-none;
+} */

@@ -55,7 +55,7 @@ const Navbar = () => {
       {!isNavbarOpen && (
         <Link href="/">
           <Image
-            src="/SVGs/zaama-logo.svg"
+            src="/SVG/zaama-logo.svg"
             alt="Zaama-logo"
             width={130}
             height={100}

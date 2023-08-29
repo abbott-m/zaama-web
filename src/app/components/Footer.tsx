@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="text-center sm:text-left">
         <Link href="/" className="mb-6 inline-block py-2 ">
           <Image
-            src="/SVGs/zaama-logo.svg"
+            src="/SVG/zaama-logo.svg"
             alt="zaama-logo"
             width={120}
             height={120}

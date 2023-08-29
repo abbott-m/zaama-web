@@ -14,17 +14,8 @@ const SingleTicket = ({
   perks,
 }: singleTicketProps) => {
   return (
-    // <div className="w-80 h-[520px] relative bg-ticket-1 bg-contain bg-no-repeat text-zaama_yellow pt-14 px-3 ">
-    //   <ul className="text-center mb-4">
-    //     <li className="mb-1">VIP Access</li>
-    //     <li className="mb-1"> Party Bands</li>
-    //     <li className="mb-1">Cocktail Arena</li>
-    //   </ul>
-    //   <p className="text-center font-extrabold text-3xl mb-3">$70</p>
-    //   <p className="uppercase font-semibold text-xl text-center">VIP</p>
-    // </div>
     <div
-      className={`w-72 h-96  px-2 py-4 flex flex-col justify-center items-center rounded-lg bg-[#1d1d1d]  transition duration-100 hover:scale-105  hover:text-gray-200  ${
+      className={`mx-auto w-72 h-96  px-2 py-4 flex flex-col justify-center items-center rounded-lg bg-[#1d1d1d]  transition duration-100 hover:scale-105  hover:text-gray-200  ${
         color === "red"
           ? "hover:bg-zaama_red/60"
           : color === "green"
