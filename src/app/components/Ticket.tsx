@@ -40,10 +40,10 @@ const Ticket = () => {
 
   return (
     <section id="tickets" className="  px-5 pt-20 pb-28  sm:py-24 lg:px-16 ">
-      <p className="text-center text-xl font-medium mb-4 text-zaama_yellow uppercase tracking-wider  md:text-2xl ">
+      <p className="text-center text-xl font-medium mb-4 text-zaama_yellow uppercase tracking-wider  md:text-2xl selection:bg-zaama_red/50">
         Choose your package
       </p>
-      <p className="text-center mb-14">
+      <p className="text-center mb-14 selection:bg-zaama_red/50">
         We have uniquely crafted ticket packages for everyone
       </p>
       <div className="flex justify-center items-center md:hidden">
