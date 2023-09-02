@@ -1,27 +1,29 @@
+"use client";
 import Image from "next/image";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const Hero = () => {
+  const router = useRouter();
   return (
-    <section className="text-center px-5 pt-20 select-none sm:px-10  md:px-20">
+    <section className="text-center h-96 px-5 pt-10 select-none bg-hero-bg bg-cover bg-no-repeat bg-center sm:px-10  md:px-20 md:h-auto">
       <Image
-        src="/GIF/zaama-logo-anim.gif"
+        src="/images/zaama-3d.png"
         alt="Zaama-logo"
-        width={400}
-        height={300}
+        width={500}
+        height={400}
         unoptimized
         className="mx-auto mb-14 "
       />
-      <Link href="/#tickets">
-        <Image
-          src="/images/zaama-arrow-down.png"
-          alt="arrow-down"
-          width={50}
-          height={400}
-          className="mx-auto transition duration-150  animate-bounce hover:animate-none"
-        />
-      </Link>
+
+      <Image
+        onClick={() => router.push("/#tickets")}
+        src="/images/zaama-arrow-down.png"
+        alt="arrow-down"
+        width={50}
+        height={400}
+        className="mx-auto transition duration-150  animate-bounce hover:animate-none"
+      />
     </section>
   );
 };

@@ -11,6 +11,7 @@ const config: Config = {
       backgroundImage: {
         "ticket-1": "url(/images/ticket-1.png)",
         "bg-four": "url(/images/bg-4.png)",
+        "hero-bg": "url(/GIF/hero.GIF)",
       },
       colors: {
         zaama_green: "#00C986",
