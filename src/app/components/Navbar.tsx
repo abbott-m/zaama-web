@@ -42,7 +42,7 @@ const Navbar = () => {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="#dedede"
-          className="w-8 h-8 inline cursor-pointer "
+          className="w-8 h-8 inline cursor-pointer transition-all duration-150 hover:stroke-zaama_green"
           onClick={() => setIsNavbarOpen(true)}
         >
           <path
@@ -64,7 +64,7 @@ const Navbar = () => {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="#dedede"
-              className="w-8 h-8 inline cursor-pointer"
+              className="w-8 h-8 inline cursor-pointer transition-all duration-150 hover:stroke-zaama_green"
             >
               <path
                 strokeLinecap="round"
@@ -74,11 +74,11 @@ const Navbar = () => {
             </svg>
           </li>
 
-          {navLinks.map((item, index) => (
+          {navLinks.map((item) => (
             <li
               key={item.id}
               onClick={() => handleNavigate(item.path)}
-              className="p-1 uppercase cursor-pointer hover:text-zaama_red"
+              className="p-1 uppercase cursor-pointer transition duration-150 hover:text-zaama_green"
             >
               {item.name}
             </li>

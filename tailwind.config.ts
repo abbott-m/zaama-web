@@ -19,18 +19,12 @@ const config: Config = {
         zaama_orange: "#FF7700",
       },
       animation: {
-        marquee: "marquee 30s linear infinite",
-        marquee2: "marquee2 30s linear infinite",
-        "bounce-slow": "bounce 2s linear infinite",
+        carousel: "carousel 40s linear infinite",
       },
       keyframes: {
-        marquee: {
+        carousel: {
           "0%": { transform: "translateX(0%)" },
           "100%": { transform: "translateX(-100%)" },
-        },
-        marquee2: {
-          "0%": { transform: "translateX(100%)" },
-          "100%": { transform: "translateX(0%)" },
         },
       },
     },
