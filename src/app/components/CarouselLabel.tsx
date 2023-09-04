@@ -15,7 +15,10 @@ type CarouselLabel = {
 };
 const CarouselLabel = ({ word }: CarouselLabel) => {
   const duplicatedWords = Array.from({ length: 40 }, (_, index) => (
-    <span className="text-sm uppercase text-zaama_green whitespace-nowrap ">
+    <span
+      key={index}
+      className="text-sm uppercase text-zaama_green whitespace-nowrap "
+    >
       {word}
     </span>
   ));
