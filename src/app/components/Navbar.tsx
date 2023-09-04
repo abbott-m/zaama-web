@@ -34,7 +34,7 @@ const Navbar = () => {
     router.push(path);
   };
   return (
-    <nav className=" w-full flex gap-3 justify-center items-center p-5 md:px-10 lg:px-20 ">
+    <nav className=" w-full flex gap-3 justify-center items-center p-7 md:px-10 lg:px-20 ">
       {!isNavbarOpen ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"

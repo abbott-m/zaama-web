@@ -1,4 +1,9 @@
 import React from "react";
+import localFont from "next/font/local";
+
+const blatant = localFont({
+  src: "../blatant-font/OTF/Blatant.otf",
+});
 
 type singleTicketProps = {
   color: string;
@@ -23,8 +28,12 @@ const SingleTicket = ({
           : "hover:bg-zaama_orange/60"
       }`}
     >
-      <p className="uppercase text-lg text-center mb-3">{packageName}</p>
-      <p className="text-center text-4xl mb-5 md:text-5xl">
+      <p className={`${blatant.className} uppercase text-lg text-center mb-3`}>
+        {packageName}
+      </p>
+      <p
+        className={`${blatant.className} text-center text-4xl mb-5 md:text-5xl`}
+      >
         <span className="text-3xl">$</span>
         {price}
       </p>

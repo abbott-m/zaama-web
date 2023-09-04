@@ -10,7 +10,7 @@ const Store = () => {
   return (
     <section
       id="store"
-      className=" bg-gradient-to-br from-[#1a1a1a] via-[#2a2a2a] to-[#715353] px-5 py-20 sm:px-10 sm:py-20 md:py-4 md:px-20 md:flex md:items-center md:justify-center md:gap-10 lg:px-24 "
+      className=" bg-gradient-to-br from-[#1a1a1a] via-[#2a2a2a] to-[#5a4747] px-5 py-20 sm:px-10 sm:py-20 md:py-4 md:px-20 md:flex md:items-center md:justify-center md:gap-10 lg:px-24 "
     >
       <div className="md:w-7/12">
         <div className="mb-10 md:text-left ">
@@ -27,7 +27,7 @@ const Store = () => {
             deleniti natus, optio officiis libero, magni voluptas
           </p>
         </div>
-        <div className=" text-gray-800 flex gap-5 flex-col items-center justify-center sm:flex-row md:justify-start ">
+        <div className=" text-gray-800 flex gap-5 flex-col items-center justify-center sm:flex-row md:justify-start select-none ">
           <button className="bg-gray-100 inline-flex  py-2 px-5 rounded-lg items-center w-48 hover:bg-gray-200 outline-none">
             <svg
               xmlns="http://www.w3.org/2000/svg"

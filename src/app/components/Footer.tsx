@@ -3,6 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useState, useRef } from "react";
+import localFont from "next/font/local";
+
+const blatant = localFont({
+  src: "../blatant-font/OTF/Blatant.otf",
+});
 
 const Footer = () => {
   const [isSubscriptionLoading, setIsSubscriptionLoading] = useState(false);
@@ -113,7 +118,9 @@ const Footer = () => {
             </div>
           ) : (
             <form ref={formRef} onSubmit={handleSubmit}>
-              <p className="font-medium  uppercase mb-4  tracking-wide whitespace-nowrap text-center  ">
+              <p
+                className={`${blatant.className} font-medium  uppercase mb-4  tracking-wide whitespace-nowrap text-center `}
+              >
                 Join our newsletter
               </p>
               <div>
@@ -139,7 +146,9 @@ const Footer = () => {
       </div>
 
       <div className="text-center ">
-        <p className="font-medium text-lg uppercase mb-4 tracking-wide whitespace-nowrap">
+        <p
+          className={`${blatant.className} font-medium text-lg uppercase mb-4 tracking-wide whitespace-nowrap`}
+        >
           Quick Links
         </p>
         <ul>
@@ -166,7 +175,9 @@ const Footer = () => {
         </ul>
       </div>
       <div className="text-center ">
-        <p className="font-medium text-lg uppercase mb-4 tracking-wide whitespace-nowrap">
+        <p
+          className={`${blatant.className} font-medium text-lg uppercase mb-4 tracking-wide whitespace-nowrap`}
+        >
           Connect
         </p>
         <ul>

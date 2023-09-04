@@ -12,13 +12,13 @@ const About = () => {
       className="relative bg-bg-three bg-cover bg-no-repeat bg-center bg-opacity-50 flex flex-col items-center gap-14 px-5 py-10 tracking-wider sm:px-10  sm:py-24 lg:flex-row  md:px-20 lg:px-28 selection:bg-zaama_red/50"
     >
       <div className="absolute top-0 left-0 h-full w-full bg-black/80"></div>
-      <div className="  relative w-full h-80  lg:w-1/2">
+      <div className="  relative w-3/4 h-80  lg:w-1/2 ">
         <Image
           src="/images/zaama-tape.png"
           alt="about-zaama"
           fill
           objectFit="contain"
-          className=" animate-bounce-slow "
+          className=" animate-bounce-slow mx-auto"
         />
       </div>
       <div className=" text-justify relative  lg:w-3/4">

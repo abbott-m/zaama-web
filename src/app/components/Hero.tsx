@@ -6,14 +6,15 @@ import React from "react";
 const Hero = () => {
   const router = useRouter();
   return (
-    <section className="text-center h-96 px-5 pt-10 select-none bg-hero-bg bg-cover bg-no-repeat bg-center sm:px-10  md:px-20 md:h-auto">
+    <section className="text-center  px-5 pt-10 select-none sm:px-10  md:px-20  sm:bg-hero-bg sm:bg-cover sm:bg-no-repeat sm:bg-center">
       <Image
         src="/images/zaama-3d.png"
         alt="Zaama-logo"
         width={500}
         height={400}
         unoptimized
-        className="mx-auto mb-14 "
+        priority
+        className="mx-auto mb-14 mt-10 "
       />
 
       <Image

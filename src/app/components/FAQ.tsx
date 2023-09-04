@@ -11,19 +11,19 @@ const FAQ = () => {
   const faq: faq = [
     {
       id: 1,
-      question: "HOW TO BECOME A VENDOR ",
+      question: "How to become a vendor ",
       answer:
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias, nihil! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse, totam! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse, totam!",
     },
     {
       id: 2,
-      question: "HOW TO BECOME A VENDOR",
+      question: "How to become a vendor",
       answer:
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias, nihil! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse, totam! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse, totam!",
     },
     {
       id: 3,
-      question: "HOW TO BECOME A VENDOR",
+      question: "How to become a vendor",
       answer:
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias, nihil! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse, totam! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse, totam!",
     },
