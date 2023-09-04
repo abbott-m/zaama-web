@@ -22,7 +22,7 @@ const Hero = () => {
         alt="arrow-down"
         width={50}
         height={400}
-        className="mx-auto transition duration-150  animate-bounce hover:animate-none"
+        className="mx-auto transition duration-150  animate-bounce cursor-pointer hover:animate-none"
       />
     </section>
   );

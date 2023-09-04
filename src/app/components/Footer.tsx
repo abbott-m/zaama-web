@@ -1,7 +1,7 @@
 "use client";
-"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React, { useState, useRef } from "react";
 
 const Footer = () => {
@@ -11,6 +11,7 @@ const Footer = () => {
     type: "",
     text: "",
   });
+  const router = useRouter();
   const formRef = useRef<HTMLFormElement | null>(null);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -62,6 +63,7 @@ const Footer = () => {
         }, 5000);
       });
   };
+
   return (
     <footer className="bg-[#161616]  flex flex-col  justify-center items-center px-4 py-10 gap-16   sm:flex-row  sm:items-start sm:px-28 sm:py-16 md:gap-24 lg:gap-28 selection:bg-zaama_red/50">
       <div className="text-center ">
@@ -142,21 +144,24 @@ const Footer = () => {
         </p>
         <ul>
           {" "}
-          <li className="mb-3 text-gray-400">
+          <li
+            onClick={() => router.push("/#about")}
+            className="mb-3 text-gray-400 cursor-pointer hover:text-[#d3d3d3] p-[2px]"
+          >
             {" "}
-            <Link href="/#about" className="hover:text-[#d3d3d3] p-[2px] ">
-              About Zaama
-            </Link>
+            About Zaama
           </li>{" "}
-          <li className="mb-3 text-gray-400">
-            <Link href="/#tickets" className="hover:text-[#d3d3d3] p-[2px]">
-              Tickets
-            </Link>
+          <li
+            onClick={() => router.push("/#tickets")}
+            className="mb-3 text-gray-400 cursor-pointer hover:text-[#d3d3d3] p-[2px]"
+          >
+            Tickets
           </li>
-          <li className="mb-3 text-gray-400">
-            <Link href="/#store" className="hover:text-[#d3d3d3] p-[2px]">
-              Store
-            </Link>
+          <li
+            onClick={() => router.push("/#store")}
+            className="mb-3 text-gray-400 cursor-pointer hover:text-[#d3d3d3] p-[2px]"
+          >
+            Store
           </li>{" "}
         </ul>
       </div>
@@ -165,7 +170,7 @@ const Footer = () => {
           Connect
         </p>
         <ul>
-          <li className="mb-3 text-gray-400 ">
+          <li className="mb-3 text-gray-400  ">
             <Link
               href="https://instagram.com"
               target="_blank"
@@ -175,7 +180,7 @@ const Footer = () => {
               Instagram
             </Link>
           </li>
-          <li className="mb-3 text-gray-400">
+          <li className="mb-3 text-gray-400 ">
             {" "}
             <Link
               href="https://twitter.com"
@@ -186,7 +191,7 @@ const Footer = () => {
               Twitter
             </Link>
           </li>
-          <li className="mb-3 text-gray-400">
+          <li className="mb-3 text-gray-400 ">
             {" "}
             <Link
               href="https://facebook.com"
