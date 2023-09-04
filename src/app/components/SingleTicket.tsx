@@ -48,7 +48,7 @@ const SingleTicket = ({
       </ul>
 
       <button
-        className={`rounded-sm text-sm w-44 h-10 outline-none font-semibold border border-gray-400  uppercase hover:bg-[#181818]/20  `}
+        className={`${blatant.className}  tracking-widest rounded-sm text-sm w-44 h-10 outline-none font-semibold border border-gray-400  uppercase hover:bg-[#181818]/20  `}
       >
         Get Ticket
       </button>
