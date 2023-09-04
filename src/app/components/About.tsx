@@ -1,6 +1,10 @@
 import Image from "next/image";
 import React from "react";
+import localFont from "next/font/local";
 
+const blatantBold = localFont({
+  src: "../blatant-font/OTF/Blatant-Bold.otf",
+});
 const About = () => {
   return (
     <section
@@ -17,7 +21,9 @@ const About = () => {
         />
       </div>
       <div className=" text-justify  lg:w-3/4">
-        <p className="text-xl text-zaama_yellow uppercase tracking-wide font-medium mb-5 text-center md:text-2xl ">
+        <p
+          className={`${blatantBold.className} text-xl text-zaama_yellow uppercase tracking-wide font-medium mb-5 text-center md:text-2xl `}
+        >
           About Zaama
         </p>
         <p className="mb-3 leading-7  ">

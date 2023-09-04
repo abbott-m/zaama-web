@@ -1,5 +1,10 @@
 "use client";
 import React, { useRef } from "react";
+import localFont from "next/font/local";
+
+const blatantBold = localFont({
+  src: "../blatant-font/OTF/Blatant-Bold.otf",
+});
 
 const FAQ = () => {
   const checkboxRef = useRef<HTMLInputElement>(null);
@@ -28,7 +33,9 @@ const FAQ = () => {
       id="faq"
       className=" px-5 pt-14 pb-10 bg-gradient-to-tr from-[#212121]  to-[#2a2a2a] sm:px-20 sm:pt-20 sm:pb-16 selection:bg-zaama_red/50"
     >
-      <p className="text-center text-xl font-medium mb-8 tracking-wider text-zaama_yellow uppercase md:text-2xl md:mb-10">
+      <p
+        className={`${blatantBold.className} text-center text-xl font-medium mb-8 tracking-wider text-zaama_yellow uppercase md:text-2xl md:mb-10`}
+      >
         Frequently Asked Questions
       </p>
       {faq.map((item) => (
@@ -37,24 +44,13 @@ const FAQ = () => {
             <input
               type="radio"
               name="faq"
-              //   id={item.id.toString()}
               ref={checkboxRef}
               className="peer sr-only"
             />{" "}
             <p className="py-3  w-full flex justify-between items-center  font-medium  border-b border-white cursor-pointer hover:bg-zaamatext-zaama_red/20 peer-checked:text-zaama_red peer-checked:border-b-zaama_red   ">
               <span>{item.question}</span>
-              {/* {checkboxRef.current} */}
-              {/* {checkboxRef.current?.checked ? (
-                <span className="hidden text-2xl peer-checked:inline-block">
-                  +
-                </span>
-              ) : (
-                <span className="inline-block text-2xl peer-checked:hidden">
-                  -
-                </span>
-              )} */}
             </p>
-            <p className=" font-light   max-h-0 transition-all duration-200 overflow-hidden peer-checked:max-h-40 peer-checked:py-5  ">
+            <p className=" font-light  max-h-0 transition-all duration-200 overflow-hidden peer-checked:max-h-40 peer-checked:py-5  ">
               {item.answer}
             </p>
           </label>
