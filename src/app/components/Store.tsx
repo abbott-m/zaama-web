@@ -10,7 +10,7 @@ const Store = () => {
   return (
     <section
       id="store"
-      className=" bg-gradient-to-tr from-[#212121] via-[#2a2a2a] to-[#1b1b1b] px-5 py-20 sm:px-10 sm:py-20 md:py-4 md:px-20 md:flex md:items-center md:justify-center md:gap-10 lg:px-24 "
+      className=" bg-gradient-to-br from-[#1a1a1a] via-[#2a2a2a] to-[#715353] px-5 py-20 sm:px-10 sm:py-20 md:py-4 md:px-20 md:flex md:items-center md:justify-center md:gap-10 lg:px-24 "
     >
       <div className="md:w-7/12">
         <div className="mb-10 md:text-left ">
