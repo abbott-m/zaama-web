@@ -28,7 +28,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${syneMono.className} bg-[#151515] text-gray-200 pt-3`}>
+      <body
+        className={`${syneMono.className} bg-[#151515] text-gray-200 pt-3 max-w-[2200px] lg:mx-auto`}
+      >
         <CarouselLabel word="Zaama: The Disco" />
         <Navbar />
         {children}

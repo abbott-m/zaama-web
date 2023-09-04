@@ -21,7 +21,7 @@ const config: Config = {
         zaama_orange: "#FF7700",
       },
       animation: {
-        carousel: "carousel 20s linear infinite",
+        carousel: "carousel 30s linear infinite ",
         "bounce-slow": "bounce 2s linear infinite",
       },
       keyframes: {

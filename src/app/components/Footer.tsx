@@ -27,7 +27,7 @@ const Footer = () => {
 
     formData.append("email_address", emailAddress);
     fetch(
-      "https://script.google.com/macros/s/AKfycbwq-913xkeqxxpuJMBZsip6hgOZNxuHb0ENVB_l-VimNlVyAQdcVer1UhzaKOnQsNZdDw/exec",
+      "https://script.google.com/macros/s/AKfycbxM34PZhfjtBJTjkRXEnStrNrU766ZF7wWfi-nBCUKNwNGNLjwba0JPKXdMPFatsART3A/exec",
       {
         method: "POST",
         body: formData,
