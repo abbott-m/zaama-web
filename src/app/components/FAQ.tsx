@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import localFont from "next/font/local";
 
 const blatantBold = localFont({
@@ -7,23 +7,27 @@ const blatantBold = localFont({
 });
 
 const FAQ = () => {
-  const checkboxRef = useRef<HTMLInputElement>(null);
+  const [selectedItem, setSelectedItem] = useState<number | null>(null);
+
+  const handleItemClick = (item: number) => {
+    setSelectedItem(item === selectedItem ? null : item);
+  };
   const faq: faq = [
     {
       id: 1,
-      question: "How to become a vendor ",
+      question: "How to become a vendor1 ",
       answer:
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias, nihil! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse, totam! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse, totam!",
     },
     {
       id: 2,
-      question: "How to become a vendor",
+      question: "How to become a vendor2",
       answer:
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias, nihil! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse, totam! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse, totam!",
     },
     {
       id: 3,
-      question: "How to become a vendor",
+      question: "How to become a vendor3",
       answer:
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias, nihil! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse, totam! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse, totam!",
     },
@@ -44,7 +48,8 @@ const FAQ = () => {
             <input
               type="radio"
               name="faq"
-              ref={checkboxRef}
+              checked={item.id === selectedItem}
+              onChange={() => handleItemClick(item.id)}
               className="peer sr-only"
             />{" "}
             <p className="py-3  w-full flex justify-between items-center  font-medium  border-b border-white cursor-pointer hover:bg-zaamatext-zaama_red/20 peer-checked:text-zaama_red peer-checked:border-b-zaama_red   ">

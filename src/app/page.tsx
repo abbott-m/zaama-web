@@ -6,6 +6,7 @@ import FAQ from "./components/FAQ";
 import Store from "./components/Store";
 import Ticket from "./components/Ticket";
 import CarouselLabel from "./components/CarouselLabel";
+import Image from "next/image";
 
 const Home = () => {
   return (
@@ -15,7 +16,6 @@ const Home = () => {
       <Ticket />
       <CarouselLabel word="about" />
       <About />
-      <CarouselLabel word="store" />
       <Store />
       <Sponsors />
       <FAQ />

@@ -12,7 +12,6 @@ const Hero = () => {
         alt="Zaama-logo"
         width={500}
         height={400}
-        unoptimized
         priority
         className="mx-auto mb-14 mt-10 "
       />
@@ -23,7 +22,7 @@ const Hero = () => {
         alt="arrow-down"
         width={50}
         height={400}
-        className="mx-auto transition duration-150  animate-bounce cursor-pointer hover:animate-none"
+        className="mx-auto transition duration-150  animate-bounce cursor-pointer "
       />
     </section>
   );
