@@ -36,6 +36,7 @@ const Home = () => {
           <Image
             src="/GIF/zaama-logo-anim.gif"
             alt="zaama-logo-animation"
+            unoptimized
             width={300}
             height={100}
             priority
