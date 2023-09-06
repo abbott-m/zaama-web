@@ -11,37 +11,31 @@ const Navbar = () => {
     {
       id: 1,
       name: "about",
-      path: "/#about",
+      path: "about",
     },
     {
       id: 2,
       name: "store",
-      path: "/#store",
+      path: "store",
     },
     {
       id: 3,
       name: "sponsors",
-      path: "/#sponsors",
+      path: "sponsors",
     },
     {
       id: 4,
       name: "FAQ",
-      path: "/#faq",
+      path: "faq",
     },
   ];
   // const handleNavigate = (path: string) => {
   //   setIsNavbarOpen(false);
   //   router.push(path);
   // };
-  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    // first prevent the default behavior
-    e.preventDefault();
-    // get the href and remove everything before the hash (#)
-    const href = e.currentTarget.href;
-    const targetId = href.replace(/.*\#/, "");
-
+  const handleScroll = (sectionId: string) => {
     // get the element by id and use scrollIntoView
-    const element = document.getElementById(targetId);
+    const element = document.getElementById(sectionId);
     window.scrollTo({
       top: element?.getBoundingClientRect().top,
       behavior: "smooth",
@@ -96,14 +90,11 @@ const Navbar = () => {
             // >
             //   {item.name}
             // </li>
-            <li>
-              <Link
-                href={item.path}
-                onClick={handleScroll}
-                className="p-1 uppercase cursor-pointer transition duration-150 hover:text-zaama_green"
-              >
-                {item.name}
-              </Link>
+            <li
+              onClick={(e) => handleScroll(item.path)}
+              className="p-1 uppercase cursor-pointer transition duration-150 hover:text-zaama_green"
+            >
+              {item.name}
             </li>
           ))}
 
