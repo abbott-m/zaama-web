@@ -31,7 +31,7 @@ const Navbar = () => {
   ];
   const handleNavigate = (path: string) => {
     setIsNavbarOpen(false);
-    router.push(path);
+    router.push(path, { scroll: false });
   };
   return (
     <nav className=" w-full flex gap-3 justify-center items-center p-7 md:px-10 lg:px-20 ">
