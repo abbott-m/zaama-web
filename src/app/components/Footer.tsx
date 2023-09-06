@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useState, useRef } from "react";
 import localFont from "next/font/local";
+import handleScroll from "../lib/handleScroll";
 
 const blatant = localFont({
   src: "../blatant-font/OTF/Blatant.otf",
@@ -153,20 +154,35 @@ const Footer = () => {
         <ul>
           {" "}
           <li
-            onClick={() => router.push("/#about")}
+            onClick={(e) =>
+              handleScroll({
+                sectionId: "about",
+                behavior: "instant",
+              })
+            }
             className="mb-3 text-gray-400 cursor-pointer hover:text-[#d3d3d3] p-[2px]"
           >
             {" "}
             About Zaama
           </li>{" "}
           <li
-            onClick={() => router.push("/#tickets")}
+            onClick={(e) =>
+              handleScroll({
+                sectionId: "tickets",
+                behavior: "instant",
+              })
+            }
             className="mb-3 text-gray-400 cursor-pointer hover:text-[#d3d3d3] p-[2px]"
           >
             Tickets
           </li>
           <li
-            onClick={() => router.push("/#store")}
+            onClick={(e) =>
+              handleScroll({
+                sectionId: "store",
+                behavior: "instant",
+              })
+            }
             className="mb-3 text-gray-400 cursor-pointer hover:text-[#d3d3d3] p-[2px]"
           >
             Store

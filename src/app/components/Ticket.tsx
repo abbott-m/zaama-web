@@ -56,6 +56,7 @@ const Ticket = () => {
       >
         We have uniquely crafted ticket packages for everyone
       </p>
+
       <div data-aos="fade-up">
         <div className="flex justify-center items-center md:hidden">
           <Swiper

@@ -1,11 +1,9 @@
 "use client";
 import React, { useState } from "react";
-import { useRouter } from "next/navigation";
 import handleScroll from "../lib/handleScroll";
 
 const Navbar = () => {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
-  const router = useRouter();
 
   const navLinks = [
     {
@@ -29,10 +27,6 @@ const Navbar = () => {
       path: "faq",
     },
   ];
-  // const handleNavigate = (path: string) => {
-  //   setIsNavbarOpen(false);
-  //   router.push(path);
-  // };
 
   return (
     <nav className=" w-full flex gap-3 justify-center items-center p-7 md:px-10 lg:px-20 ">
@@ -81,7 +75,7 @@ const Navbar = () => {
               onClick={(e) =>
                 handleScroll({
                   sectionId: item.path,
-                  behavior: "smooth",
+                  behavior: "instant",
                   onClick: () => setIsNavbarOpen(false),
                 })
               }

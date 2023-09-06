@@ -20,7 +20,7 @@ const SingleTicket = ({
 }: singleTicketProps) => {
   return (
     <div
-      className={`mx-auto w-72 h-96  px-2 py-4 flex flex-col justify-center items-center rounded-lg bg-[#1d1d1d]  transition duration-100 hover:scale-105  hover:text-gray-200  ${
+      className={`mx-auto w-72 h-96  px-2 py-4 flex flex-col justify-center items-center rounded-lg bg-[#1d1d1d]  transition duration-100 hover:scale-105  hover:text-gray-200 selection:bg-zaama_red/50  ${
         color === "red"
           ? "hover:bg-zaama_red/60"
           : color === "green"
@@ -48,7 +48,7 @@ const SingleTicket = ({
       </ul>
 
       <button
-        className={`${blatant.className}  tracking-widest rounded-sm text-sm w-44 h-10 outline-none font-semibold border border-gray-400  uppercase hover:bg-[#181818]/20  `}
+        className={`${blatant.className}  tracking-widest rounded-sm text-sm w-44 h-10 outline-none font-semibold border border-gray-400  uppercase hover:bg-[#181818]/20 select-none `}
       >
         Get Ticket
       </button>

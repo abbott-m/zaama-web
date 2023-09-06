@@ -23,7 +23,7 @@ const CarouselLabel = ({ word }: CarouselLabel) => {
     </span>
   ));
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden selection:bg-zaama_red/50">
       <div className="animate-carousel flex gap-7 py-3">
         {duplicatedWords}
         {duplicatedWords}

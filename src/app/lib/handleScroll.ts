@@ -9,7 +9,8 @@ const handleScroll = ({ sectionId, behavior, onClick }: scrollHandler) => {
 
   // scroll to the element
   window.scrollTo({
-    top: element?.getBoundingClientRect().top,
+    top: Number(element?.offsetTop),
+    left: 0,
     behavior: behavior,
   });
 

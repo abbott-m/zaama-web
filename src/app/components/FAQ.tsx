@@ -54,7 +54,7 @@ const FAQ = () => {
                 onChange={() => handleItemClick(item.id)}
                 className="peer sr-only"
               />{" "}
-              <p className="py-3  w-full flex justify-between items-center  font-medium  border-b border-white cursor-pointer hover:bg-zaamatext-zaama_red/20 peer-checked:text-zaama_red peer-checked:border-b-zaama_red   ">
+              <p className="py-3  w-full flex justify-between items-center  font-medium  border-b border-white cursor-pointer hover:bg-zaamatext-zaama_red/20 peer-checked:text-zaama_red peer-checked:border-b-zaama_red peer-checked:font-semibold  ">
                 <span>{item.question}</span>
               </p>
               <p className=" font-light  max-h-0 transition-all duration-200 overflow-hidden peer-checked:max-h-40 peer-checked:py-5  ">

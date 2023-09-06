@@ -7,10 +7,10 @@ const Hero = () => {
   return (
     <section className="text-center  px-5 pt-10 select-none sm:px-10  md:px-20  sm:bg-hero-bg sm:bg-cover sm:bg-no-repeat sm:bg-center">
       <Image
-        src="/images/zaama-3d.png"
+        src="/images/zaama-3d-new.png"
         alt="Zaama-logo"
-        width={270}
-        height={300}
+        width={260}
+        height={200}
         priority
         className="mx-auto mb-14 mt-10 bg-transparent"
         data-aos="zoom-in-up"

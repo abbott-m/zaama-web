@@ -20,7 +20,7 @@ const Sponsors = () => {
   return (
     <section
       id="sponsors"
-      className=" px-4 py-10 bg-bg-four bg-top bg-cover sm:px-14 sm:py-24  md:bg-bottom md:gap-8 lg:px-24"
+      className=" px-4 py-10 bg-bg-four bg-top bg-cover sm:px-14 sm:py-24  md:bg-bottom md:gap-8 lg:px-24 selection:bg-zaama_red/50"
     >
       <p
         data-aos="fade-down"
@@ -28,6 +28,7 @@ const Sponsors = () => {
       >
         Our Sponsors
       </p>
+
       <div data-aos="fade-up">
         <div className="flex items-center justify-center my-5 sm:hidden">
           <Swiper
