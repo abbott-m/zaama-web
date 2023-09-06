@@ -10,15 +10,25 @@ import CarouselLabel from "./components/CarouselLabel";
 import Image from "next/image";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+// ..
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
 
+  // initialize AOS
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
+  // set a  timer to close the loading screen and mount the main page
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 6500);
+    }, 600);
   }, []);
+
   return (
     <main className="">
       {loading ? (
@@ -28,6 +38,7 @@ const Home = () => {
             alt="zaama-logo-animation"
             width={300}
             height={100}
+            priority
           />
         </div>
       ) : (

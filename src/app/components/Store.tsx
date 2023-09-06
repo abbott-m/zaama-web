@@ -15,19 +15,26 @@ const Store = () => {
       <div className="md:w-7/12">
         <div className="mb-10 md:text-left ">
           <p
-            className={`${blatantBold.className} text-center text-xl font-medium mb-7 text-zaama_yellow uppercase tracking-wider md:text-2xl md:text-left`}
+            data-aos="fade-down"
+            className={`${blatantBold.className} text-center text-xl font-medium mb-5 text-zaama_yellow uppercase tracking-wider md:text-2xl md:text-left`}
           >
             Our Store
           </p>
 
-          <p className=" text-center selection:bg-zaama_red/50 leading-7  sm:mx-auto md:text-left md:mx-0 ">
+          <p
+            data-aos="fade-right"
+            className=" text-center selection:bg-zaama_red/50 leading-7  sm:mx-auto md:text-left md:mx-0 "
+          >
             Download Zaama app to order for your merch Lorem ipsum dolor sit
             amet consectetur, adipisicing elit. Repellendus, inventore. Lorem,
             ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus illo
             deleniti natus, optio officiis libero, magni voluptas
           </p>
         </div>
-        <div className=" text-gray-800 flex gap-5 flex-col items-center justify-center sm:flex-row md:justify-start select-none ">
+        <div
+          data-aos="fade-up"
+          className=" text-gray-800 flex gap-5 flex-col items-center justify-center sm:flex-row md:justify-start select-none "
+        >
           <button className="bg-gray-100 inline-flex  py-2 px-5 rounded-lg items-center w-48 hover:bg-gray-200 outline-none">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +74,7 @@ const Store = () => {
           </button>
         </div>
       </div>
-      <div className=" hidden md:w-5/12 md:block ">
+      <div data-aos="fade-left" className=" hidden md:w-5/12 md:block ">
         <Image
           src="/images/zaama-mobile.png"
           alt="zaama-mobile"

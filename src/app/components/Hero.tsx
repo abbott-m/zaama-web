@@ -13,7 +13,10 @@ const Hero = () => {
         width={500}
         height={400}
         priority
-        className="mx-auto mb-14 mt-10 "
+        unoptimized
+        className="mx-auto mb-14 mt-10 bg-transparent"
+        data-aos="zoom-in-up"
+        data-aos-duration="500"
       />
 
       <Image
@@ -21,8 +24,8 @@ const Hero = () => {
         src="/images/zaama-arrow-down.png"
         alt="arrow-down"
         width={50}
-        height={400}
-        className="mx-auto transition duration-150  animate-bounce cursor-pointer "
+        height={50}
+        className="mx-auto transition duration-150 animate-bounce mt-20 cursor-pointer "
       />
     </section>
   );
