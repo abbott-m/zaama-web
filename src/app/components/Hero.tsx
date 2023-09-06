@@ -1,10 +1,9 @@
 "use client";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 import React from "react";
+import handleScroll from "../lib/handleScroll";
 
 const Hero = () => {
-  const router = useRouter();
   return (
     <section className="text-center  px-5 pt-10 select-none sm:px-10  md:px-20  sm:bg-hero-bg sm:bg-cover sm:bg-no-repeat sm:bg-center">
       <Image
@@ -19,7 +18,12 @@ const Hero = () => {
       />
 
       <Image
-        onClick={() => router.push("/#tickets")}
+        onClick={(e) =>
+          handleScroll({
+            sectionId: "tickets",
+            behavior: "instant",
+          })
+        }
         src="/images/zaama-arrow-down.png"
         alt="arrow-down"
         width={50}

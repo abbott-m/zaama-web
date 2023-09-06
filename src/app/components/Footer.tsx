@@ -35,7 +35,6 @@ const Footer = () => {
     )
       .then((res) => res.text())
       .then((data) => {
-        console.log("newsletter response is", data);
         // set button loading state to false
         setIsSubscriptionLoading(false);
 

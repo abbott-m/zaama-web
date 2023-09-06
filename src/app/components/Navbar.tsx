@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
+import handleScroll from "../lib/handleScroll";
 
 const Navbar = () => {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
@@ -32,14 +33,7 @@ const Navbar = () => {
   //   setIsNavbarOpen(false);
   //   router.push(path);
   // };
-  const handleScroll = (sectionId: string) => {
-    // get the element by id and use scrollIntoView
-    const element = document.getElementById(sectionId);
-    window.scrollTo({
-      top: element?.getBoundingClientRect().top,
-      behavior: "smooth",
-    });
-  };
+
   return (
     <nav className=" w-full flex gap-3 justify-center items-center p-7 md:px-10 lg:px-20 ">
       {!isNavbarOpen ? (
@@ -82,16 +76,15 @@ const Navbar = () => {
           </li>
 
           {navLinks.map((item) => (
-            // <li
-            //   key={item.id}
-            //   onClick={() => handleNavigate(item.path)}
-            //   className="p-1 uppercase cursor-pointer transition duration-150 hover:text-zaama_green"
-            // >
-            //   {item.name}
-            // </li>
             <li
               key={item.id}
-              onClick={(e) => handleScroll(item.path)}
+              onClick={(e) =>
+                handleScroll({
+                  sectionId: item.path,
+                  behavior: "smooth",
+                  onClick: () => setIsNavbarOpen(false),
+                })
+              }
               className="p-1 uppercase cursor-pointer transition duration-150 hover:text-zaama_green"
             >
               {item.name}
