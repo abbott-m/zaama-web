@@ -1,7 +1,7 @@
 "use client";
-import Image from "next/image";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const Navbar = () => {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
@@ -29,9 +29,23 @@ const Navbar = () => {
       path: "/#faq",
     },
   ];
-  const handleNavigate = (path: string) => {
-    setIsNavbarOpen(false);
-    router.push(path, { scroll: false });
+  // const handleNavigate = (path: string) => {
+  //   setIsNavbarOpen(false);
+  //   router.push(path);
+  // };
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    // first prevent the default behavior
+    e.preventDefault();
+    // get the href and remove everything before the hash (#)
+    const href = e.currentTarget.href;
+    const targetId = href.replace(/.*\#/, "");
+
+    // get the element by id and use scrollIntoView
+    const element = document.getElementById(targetId);
+    window.scrollTo({
+      top: element?.getBoundingClientRect().top,
+      behavior: "smooth",
+    });
   };
   return (
     <nav className=" w-full flex gap-3 justify-center items-center p-7 md:px-10 lg:px-20 ">
@@ -75,12 +89,21 @@ const Navbar = () => {
           </li>
 
           {navLinks.map((item) => (
-            <li
-              key={item.id}
-              onClick={() => handleNavigate(item.path)}
-              className="p-1 uppercase cursor-pointer transition duration-150 hover:text-zaama_green"
-            >
-              {item.name}
+            // <li
+            //   key={item.id}
+            //   onClick={() => handleNavigate(item.path)}
+            //   className="p-1 uppercase cursor-pointer transition duration-150 hover:text-zaama_green"
+            // >
+            //   {item.name}
+            // </li>
+            <li>
+              <Link
+                href={item.path}
+                onClick={handleScroll}
+                className="p-1 uppercase cursor-pointer transition duration-150 hover:text-zaama_green"
+              >
+                {item.name}
+              </Link>
             </li>
           ))}
 
