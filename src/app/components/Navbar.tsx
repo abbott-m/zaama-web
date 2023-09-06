@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
-import Link from "next/link";
 
 const Navbar = () => {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
@@ -91,6 +90,7 @@ const Navbar = () => {
             //   {item.name}
             // </li>
             <li
+              key={item.id}
               onClick={(e) => handleScroll(item.path)}
               className="p-1 uppercase cursor-pointer transition duration-150 hover:text-zaama_green"
             >
