@@ -126,6 +126,7 @@ const Footer = () => {
               <div>
                 <input
                   type="email"
+                  name="email"
                   required
                   value={emailAddress}
                   onChange={(e) => setEmailAddress(e.target.value)}

@@ -26,7 +26,7 @@ const Sponsors = () => {
         data-aos="fade-down"
         className={`${blatantBold.className} text-center text-xl font-medium mb-8 tracking-wider text-zaama_yellow uppercase md:text-2xl md:mb-10`}
       >
-        Our Sponsors
+        Our Sponsors and Partners
       </p>
 
       <div data-aos="fade-up">

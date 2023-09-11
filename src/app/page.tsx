@@ -44,7 +44,7 @@ const Home = () => {
         </div>
       ) : (
         <>
-          <CarouselLabel word="Zaama: The Disco" />
+          <CarouselLabel word="Zaama Disco: The Rave" />
           <Navbar />
           <Hero />
           <CarouselLabel word="tickets" />
