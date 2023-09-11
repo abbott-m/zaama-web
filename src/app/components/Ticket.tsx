@@ -43,7 +43,7 @@ const Ticket = () => {
   ];
 
   return (
-    <section id="tickets" className="  px-5 pt-20 pb-28  sm:py-24 lg:px-16 ">
+    <section id="tickets" className="  px-5 pt-14 pb-28  sm:py-10 lg:px-16 ">
       <p
         data-aos="fade-up"
         className={`${blatantBold.className} text-center text-xl font-medium mb-4 text-zaama_yellow uppercase tracking-wider  md:text-2xl selection:bg-zaama_red/50`}

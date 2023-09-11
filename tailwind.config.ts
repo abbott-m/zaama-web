@@ -10,7 +10,7 @@ const config: Config = {
     extend: {
       backgroundImage: {
         "ticket-1": "url(/images/ticket-1.png)",
-        "bg-three": "url(/images/bg-3.png)",
+        "about-zaama-cover": "url(/images/about-zaama-bg.png)",
         "bg-four": "url(/images/bg-4.png)",
         "hero-bg": "url(/GIF/hero.GIF)",
       },
