@@ -1,8 +1,14 @@
 "use client";
-"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React, { useState, useRef } from "react";
+import localFont from "next/font/local";
+import handleScroll from "../lib/handleScroll";
+
+const blatant = localFont({
+  src: "../blatant-font/OTF/Blatant.otf",
+});
 
 const Footer = () => {
   const [isSubscriptionLoading, setIsSubscriptionLoading] = useState(false);
@@ -11,6 +17,7 @@ const Footer = () => {
     type: "",
     text: "",
   });
+  const router = useRouter();
   const formRef = useRef<HTMLFormElement | null>(null);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -21,7 +28,7 @@ const Footer = () => {
 
     formData.append("email_address", emailAddress);
     fetch(
-      "https://script.google.com/macros/s/AKfycbwq-913xkeqxxpuJMBZsip6hgOZNxuHb0ENVB_l-VimNlVyAQdcVer1UhzaKOnQsNZdDw/exec",
+      "https://script.google.com/macros/s/AKfycbxM34PZhfjtBJTjkRXEnStrNrU766ZF7wWfi-nBCUKNwNGNLjwba0JPKXdMPFatsART3A/exec",
       {
         method: "POST",
         body: formData,
@@ -29,7 +36,6 @@ const Footer = () => {
     )
       .then((res) => res.text())
       .then((data) => {
-        console.log("newsletter response is", data);
         // set button loading state to false
         setIsSubscriptionLoading(false);
 
@@ -62,6 +68,7 @@ const Footer = () => {
         }, 5000);
       });
   };
+
   return (
     <footer className="bg-[#161616]  flex flex-col  justify-center items-center px-4 py-10 gap-16   sm:flex-row  sm:items-start sm:px-28 sm:py-16 md:gap-24 lg:gap-28 selection:bg-zaama_red/50">
       <div className="text-center ">
@@ -111,7 +118,9 @@ const Footer = () => {
             </div>
           ) : (
             <form ref={formRef} onSubmit={handleSubmit}>
-              <p className="font-medium  uppercase mb-4  tracking-wide whitespace-nowrap text-center  ">
+              <p
+                className={`${blatant.className} font-medium  uppercase mb-4  tracking-wide whitespace-nowrap text-center `}
+              >
                 Join our newsletter
               </p>
               <div>
@@ -137,35 +146,57 @@ const Footer = () => {
       </div>
 
       <div className="text-center ">
-        <p className="font-medium text-lg uppercase mb-4 tracking-wide whitespace-nowrap">
+        <p
+          className={`${blatant.className} font-medium text-lg uppercase mb-4 tracking-wide whitespace-nowrap`}
+        >
           Quick Links
         </p>
         <ul>
           {" "}
-          <li className="mb-3 text-gray-400">
+          <li
+            onClick={(e) =>
+              handleScroll({
+                sectionId: "about",
+                behavior: "instant",
+              })
+            }
+            className="mb-3 text-gray-400 cursor-pointer hover:text-[#d3d3d3] p-[2px]"
+          >
             {" "}
-            <Link href="/#about" className="hover:text-[#d3d3d3] p-[2px] ">
-              About Zaama
-            </Link>
+            About Zaama
           </li>{" "}
-          <li className="mb-3 text-gray-400">
-            <Link href="/#tickets" className="hover:text-[#d3d3d3] p-[2px]">
-              Tickets
-            </Link>
+          <li
+            onClick={(e) =>
+              handleScroll({
+                sectionId: "tickets",
+                behavior: "instant",
+              })
+            }
+            className="mb-3 text-gray-400 cursor-pointer hover:text-[#d3d3d3] p-[2px]"
+          >
+            Tickets
           </li>
-          <li className="mb-3 text-gray-400">
-            <Link href="/#store" className="hover:text-[#d3d3d3] p-[2px]">
-              Store
-            </Link>
+          <li
+            onClick={(e) =>
+              handleScroll({
+                sectionId: "store",
+                behavior: "instant",
+              })
+            }
+            className="mb-3 text-gray-400 cursor-pointer hover:text-[#d3d3d3] p-[2px]"
+          >
+            Store
           </li>{" "}
         </ul>
       </div>
       <div className="text-center ">
-        <p className="font-medium text-lg uppercase mb-4 tracking-wide whitespace-nowrap">
+        <p
+          className={`${blatant.className} font-medium text-lg uppercase mb-4 tracking-wide whitespace-nowrap`}
+        >
           Connect
         </p>
         <ul>
-          <li className="mb-3 text-gray-400 ">
+          <li className="mb-3 text-gray-400  ">
             <Link
               href="https://instagram.com"
               target="_blank"
@@ -175,7 +206,7 @@ const Footer = () => {
               Instagram
             </Link>
           </li>
-          <li className="mb-3 text-gray-400">
+          <li className="mb-3 text-gray-400 ">
             {" "}
             <Link
               href="https://twitter.com"
@@ -186,7 +217,7 @@ const Footer = () => {
               Twitter
             </Link>
           </li>
-          <li className="mb-3 text-gray-400">
+          <li className="mb-3 text-gray-400 ">
             {" "}
             <Link
               href="https://facebook.com"

@@ -1,24 +1,40 @@
 import Image from "next/image";
 import React from "react";
+import localFont from "next/font/local";
+
+const blatantBold = localFont({
+  src: "../blatant-font/OTF/Blatant-Bold.otf",
+});
 
 const Store = () => {
   return (
     <section
       id="store"
-      className=" bg-gradient-to-tr from-[#212121] via-[#2a2a2a] to-[#1b1b1b] px-5 py-20 sm:px-10 sm:py-24 md:px-20 md:flex md:items-center md:justify-center md:gap-10 lg:px-24 "
+      className=" bg-gradient-to-br from-[#1a1a1a] via-[#2a2a2a] to-[#5a4747] px-5 py-20 sm:px-10 sm:py-20 md:py-4 md:px-20 md:flex md:items-center md:justify-center md:gap-10 lg:px-24 selection:bg-zaama_red/50"
     >
       <div className="md:w-7/12">
         <div className="mb-10 md:text-left ">
-          <p className="text-center text-xl font-medium mb-7 text-zaama_yellow uppercase tracking-wider md:text-2xl md:text-left">
+          <p
+            data-aos="fade-down"
+            className={`${blatantBold.className} text-center text-xl font-medium mb-5 text-zaama_yellow uppercase tracking-wider md:text-2xl md:text-left`}
+          >
             Our Store
           </p>
 
-          <p className=" text-center selection:bg-zaama_red/50 leading-7  sm:mx-auto md:text-left md:mx-0 ">
+          <p
+            data-aos="fade-right"
+            className=" text-center  leading-7  sm:mx-auto md:text-left md:mx-0 "
+          >
             Download Zaama app to order for your merch Lorem ipsum dolor sit
-            amet consectetur, adipisicing elit. Repellendus, inventore.
+            amet consectetur, adipisicing elit. Repellendus, inventore. Lorem,
+            ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus illo
+            deleniti natus, optio officiis libero, magni voluptas
           </p>
         </div>
-        <div className=" text-gray-800 flex gap-5 flex-col items-center justify-center sm:flex-row md:justify-start ">
+        <div
+          data-aos="fade-up"
+          className=" text-gray-800 flex gap-5 flex-col items-center justify-center sm:flex-row md:justify-start select-none "
+        >
           <button className="bg-gray-100 inline-flex  py-2 px-5 rounded-lg items-center w-48 hover:bg-gray-200 outline-none">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +74,7 @@ const Store = () => {
           </button>
         </div>
       </div>
-      <div className=" hidden md:w-5/12 md:block ">
+      <div data-aos="fade-left" className=" hidden md:w-5/12 md:block ">
         <Image
           src="/images/zaama-mobile.png"
           alt="zaama-mobile"

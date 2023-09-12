@@ -10,7 +10,9 @@ const config: Config = {
     extend: {
       backgroundImage: {
         "ticket-1": "url(/images/ticket-1.png)",
+        "bg-three": "url(/images/bg-3.png)",
         "bg-four": "url(/images/bg-4.png)",
+        "hero-bg": "url(/GIF/hero.GIF)",
       },
       colors: {
         zaama_green: "#00C986",
@@ -19,18 +21,13 @@ const config: Config = {
         zaama_orange: "#FF7700",
       },
       animation: {
-        marquee: "marquee 30s linear infinite",
-        marquee2: "marquee2 30s linear infinite",
+        carousel: "carousel 30s linear infinite ",
         "bounce-slow": "bounce 2s linear infinite",
       },
       keyframes: {
-        marquee: {
+        carousel: {
           "0%": { transform: "translateX(0%)" },
           "100%": { transform: "translateX(-100%)" },
-        },
-        marquee2: {
-          "0%": { transform: "translateX(100%)" },
-          "100%": { transform: "translateX(0%)" },
         },
       },
     },
