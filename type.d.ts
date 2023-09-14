@@ -3,8 +3,13 @@ type faq = {
   question: string;
   answer: string;
 }[];
-type faq = {
+// type faq = {
+//   id: number;
+//   name: string;
+//   path: string;
+// }[];
+type socialLinks = {
   id: number;
-  name: string;
+  icon: React.ReactNode;
   path: string;
 }[];

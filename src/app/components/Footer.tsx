@@ -5,6 +5,12 @@ import { useRouter } from "next/navigation";
 import React, { useState, useRef } from "react";
 import localFont from "next/font/local";
 import handleScroll from "../lib/handleScroll";
+import ZaamaLogo from "../../../public/SVG/zaama-logo.svg";
+import Facebook from "../../../public/SVG/facebook-logo.svg";
+import Twitter from "../../../public/SVG/twitter-logo.svg";
+import Instagram from "../../../public/SVG/instagram-logo.svg";
+import Youtube from "../../../public/SVG/youtube-logo.svg";
+import Tiktok from "../../../public/SVG/tiktok-logo.svg";
 
 const blatant = localFont({
   src: "../blatant-font/OTF/Blatant.otf",
@@ -19,6 +25,38 @@ const Footer = () => {
   });
   const router = useRouter();
   const formRef = useRef<HTMLFormElement | null>(null);
+
+  const socialLinks: socialLinks = [
+    {
+      id: 1,
+      icon: (
+        <Twitter className="fill-gray-200 w-[18px] h-[18px] hover:fill-gray-300" />
+      ),
+      path: "https://twitter.com",
+    },
+    {
+      id: 2,
+      icon: (
+        <Instagram className="stroke-gray-200 stroke-2 w-5 h-5 hover:stroke-gray-300" />
+      ),
+      path: "https://instagram.com",
+    },
+    {
+      id: 3,
+      icon: <Facebook className="fill-gray-200 w-5 h-5 hover:fill-gray-300" />,
+      path: "https://facebook.com",
+    },
+    {
+      id: 4,
+      icon: <Tiktok className="fill-gray-200 w-5 h-5 hover:fill-gray-300" />,
+      path: "https://tiktok.com",
+    },
+    {
+      id: 5,
+      icon: <Youtube className="fill-gray-200 w-6 h-6 hover:fill-gray-300" />,
+      path: "https://youtube.com",
+    },
+  ];
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -73,20 +111,9 @@ const Footer = () => {
     <footer className="bg-[#161616]  flex flex-col  justify-center items-center px-4 py-10 gap-16   sm:flex-row  sm:items-start sm:px-28 sm:py-16 md:gap-24 lg:gap-28 selection:bg-zaama_red/50">
       <div className="text-center ">
         <Link href="/" className="mb-6 inline-block py-2 ">
-          <Image
-            src="/SVG/zaama-logo.svg"
-            alt="zaama-logo"
-            width={120}
-            height={120}
-          />
+          <ZaamaLogo className="w-32" />
         </Link>
         <div>
-          {/* <p
-            onClick={() => setIsSubscriptionLoading(!isSubscriptionLoading)}
-            className="text-white"
-          >
-            isloading
-          </p> */}
           {isSubscriptionLoading ? (
             <div className="w-64 h-32 flex justify-center items-center ">
               <Image
@@ -196,39 +223,19 @@ const Footer = () => {
         >
           Connect
         </p>
-        <ul>
-          <li className="mb-3 text-gray-400  ">
-            <Link
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener"
-              className="hover:text-[#d3d3d3] p-[2px]"
-            >
-              Instagram
-            </Link>
-          </li>
-          <li className="mb-3 text-gray-400 ">
-            {" "}
-            <Link
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener"
-              className="hover:text-[#d3d3d3] p-[2px]"
-            >
-              Twitter
-            </Link>
-          </li>
-          <li className="mb-3 text-gray-400 ">
-            {" "}
-            <Link
-              href="https://facebook.com"
-              target="_blank"
-              rel="noopener"
-              className="hover:text-[#d3d3d3] p-[2px]"
-            >
-              Facebook
-            </Link>
-          </li>
+        <ul className="flex gap-3 items-center justify-center flex-wrap max-w-[180px] ">
+          {socialLinks.map((item) => (
+            <li>
+              <Link
+                href={item.path}
+                target="_blank"
+                rel="noopener"
+                className="bg-[#3a3a3a] w-10 h-10  rounded-full inline-flex justify-center items-center transition duration-150 hover:bg-[#2e2e2e]"
+              >
+                {item.icon}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
     </footer>
