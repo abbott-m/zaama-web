@@ -30,30 +30,36 @@ const Footer = () => {
     {
       id: 1,
       icon: (
-        <Twitter className="fill-gray-200 w-[18px] h-[18px] hover:fill-gray-300" />
+        <Twitter className="fill-gray-200 w-4 h-4 shadow-md hover:fill-gray-300" />
       ),
       path: "https://twitter.com",
     },
     {
       id: 2,
       icon: (
-        <Instagram className="stroke-gray-200 stroke-2 w-5 h-5 hover:stroke-gray-300" />
+        <Instagram className="stroke-gray-200 stroke-2 w-4 h-4 shadow-md hover:stroke-gray-300" />
       ),
       path: "https://instagram.com",
     },
     {
       id: 3,
-      icon: <Facebook className="fill-gray-200 w-5 h-5 hover:fill-gray-300" />,
+      icon: (
+        <Facebook className="fill-gray-200 w-4 h-4 shadow-md hover:fill-gray-300" />
+      ),
       path: "https://facebook.com",
     },
     {
       id: 4,
-      icon: <Tiktok className="fill-gray-200 w-5 h-5 hover:fill-gray-300" />,
+      icon: (
+        <Tiktok className="fill-gray-200 w-4 h-4 shadow-md hover:fill-gray-300" />
+      ),
       path: "https://tiktok.com",
     },
     {
       id: 5,
-      icon: <Youtube className="fill-gray-200 w-6 h-6 hover:fill-gray-300" />,
+      icon: (
+        <Youtube className="fill-gray-200 w-5 h-5 shadow-md hover:fill-gray-300" />
+      ),
       path: "https://youtube.com",
     },
   ];
