@@ -2,10 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-*,
+/* *,
 body {
   scroll-behavior: smooth;
-}
+} */
+
 /* .swiper-wrapper {
   @apply pb-14;
 } */

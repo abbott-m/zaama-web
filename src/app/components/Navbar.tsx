@@ -94,16 +94,7 @@ const Navbar = () => {
           </li>
 
           {navLinks.map((item) => (
-            <li
-              key={item.id}
-              // onClick={(e) =>
-              //   handleScroll({
-              //     sectionId: item.path,
-              //     behavior: "instant",
-              //     onClick: () => setIsNavbarOpen(false),
-              //   })
-              // }
-            >
+            <li key={item.id} onClick={() => setIsNavbarOpen(false)}>
               <a
                 href={item.path}
                 className="p-1 uppercase inline-block transition duration-150 hover:text-zaama_green"
