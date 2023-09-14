@@ -37,7 +37,7 @@ const Footer = () => {
     {
       id: 2,
       icon: (
-        <Instagram className="stroke-gray-200 stroke-2 w-4 h-4 shadow-md hover:stroke-gray-300" />
+        <Instagram className="stroke-gray-100 stroke-2 w-4 h-4 shadow-md hover:stroke-gray-300" />
       ),
       path: "https://instagram.com",
     },

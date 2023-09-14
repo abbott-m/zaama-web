@@ -5,7 +5,16 @@ import handleScroll from "../lib/handleScroll";
 
 const Hero = () => {
   return (
-    <section className="text-center  px-5 pt-10 select-none sm:px-10  md:px-20  sm:bg-hero-bg sm:bg-cover sm:bg-no-repeat sm:bg-center">
+    <section className="text-center  px-5 pt-10 select-none sm:px-10  md:px-20  ">
+      <div className="h-full w-full fixed top-0 left-0 bg-black/70 -z-[5]"></div>
+      <video
+        autoPlay
+        loop
+        muted
+        className=" h-full w-full absolute top-0 left-0 object-cover -z-10"
+      >
+        <source src="/video/hero-bg.mp4" type="video/mp4" />
+      </video>
       <Image
         src="/images/zaama-3d-new.png"
         alt="Zaama-logo"
