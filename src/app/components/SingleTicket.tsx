@@ -20,7 +20,7 @@ const SingleTicket = ({
 }: singleTicketProps) => {
   return (
     <div
-      className={`mx-auto w-72 h-96  px-2 py-4 flex flex-col justify-center items-center rounded-lg bg-[#1d1d1d]  transition duration-100 hover:scale-105  hover:text-gray-200 selection:bg-zaama_red/50  ${
+      className={`mx-auto w-72 h-96  px-2 py-4 flex flex-col justify-center items-center rounded-lg bg-ticket-1 bg-cover  transition duration-100 hover:scale-105  hover:text-gray-200 selection:bg-zaama_red/50  ${
         color === "red"
           ? "hover:bg-zaama_red/60"
           : color === "green"
