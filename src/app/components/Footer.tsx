@@ -231,7 +231,7 @@ const Footer = () => {
         </p>
         <ul className="flex gap-3 items-center justify-center flex-wrap max-w-[180px] ">
           {socialLinks.map((item) => (
-            <li>
+            <li key={item.id}>
               <Link
                 href={item.path}
                 target="_blank"

@@ -5,38 +5,44 @@ import handleScroll from "../lib/handleScroll";
 const Navbar = () => {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
 
-  const navLinks = [
+  const navLinks: navLinks = [
     {
       id: 1,
       name: "about",
-      path: "about",
+      sectionId: "about",
+      path: "#about",
     },
 
     {
       id: 2,
       name: "vendor",
-      path: "vendor",
+      sectionId: "vendor",
+      path: "/vendor",
     },
     {
       id: 3,
       name: "volunteers",
-      path: "volunteers",
+      sectionId: "volunteers",
+      path: "/volunteers",
     },
 
     {
       id: 4,
       name: "media",
-      path: "media",
+      sectionId: "media",
+      path: "/media",
     },
     {
       id: 5,
       name: "table",
-      path: "table",
+      sectionId: "table",
+      path: "/table",
     },
     {
       id: 6,
       name: "FAQ",
-      path: "faq",
+      sectionId: "faq",
+      path: "/#faq",
     },
   ];
 
@@ -84,16 +90,20 @@ const Navbar = () => {
           {navLinks.map((item) => (
             <li
               key={item.id}
-              onClick={(e) =>
-                handleScroll({
-                  sectionId: item.path,
-                  behavior: "instant",
-                  onClick: () => setIsNavbarOpen(false),
-                })
-              }
-              className="p-1 uppercase cursor-pointer transition duration-150 hover:text-zaama_green"
+              // onClick={(e) =>
+              //   handleScroll({
+              //     sectionId: item.path,
+              //     behavior: "instant",
+              //     onClick: () => setIsNavbarOpen(false),
+              //   })
+              // }
             >
-              {item.name}
+              <a
+                href={item.path}
+                className="p-1 uppercase inline-block transition duration-150 hover:text-zaama_green"
+              >
+                {item.name}
+              </a>
             </li>
           ))}
 

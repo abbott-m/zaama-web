@@ -1,6 +1,9 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Syne_Mono } from "next/font/google";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import CarouselLabel from "./components/CarouselLabel";
 
 const syneMono = Syne_Mono({ subsets: ["latin"], weight: "400" });
 
@@ -28,7 +31,12 @@ export default function RootLayout({
       <body
         className={`${syneMono.className}  bg-[#161616] text-gray-200 pt-3 max-w-[2200px] lg:mx-auto`}
       >
+        <CarouselLabel word="Zaama Disco: The Rave" />
+
+        <Navbar />
+
         {children}
+        <Footer />
       </body>
     </html>
   );
