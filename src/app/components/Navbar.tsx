@@ -8,38 +8,44 @@ const Navbar = () => {
   const navLinks: navLinks = [
     {
       id: 1,
+      name: "home",
+      sectionId: "",
+      path: "/",
+    },
+    {
+      id: 2,
       name: "about",
       sectionId: "about",
       path: "#about",
     },
 
     {
-      id: 2,
+      id: 3,
       name: "vendor",
       sectionId: "vendor",
       path: "/vendor",
     },
     {
-      id: 3,
+      id: 4,
       name: "volunteers",
       sectionId: "volunteers",
       path: "/volunteers",
     },
 
     {
-      id: 4,
+      id: 5,
+      name: "tables",
+      sectionId: "table",
+      path: "/tables",
+    },
+    {
+      id: 6,
       name: "media",
       sectionId: "media",
       path: "/media",
     },
     {
-      id: 5,
-      name: "table",
-      sectionId: "table",
-      path: "/table",
-    },
-    {
-      id: 6,
+      id: 7,
       name: "FAQ",
       sectionId: "faq",
       path: "/#faq",
