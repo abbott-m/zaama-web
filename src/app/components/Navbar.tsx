@@ -11,18 +11,30 @@ const Navbar = () => {
       name: "about",
       path: "about",
     },
+
     {
       id: 2,
-      name: "store",
-      path: "store",
+      name: "vendor",
+      path: "vendor",
     },
     {
       id: 3,
-      name: "sponsors",
-      path: "sponsors",
+      name: "volunteers",
+      path: "volunteers",
     },
+
     {
       id: 4,
+      name: "media",
+      path: "media",
+    },
+    {
+      id: 5,
+      name: "table",
+      path: "table",
+    },
+    {
+      id: 6,
       name: "FAQ",
       path: "faq",
     },
@@ -48,11 +60,11 @@ const Navbar = () => {
         </svg>
       ) : (
         <ul
-          className={`gap-8 items-center select-none  ${
+          className={`fixed top-0 left-0 z-10 pt-24 bg-[#111111] w-screen h-screen gap-7 items-center select-none  ${
             isNavbarOpen ? "flex flex-col" : "hidden "
           }`}
         >
-          <li onClick={() => setIsNavbarOpen(false)}>
+          <li onClick={() => setIsNavbarOpen(false)} className="mb-7">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
