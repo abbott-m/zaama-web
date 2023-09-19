@@ -29,13 +29,13 @@ const Ticket = () => {
       perks: ["Standard Access", "Party Bands", "Cocktail Arena"],
     },
     {
-      color: "green",
+      color: "yellow",
       packageName: "VIP",
       price: "40",
       perks: ["VIP Access", "Party Bands", "Cocktail Arena"],
     },
     {
-      color: "yellow",
+      color: "green",
       packageName: "VVIP",
       price: "60",
       perks: ["VVIP Access", "Party Bands", "Cocktail Arena"],

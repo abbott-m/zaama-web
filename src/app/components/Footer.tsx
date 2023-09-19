@@ -11,6 +11,7 @@ import Twitter from "../../../public/SVG/twitter-logo.svg";
 import Instagram from "../../../public/SVG/instagram-logo.svg";
 import Youtube from "../../../public/SVG/youtube-logo.svg";
 import Tiktok from "../../../public/SVG/tiktok-logo.svg";
+import PrimaryButton from "./PrimaryButton";
 
 const blatant = localFont({
   src: "../blatant-font/OTF/Blatant.otf",
@@ -114,7 +115,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#161616]  flex flex-col  justify-center items-center px-4 py-10 gap-16   sm:flex-row  sm:items-start sm:px-28 sm:py-16 md:gap-24 lg:gap-28 selection:bg-zaama_red/50">
+    <footer className="bg-[#161616]  flex flex-col  justify-center items-center px-4 py-10 gap-16   sm:flex-row  sm:items-start sm:flex-wrap sm:px-28 sm:py-16  md:gap-24 lg:gap-28 selection:bg-zaama_red/50">
       <div className="text-center ">
         <Link href="/" className="mb-6 inline-block py-2 ">
           <ZaamaLogo className="w-32" />
@@ -166,13 +167,11 @@ const Footer = () => {
                   placeholder="Email address"
                   className=" w-64 h-10 text-sm outline-none bg-[#272727] rounded-md px-4 mb-3 "
                 />
-                <button
-                  type="submit"
-                  disabled={!emailAddress}
-                  className="h-10 w-64 block  bg-zaama_red rounded-md transition duration-100 enabled:hover:bg-[#b21717] disabled:bg-zaama_red/80"
-                >
-                  Subscribe
-                </button>
+                <div className="h-10 w-64">
+                  <PrimaryButton type="submit" disabled={!emailAddress}>
+                    Subscribe
+                  </PrimaryButton>
+                </div>
               </div>
             </form>
           )}

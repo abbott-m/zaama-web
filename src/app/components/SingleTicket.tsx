@@ -1,5 +1,6 @@
 import React from "react";
 import localFont from "next/font/local";
+import Image from "next/image";
 
 const blatant = localFont({
   src: "../blatant-font/OTF/Blatant.otf",
@@ -20,7 +21,7 @@ const SingleTicket = ({
 }: singleTicketProps) => {
   return (
     <div
-      className={`mx-auto w-72 h-96  px-2 py-4 flex flex-col justify-center items-center rounded-lg bg-ticket-1 bg-cover  transition duration-100 hover:scale-105  hover:text-gray-200 selection:bg-zaama_red/50 
+      className={`relative mx-auto w-72 h-96  px-2 py-4 flex flex-col justify-center items-center rounded-2xl bg-transparent  transition duration-100 hover:scale-105  hover:text-gray-200 selection:bg-zaama_red/50 
        ${
          color === "red"
            ? "hoverr:bg-zaama_red/60"
@@ -31,6 +32,18 @@ const SingleTicket = ({
       
       `}
     >
+      <Image
+        src={
+          color === "green"
+            ? "/images/ticket-1.svg"
+            : color === "red"
+            ? "/images/ticket-2.svg"
+            : "/images/ticket-3.svg"
+        }
+        alt="zaama ticket"
+        fill
+        className="-z-10"
+      />
       <p className={`${blatant.className} uppercase text-lg text-center mb-3`}>
         {packageName}
       </p>
@@ -49,9 +62,16 @@ const SingleTicket = ({
           </li>
         ))}
       </ul>
-
       <button
-        className={`${blatant.className}  tracking-widest rounded-sm text-sm w-44 h-10 outline-none font-semibold border border-gray-400  uppercase hover:bg-[#232323]/20 select-none `}
+        className={`${
+          blatant.className
+        }  tracking-widest rounded-sm text-sm w-44 h-10 outline-none font-semibold border   uppercase  select-none transition duration-150  ${
+          color === "red"
+            ? "border-zaama_red/50 hover:bg-zaama_red/10"
+            : color === "green"
+            ? "border-zaama_green/50 hover:bg-zaama_green/10"
+            : "border-zaama_yellow/50 hover:bg-zaama_yellow/10"
+        } `}
       >
         Get Ticket
       </button>

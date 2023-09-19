@@ -6,7 +6,7 @@ import handleScroll from "../lib/handleScroll";
 const Hero = () => {
   return (
     <section className="text-center  px-5 pt-10 select-none sm:px-10  md:px-20  ">
-      <div className="h-full w-full fixed top-0 left-0 bg-black/70 -z-[5]"></div>
+      <div className="h-full w-full fixed top-0 left-0 bg-black/50 -z-[5]"></div>
       <video
         autoPlay
         loop
