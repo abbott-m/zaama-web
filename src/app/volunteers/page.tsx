@@ -130,8 +130,8 @@ const Volunteers = () => {
   };
 
   return (
-    <section className=" py-8 px-5 bg-[#161616] flex justify-center items-center selection:bg-zaama_red/50">
-      <div className="mb-16 md:bg-[#4c4c4c]/20 md:px-16 md:py-14 md:rounded-2xl md:inline-block  md:mx-auto ">
+    <section className=" py-4 px-5 bg-[#161616] flex justify-center items-center md:py-8 selection:bg-zaama_red/50">
+      <div className="w-full mb-16 md:bg-[#4c4c4c]/20 md:px-16 md:py-14 md:rounded-2xl md:inline-block  md:mx-auto  md:w-auto">
         <h1
           data-aos="fade-down"
           className={`${blatantBold.className} text-xl text-zaama_yellow uppercase tracking-wide font-medium mb-5 text-center md:text-2xl `}
@@ -141,7 +141,7 @@ const Volunteers = () => {
 
         <form
           onSubmit={handleSubmit}
-          className="w-full pt-5 md:mx-auto md:block md:w-auto"
+          className="  w-full pt-5 md:mx-auto md:block md:w-auto"
         >
           <div className="flex flex-col gap-7 justify-center mb-7 md:mb-8 md:flex-row md:gap-6 lg:gap-10 lg:mb-8">
             <label className="w-full md:w-[350px]">
