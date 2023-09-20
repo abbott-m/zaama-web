@@ -115,7 +115,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#161616]  flex flex-col  justify-center items-center px-4 py-10 gap-16   sm:flex-row  sm:items-start sm:flex-wrap sm:px-28 sm:py-16  md:gap-24 lg:gap-28 selection:bg-zaama_red/50">
+    <footer className="bg-[#1c1c1c]  flex flex-col  justify-center items-center px-4 py-10 gap-16   sm:flex-row  sm:items-start sm:flex-wrap sm:px-28 sm:py-16  md:gap-24 lg:gap-28 selection:bg-zaama_red/50">
       <div className="text-center ">
         <Link href="/" className="mb-6 inline-block py-2 ">
           <ZaamaLogo className="w-32" />

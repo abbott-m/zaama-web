@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import localFont from "next/font/local";
 import InputField from "../components/InputField";
 import PrimaryButton from "../components/PrimaryButton";
+import ButtonLoader from "../../../public/SVG/loader.svg";
 
 const blatantBold = localFont({
   src: "../blatant-font/OTF/Blatant-Bold.otf",
@@ -14,6 +15,11 @@ const Media = () => {
     email: "",
     number_of_team: "",
   });
+  const [isMediaFormLoading, setIsMediaFormLoading] = useState(false);
+  const [response, setResponse] = useState({
+    type: "",
+    text: "",
+  });
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -21,10 +27,70 @@ const Media = () => {
     setMediaFields((prev) => ({ ...prev, [name]: value }));
   };
 
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    setIsMediaFormLoading(true);
+    let formData = new FormData();
+
+    formData.append("email", mediaFields.email);
+    formData.append("media_name", mediaFields.media_name);
+    formData.append("number_of_team", mediaFields.number_of_team);
+    formData.append(
+      "phone_number",
+      mediaFields.phone_number.replace(/\s/g, "")
+    );
+    fetch(
+      "https://script.google.com/macros/s/AKfycbwaxDrFiS99c9AKTVzg3mMFWu7iL3BjvXSZKq9sYN2MPOvh7XbFy7KnlvYJNmScsI-Gmw/exec",
+      {
+        method: "POST",
+        body: formData,
+      }
+    )
+      .then((res) => res.text())
+      .then((data) => {
+        // set button loading state to false
+        setIsMediaFormLoading(false);
+
+        // reset input fields to default
+        setMediaFields({
+          media_name: "",
+          phone_number: "",
+          email: "",
+          number_of_team: "",
+        });
+
+        setResponse({
+          type: "success",
+          text: data,
+        });
+        setTimeout(() => {
+          setResponse({
+            type: "",
+            text: "",
+          });
+        }, 4000);
+      })
+      .catch((error) => {
+        // set button loading state to false
+        setIsMediaFormLoading(false);
+        setResponse({
+          type: "fail",
+          text: "An error occurred",
+        });
+        setTimeout(() => {
+          setResponse({
+            type: "",
+            text: "",
+          });
+        }, 5000);
+      });
+  };
+
   return (
     // <section className="relative pt-16 pb-20 px-5  bg-zaama-code bg-cover bg-center bg-no-repeat md: selection:bg-zaama_red/50">
     //   <div className="absolute top-0 left-0 h-full w-full bg-black/50"></div>
-    <section className="relative pt-16 pb-20 px-5 bg-[#1a1a1a]   selection:bg-zaama_red/50">
+    <section className="relative pt-10 pb-20 px-5 bg-[#161616]   selection:bg-zaama_red/50">
       {/* <div className="absolute top-0 left-0 h-full w-full bg-black/50"></div> */}
       <div className="relative ">
         <h1
@@ -33,7 +99,11 @@ const Media = () => {
         >
           Register your media
         </h1>
-        <form className="w-full pt-5 md:mx-auto md:block md:w-auto">
+
+        <form
+          onSubmit={handleSubmit}
+          className="w-full pt-5 md:mx-auto md:block md:w-auto"
+        >
           <div className="flex flex-col gap-5 justify-center mb-7 md:mb-8 md:flex-row md:gap-6 lg:gap-8">
             <label className="w-full md:w-[350px]">
               <p className="text-white font-medium mb-3">Media Name</p>
@@ -78,7 +148,7 @@ const Media = () => {
               />
             </label>
           </div>
-          <div className="h-10 w-64 mx-auto my-10">
+          <div className="h-11 w-64 mx-auto my-10">
             <PrimaryButton
               type="submit"
               disabled={
@@ -88,7 +158,11 @@ const Media = () => {
                 !mediaFields.phone_number
               }
             >
-              Register
+              {isMediaFormLoading ? (
+                <ButtonLoader className="animate-spin mx-auto  " />
+              ) : (
+                "Register"
+              )}
             </PrimaryButton>
           </div>
         </form>

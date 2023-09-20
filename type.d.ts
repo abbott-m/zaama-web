@@ -16,3 +16,8 @@ type socialLinks = {
   icon: React.ReactNode;
   path: string;
 }[];
+interface IOptions {
+  id: number;
+  name: string;
+  value: string;
+}

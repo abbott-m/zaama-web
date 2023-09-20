@@ -15,7 +15,7 @@ const PrimaryButton = ({ disabled, children, type }: PrimaryButtonTypes) => {
     <button
       type={type}
       disabled={disabled}
-      className={`${blatantBold.className} tracking-wide w-full h-full block  bg-zaama_red rounded-md transition duration-100 enabled:hover:bg-[#b21717] disabled:bg-[#413939]`}
+      className={`${blatantBold.className} tracking-wide w-full h-full block  bg-zaama_red rounded-md transition duration-100 select-none enabled:hover:bg-[#b21717] disabled:bg-[#413939]`}
     >
       {children}
     </button>
