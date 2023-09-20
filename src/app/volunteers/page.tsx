@@ -59,8 +59,22 @@ const Volunteers = () => {
       "phone_number",
       volunteerFields.phone_number.replace(/\s/g, "")
     );
+    formData.append("category", volunteerFields.category);
+    formData.append("educational_level", volunteerFields.educational_level);
+    formData.append("age", volunteerFields.age);
+    formData.append("interest", volunteerFields.interest);
+    formData.append("favourite_genre", volunteerFields.favourite_genre);
+    formData.append(
+      "volunteer_payment_mode",
+      volunteerFields.volunteer_payment_mode
+    );
+    formData.append("health_status", volunteerFields.health_status);
+    formData.append("past_experience", volunteerFields.past_experience);
+    formData.append("expectation", volunteerFields.expectation);
+    formData.append("social_handle", volunteerFields.social_handle);
+
     fetch(
-      "https://script.google.com/macros/s/AKfycbwaxDrFiS99c9AKTVzg3mMFWu7iL3BjvXSZKq9sYN2MPOvh7XbFy7KnlvYJNmScsI-Gmw/exec",
+      "https://script.google.com/macros/s/AKfycbwREBq02Y7eIjHsru3Qg8PpLBh8XzXYEe56lbPMxxDp5NQUCAsEabTQZSTrQsMiCY8ohA/exec",
       {
         method: "POST",
         body: formData,
@@ -124,7 +138,6 @@ const Volunteers = () => {
         >
           Become a volunteer
         </h1>
-        <pre>{JSON.stringify(volunteerFields, null, 2)}</pre>
 
         <form
           onSubmit={handleSubmit}
