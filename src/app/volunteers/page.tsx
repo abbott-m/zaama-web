@@ -15,6 +15,7 @@ import {
   volunteerExperience,
 } from "@/app/lib/formData";
 import TextAreaField from "../components/TextAreaField";
+import ToastNotification from "../components/ToastNotification";
 
 const blatantBold = localFont({
   src: "../blatant-font/OTF/Blatant-Bold.otf",
@@ -74,7 +75,7 @@ const Volunteers = () => {
     formData.append("social_handle", volunteerFields.social_handle);
 
     fetch(
-      "https://script.google.com/macros/s/AKfycbwREBq02Y7eIjHsru3Qg8PpLBh8XzXYEe56lbPMxxDp5NQUCAsEabTQZSTrQsMiCY8ohA/exec",
+      "https://script.google.com/macros/s/AKfycbxN0nSk7Okb9U0uVK3y5InqcbBFPgY2ShbJho4OtgR3ovMkWYHn3QijZl47pSclFesHmw/exec",
       {
         method: "POST",
         body: formData,
@@ -111,14 +112,14 @@ const Volunteers = () => {
             type: "",
             text: "",
           });
-        }, 4000);
+        }, 5000);
       })
       .catch((error) => {
         // set button loading state to false
         setIsMediaFormLoading(false);
         setResponse({
           type: "fail",
-          text: "An error occurred",
+          text: "An error occurred. Try again",
         });
         setTimeout(() => {
           setResponse({
@@ -131,6 +132,12 @@ const Volunteers = () => {
 
   return (
     <section className=" py-4 px-5 bg-[#161616] flex justify-center items-center md:py-8 selection:bg-zaama_red/50">
+      {response.text &&
+        (response.type === "success" ? (
+          <ToastNotification type="success" text={response.text} />
+        ) : (
+          <ToastNotification type="error" text={response.text} />
+        ))}
       <div className="w-full mb-16 md:bg-[#4c4c4c]/20 md:px-16 md:py-14 md:rounded-2xl md:inline-block  md:mx-auto  md:w-auto">
         <h1
           data-aos="fade-down"

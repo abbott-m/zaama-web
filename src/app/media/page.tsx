@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import InputField from "../components/InputField";
 import PrimaryButton from "../components/PrimaryButton";
 import ButtonLoader from "../../../public/SVG/loader.svg";
+import ToastNotification from "../components/ToastNotification";
 
 const blatantBold = localFont({
   src: "../blatant-font/OTF/Blatant-Bold.otf",
@@ -69,14 +70,14 @@ const Media = () => {
             type: "",
             text: "",
           });
-        }, 4000);
+        }, 5000);
       })
       .catch((error) => {
         // set button loading state to false
         setIsMediaFormLoading(false);
         setResponse({
           type: "fail",
-          text: "An error occurred",
+          text: "An error occurred. Try again",
         });
         setTimeout(() => {
           setResponse({
@@ -89,6 +90,12 @@ const Media = () => {
 
   return (
     <section className=" py-4 px-5 bg-[#161616] flex justify-center items-center md:py-8 selection:bg-zaama_red/50">
+      {response.text &&
+        (response.type === "success" ? (
+          <ToastNotification type="success" text={response.text} />
+        ) : (
+          <ToastNotification type="error" text={response.text} />
+        ))}
       <div className=" w-full mb-16 md:bg-[#4c4c4c]/20 md:px-16 md:py-14 md:rounded-2xl md:inline-block  md:mx- md:w-auto ">
         <h1
           data-aos="fade-down"

@@ -12,48 +12,36 @@ const Navbar = () => {
       sectionId: "",
       path: "/",
     },
-    {
-      id: 2,
-      name: "about",
-      sectionId: "about",
-      path: "#about",
-    },
 
     {
-      id: 3,
+      id: 2,
       name: "vendor",
       sectionId: "vendor",
       path: "/vendor",
     },
     {
-      id: 4,
+      id: 3,
       name: "volunteers",
       sectionId: "volunteers",
       path: "/volunteers",
     },
 
     {
-      id: 5,
+      id: 4,
       name: "tables",
       sectionId: "table",
       path: "/tables",
     },
     {
-      id: 6,
+      id: 5,
       name: "media",
       sectionId: "media",
       path: "/media",
     },
-    {
-      id: 7,
-      name: "FAQ",
-      sectionId: "faq",
-      path: "/#faq",
-    },
   ];
 
   return (
-    <nav className=" w-full flex gap-3 justify-center items-center p-7 md:px-10 lg:px-20 ">
+    <nav className=" w-full flex gap-3 justify-center items-center p-2 md:p-1 md:px-10 lg:px-20 ">
       {!isNavbarOpen ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -72,7 +60,7 @@ const Navbar = () => {
         </svg>
       ) : (
         <ul
-          className={`fixed top-0 left-0 z-10 pt-24 bg-[#111111] w-screen h-screen gap-7 items-center select-none  ${
+          className={`fixed top-0 left-0 z-10 pt-16 bg-[#111111] w-screen h-screen gap-7 items-center select-none  ${
             isNavbarOpen ? "flex flex-col" : "hidden "
           }`}
         >

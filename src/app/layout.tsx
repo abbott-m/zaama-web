@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${syneMono.className}  bg-[#161616] text-gray-200 pt-3 max-w-[2200px] lg:mx-auto`}
+        className={`${syneMono.className}  bg-[#161616] text-gray-200 pt-3 max-w-[2200px] md:pt-1 lg:mx-auto`}
       >
         <CarouselLabel word="Zaama Disco: The Rave" />
 

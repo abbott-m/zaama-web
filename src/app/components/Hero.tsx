@@ -11,7 +11,7 @@ const Hero = () => {
         autoPlay
         loop
         muted
-        className=" h-full w-full absolute top-0 left-0 object-cover -z-10"
+        className=" h-5/6 w-full absolute top-0 left-0 object-cover -z-10 md:h-full"
       >
         <source src="/video/hero-bg.mp4" type="video/mp4" />
       </video>
