@@ -59,5 +59,8 @@ body {
   @apply mb-3 text-gray-300 text-sm;
 }
 .policy-subheading {
-  @apply font-semibold uppercase my-2;
+  @apply font-semibold uppercase mt-5 mb-2;
+}
+.policy-list {
+  @apply ml-2;
 }

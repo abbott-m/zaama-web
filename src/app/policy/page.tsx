@@ -1,5 +1,6 @@
 import React from "react";
 import localFont from "next/font/local";
+import Link from "next/link";
 
 const blatantBold = localFont({
   src: "../blatant-font/OTF/Blatant-Bold.otf",
@@ -9,7 +10,7 @@ const Policy = () => {
   return (
     <section className="py-10 px-5 md:px-16 ">
       <h2
-        className={`${blatantBold.className} text-xl text-zaama_yellow uppercase tracking-wide font-medium mb-6 text-center md:text-2xl `}
+        className={`${blatantBold.className} text-xl text-zaama_yellow uppercase tracking-wide font-medium mb-7 text-center md:text-2xl `}
       >
         TICKETS POLICY{" "}
       </h2>
@@ -397,6 +398,256 @@ const Policy = () => {
         available on the Event website, are also included herein by reference.
         In the event of any conflict, the terms on this page shall prevail.
       </p>
+
+      <h2
+        className={`${blatantBold.className} text-xl text-zaama_yellow uppercase tracking-wide font-medium my-8 text-center md:text-2xl `}
+      >
+        HEALTH AND SECURITY POLICIES
+      </h2>
+      <h3 className="policy-subheading">Health + Safety</h3>
+      <p className="policy-paragraph">
+        The event shall be presented in accordance with applicable public health
+        conditions as of the date of the event and which may change at any time
+        as determined by federal, state or local government agencies or
+        instrumentalities, artists or the promoter; such requirements may
+        include, without limitation, changes to capacity, attendance procedures
+        and attendance requirements, such as proof of vaccination and/or
+        negative COVID-19 test, and other protective measures such as requiring
+        attendees to wear face coverings. If any ticket holder does not comply
+        with any laws, mandates, health orders or directives, promoter or event
+        terms, conditions or rules, then the promoter or event operator may
+        refuse admission to the event or require the ticket holder to leave the
+        venue and such ticket holder will not be entitled to a refund.
+      </p>
+      <h3 className="policy-subheading">COVID-19 Warning</h3>
+      <p className="policy-paragraph">
+        COVID-19 is an extremely contagious disease that can lead to severe
+        illness and death. There is an inherent and elevated risk of exposure to
+        COVID-19 in any public place or place where people are present and there
+        is no guarantee, express or implied, that those attending the festival
+        will not be exposed to COVID-19.
+      </p>
+      <h3 className="policy-subheading">
+        Attendee Promise & Health Acknowledgement
+      </h3>
+      <p className="policy-paragraph">
+        All attendees agree to follow festival policies (including health and
+        safety policies) and posted instructions while at the festival.
+        According to the CDC, older adults and people of all ages with serious
+        underlying medical conditions may be at higher risk of death or severe
+        illness from COVID-19. All attendees should evaluate their risk in
+        determining whether to attend the festival. By entering the festival,
+        attendees voluntarily assume all risks related to exposure to COVID-19
+        and confirm that they will adhere to local quarantine mandates and the
+        CDC quarantine requirements, available{" "}
+        <Link href="https://www.cdc.gov/coronavirus/2019-ncov/your-health/quarantine-isolation.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fif-you-are-sick%2Fquarantine.html">
+          here
+        </Link>
+        . corporate@unilandfest.com
+      </p>
+      <h3 className="policy-subheading">Public Safety</h3>
+      <p className="policy-paragraph">
+        Security and safety are of utmost importance. We work hand in hand with
+        law enforcement and public safety agencies to help ensure the safety of
+        our events. Because of those very same concerns, we are unable to
+        publicly comment on detailed, specific actions which are taken. Some of
+        the security measures you will notice upon your arrival such as bag
+        checks, walk-through metal detectors(magnetometers) for all attendees,
+        staff and performers, and dog sweeps.
+      </p>
+      <p className="policy-paragraph">
+        Please note that we will implement searches upon festival entry. Please
+        arrive early and note the Prohibited Items list, these will be
+        confiscated / surrendered upon entry. Face coverings are recommended to
+        protect against desert dust. In the event of an emergency, information
+        may be relayed on the video screens, over the audio system, and/or
+        through mobile notifications. If you, or a friend, require medical
+        assistance please locate your nearest medical tent or alert festival
+        personnel.
+      </p>
+      <p className="policy-paragraph">
+        And remember: if you see something, say something. Flag down any
+        festival personnel if you notice something that doesn’t seem quite
+        right.
+      </p>
+      <h3 className="policy-subheading">Allowed In Venue</h3>
+      <p className="policy-paragraph">
+        Festival reserves the right, in its sole discretion, to amend the list
+        of acceptable or prohibited items at any time
+      </p>
+      <ul>
+        <li className="policy-paragraph policy-list">
+          • YES Backpacks (Medium) 18"x13"x8.5"
+        </li>
+        <li className="policy-paragraph policy-list">• YES Bandaids </li>
+        <li className="policy-paragraph policy-list">• YES Binoculars </li>
+        <li className="policy-paragraph policy-list">
+          • YES Breast Pump (Manual, Battery Operated, Or Powered Devices){" "}
+        </li>
+        <li className="policy-paragraph policy-list">
+          • YES Cameras (Non-Pro Digital, Disposable, Polaroid and Film){" "}
+        </li>
+        <li className="policy-paragraph policy-list">
+          • YES Chapstick and Lip Balm{" "}
+        </li>
+        <li className="policy-paragraph policy-list">• YES Dancing Shoes </li>
+        <li className="policy-paragraph policy-list">• YES Ear Plugs </li>
+        <li className="policy-paragraph policy-list">• YES Eye Drops </li>
+        <li className="policy-paragraph policy-list">• YES Face Masks </li>
+        <li className="policy-paragraph policy-list">
+          • YES Fanny Packs and Hip Bags{" "}
+        </li>
+        <li className="policy-paragraph policy-list">• YES GoPros </li>
+        <li className="policy-paragraph policy-list">
+          • YES Gum (sealed packs){" "}
+        </li>
+        <li className="policy-paragraph policy-list">• YES Hand Sanitizer </li>
+        <li className="policy-paragraph policy-list">• YES Hats </li>
+        <li className="policy-paragraph policy-list">
+          • YES Hydration packs (Empty){" "}
+        </li>
+        <li className="policy-paragraph policy-list">• YES Inhalers </li>
+        <li className="policy-paragraph policy-list">• YES Lighters </li>
+        <li className="policy-paragraph policy-list">• YES Makeup </li>
+        <li className="policy-paragraph policy-list">
+          • YES Mobile Phone Chargers{" "}
+        </li>
+        <li className="policy-paragraph policy-list">• YES Parasols </li>
+        <li className="policy-paragraph policy-list">
+          • YES Plastic Water Bottles (Empty and Reusable){" "}
+        </li>
+        <li className="policy-paragraph policy-list">
+          • YES Prescription Medication (Name On Medication Must Correlate With
+          Person’s Drivers License or other appropriate state identification){" "}
+        </li>
+        <li className="policy-paragraph policy-list">
+          {" "}
+          • YES Purses and Handbags (no larger than 12”x6”x12”)
+        </li>
+        <li className="policy-paragraph policy-list">
+          {" "}
+          • YES Service Animals (See ADA Page)
+        </li>
+        <li className="policy-paragraph policy-list">
+          • YES Stored Breastmilk or Formula{" "}
+        </li>
+        <li className="policy-paragraph policy-list">
+          • YES Strollers (for baby/toddler only){" "}
+        </li>
+        <li className="policy-paragraph policy-list">
+          • YES Sunblock (Non-Aerosol){" "}
+        </li>
+        <li className="policy-paragraph policy-list">• YES Sunglasses </li>
+        <li className="policy-paragraph policy-list">
+          • YES Towels (small-medium size){" "}
+        </li>
+        <li className="policy-paragraph policy-list">• YES Water Misters </li>
+      </ul>
+      <h3 className="policy-subheading">Not Allowed In Venue</h3>
+      <p className="policy-paragraph">
+        In addition to the list below, any item deemed inappropriate by festival
+        personnel will not be allowed into the venue/festival and must be either
+        returned to your vehicle or disposed (as appropriate).
+      </p>
+      <ul>
+        <li className="policy-paragraph policy-list">
+          • NO Advanced First Aid Kits* (including, but not limited to,
+          hemostatic gauze or powder, tourniquets, compression bandages,
+          decompression needles, or chest seals){" "}
+        </li>
+        <li className="policy-paragraph policy-list">
+          • NO Aerosol Products/Aerosol Cans{" "}
+        </li>
+        <li className="policy-paragraph policy-list">• NO Air Horns </li>
+        <li className="policy-paragraph policy-list">• NO Animals </li>
+        <li className="policy-paragraph policy-list">
+          • NO Audio Recording Devices{" "}
+        </li>
+        <li className="policy-paragraph policy-list">
+          • NO Bicycles, Skates, Scooters or Skateboards{" "}
+        </li>
+        <li className="policy-paragraph policy-list">• NO Blankets </li>
+        <li className="policy-paragraph policy-list">• NO Body Armor </li>
+        <li className="policy-paragraph policy-list">
+          • NO Chains or Chain Wallets{" "}
+        </li>
+        <li className="policy-paragraph policy-list">• NO Chairs </li>
+        <li className="policy-paragraph policy-list">• NO Coolers </li>
+        <li className="policy-paragraph policy-list">
+          • NO Detachable Lens Cameras{" "}
+        </li>
+        <li className="policy-paragraph policy-list">
+          • NO Discriminative or Appropriative Items{" "}
+        </li>
+        <li className="policy-paragraph policy-list">
+          • NO Drones or Remote Control Aircraft, Cars or Toys{" "}
+        </li>
+        <li className="policy-paragraph policy-list">
+          • NO Fireworks, Explosives or Road Flares{" "}
+        </li>
+        <li className="policy-paragraph policy-list">
+          • NO Flyers, Samples, Giveaways or Promotional Items{" "}
+        </li>
+        <li className="policy-paragraph policy-list">
+          • NO Glass Bottles or Containers{" "}
+        </li>
+        <li className="policy-paragraph policy-list">
+          • NO Glow Sticks, Light Sticks, or LED Gloves{" "}
+        </li>
+        <li className="policy-paragraph policy-list">• NO Hammocks </li>
+        <li className="policy-paragraph policy-list">• NO Hula Hoops </li>
+        <li className="policy-paragraph policy-list">
+          • NO Hoverboards or Segways{" "}
+        </li>
+        <li className="policy-paragraph policy-list">
+          • NO Illegal Drugs or Drug Paraphernalia{" "}
+        </li>
+        <li className="policy-paragraph policy-list">• NO Instruments </li>
+        <li className="policy-paragraph policy-list">• NO IV Bags </li>
+        <li className="policy-paragraph policy-list">
+          • NO Kites or Sky Lanterns{" "}
+        </li>
+        <li className="policy-paragraph policy-list">• NO Laser Pointers </li>
+        <li className="policy-paragraph policy-list">
+          • NO Markers or Paint Pens{" "}
+        </li>
+        <li className="policy-paragraph policy-list">• NO Massagers </li>
+        <li className="policy-paragraph policy-list">
+          • NO Metal Water Bottles or Containers{" "}
+        </li>
+        <li className="policy-paragraph policy-list">
+          • NO Outside Food or Beverage{" "}
+        </li>
+        <li className="policy-paragraph policy-list">
+          • NO Non-Personal Protective Equipment (e.g., costume){" "}
+        </li>
+        <li className="policy-paragraph policy-list">
+          • NO Selfie Sticks, Tripods or Narcissists{" "}
+        </li>
+        <li className="policy-paragraph policy-list">• NO Smelling Salts* </li>
+        <li className="policy-paragraph policy-list">• NO Stuffed Animals </li>
+        <li className="policy-paragraph policy-list">
+          • NO Tents or Sleeping Bags{" "}
+        </li>
+        <li className="policy-paragraph policy-list">• NO Tourniquets* </li>
+        <li className="policy-paragraph policy-list">
+          • NO Toy Guns, Water Guns or Sling Shots{" "}
+        </li>
+        <li className="policy-paragraph policy-list">• NO Totems </li>
+        <li className="policy-paragraph policy-list">• NO Umbrellas </li>
+        <li className="policy-paragraph policy-list">• NO Video Cameras </li>
+        <li className="policy-paragraph policy-list">• NO Wagons </li>
+        <li className="policy-paragraph policy-list">• NO Walkie Talkies </li>
+        <li className="policy-paragraph policy-list">
+          • NO Weapons (Guns, Knives, Ammo, Pepper Spray, Mace, etc. including
+          off-duty law enforcement or concealed carry permits){" "}
+        </li>
+      </ul>
+      <p className="policy-paragraph">
+        * In the event of a medical emergency, please go to a medical tent or
+        find a festival staff member with a radio.
+      </p>
+      <p>&copy; 2023</p>
     </section>
   );
 };
