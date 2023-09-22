@@ -152,3 +152,64 @@ export const volunteerExperience: IOptions[] = [
     value: "Very Bad",
   },
 ];
+export const vendorRegistration: IOptions[] = [
+  {
+    id: 1,
+    name: "Yes",
+    value: "Yes",
+  },
+  {
+    id: 2,
+    name: "No",
+    value: "No",
+  },
+];
+export const vendorBoothSize: IOptions[] = [
+  {
+    id: 1,
+    name: "10 x 10",
+    value: "10 x 10",
+  },
+  {
+    id: 2,
+    name: "20 x 20",
+    value: "20 x 20",
+  },
+  {
+    id: 3,
+    name: "40 x 40",
+    value: "40 x 40",
+  },
+];
+export const vendorCategory: IOptions[] = [
+  {
+    id: 1,
+    name: "Foods",
+    value: "Foods",
+  },
+  {
+    id: 2,
+    name: "Drinks",
+    value: "Drinks",
+  },
+  {
+    id: 3,
+    name: "Fashion",
+    value: "Fashion",
+  },
+  {
+    id: 4,
+    name: "Arts",
+    value: "Arts",
+  },
+  {
+    id: 5,
+    name: "Tech",
+    value: "Tech",
+  },
+  {
+    id: 6,
+    name: "Infused",
+    value: "Infused",
+  },
+];
