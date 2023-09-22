@@ -15,9 +15,9 @@ const Navbar = () => {
 
     {
       id: 2,
-      name: "vendor",
-      sectionId: "vendor",
-      path: "/vendor",
+      name: "vendors",
+      sectionId: "vendors",
+      path: "/vendors",
     },
     {
       id: 3,

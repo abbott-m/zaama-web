@@ -54,3 +54,10 @@ body {
     -moz-appearance: textfield;
   }
 }
+
+.policy-paragraph {
+  @apply mb-3 text-gray-300 text-sm;
+}
+.policy-subheading {
+  @apply font-semibold uppercase my-2;
+}
