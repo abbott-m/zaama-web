@@ -222,6 +222,7 @@ const Footer = () => {
           </li>{" "}
         </ul>
       </div>
+
       <div className="text-center ">
         <p
           className={`${blatant.className} font-medium text-lg uppercase mb-4 tracking-wide whitespace-nowrap`}
@@ -242,6 +243,18 @@ const Footer = () => {
             </li>
           ))}
         </ul>
+      </div>
+      <div className="text-center max-w-[180px]">
+        <p
+          className={`${blatant.className} font-medium text-lg uppercase mb-4 tracking-wide whitespace-nowrap`}
+        >
+          Support
+        </p>
+        <div className="text-gray-400">
+          <p className="text-sm mb-3">
+            For more enquiry or information: info@zaamadisco.com
+          </p>
+        </div>
       </div>
     </footer>
   );
