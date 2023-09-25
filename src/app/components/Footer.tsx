@@ -204,13 +204,12 @@ const Footer = () => {
         <ul>
           {" "}
           {quickLinks.map((item) => (
-            <li key={item.id}>
-              <Link
-                href={item.path}
-                className="mb-3 inline-block text-gray-400 cursor-pointer hover:text-[#d3d3d3] p-[2px]"
-              >
-                {item.name}
-              </Link>
+            <li
+              key={item.id}
+              onClick={() => router.push(item.path)}
+              className="mb-3 text-gray-400 cursor-pointer hover:text-[#d3d3d3] p-[2px]"
+            >
+              {item.name}
             </li>
           ))}
         </ul>
