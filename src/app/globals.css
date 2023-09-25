@@ -56,11 +56,11 @@ body {
 }
 
 .policy-paragraph {
-  @apply mb-3 text-gray-300 text-sm;
+  @apply mb-3 text-gray-300 text-sm selection:bg-zaama_red/50;
 }
 .policy-subheading {
-  @apply font-semibold uppercase mt-5 mb-2;
+  @apply font-semibold uppercase mt-5 mb-2  selection:bg-zaama_red/50;
 }
 .policy-list {
-  @apply ml-2;
+  @apply ml-2  selection:bg-zaama_red/50;
 }

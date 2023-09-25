@@ -10,14 +10,18 @@ import {
   vendorCategory,
   vendorBoothSize,
 } from "@/app/lib/formData";
-import TextAreaField from "../../components/TextAreaField";
 import ToastNotification from "../../components/ToastNotification";
 import CustomCheckbox from "@/app/components/form/CustomCheckbox";
+import { useRouter } from "next/navigation";
 
+const blatantRegular = localFont({
+  src: "../../blatant-font/OTF/Blatant.otf",
+});
 const blatantBold = localFont({
   src: "../../blatant-font/OTF/Blatant-Bold.otf",
 });
 const VendorForm = () => {
+  const router = useRouter();
   const [vendorFields, setVendorFields] = useState({
     primary_first_name: "",
     primary_last_name: "",
@@ -44,6 +48,7 @@ const VendorForm = () => {
     type: "",
     text: "",
   });
+
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -86,9 +91,10 @@ const VendorForm = () => {
     formData.append("category", vendorFields.category);
     formData.append("other_category", vendorFields.other_category);
     formData.append("booth_size", vendorFields.booth_size);
+    formData.append("terms_accepted", isTermChecked ? "yes" : "no");
 
     fetch(
-      "https://script.google.com/macros/s/AKfycby3GkSX9W4n2hhE6cMB_nWHGKhrVmPzEPgrVCMCdYgQsRq3cc0wqEKZuR2HSfBtgzOW4A/exec",
+      "https://script.google.com/macros/s/AKfycbweg39cc_xO7baeDfhfmdYLpkVumWR4kL0hWS08eleR9XeZaOaAoYFUgwp-7vnhdVVpGA/exec",
       {
         method: "POST",
         body: formData,
@@ -162,11 +168,26 @@ const VendorForm = () => {
         >
           Vendor Application Form
         </h1>
-
+        <p className="text-xs text-gray-200 leading-relaxed md:w-[650px]">
+          Please ensure you have reviewed our{" "}
+          <span
+            onClick={() => router.push("/vendors")}
+            className="underline underline-offset-2 cursor-pointer hover:text-gray-300"
+          >
+            policy
+          </span>{" "}
+          before proceeding with the vendor application. Your compliance with
+          our guidelines is appreciated.
+        </p>
         <form
           onSubmit={handleSubmit}
           className="  w-full pt-5 md:mx-auto md:block md:w-auto"
         >
+          <p
+            className={`${blatantRegular.className} text-gray-200 text-lg mb-7 text-center`}
+          >
+            Primary Contact Details
+          </p>
           <div className="flex flex-col gap-7 justify-center mb-7 md:mb-8 md:flex-row md:gap-6 lg:gap-10 lg:mb-8">
             <label className="w-full md:w-[350px]">
               <p className="text-gray-300 font-medium mb-3"> First Name</p>
@@ -222,6 +243,11 @@ const VendorForm = () => {
               />
             </label>
           </div>
+          <p
+            className={`${blatantRegular.className} text-gray-200 text-lg mb-7 text-center`}
+          >
+            Secondary Contact Details
+          </p>
           <div className="flex flex-col gap-7 justify-center mb-7 md:mb-8 md:flex-row md:gap-6 lg:gap-10 lg:mb-8">
             <label className="w-full md:w-[350px]">
               <p className="text-gray-300 font-medium mb-3"> First Name</p>
@@ -277,7 +303,11 @@ const VendorForm = () => {
               />
             </label>
           </div>
-
+          <p
+            className={`${blatantRegular.className} text-gray-200 text-lg mb-7 text-center`}
+          >
+            Other Details
+          </p>
           <div className="flex flex-col gap-7 justify-center mb-7 md:flex-row md:gap-6 lg:gap-10 lg:mb-8">
             <label className="w-full md:w-[350px]">
               <p className="text-gray-300 font-medium mb-3 capitalize">
@@ -383,13 +413,16 @@ const VendorForm = () => {
               />
             </div>
           </div>
-          <div className="w-full flex gap-2 items-start text-gray-300">
+          <div className="w-full flex gap-3 md:items-center text-gray-300 ">
             <CustomCheckbox
               name="Terms"
               handleInputChange={() => setIsTermChecked(!isTermChecked)}
               checked={isTermChecked}
             />
-            <span className="text-sm">
+            <span
+              onClick={() => setIsTermChecked(!isTermChecked)}
+              className="text-sm w-full md:inline-block md:w-[650px]"
+            >
               By submitting this document, I affirm and agree that I have read
               and understood the Uniland fest Vendor Terms and Condition and
               agree to abide by them
