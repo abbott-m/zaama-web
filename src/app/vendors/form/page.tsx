@@ -12,6 +12,7 @@ import {
 } from "@/app/lib/formData";
 import TextAreaField from "../../components/TextAreaField";
 import ToastNotification from "../../components/ToastNotification";
+import CustomCheckbox from "@/app/components/form/CustomCheckbox";
 
 const blatantBold = localFont({
   src: "../../blatant-font/OTF/Blatant-Bold.otf",
@@ -36,6 +37,7 @@ const VendorForm = () => {
     other_category: "",
     booth_size: "",
   });
+  const [isTermChecked, setIsTermChecked] = useState(false);
 
   const [isMediaFormLoading, setIsMediaFormLoading] = useState(false);
   const [response, setResponse] = useState({
@@ -381,11 +383,24 @@ const VendorForm = () => {
               />
             </div>
           </div>
-
+          <div className="w-full flex gap-2 items-start text-gray-300">
+            <CustomCheckbox
+              name="Terms"
+              handleInputChange={() => setIsTermChecked(!isTermChecked)}
+              checked={isTermChecked}
+            />
+            <span className="text-sm">
+              By submitting this document, I affirm and agree that I have read
+              and understood the Uniland fest Vendor Terms and Condition and
+              agree to abide by them
+            </span>
+          </div>
+          {/* {JSON.stringify(isTermChecked)} */}
           <div className="h-11 w-64 mx-auto mt-16">
             <PrimaryButton
               type="submit"
               disabled={
+                !isTermChecked ||
                 !vendorFields.primary_country ||
                 !vendorFields.primary_email ||
                 !vendorFields.primary_first_name ||

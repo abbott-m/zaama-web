@@ -38,6 +38,12 @@ const Navbar = () => {
       sectionId: "media",
       path: "/media",
     },
+    {
+      id: 6,
+      name: "policy",
+      sectionId: "policy",
+      path: "/policy",
+    },
   ];
 
   return (
