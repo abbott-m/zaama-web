@@ -9,14 +9,16 @@ const blatant = localFont({
 type singleTicketProps = {
   color: string;
   packageName: string;
-  price: string;
+  dollar_price: string;
+  cedi_price: string;
   perks: string[];
 };
 
 const SingleTicket = ({
   color,
   packageName,
-  price,
+  dollar_price,
+  cedi_price,
   perks,
 }: singleTicketProps) => {
   return (
@@ -48,10 +50,10 @@ const SingleTicket = ({
         {packageName}
       </p>
       <p
-        className={`${blatant.className} text-center text-4xl mb-5 md:text-5xl`}
+        className={`${blatant.className} text-center text-2xl mb-5 md:text-4xl`}
       >
-        <span className="text-3xl">$</span>
-        {price}
+        <span className="text-xl">$ </span>
+        {dollar_price} /<span className="text-xl"> &#8373; </span> {cedi_price}
       </p>
 
       <ul className=" text-sm mb-5 selection:bg-gray-200">

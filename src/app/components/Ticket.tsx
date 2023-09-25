@@ -19,25 +19,29 @@ const Ticket = () => {
     {
       color: "yellow",
       packageName: "regular",
-      price: "10",
+      dollar_price: "10",
+      cedi_price: "116",
       perks: ["Standard Access", "Party Bands", "Cocktail Arena"],
     },
     {
       color: "red",
       packageName: "standard",
-      price: "20",
+      dollar_price: "20",
+      cedi_price: "231",
       perks: ["Standard Access", "Party Bands", "Cocktail Arena"],
     },
     {
       color: "yellow",
       packageName: "VIP",
-      price: "40",
+      dollar_price: "40",
+      cedi_price: "462",
       perks: ["VIP Access", "Party Bands", "Cocktail Arena"],
     },
     {
       color: "green",
       packageName: "VVIP",
-      price: "60",
+      dollar_price: "60",
+      cedi_price: "692",
       perks: ["VVIP Access", "Party Bands", "Cocktail Arena"],
     },
   ];
@@ -77,7 +81,8 @@ const Ticket = () => {
                   key={index}
                   color={item.color}
                   packageName={item.packageName}
-                  price={item.price}
+                  dollar_price={item.dollar_price}
+                  cedi_price={item.cedi_price}
                   perks={item.perks}
                 />
               </SwiperSlide>
@@ -103,7 +108,8 @@ const Ticket = () => {
                   key={index}
                   color={item.color}
                   packageName={item.packageName}
-                  price={item.price}
+                  dollar_price={item.dollar_price}
+                  cedi_price={item.dollar_price}
                   perks={item.perks}
                 />
               </SwiperSlide>
@@ -131,7 +137,8 @@ const Ticket = () => {
                   key={index}
                   color={item.color}
                   packageName={item.packageName}
-                  price={item.price}
+                  dollar_price={item.dollar_price}
+                  cedi_price={item.cedi_price}
                   perks={item.perks}
                 />
               </SwiperSlide>
