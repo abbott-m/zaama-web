@@ -64,6 +64,23 @@ const Footer = () => {
       path: "https://youtube.com",
     },
   ];
+  const quickLinks: quickLinks = [
+    {
+      id: 1,
+      name: "About Zaama",
+      path: "/#about",
+    },
+    {
+      id: 2,
+      name: "Tickets",
+      path: "/#tickets",
+    },
+    {
+      id: 3,
+      name: "Store",
+      path: "/#store",
+    },
+  ];
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -186,40 +203,16 @@ const Footer = () => {
         </p>
         <ul>
           {" "}
-          <li
-            onClick={(e) =>
-              handleScroll({
-                sectionId: "about",
-                behavior: "instant",
-              })
-            }
-            className="mb-3 text-gray-400 cursor-pointer hover:text-[#d3d3d3] p-[2px]"
-          >
-            {" "}
-            About Zaama
-          </li>{" "}
-          <li
-            onClick={(e) =>
-              handleScroll({
-                sectionId: "tickets",
-                behavior: "instant",
-              })
-            }
-            className="mb-3 text-gray-400 cursor-pointer hover:text-[#d3d3d3] p-[2px]"
-          >
-            Tickets
-          </li>
-          <li
-            onClick={(e) =>
-              handleScroll({
-                sectionId: "store",
-                behavior: "instant",
-              })
-            }
-            className="mb-3 text-gray-400 cursor-pointer hover:text-[#d3d3d3] p-[2px]"
-          >
-            Store
-          </li>{" "}
+          {quickLinks.map((item) => (
+            <li key={item.id}>
+              <Link
+                href={item.path}
+                className="mb-3 inline-block text-gray-400 cursor-pointer hover:text-[#d3d3d3] p-[2px]"
+              >
+                {item.name}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
 
@@ -236,7 +229,7 @@ const Footer = () => {
                 href={item.path}
                 target="_blank"
                 rel="noopener"
-                className="bg-[#3a3a3a] w-10 h-10  rounded-full inline-flex justify-center items-center transition duration-150 hover:bg-[#2e2e2e]"
+                className="bg-[#3a3a3a] w-10 h-10  rounded-full shadow-sm shadow-white/30 inline-flex justify-center items-center transition duration-150 hover:bg-[#2e2e2e]"
               >
                 {item.icon}
               </Link>
@@ -251,8 +244,9 @@ const Footer = () => {
           Support
         </p>
         <div className="text-gray-400">
-          <p className="text-sm mb-3">
-            For more enquiry or information: info@zaamadisco.com
+          <p className="text-sm mb-3 ">
+            For more enquiry or information:{" "}
+            <span className="text-gray-300">info@zaamadisco.com </span>
           </p>
         </div>
       </div>

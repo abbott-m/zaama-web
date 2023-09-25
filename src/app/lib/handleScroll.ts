@@ -1,9 +1,8 @@
 type scrollHandler = {
   sectionId: string;
-  behavior: "smooth" | "auto" | "instant";
   onClick?: () => void;
 };
-const handleScroll = ({ sectionId, behavior, onClick }: scrollHandler) => {
+const handleScroll = ({ sectionId, onClick }: scrollHandler) => {
   // get the element by id and use scrollIntoView
   const element = document.getElementById(sectionId);
 
@@ -11,7 +10,7 @@ const handleScroll = ({ sectionId, behavior, onClick }: scrollHandler) => {
   window.scrollTo({
     top: Number(element?.offsetTop),
     left: 0,
-    behavior: behavior,
+    behavior: "instant",
   });
 
   // do anything alongside the scrolling

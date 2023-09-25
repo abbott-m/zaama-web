@@ -27,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body
         className={`${syneMono.className}  bg-[#161616] text-gray-200 pt-3 max-w-[2200px] md:pt-1 lg:mx-auto`}
       >

@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import handleScroll from "../lib/handleScroll";
+import Link from "next/link";
 
 const Navbar = () => {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
@@ -89,12 +90,18 @@ const Navbar = () => {
 
           {navLinks.map((item) => (
             <li key={item.id} onClick={() => setIsNavbarOpen(false)}>
-              <a
+              {/* <a
                 href={item.path}
                 className="p-1 uppercase inline-block transition duration-150 hover:text-zaama_green"
               >
                 {item.name}
-              </a>
+              </a> */}
+              <Link
+                href={item.path}
+                className="p-1 uppercase inline-block transition duration-150 hover:text-zaama_green"
+              >
+                {item.name}
+              </Link>
             </li>
           ))}
 

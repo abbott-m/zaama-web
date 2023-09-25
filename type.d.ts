@@ -16,6 +16,11 @@ type socialLinks = {
   icon: React.ReactNode;
   path: string;
 }[];
+type quickLinks = {
+  id: number;
+  name: string;
+  path: string;
+}[];
 interface IOptions {
   id: number;
   name: string;
