@@ -8,12 +8,8 @@ import Store from "./components/Store";
 import Ticket from "./components/Ticket";
 import CarouselLabel from "./components/CarouselLabel";
 import Image from "next/image";
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
 import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
-// ..
-
+import "aos/dist/aos.css";
 const Home = () => {
   const [loading, setLoading] = useState(true);
 

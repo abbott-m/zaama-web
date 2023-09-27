@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import handleScroll from "../lib/handleScroll";
 import Link from "next/link";
 
 const Navbar = () => {
@@ -48,7 +47,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className=" w-full flex gap-3 justify-center items-center p-2 md:p-1 md:px-10 lg:px-20 ">
+    <nav className="absolute z-10 w-full flex gap-3 justify-center items-center p-2 md:p-1 md:px-10 lg:px-20 ">
       {!isNavbarOpen ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"
