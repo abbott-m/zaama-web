@@ -8,7 +8,7 @@ const blatantBold = localFont({
 
 const Tables = () => {
   return (
-    <section className=" py-4 px-5 bg-[#161616] flex justify-center items-center md:py-8 selection:bg-zaama_red/50">
+    <section className=" pt-20 pb-4 px-5 bg-[#161616] flex justify-center items-center md:px-8 md:pb-8  selection:bg-zaama_red/50">
       <div className=" w-full mb-16 md:bg-[#4c4c4c]/20 md:px-16 md:py-14 md:rounded-2xl md:inline-block   md:w-auto ">
         <h1
           data-aos="fade-down"

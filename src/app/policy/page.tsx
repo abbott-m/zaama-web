@@ -8,7 +8,7 @@ const blatantBold = localFont({
 
 const Policy = () => {
   return (
-    <section className="py-10 px-5 md:px-16 ">
+    <section className="py-16 px-5 md:px-16 ">
       <h2
         className={`${blatantBold.className} text-xl text-zaama_yellow uppercase tracking-wide font-medium mb-7 text-center md:text-2xl `}
       >
