@@ -1,6 +1,8 @@
 import React from "react";
 import localFont from "next/font/local";
 import Image from "next/image";
+import { Router } from "next/router";
+import { useRouter } from "next/navigation";
 
 const blatant = localFont({
   src: "../blatant-font/OTF/Blatant.otf",
@@ -21,6 +23,7 @@ const SingleTicket = ({
   cedi_price,
   perks,
 }: singleTicketProps) => {
+  const router = useRouter();
   return (
     <div
       className={`relative mx-auto w-72 h-96  px-2 py-4 flex flex-col justify-center items-center rounded-2xl bg-transparent  transition duration-100 hover:scale-105  hover:text-gray-200 selection:bg-zaama_red/50 
@@ -65,6 +68,12 @@ const SingleTicket = ({
         ))}
       </ul>
       <button
+        onClick={() =>
+          window.open(
+            "https://vsprocessorpro.com/ev/BuyTicket?Id=1601&p=g&comid=1255",
+            "_blank"
+          )
+        }
         className={`${
           blatant.className
         }  tracking-widest rounded-sm text-sm w-44 h-10 outline-none font-semibold border   uppercase  select-none transition duration-150  ${

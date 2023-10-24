@@ -18,31 +18,35 @@ const Ticket = () => {
   const ticketData = [
     {
       color: "yellow",
-      packageName: "regular",
+      packageName: "general access",
       dollar_price: "10",
-      cedi_price: "116",
-      perks: ["Standard Access", "Party Bands", "Cocktail Arena"],
+      cedi_price: "100",
+
+      perks: [
+        "Access to festival",
+        "Bars and Merch",
+        "Cocktail Arena",
+        "Drinks ",
+      ],
     },
     {
       color: "red",
       packageName: "standard",
       dollar_price: "20",
-      cedi_price: "231",
-      perks: ["Standard Access", "Party Bands", "Cocktail Arena"],
+      cedi_price: "200",
+      perks: [
+        // " UNRESTRICTED ACESS TO THE FRONT STAGE Unres",
+        // "Water and wristband",
+        // "Standard access",
+        // "Cocktail Arena",
+      ],
     },
     {
       color: "yellow",
       packageName: "VIP",
       dollar_price: "40",
-      cedi_price: "462",
+      cedi_price: "300",
       perks: ["VIP Access", "Party Bands", "Cocktail Arena"],
-    },
-    {
-      color: "green",
-      packageName: "VVIP",
-      dollar_price: "60",
-      cedi_price: "692",
-      perks: ["VVIP Access", "Party Bands", "Cocktail Arena"],
     },
   ];
 
