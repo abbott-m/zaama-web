@@ -7,6 +7,9 @@ const blatantBold = localFont({
 });
 
 const Store = () => {
+  const scrollToBottom = () => {
+    window.scrollTo(0, document.body.scrollHeight);
+  };
   return (
     <section
       id="store"
@@ -33,7 +36,10 @@ const Store = () => {
           data-aos="fade-up"
           className=" text-gray-800 flex gap-5 flex-col items-center justify-center sm:flex-row md:justify-start select-none "
         >
-          <button className="bg-gray-100 inline-flex  py-2 px-5 rounded-lg items-center w-48 hover:bg-gray-200 outline-none">
+          <button
+            onClick={scrollToBottom}
+            className="bg-gray-100 inline-flex  py-2 px-5 rounded-lg items-center w-48 hover:bg-gray-200 outline-none"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -51,7 +57,10 @@ const Store = () => {
               </span>
             </span>
           </button>
-          <button className="bg-gray-100 inline-flex font-semibold py-2 px-5 rounded-lg items-center w-48 hover:bg-gray-200 outline-none">
+          <button
+            onClick={scrollToBottom}
+            className="bg-gray-100 inline-flex font-semibold py-2 px-5 rounded-lg items-center w-48 hover:bg-gray-200 outline-none"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
