@@ -17,7 +17,7 @@ const blatantBold = localFont({
   src: "../blatant-font/OTF/Blatant-Bold.otf",
 });
 
-export const SingleTable = ({
+ const SingleTable = ({
   color,
   packageName,
   cedi_price,
