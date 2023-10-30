@@ -34,7 +34,7 @@ const Vendors = () => {
         <p className="policy-subheading">Beverages</p>
         <p className="policy-paragraph ">
           ZaamaDisco maintains the exclusive right to all beverage sales and
-          distribution at the zaama Disco Unless previously authorized, no
+          distribution at the Zaama Disco Unless previously authorized, no
           vendor or sponsor may sell or provide samples of alcohol, carbonated
           soft drinks, bottled water, iced tea or bottled fruit juices. This
           policy will be strictly enforced and will result in termination.
@@ -90,11 +90,11 @@ const Vendors = () => {
         <p className="policy-subheading"> Merchandise And Product</p>
         <ul>
           <li className="policy-paragraph policy-list">
-            ⁃ Vendors may only sell what the Uniland festival Limited has
-            approved in advance during the registration process. Offensive
-            materials (ie: Ethnically or racially offensive) may not be sold or
-            displayed at the uniland fest. Failure to comply with this policy
-            will result in termination from the Uniland fest team.
+            ⁃ Vendors may only sell what Zaama Disco has approved in advance
+            during the registration process. Offensive materials (ie: Ethnically
+            or racially offensive) may not be sold or displayed at the Zaama
+            Disco. Failure to comply with this policy will result in termination
+            from the Zaama Disco team.
           </li>
           <li className="policy-paragraph policy-list">
             ⁃ All merchandise / product and signage must be contained within, or
@@ -102,11 +102,11 @@ const Vendors = () => {
           </li>
           <li className="policy-paragraph policy-list">
             ⁃ A vendor’s merchandise / product shall be reviewed and evaluated
-            according to the goals and guidelines of Uniland fest management;
-            and Uniland fest Management shall also evaluate the quality of the
-            items, uniqueness, and appropriateness of the items for Uniland
-            fest. It is within the discretion of the Zaama Disco management to
-            deny applications based upon these criteria.
+            according to the goals and guidelines of Zaama Disco management; and
+            Zaama Disco Management shall also evaluate the quality of the items,
+            uniqueness, and appropriateness of the items for Zaama Disco. It is
+            within the discretion of the Zaama Disco management to deny
+            applications based upon these criteria.
           </li>
           <li className="policy-paragraph policy-list">
             ⁃ A vendor may not receive merchandise / product, directly or
@@ -162,15 +162,15 @@ const Vendors = () => {
         <p className="policy-subheading">Zaama Disco Logo</p>
         <p className="policy-paragraph ">
           Do not use the official Zaama Disco logo or artwork, or incorporate
-          the name Zaama Disc into your product line. The name and logo are
+          the name Zaama Disco into your product line. The name and logo are
           protected by trademark and copyright laws and may only be used by
           special licensing agreements.
         </p>
         <p className="policy-paragraph ">
           *ALL VENDORS MUST SUBMIT COPIES OF THEIR BUSINESS REGISTRATION; TAX ID
-          NUMBER AND FDA PERMITS TO Uniland fest TEAM AT LEAST TWO WEEKS PRIOR
-          TO YOUR VENDING DATE. NO APPLICATION WILL BE PROCESSED UNLESS ALL OF
-          THE FOLLOWING ITEMS ARE INCLUDED IN THE REGISTRATION PACKAGE:
+          NUMBER AND FDA PERMITS TO ZAAMA DISCO TEAM AT LEAST TWO WEEKS PRIOR TO
+          YOUR VENDING DATE. NO APPLICATION WILL BE PROCESSED UNLESS ALL OF THE
+          FOLLOWING ITEMS ARE INCLUDED IN THE REGISTRATION PACKAGE:
         </p>
         <ul>
           <li className="policy-paragraph policy-list">(1) Application Form</li>
@@ -180,7 +180,13 @@ const Vendors = () => {
           <li className="policy-paragraph policy-list">(3) Payment</li>
         </ul>
       </div>
-      <div className="w-full flex gap-3 md:items-center text-gray-300 mt-10 mb-7 ">
+      <p
+        onClick={() => router.push("/vendors/faq")}
+        className="text-sm w-full underline underline-offset-2 mt-4 text-gray-400 cursor-pointer md:inline-block md:w-[650px]"
+      >
+        Read frequently asked questions
+      </p>
+      <div className="w-full flex gap-3 md:items-center text-gray-300 my-7">
         <CustomCheckbox
           name="Terms"
           handleInputChange={() => setIsTermChecked(!isTermChecked)}
@@ -191,7 +197,7 @@ const Vendors = () => {
           className="text-sm w-full md:inline-block md:w-[650px]"
         >
           By proceeding, I affirm and agree that I have read and understood the
-          Uniland fest Vendor Terms and Condition and agree to abide by them
+          Zaama Disco Vendor Terms and Condition and agree to abide by them
         </span>
       </div>
       <div className="h-11 w-64 mx-auto ">

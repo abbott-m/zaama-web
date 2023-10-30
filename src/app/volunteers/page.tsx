@@ -16,6 +16,7 @@ import {
 } from "@/app/lib/formData";
 import TextAreaField from "../components/TextAreaField";
 import ToastNotification from "../components/ToastNotification";
+import { useRouter } from "next/navigation";
 
 const blatantBold = localFont({
   src: "../blatant-font/OTF/Blatant-Bold.otf",
@@ -41,6 +42,7 @@ const Volunteers = () => {
     type: "",
     text: "",
   });
+  const router = useRouter();
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -145,6 +147,12 @@ const Volunteers = () => {
         >
           Become a volunteer
         </h1>
+        <p
+          onClick={() => router.push("/volunteers/faq")}
+          className="text-sm w-full underline underline-offset-2 mt-4 text-gray-400 cursor-pointer md:inline-block md:w-[650px]"
+        >
+          Read frequently asked questions
+        </p>
 
         <form
           onSubmit={handleSubmit}
@@ -336,7 +344,7 @@ const Volunteers = () => {
             <div className="flex justify-between items-center">
               {" "}
               <p className="text-gray-300  font-medium mb-3 capitalize select-none">
-                What's your Expectation for Mozama Disco ?
+                What's your Expectation for Zaama Disco ?
               </p>
               <span className="text-gray-400">
                 {300 - volunteerFields.expectation.length}

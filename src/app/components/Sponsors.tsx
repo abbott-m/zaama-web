@@ -22,15 +22,59 @@ const Sponsors = () => {
       id="sponsors"
       className="relative px-4 py-10 bg-bg-four bg-top bg-cover sm:px-14 sm:py-24  md:bg-bottom md:gap-8 lg:px-24 selection:bg-zaama_red/50"
     >
-      <div className="absolute top-0 left-0 h-full w-full bg-black/40"></div>
+      <div className="absolute top-0 left-0 h-full w-full bg-black/20"></div>
       <p
         data-aos="fade-down"
         className={`${blatantBold.className} text-center text-xl font-medium mb-8 tracking-wider text-zaama_yellow uppercase md:text-2xl md:mb-10`}
       >
         Our Sponsors and Partners
       </p>
-
-      <div data-aos="fade-up">
+      <div
+        data-aos="fade-up"
+        className="flex gap-5 justify-center items-center flex-wrap sm:gap-8 lg:w-4/6 lg:mx-auto"
+      >
+        <div className="relative w-40 h-20 sm:w-48">
+          <Image
+            src="/images/ministry-of-tourism-arts-and-culture.png"
+            alt="ministry-of-tourism-arts-and-culture"
+            objectFit="contain"
+            fill
+          />
+        </div>
+        <div className="relative w-40 h-20 sm:w-48">
+          <Image
+            src="/images/beyond-the-return.png"
+            alt="beyond-the-return"
+            objectFit="contain"
+            fill
+          />
+        </div>
+        <div className="relative w-40 h-20 sm:w-48">
+          <Image
+            src="/images/ghana-tourism-authority.png"
+            alt="ghana-tourism-authority"
+            objectFit="contain"
+            fill
+          />
+        </div>
+        <div className="relative w-40 h-20 sm:w-48">
+          <Image
+            src="/images/musicians-union-of-ghana.png"
+            alt="musicians-union-of-ghana"
+            objectFit="contain"
+            fill
+          />
+        </div>
+        <div className="relative w-40 h-20 sm:w-48">
+          <Image
+            src="/images/xecute.png"
+            alt="xecute"
+            objectFit="contain"
+            fill
+          />
+        </div>
+      </div>
+      {/* <div data-aos="fade-up">
         <div className="flex items-center justify-center my-5 sm:hidden">
           <Swiper
             loop={true}
@@ -51,7 +95,7 @@ const Sponsors = () => {
                   className="w-36 h-36 bg- bg-gradient-to-tr from-[#1c1c1c] to-[#4a4a4a] rounded-full flex justify-center items-center p-2 shadow-md shadow-[#6e6e6e]  mx-auto mb-1"
                 >
                   <Image
-                    src="/images/Blache_logo.png"
+                    src="/images/ghana-tourism-authority.png"
                     alt="Blach-logo"
                     width={120}
                     height={120}
@@ -81,7 +125,7 @@ const Sponsors = () => {
                   className="w-36 h-36 bg- bg-gradient-to-tr from-[#1c1c1c] to-[#4a4a4a] rounded-full flex justify-center items-center p-2 shadow-md shadow-[#6e6e6e]  mx-auto mb-1"
                 >
                   <Image
-                    src="/images/Blache_logo.png"
+                    src="/images/ghana-tourism-authority.png"
                     alt="Blach-logo"
                     width={120}
                     height={120}
@@ -111,7 +155,7 @@ const Sponsors = () => {
                   className="w-36 h-36 bg- bg-gradient-to-tr from-[#1c1c1c] to-[#4a4a4a] rounded-full flex justify-center items-center p-2 shadow-md shadow-[#6e6e6e]  mx-auto mb-1"
                 >
                   <Image
-                    src="/images/Blache_logo.png"
+                    src="/images/ghana-tourism-authority.png"
                     alt="Blach-logo"
                     width={120}
                     height={120}
@@ -141,7 +185,7 @@ const Sponsors = () => {
                   className="w-36 h-36 bg- bg-gradient-to-tr from-[#1c1c1c] to-[#4a4a4a] rounded-full flex justify-center items-center p-2 shadow-md shadow-[#6e6e6e]  mx-auto mb-1"
                 >
                   <Image
-                    src="/images/Blache_logo.png"
+                    src="/images/ghana-tourism-authority.png"
                     alt="Blach-logo"
                     width={120}
                     height={120}
@@ -151,7 +195,7 @@ const Sponsors = () => {
             ))}
           </Swiper>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

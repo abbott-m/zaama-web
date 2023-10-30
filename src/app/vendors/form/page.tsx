@@ -424,8 +424,8 @@ const VendorForm = () => {
               className="text-sm w-full md:inline-block md:w-[650px]"
             >
               By submitting this document, I affirm and agree that I have read
-              and understood the Uniland fest Vendor Terms and Condition and
-              agree to abide by them
+              and understood the Zaama Vendor Terms and Condition and agree to
+              abide by them
             </span>
           </div>
           {/* {JSON.stringify(isTermChecked)} */}

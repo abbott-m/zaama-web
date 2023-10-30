@@ -47,7 +47,7 @@ const Home = () => {
           <About />
           <Store />
           <Sponsors />
-          <FAQ />
+          {/* <FAQ /> */}
         </>
       )}
     </main>

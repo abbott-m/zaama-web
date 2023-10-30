@@ -31,16 +31,16 @@ const Footer = () => {
     {
       id: 1,
       icon: (
-        <Twitter className="fill-gray-200 w-4 h-4 shadow-md hover:fill-gray-300" />
+        <Twitter className="stroke-gray-200 w-4 h-4 shadow-md hover:fill-gray-300" />
       ),
-      path: "https://twitter.com",
+      path: "https://x.com/zaamadisco?s=11&t=2z9CU3pe6dNz1Gfd4639Dg",
     },
     {
       id: 2,
       icon: (
         <Instagram className="stroke-gray-100 stroke-2 w-4 h-4 shadow-md hover:stroke-gray-300" />
       ),
-      path: "https://instagram.com",
+      path: "https://instagram.com/zaamadisco?igshid=MzRlODBiNWFlZA==",
     },
     {
       id: 3,
@@ -54,7 +54,7 @@ const Footer = () => {
       icon: (
         <Tiktok className="fill-gray-200 w-4 h-4 shadow-md hover:fill-gray-300" />
       ),
-      path: "https://tiktok.com",
+      path: "https://www.tiktok.com/@zaamadisco?_t=8gpyYgQzFmo&_r=1",
     },
     {
       id: 5,
@@ -244,8 +244,18 @@ const Footer = () => {
         </p>
         <div className="text-gray-400">
           <p className="text-sm mb-3 ">
-            For more enquiry or information:{" "}
-            <span className="text-gray-300">info@zaamadisco.com </span>
+            For more enquiry or information: <br />
+            <span className="text-gray-300 mt-1 inline-block">
+              info@zaamadisco.com{" "}
+            </span>
+            <br />
+            <span className="text-gray-300 mt-1 inline-block">
+              +233 244475597
+            </span>
+            <br />
+            <span className="text-gray-300 mt-1 inline-block">
+              +233 55 283 1168
+            </span>
           </p>
         </div>
       </div>

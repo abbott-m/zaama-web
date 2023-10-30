@@ -1,11 +1,14 @@
+"use client";
 import React from "react";
 import localFont from "next/font/local";
 import Image from "next/image";
-import { Router } from "next/router";
 import { useRouter } from "next/navigation";
 
 const blatant = localFont({
   src: "../blatant-font/OTF/Blatant.otf",
+});
+const blatantBold = localFont({
+  src: "../blatant-font/OTF/Blatant-Bold.otf",
 });
 
 type singleTicketProps = {
@@ -26,7 +29,7 @@ const SingleTicket = ({
   const router = useRouter();
   return (
     <div
-      className={`relative mx-auto w-72 h-96  px-2 py-4 flex flex-col justify-center items-center rounded-2xl bg-transparent  transition duration-100 hover:scale-105  hover:text-gray-200 selection:bg-zaama_red/50 
+      className={`relative mx-auto w-72 h-[390px]  px-2 py-4 flex flex-col justify-center items-center rounded-2xl bg-transparent  transition duration-100 lg:w-80 hover:scale-105  hover:text-gray-200 selection:bg-zaama_red/50 
        ${
          color === "red"
            ? "hoverr:bg-zaama_red/60"
@@ -52,16 +55,21 @@ const SingleTicket = ({
       <p className={`${blatant.className} uppercase text-lg text-center mb-3`}>
         {packageName}
       </p>
-      <p
+      {/* <p
         className={`${blatant.className} text-center text-2xl mb-5 md:text-4xl`}
       >
         <span className="text-xl">$ </span>
         {dollar_price} /<span className="text-xl"> &#8373; </span> {cedi_price}
+      </p> */}
+      <p
+        className={`${blatantBold.className} text-center text-4xl mb-5 md:text-5xl`}
+      >
+        <span className="text-lg md:text-2xl"> &#8373; </span> {cedi_price}
       </p>
 
       <ul className=" text-sm mb-5 selection:bg-gray-200">
         {perks.map((item, index) => (
-          <li key={index} className="mb-1 flex gap-3 items-center">
+          <li key={index} className="mb-1 flex gap-3 items-center text-xs">
             <span className=" w-[6px] h-[6px] inline-block rounded-full bg-white "></span>
             {item}
           </li>
@@ -76,7 +84,7 @@ const SingleTicket = ({
         }
         className={`${
           blatant.className
-        }  tracking-widest rounded-sm text-sm w-44 h-10 outline-none font-semibold border   uppercase  select-none transition duration-150  ${
+        }  tracking-widest rounded-sm text-sm w-40 h-10 outline-none font-semibold border   uppercase  select-none transition duration-150  ${
           color === "red"
             ? "border-zaama_red/50 hover:bg-zaama_red/10"
             : color === "green"
