@@ -25,7 +25,7 @@ const Hero = () => {
         width={260}
         height={200}
         priority
-        className="mx-auto mb-16 mt-14 bg-transparent"
+        className="mx-auto mb-16 mt-14 bg-transparent animate-little_bounce"
         data-aos="zoom-in-up"
         data-aos-duration="500"
       />

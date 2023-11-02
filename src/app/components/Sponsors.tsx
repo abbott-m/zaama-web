@@ -49,6 +49,16 @@ const Sponsors = () => {
       smallSize: true,
     },
     {
+      imageSrc: "/images/Blache_logo.png",
+      alt: "Blache",
+      smallSize: false,
+    },
+    {
+      imageSrc: "/images/ministry-of-tourism-arts-and-culture.png",
+      alt: "ministry-of-tourism-arts-and-culture",
+      smallSize: false,
+    },
+    {
       imageSrc: "/images/xecute.png",
       alt: "xecute",
       smallSize: false,
@@ -67,12 +77,12 @@ const Sponsors = () => {
   return (
     <section
       id="sponsors"
-      className="relative px-4 py-10 bg-bg-four bg-top bg-cover sm:px-14 sm:py-24  md:bg-bottom md:gap-8 lg:px-24 selection:bg-zaama_red/50"
+      className="relative px-4 py-10 bg-bg-four bg-top bg-cover sm:px-14 sm:py-24  md:bg-bottom md:gap-8 lg:px-24 "
     >
       <div className="absolute top-0 left-0 h-full w-full bg-black/20"></div>
       <p
         data-aos="fade-down"
-        className={`${blatantBold.className} text-center text-xl font-medium mb-8 tracking-wider text-zaama_yellow uppercase md:text-2xl md:mb-10`}
+        className={`${blatantBold.className} text-center text-xl font-medium mb-8 tracking-wider text-zaama_yellow uppercase selection:bg-zaama_red/50 md:text-2xl md:mb-10`}
       >
         Our Sponsors and Partners
       </p>
@@ -121,11 +131,11 @@ const Sponsors = () => {
           />
         </div>
       </div> */}
-      <div data-aos="fade-up">
+      <div data-aos="fade-up" className="select-none">
         <div className="flex items-center justify-center my-5 sm:hidden">
           <Swiper
-            loop={true}
             speed={1200}
+            loop={true}
             slidesPerView={2}
             spaceBetween={10}
             autoplay={{
