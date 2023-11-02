@@ -12,11 +12,58 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import localFont from "next/font/local";
 
+type SponsorData = {
+  imageSrc: string;
+  alt: string;
+  smallSize: boolean;
+};
 const blatantBold = localFont({
   src: "../blatant-font/OTF/Blatant-Bold.otf",
 });
 
 const Sponsors = () => {
+  const sponsors: SponsorData[] = [
+    {
+      imageSrc: "/images/Blache_logo.png",
+      alt: "Blache",
+      smallSize: false,
+    },
+    {
+      imageSrc: "/images/ministry-of-tourism-arts-and-culture.png",
+      alt: "ministry-of-tourism-arts-and-culture",
+      smallSize: false,
+    },
+    {
+      imageSrc: "/images/beyond-the-return.png",
+      alt: "beyond-the-return",
+      smallSize: false,
+    },
+    {
+      imageSrc: "/images/ghana-tourism-authority.png",
+      alt: "ghana-tourism-authority",
+      smallSize: false,
+    },
+    {
+      imageSrc: "/images/musicians-union-of-ghana.png",
+      alt: "musicians-union-of-ghana",
+      smallSize: true,
+    },
+    {
+      imageSrc: "/images/xecute.png",
+      alt: "xecute",
+      smallSize: false,
+    },
+    {
+      imageSrc: "/images/EU-flag.png",
+      alt: "EU-flag",
+      smallSize: true,
+    },
+    {
+      imageSrc: "/images/chamber-of-commerce.png",
+      alt: "chamber-of-commerce",
+      smallSize: true,
+    },
+  ];
   return (
     <section
       id="sponsors"
@@ -29,7 +76,7 @@ const Sponsors = () => {
       >
         Our Sponsors and Partners
       </p>
-      <div
+      {/* <div
         data-aos="fade-up"
         className="flex gap-5 justify-center items-center flex-wrap sm:gap-8 lg:w-4/6 lg:mx-auto"
       >
@@ -73,8 +120,8 @@ const Sponsors = () => {
             fill
           />
         </div>
-      </div>
-      {/* <div data-aos="fade-up">
+      </div> */}
+      <div data-aos="fade-up">
         <div className="flex items-center justify-center my-5 sm:hidden">
           <Swiper
             loop={true}
@@ -88,17 +135,17 @@ const Sponsors = () => {
             modules={[Pagination, Navigation, Autoplay]}
             className="mySwiper "
           >
-            {[1, 2, 3, 4, 5].map((item, index) => (
+            {sponsors.map((item, index) => (
               <SwiperSlide key={index}>
                 <div
                   key={index}
-                  className="w-36 h-36 bg- bg-gradient-to-tr from-[#1c1c1c] to-[#4a4a4a] rounded-full flex justify-center items-center p-2 shadow-md shadow-[#6e6e6e]  mx-auto mb-1"
+                  className="w-36 h-36 bg- bg-gradient-to-tr from-[#344834] to-[#4a4a4a] rounded-full flex justify-center items-center p-2 shadow-md shadow-[#6e6e6e]  mx-auto mb-1"
                 >
                   <Image
-                    src="/images/ghana-tourism-authority.png"
-                    alt="Blach-logo"
-                    width={120}
-                    height={120}
+                    src={item.imageSrc}
+                    alt={item.alt}
+                    width={item.smallSize ? 200 : 120}
+                    height={item.smallSize ? 200 : 120}
                   />
                 </div>
               </SwiperSlide>
@@ -118,15 +165,15 @@ const Sponsors = () => {
             modules={[Autoplay]}
             className="mySwiper "
           >
-            {[1, 2, 3, 4, 5, 6].map((item, index) => (
+            {sponsors.map((item, index) => (
               <SwiperSlide key={index}>
                 <div
                   key={index}
                   className="w-36 h-36 bg- bg-gradient-to-tr from-[#1c1c1c] to-[#4a4a4a] rounded-full flex justify-center items-center p-2 shadow-md shadow-[#6e6e6e]  mx-auto mb-1"
                 >
                   <Image
-                    src="/images/ghana-tourism-authority.png"
-                    alt="Blach-logo"
+                    src={item.imageSrc}
+                    alt={item.alt}
                     width={120}
                     height={120}
                   />
@@ -148,15 +195,15 @@ const Sponsors = () => {
             modules={[Autoplay]}
             className="mySwiper "
           >
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((item, index) => (
+            {sponsors.map((item, index) => (
               <SwiperSlide key={index}>
                 <div
                   key={index}
                   className="w-36 h-36 bg- bg-gradient-to-tr from-[#1c1c1c] to-[#4a4a4a] rounded-full flex justify-center items-center p-2 shadow-md shadow-[#6e6e6e]  mx-auto mb-1"
                 >
                   <Image
-                    src="/images/ghana-tourism-authority.png"
-                    alt="Blach-logo"
+                    src={item.imageSrc}
+                    alt={item.alt}
                     width={120}
                     height={120}
                   />
@@ -178,15 +225,15 @@ const Sponsors = () => {
             modules={[Autoplay]}
             className="mySwiper"
           >
-            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item, index) => (
+            {sponsors.map((item, index) => (
               <SwiperSlide key={index}>
                 <div
                   key={index}
                   className="w-36 h-36 bg- bg-gradient-to-tr from-[#1c1c1c] to-[#4a4a4a] rounded-full flex justify-center items-center p-2 shadow-md shadow-[#6e6e6e]  mx-auto mb-1"
                 >
                   <Image
-                    src="/images/ghana-tourism-authority.png"
-                    alt="Blach-logo"
+                    src={item.imageSrc}
+                    alt={item.alt}
                     width={120}
                     height={120}
                   />
@@ -195,7 +242,7 @@ const Sponsors = () => {
             ))}
           </Swiper>
         </div>
-      </div> */}
+      </div>
     </section>
   );
 };

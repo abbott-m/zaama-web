@@ -28,8 +28,14 @@ const Store = () => {
             data-aos="fade-right"
             className=" text-center  leading-7  sm:mx-auto md:text-left md:mx-0 "
           >
-            Zaama Disco app coming soon, subscribe to news letter to stay
-            updated
+            Zaama Disco app coming soon, subscribe to our{" "}
+            <span
+              onClick={scrollToBottom}
+              className="underline underline-offset-2 cursor-pointer transition duration-150 hover:text-[#b0b0b0]"
+            >
+              newsletter
+            </span>{" "}
+            to stay updated
           </p>
         </div>
         <div
@@ -81,7 +87,10 @@ const Store = () => {
           </button>
         </div>
       </div>
-      <div data-aos="fade-left" className=" hidden md:w-5/12 md:block ">
+      <div
+        data-aos="fade-left"
+        className=" hidden animate-little_bounce md:w-5/12 md:block "
+      >
         <Image
           src="/images/zaama-mobile.png"
           alt="zaama-mobile"

@@ -306,8 +306,8 @@ const Policy = () => {
         Association ("GAA") pursuant to the applicable AAA rules in effect at
         the time the arbitration is initiated. User may obtain information about
         arbitration, arbitration procedures and fees from by emailing
-        corporate@unilandfestion.com or visiting www.adr.org. If GAA is unable
-        or unwilling to arbitrate a dispute, then the dispute may be referred to
+        info@zaamadisco.com or visiting www.adr.org. If GAA is unable or
+        unwilling to arbitrate a dispute, then the dispute may be referred to
         any other arbitration organization or arbitrator the Parties both agree
         upon in writing or that is appointed pursuant to Section 5 of the FAA.
         The arbitration shall take place in the federal judicial district where
@@ -357,8 +357,8 @@ const Policy = () => {
         EXERCISE THIS RIGHT PROMPTLY. If User does not wish to be bound by this
         agreement to arbitrate, User must notify us in writing within sixty (60)
         days after the date User signs this Agreement. User must send his or her
-        request to corporate@unilandfest.com. The request must include User's
-        full name, address, invoice number, and the statement "I reject the
+        request to info@zaamadisco.com. The request must include User's full
+        name, address, invoice number, and the statement "I reject the
         Arbitration Agreement contained in the Festival Ticket Terms." If User
         exercises his/her right to reject arbitration, the other terms of this
         Agreement shall remain in full force and effect as if User had not
@@ -443,7 +443,7 @@ const Policy = () => {
         <Link href="https://www.cdc.gov/coronavirus/2019-ncov/your-health/quarantine-isolation.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fif-you-are-sick%2Fquarantine.html">
           here
         </Link>
-        . corporate@unilandfest.com
+        . info@zaamadisco.com
       </p>
       <h3 className="policy-subheading">Public Safety</h3>
       <p className="policy-paragraph">

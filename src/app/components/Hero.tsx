@@ -18,6 +18,7 @@ const Hero = () => {
       >
         <source src="/video/hero-bg.mp4" type="video/mp4" />
       </video>
+
       <Image
         src="/images/zaama-3d-new.png"
         alt="Zaama-logo"

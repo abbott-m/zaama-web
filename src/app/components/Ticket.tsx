@@ -18,7 +18,7 @@ const Ticket = () => {
   const ticketData = [
     {
       color: "yellow",
-      packageName: "Standard",
+      packageName: "Ealy Birds",
       dollar_price: "10",
       cedi_price: "100",
       perks: [
@@ -27,6 +27,7 @@ const Ticket = () => {
         "Standard access",
         "Cocktail area ",
       ],
+      available: true,
     },
     {
       color: "red",
@@ -39,6 +40,7 @@ const Ticket = () => {
         "Priority entry",
         "Drinks",
       ],
+      available: true,
     },
     {
       color: "green",
@@ -50,6 +52,7 @@ const Ticket = () => {
         "Priority entry",
         "Access to the VIP lounge",
       ],
+      available: true,
     },
   ];
 
@@ -91,6 +94,7 @@ const Ticket = () => {
                   dollar_price={item.dollar_price}
                   cedi_price={item.cedi_price}
                   perks={item.perks}
+                  available={item.available}
                 />
               </SwiperSlide>
             ))}
@@ -118,6 +122,7 @@ const Ticket = () => {
                   dollar_price={item.dollar_price}
                   cedi_price={item.dollar_price}
                   perks={item.perks}
+                  available={item.available}
                 />
               </SwiperSlide>
             ))}
@@ -147,6 +152,7 @@ const Ticket = () => {
                   dollar_price={item.dollar_price}
                   cedi_price={item.cedi_price}
                   perks={item.perks}
+                  available={item.available}
                 />
               </SwiperSlide>
             ))}

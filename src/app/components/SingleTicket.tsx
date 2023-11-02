@@ -17,6 +17,7 @@ type singleTicketProps = {
   dollar_price: string;
   cedi_price: string;
   perks: string[];
+  available: boolean;
 };
 
 const SingleTicket = ({
@@ -25,6 +26,7 @@ const SingleTicket = ({
   dollar_price,
   cedi_price,
   perks,
+  available,
 }: singleTicketProps) => {
   const router = useRouter();
   return (
@@ -36,6 +38,10 @@ const SingleTicket = ({
            : color === "green"
            ? "hoverr:bg-zaama_green/60"
            : "hoverr:bg-zaama_orange/60"
+       }
+       ${
+         !available &&
+         "grayscale opacity-60 text-gray-400 select-none pointer-events-none"
        }
       
       `}

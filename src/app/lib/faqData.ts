@@ -79,7 +79,7 @@ export const volunteerFAQ = [
   {
     id: 4,
     question: "Can I claim benefits while volunteering?",
-    answer: "...",
+    answer: "No",
   },
   {
     id: 5,
