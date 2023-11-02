@@ -67,12 +67,12 @@ const Footer = () => {
   const quickLinks: quickLinks = [
     {
       id: 1,
-      name: "Vendor",
+      name: "Vendors",
       path: "/vendors",
     },
     {
       id: 2,
-      name: "Volunteer",
+      name: "Volunteers",
       path: "/volunteers",
     },
     {
