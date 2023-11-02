@@ -28,7 +28,7 @@ const Home = () => {
   return (
     <main className="">
       {loading ? (
-        <div className="h-screen w-screen fixed top-0 left-0 z-20 ">
+        <div className="h-screen w-screen fixed top-0 left-0 z-20 bg-[#1a1a1a] flex justify-center items-center">
           <Image
             src="/GIF/zaama-logo-anim.gif"
             alt="zaama-logo-animation"
