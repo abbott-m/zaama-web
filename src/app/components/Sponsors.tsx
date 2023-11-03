@@ -64,14 +64,14 @@ const Sponsors = () => {
       smallSize: false,
     },
     {
-      imageSrc: "/images/EU-flag.png",
-      alt: "EU-flag",
-      smallSize: true,
+      imageSrc: "/images/a-list-management.png",
+      alt: "a-list-management",
+      smallSize: false,
     },
     {
-      imageSrc: "/images/chamber-of-commerce.png",
-      alt: "chamber-of-commerce",
-      smallSize: true,
+      imageSrc: "/images/road-boys-association.png",
+      alt: "road-boys-association",
+      smallSize: false,
     },
   ];
   return (

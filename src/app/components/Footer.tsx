@@ -7,6 +7,7 @@ import localFont from "next/font/local";
 import handleScroll from "../lib/handleScroll";
 import ZaamaLogo from "../../../public/SVG/zaama-logo.svg";
 import Facebook from "../../../public/SVG/facebook-logo.svg";
+import Snapchat from "../../../public/SVG/snapchat-logo.svg";
 import Twitter from "../../../public/SVG/twitter-logo.svg";
 import Instagram from "../../../public/SVG/instagram-logo.svg";
 import Youtube from "../../../public/SVG/youtube-logo.svg";
@@ -47,7 +48,7 @@ const Footer = () => {
       icon: (
         <Facebook className="fill-gray-200 w-4 h-4 shadow-md hover:fill-gray-300" />
       ),
-      path: "https://facebook.com",
+      path: "https://www.facebook.com/blacksherifmusic?mibextid=LQQJ4d",
     },
     {
       id: 4,
@@ -58,6 +59,13 @@ const Footer = () => {
     },
     {
       id: 5,
+      icon: (
+        <Snapchat className="fill-gray-200 w-5 h-5 shadow-md hover:fill-gray-300" />
+      ),
+      path: "https://www.snapchat.com/add/zaamadisco?share_id=1hefNEEWN3o&locale=en-GB",
+    },
+    {
+      id: 6,
       icon: (
         <Youtube className="fill-gray-200 w-5 h-5 shadow-md hover:fill-gray-300" />
       ),
