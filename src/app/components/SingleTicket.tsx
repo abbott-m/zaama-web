@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import localFont from "next/font/local";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -18,6 +18,7 @@ type singleTicketProps = {
   cedi_price: string;
   perks: string[];
   available: boolean;
+  countDown: boolean;
 };
 
 const SingleTicket = ({
@@ -27,8 +28,39 @@ const SingleTicket = ({
   cedi_price,
   perks,
   available,
+  countDown,
 }: singleTicketProps) => {
   const router = useRouter();
+
+  const startTime = new Date(2023, 11, 4).getTime();
+  const endTime = new Date(2023, 11, 29).getTime();
+  const [timeRemaining, setTimeRemaining] = useState<number>(
+    endTime - startTime
+  );
+  const currentTimeGlobal = new Date().getTime();
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const currentTimeLocal = new Date().getTime();
+      if (currentTimeLocal < endTime) {
+        setTimeRemaining(endTime - currentTimeLocal);
+      } else {
+        clearInterval(interval);
+      }
+    }, 1000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [endTime]);
+
+  const days = Math.floor(timeRemaining / (24 * 60 * 60 * 1000));
+  const hours = Math.floor(
+    (timeRemaining % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000)
+  );
+  const minutes = Math.floor((timeRemaining % (60 * 60 * 1000)) / (60 * 1000));
+  const seconds = Math.floor((timeRemaining % (60 * 1000)) / 1000);
+
   return (
     <div
       className={`relative mx-auto w-72 h-[390px]  px-2 py-4 flex flex-col justify-center items-center rounded-2xl bg-transparent  transition duration-100 lg:w-80 hover:scale-105  hover:text-gray-200 selection:bg-zaama_red/50 
@@ -72,15 +104,26 @@ const SingleTicket = ({
       >
         <span className="text-lg md:text-2xl"> &#8373; </span> {cedi_price}
       </p>
-
-      <ul className=" text-sm mb-5 selection:bg-gray-200">
-        {perks.map((item, index) => (
-          <li key={index} className="mb-1 flex gap-3 items-center text-xs">
-            <span className=" w-[6px] h-[6px] inline-block rounded-full bg-white "></span>
-            {item}
-          </li>
-        ))}
-      </ul>
+      {currentTimeGlobal < endTime && countDown ? (
+        <div className={`${blatant.className} mb-10 w-2/3 text-center`}>
+          <p className="">Ticket Available In</p>
+          <p className="text-2xl">
+            {days.toString().padStart(2, "0")} :{" "}
+            {hours.toString().padStart(2, "0")} :{" "}
+            {minutes.toString().padStart(2, "0")} :{" "}
+            {seconds.toString().padStart(2, "0")}
+          </p>
+        </div>
+      ) : (
+        <ul className=" text-sm mb-5 selection:bg-gray-200">
+          {perks.map((item, index) => (
+            <li key={index} className="mb-1 flex gap-3 items-center text-xs">
+              <span className=" w-[6px] h-[6px] inline-block rounded-full bg-white "></span>
+              {item}
+            </li>
+          ))}
+        </ul>
+      )}
       <button
         onClick={() =>
           window.open(

@@ -28,6 +28,7 @@ const Ticket = () => {
         "Cocktail area ",
       ],
       available: true,
+      countDown: true,
     },
     {
       color: "red",
@@ -40,7 +41,8 @@ const Ticket = () => {
         "Priority entry",
         "Drinks",
       ],
-      available: true,
+      available: false,
+      countDown: false,
     },
     {
       color: "green",
@@ -52,7 +54,8 @@ const Ticket = () => {
         "Priority entry",
         "Access to the VIP lounge",
       ],
-      available: true,
+      available: false,
+      countDown: false,
     },
   ];
 
@@ -95,6 +98,7 @@ const Ticket = () => {
                   cedi_price={item.cedi_price}
                   perks={item.perks}
                   available={item.available}
+                  countDown={item.countDown}
                 />
               </SwiperSlide>
             ))}
@@ -123,6 +127,7 @@ const Ticket = () => {
                   cedi_price={item.dollar_price}
                   perks={item.perks}
                   available={item.available}
+                  countDown={item.countDown}
                 />
               </SwiperSlide>
             ))}
@@ -153,6 +158,7 @@ const Ticket = () => {
                   cedi_price={item.cedi_price}
                   perks={item.perks}
                   available={item.available}
+                  countDown={item.countDown}
                 />
               </SwiperSlide>
             ))}
