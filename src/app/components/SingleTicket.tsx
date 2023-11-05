@@ -32,35 +32,23 @@ const SingleTicket = ({
 }: singleTicketProps) => {
   const router = useRouter();
 
-  const startTime = new Date(2023, 11, 4).getTime();
-  const endTime = new Date(2023, 11, 29).getTime();
-  const [timeRemaining, setTimeRemaining] = useState<number>(
-    endTime - startTime
-  );
-  const currentTimeGlobal = new Date().getTime();
+  const startDate = new Date("2023-11-10T00:00:00"); // countdown timer stops at Nov 10, 2023
+  const [timeLeft, setTimeLeft] = useState<number>(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      const currentTimeLocal = new Date().getTime();
-      if (currentTimeLocal < endTime) {
-        setTimeRemaining(endTime - currentTimeLocal);
-      } else {
-        clearInterval(interval);
-      }
+    const timer = setInterval(() => {
+      const now = new Date();
+      const timeDifference = Math.max(startDate.getTime() - now.getTime(), 0);
+      setTimeLeft(timeDifference);
     }, 1000);
 
-    return () => {
-      clearInterval(interval);
-    };
-  }, [endTime]);
+    return () => clearInterval(timer);
+  }, [startDate]);
 
-  const days = Math.floor(timeRemaining / (24 * 60 * 60 * 1000));
-  const hours = Math.floor(
-    (timeRemaining % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000)
-  );
-  const minutes = Math.floor((timeRemaining % (60 * 60 * 1000)) / (60 * 1000));
-  const seconds = Math.floor((timeRemaining % (60 * 1000)) / 1000);
-
+  const seconds = Math.floor((timeLeft / 1000) % 60);
+  const minutes = Math.floor((timeLeft / 1000 / 60) % 60);
+  const hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
+  const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
   return (
     <div
       className={`relative mx-auto w-72 h-[390px]  px-2 py-4 flex flex-col justify-center items-center rounded-2xl bg-transparent  transition duration-100 lg:w-80 hover:scale-105  hover:text-gray-200 selection:bg-zaama_red/50 
@@ -104,7 +92,7 @@ const SingleTicket = ({
       >
         <span className="text-lg md:text-2xl"> &#8373; </span> {cedi_price}
       </p>
-      {currentTimeGlobal < endTime && countDown ? (
+      {countDown && timeLeft > 0 ? (
         <div className={`${blatant.className} mb-10 w-2/3 text-center`}>
           <p className="">Ticket Available In</p>
           <p className="text-2xl">
@@ -139,6 +127,9 @@ const SingleTicket = ({
             : color === "green"
             ? "border-zaama_green/50 hover:bg-zaama_green/10"
             : "border-zaama_yellow/50 hover:bg-zaama_yellow/10"
+        } ${
+          timeLeft > 0 &&
+          "grayscale opacity-60 text-gray-400 select-none pointer-events-none"
         } `}
       >
         Get Ticket
