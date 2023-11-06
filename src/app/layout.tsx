@@ -11,11 +11,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://i.postimg.cc"),
   title: "Zaama Disco",
   description:
-    "An annual event that seeks to drive the Ghanaian youth with one voice for change through entertainment.",
+    "An annual event that seeks to drive the Ghanaian youth and youths around the world with one voice for change through entertainment.",
   openGraph: {
     title: "Zaama Disco",
     description:
-      "An annual event that seeks to drive the Ghanaian youth with one voice for change through entertainment.",
+      "An annual event that seeks to drive the Ghanaian youth and youths around the world with one voice for change through entertainment.",
     images: "/9M1jmk6c/open-graph.png",
     url: "https://zaamaweb.netlify.app/",
   },
