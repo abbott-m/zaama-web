@@ -10,40 +10,14 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import localFont from "next/font/local";
+import { ticketData } from "../lib/ticketData";
 
 const blatantBold = localFont({
   src: "../blatant-font/OTF/Blatant-Bold.otf",
 });
 const Ticket = () => {
-  const ticketData = [
-    {
-      color: "yellow",
-      packageName: "regular",
-      price: "10",
-      perks: ["Standard Access", "Party Bands", "Cocktail Arena"],
-    },
-    {
-      color: "red",
-      packageName: "standard",
-      price: "20",
-      perks: ["Standard Access", "Party Bands", "Cocktail Arena"],
-    },
-    {
-      color: "green",
-      packageName: "VIP",
-      price: "40",
-      perks: ["VIP Access", "Party Bands", "Cocktail Arena"],
-    },
-    {
-      color: "yellow",
-      packageName: "VVIP",
-      price: "60",
-      perks: ["VVIP Access", "Party Bands", "Cocktail Arena"],
-    },
-  ];
-
   return (
-    <section id="tickets" className="  px-5 pt-20 pb-28  sm:py-24 lg:px-16 ">
+    <section id="tickets" className="  px-5 pt-14 pb-28  sm:py-10 lg:px-16 ">
       <p
         data-aos="fade-up"
         className={`${blatantBold.className} text-center text-xl font-medium mb-4 text-zaama_yellow uppercase tracking-wider  md:text-2xl selection:bg-zaama_red/50`}
@@ -77,8 +51,12 @@ const Ticket = () => {
                   key={index}
                   color={item.color}
                   packageName={item.packageName}
-                  price={item.price}
+                  dollar_price={item.dollar_price}
+                  cedi_price={item.cedi_price}
                   perks={item.perks}
+                  available={item.available}
+                  countDown={item.countDown}
+                  ticketID={item.ticketType}
                 />
               </SwiperSlide>
             ))}
@@ -103,8 +81,12 @@ const Ticket = () => {
                   key={index}
                   color={item.color}
                   packageName={item.packageName}
-                  price={item.price}
+                  dollar_price={item.dollar_price}
+                  cedi_price={item.dollar_price}
                   perks={item.perks}
+                  available={item.available}
+                  countDown={item.countDown}
+                  ticketID={item.ticketType}
                 />
               </SwiperSlide>
             ))}
@@ -131,8 +113,12 @@ const Ticket = () => {
                   key={index}
                   color={item.color}
                   packageName={item.packageName}
-                  price={item.price}
+                  dollar_price={item.dollar_price}
+                  cedi_price={item.cedi_price}
                   perks={item.perks}
+                  available={item.available}
+                  countDown={item.countDown}
+                  ticketID={item.ticketType}
                 />
               </SwiperSlide>
             ))}

@@ -8,14 +8,14 @@ import Store from "./components/Store";
 import Ticket from "./components/Ticket";
 import CarouselLabel from "./components/CarouselLabel";
 import Image from "next/image";
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
 import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
-// ..
-
+import "aos/dist/aos.css";
+import TicketModal from "./components/TicketModal";
+import { useTicketContext } from "./context/ticketContext";
 const Home = () => {
   const [loading, setLoading] = useState(true);
+  const { isTicketModalOpen, setIsTicketModalOpen, setTicketType, ticketType } =
+    useTicketContext();
 
   // initialize AOS
   useEffect(() => {
@@ -32,7 +32,7 @@ const Home = () => {
   return (
     <main className="">
       {loading ? (
-        <div className="h-screen w-screen fixed flex justify-center items-center">
+        <div className="h-screen w-screen fixed top-0 left-0 z-20 bg-[#1a1a1a] flex justify-center items-center">
           <Image
             src="/GIF/zaama-logo-anim.gif"
             alt="zaama-logo-animation"
@@ -44,8 +44,7 @@ const Home = () => {
         </div>
       ) : (
         <>
-          <CarouselLabel word="Zaama: The Disco" />
-          <Navbar />
+          {isTicketModalOpen && <TicketModal />}
           <Hero />
           <CarouselLabel word="tickets" />
           <Ticket />
@@ -53,8 +52,7 @@ const Home = () => {
           <About />
           <Store />
           <Sponsors />
-          <FAQ />
-          <Footer />
+          {/* <FAQ /> */}
         </>
       )}
     </main>

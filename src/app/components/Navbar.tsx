@@ -1,35 +1,53 @@
 "use client";
 import React, { useState } from "react";
-import handleScroll from "../lib/handleScroll";
+import Link from "next/link";
 
 const Navbar = () => {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
 
-  const navLinks = [
+  const navLinks: navLinks = [
     {
       id: 1,
-      name: "about",
-      path: "about",
+      name: "home",
+      sectionId: "",
+      path: "/",
     },
+
     {
       id: 2,
-      name: "store",
-      path: "store",
+      name: "vendors",
+      sectionId: "vendors",
+      path: "/vendors",
     },
     {
       id: 3,
-      name: "sponsors",
-      path: "sponsors",
+      name: "volunteers",
+      sectionId: "volunteers",
+      path: "/volunteers",
     },
+
     {
       id: 4,
-      name: "FAQ",
-      path: "faq",
+      name: "tables",
+      sectionId: "table",
+      path: "/tables",
+    },
+    {
+      id: 5,
+      name: "media",
+      sectionId: "media",
+      path: "/media",
+    },
+    {
+      id: 6,
+      name: "policy",
+      sectionId: "policy",
+      path: "/policy",
     },
   ];
 
   return (
-    <nav className=" w-full flex gap-3 justify-center items-center p-7 md:px-10 lg:px-20 ">
+    <nav className="absolute z-10 w-full flex gap-3 justify-center items-center p-2 md:p-1 md:px-10 lg:px-20 ">
       {!isNavbarOpen ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -48,11 +66,11 @@ const Navbar = () => {
         </svg>
       ) : (
         <ul
-          className={`gap-8 items-center select-none  ${
+          className={`fixed top-0 left-0 z-10 pt-16 bg-[#111111] w-screen h-screen gap-7 items-center select-none  ${
             isNavbarOpen ? "flex flex-col" : "hidden "
           }`}
         >
-          <li onClick={() => setIsNavbarOpen(false)}>
+          <li onClick={() => setIsNavbarOpen(false)} className="mb-7">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -70,18 +88,19 @@ const Navbar = () => {
           </li>
 
           {navLinks.map((item) => (
-            <li
-              key={item.id}
-              onClick={(e) =>
-                handleScroll({
-                  sectionId: item.path,
-                  behavior: "instant",
-                  onClick: () => setIsNavbarOpen(false),
-                })
-              }
-              className="p-1 uppercase cursor-pointer transition duration-150 hover:text-zaama_green"
-            >
-              {item.name}
+            <li key={item.id} onClick={() => setIsNavbarOpen(false)}>
+              {/* <a
+                href={item.path}
+                className="p-1 uppercase inline-block transition duration-150 hover:text-zaama_green"
+              >
+                {item.name}
+              </a> */}
+              <Link
+                href={item.path}
+                className="p-1 uppercase inline-block transition duration-150 hover:text-zaama_green"
+              >
+                {item.name}
+              </Link>
             </li>
           ))}
 
