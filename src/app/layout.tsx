@@ -4,6 +4,7 @@ import { Syne_Mono } from "next/font/google";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import CarouselLabel from "./components/CarouselLabel";
+import { TicketProvider } from "./context/ticketContext";
 
 const syneMono = Syne_Mono({ subsets: ["latin"], weight: "400" });
 
@@ -34,8 +35,7 @@ export default function RootLayout({
         <CarouselLabel word="Zaama Disco: The Rave" />
 
         <Navbar />
-
-        {children}
+        <TicketProvider>{children}</TicketProvider>
         <Footer />
       </body>
     </html>

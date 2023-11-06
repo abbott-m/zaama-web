@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import localFont from "next/font/local";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { useTicketContext } from "../context/ticketContext";
 
 const blatant = localFont({
   src: "../blatant-font/OTF/Blatant.otf",
@@ -19,6 +20,7 @@ type singleTicketProps = {
   perks: string[];
   available: boolean;
   countDown: boolean;
+  ticketID: number;
 };
 
 const SingleTicket = ({
@@ -29,11 +31,18 @@ const SingleTicket = ({
   perks,
   available,
   countDown,
+  ticketID,
 }: singleTicketProps) => {
   const router = useRouter();
 
   const startDate = new Date("2023-12-01T00:00:00"); // countdown timer stops at Nov 10, 2023
   const [timeLeft, setTimeLeft] = useState<number>(0);
+  const {
+    isTicketModalOpen,
+    setIsTicketModalOpen,
+    setTicketType,
+    setHasCountdown,
+  } = useTicketContext();
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -50,6 +59,12 @@ const SingleTicket = ({
   const minutes = Math.floor((timeLeft / 1000 / 60) % 60);
   const hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
   const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+
+  const handleView = () => {
+    setIsTicketModalOpen(true);
+    setTicketType(ticketID);
+    setHasCountdown(countDown);
+  };
   return (
     <div
       className={`relative mx-auto w-72 h-[390px] text-gray-200 px-2 py-3 flex flex-col justify-center items-center rounded-2xl bg-transparent  transition duration-100 lg:w-80 hover:scale-105  hover:text-gray-200 selection:bg-zaama_red/50 
@@ -107,11 +122,20 @@ const SingleTicket = ({
       )} */}
       <ul className=" text-sm mb-5 selection:bg-gray-200">
         {perks.slice(0, 3).map((item, index) => (
-          <li key={index} className="mb-1 flex gap-3 items-center text-xs ">
-            <span className=" w-[6px] h-[6px] inline-block rounded-full bg-white "></span>
+          <li
+            key={index}
+            className="mb-1 flex gap-3 items-center justify-center text-xs"
+          >
+            {/* <span className=" w-[6px] h-[6px] inline-block rounded-full bg-white "></span> */}
             {item}
           </li>
         ))}
+        <li
+          onClick={handleView}
+          className="text-center mt-1 w-full inline-block text-gray-300 text-xs cursor-pointer "
+        >
+          see more
+        </li>
       </ul>
       <button
         onClick={() =>
@@ -128,7 +152,7 @@ const SingleTicket = ({
             : color === "green"
             ? "border-zaama_green/50 hover:bg-zaama_green/10"
             : "border-zaama_yellow/50 hover:bg-zaama_yellow/10"
-        }  `}
+        } ${!countDown && "mb-11"} `}
       >
         Get Ticket
       </button>

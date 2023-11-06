@@ -10,65 +10,12 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import localFont from "next/font/local";
+import { ticketData } from "../lib/ticketData";
 
 const blatantBold = localFont({
   src: "../blatant-font/OTF/Blatant-Bold.otf",
 });
 const Ticket = () => {
-  const ticketData = [
-    {
-      color: "yellow",
-      packageName: "General Access",
-      dollar_price: "10",
-      cedi_price: "100",
-      perks: [
-        "Party Bands",
-        "Experience avenue",
-        "Food Court access",
-        "General Admission Access",
-      ],
-      available: true,
-      countDown: false,
-    },
-    {
-      color: "red",
-      packageName: "General Access Plus",
-      dollar_price: "20",
-      cedi_price: "200",
-      perks: [
-        "Party Bands",
-        "Access to Bar Area",
-        "Merge area access",
-        "Priority access to book buss",
-        "Access to Cocktail Area",
-        "Water",
-        "Access to Experiential Center",
-        "Access to food court",
-      ],
-      available: true,
-      countDown: true,
-    },
-    {
-      color: "green",
-      packageName: "VIP",
-      dollar_price: "40",
-      cedi_price: "500",
-      perks: [
-        "Access to event bars",
-        "Priority entry",
-        "Autograph signing",
-        "Merch access",
-        "Meet and Great Sessions",
-        "Access to our exclusive after party event",
-        "Access to unlimited water and drinks cocktail",
-        "An item of exclusive singing opportunity",
-        "Unrestricted access to the front stage within arms reach with the artist",
-      ],
-      available: true,
-      countDown: true,
-    },
-  ];
-
   return (
     <section id="tickets" className="  px-5 pt-14 pb-28  sm:py-10 lg:px-16 ">
       <p
@@ -109,6 +56,7 @@ const Ticket = () => {
                   perks={item.perks}
                   available={item.available}
                   countDown={item.countDown}
+                  ticketID={item.ticketType}
                 />
               </SwiperSlide>
             ))}
@@ -138,6 +86,7 @@ const Ticket = () => {
                   perks={item.perks}
                   available={item.available}
                   countDown={item.countDown}
+                  ticketID={item.ticketType}
                 />
               </SwiperSlide>
             ))}
@@ -169,6 +118,7 @@ const Ticket = () => {
                   perks={item.perks}
                   available={item.available}
                   countDown={item.countDown}
+                  ticketID={item.ticketType}
                 />
               </SwiperSlide>
             ))}

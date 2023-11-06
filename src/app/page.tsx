@@ -10,8 +10,12 @@ import CarouselLabel from "./components/CarouselLabel";
 import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import TicketModal from "./components/TicketModal";
+import { useTicketContext } from "./context/ticketContext";
 const Home = () => {
   const [loading, setLoading] = useState(true);
+  const { isTicketModalOpen, setIsTicketModalOpen, setTicketType, ticketType } =
+    useTicketContext();
 
   // initialize AOS
   useEffect(() => {
@@ -40,6 +44,7 @@ const Home = () => {
         </div>
       ) : (
         <>
+          {isTicketModalOpen && <TicketModal />}
           <Hero />
           <CarouselLabel word="tickets" />
           <Ticket />

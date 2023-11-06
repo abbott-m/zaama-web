@@ -26,14 +26,7 @@ const SingleTable = ({
   return (
     <div
       className={`relative mx-auto w-72 h-[390px]  px-2 py-4 flex flex-col justify-center items-center rounded-2xl bg-transparent  transition duration-100 lg:w-80 hover:scale-105  hover:text-gray-200 selection:bg-zaama_red/50 
-   ${
-     color === "red"
-       ? "hoverr:bg-zaama_red/60"
-       : color === "green"
-       ? "hoverr:bg-zaama_green/60"
-       : "hoverr:bg-zaama_orange/60"
-   }
-  
+ 
   `}
     >
       <Image

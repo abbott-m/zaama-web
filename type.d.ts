@@ -26,3 +26,13 @@ interface IOptions {
   name: string;
   value: string;
 }
+interface ITicketData {
+  ticketType: number;
+  color: string;
+  packageName: string;
+  dollar_price: string;
+  cedi_price: string;
+  perks: string[];
+  available: boolean;
+  countDown: boolean;
+}
