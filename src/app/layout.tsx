@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     description:
       "An annual event that seeks to drive the Ghanaian youth and youths around the world with one voice for change through entertainment.",
     images: "/9M1jmk6c/open-graph.png",
-    url: "https://zaamaweb.netlify.app/",
+    url: "https://zaamadisco.com/",
   },
 };
 
