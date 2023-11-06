@@ -32,7 +32,7 @@ const SingleTicket = ({
 }: singleTicketProps) => {
   const router = useRouter();
 
-  const startDate = new Date("2023-11-10T00:00:00"); // countdown timer stops at Nov 10, 2023
+  const startDate = new Date("2023-12-01T00:00:00"); // countdown timer stops at Nov 10, 2023
   const [timeLeft, setTimeLeft] = useState<number>(0);
 
   useEffect(() => {
@@ -43,6 +43,7 @@ const SingleTicket = ({
     }, 1000);
 
     return () => clearInterval(timer);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [startDate]);
 
   const seconds = Math.floor((timeLeft / 1000) % 60);
@@ -51,7 +52,7 @@ const SingleTicket = ({
   const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
   return (
     <div
-      className={`relative mx-auto w-72 h-[390px]  px-2 py-4 flex flex-col justify-center items-center rounded-2xl bg-transparent  transition duration-100 lg:w-80 hover:scale-105  hover:text-gray-200 selection:bg-zaama_red/50 
+      className={`relative mx-auto w-72 h-[390px] text-gray-200 px-2 py-3 flex flex-col justify-center items-center rounded-2xl bg-transparent  transition duration-100 lg:w-80 hover:scale-105  hover:text-gray-200 selection:bg-zaama_red/50 
        ${
          color === "red"
            ? "hoverr:bg-zaama_red/60"
@@ -92,7 +93,7 @@ const SingleTicket = ({
       >
         <span className="text-lg md:text-2xl"> &#8373; </span> {cedi_price}
       </p>
-      {countDown && timeLeft > 0 ? (
+      {/* {countDown && timeLeft > 0 ? (
         <div className={`${blatant.className} mb-10 w-2/3 text-center`}>
           <p className="">Ticket Available In</p>
           <p className="text-2xl">
@@ -103,15 +104,15 @@ const SingleTicket = ({
           </p>
         </div>
       ) : (
-        <ul className=" text-sm mb-5 selection:bg-gray-200">
-          {perks.map((item, index) => (
-            <li key={index} className="mb-1 flex gap-3 items-center text-xs">
-              <span className=" w-[6px] h-[6px] inline-block rounded-full bg-white "></span>
-              {item}
-            </li>
-          ))}
-        </ul>
-      )}
+      )} */}
+      <ul className=" text-sm mb-5 selection:bg-gray-200">
+        {perks.slice(0, 3).map((item, index) => (
+          <li key={index} className="mb-1 flex gap-3 items-center text-xs ">
+            <span className=" w-[6px] h-[6px] inline-block rounded-full bg-white "></span>
+            {item}
+          </li>
+        ))}
+      </ul>
       <button
         onClick={() =>
           window.open(
@@ -127,13 +128,21 @@ const SingleTicket = ({
             : color === "green"
             ? "border-zaama_green/50 hover:bg-zaama_green/10"
             : "border-zaama_yellow/50 hover:bg-zaama_yellow/10"
-        } ${
-          timeLeft > 0 &&
-          "grayscale opacity-60 text-gray-400 select-none pointer-events-none"
-        } `}
+        }  `}
       >
         Get Ticket
       </button>
+      {countDown && timeLeft > 0 && (
+        <div className={`${blatant.className} mt-2 w-2/3 text-center`}>
+          <p className="text-sm tracking-wide ">Ticket Increases In</p>
+          <p className="text-xl">
+            {days.toString().padStart(2, "0")} :{" "}
+            {hours.toString().padStart(2, "0")} :{" "}
+            {minutes.toString().padStart(2, "0")} :{" "}
+            {seconds.toString().padStart(2, "0")}
+          </p>
+        </div>
+      )}
     </div>
   );
 };
