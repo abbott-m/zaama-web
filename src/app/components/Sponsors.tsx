@@ -49,13 +49,13 @@ const Sponsors = () => {
       smallSize: true,
     },
     {
-      imageSrc: "/images/Blache_logo.png",
-      alt: "Blache",
+      imageSrc: "/images/Rave.png",
+      alt: "Rave",
       smallSize: false,
     },
     {
-      imageSrc: "/images/ministry-of-tourism-arts-and-culture.png",
-      alt: "ministry-of-tourism-arts-and-culture",
+      imageSrc: "/images/RythmzsAfrica.png",
+      alt: "RythmzsAfrica",
       smallSize: false,
     },
     {

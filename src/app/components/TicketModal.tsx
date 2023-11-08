@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef, useCallback } from "react";
 import localFont from "next/font/local";
 import { ticketData } from "../lib/ticketData";
 import { useTicketContext } from "../context/ticketContext";
@@ -7,6 +7,8 @@ import { useTicketContext } from "../context/ticketContext";
 const blatant = localFont({
   src: "../blatant-font/OTF/Blatant.otf",
 });
+type MouseEventCallback = (e: MouseEvent) => void;
+
 const TicketModal = () => {
   const { isTicketModalOpen, setIsTicketModalOpen, hasCountdown, ticketType } =
     useTicketContext();
@@ -29,15 +31,33 @@ const TicketModal = () => {
   const hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
   const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
 
+  const modalRef = useRef<HTMLDivElement | null>(null);
+
+  // close dropdown on clicking outside it
+  const closeDropdown: MouseEventCallback = useCallback((e) => {
+    if (modalRef.current && !modalRef.current.contains(e.target as Node)) {
+      setIsTicketModalOpen(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    document.addEventListener("mousedown", closeDropdown);
+    return () => {
+      document.removeEventListener("mousedown", closeDropdown);
+    };
+  }, [closeDropdown]);
+
   const ticket: ITicketData | undefined = ticketData.find(
     (item) => item.ticketType === ticketType
   );
+
   return (
     <div className="fixed z-20 h-screen w-screen top-0 left-0 ">
       <div className="absolute w-full h-full bg-black/70"></div>
       <div
+        ref={modalRef}
         className="absolute z-30 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 w-[95%] 
-       rounded-xl px-5 pt-16 pb-10 bg-[#111111] text-gray-200 md:w-4/5 md:px-10 lg:px-20 lg:w-3/5 selection:bg-zaama_red/50"
+       rounded-xl px-5 pt-16 pb-10 bg-[#1a1a1a] text-gray-200 sm:px-8 md:w-4/5 md:px-10 lg:px-20 lg:w-3/5 selection:bg-zaama_red/50"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -64,7 +84,7 @@ const TicketModal = () => {
             <p className={`${blatant.className} text-lg mb-2`}>Ticket Price</p>
             <p className="font-medium text-lg">
               {" "}
-              <span className=" "> &#8373; </span>
+              <span className=" text-sm"> &#8373; </span>
               {ticket?.cedi_price}
             </p>
           </div>

@@ -124,7 +124,7 @@ const SingleTicket = ({
         {perks.slice(0, 3).map((item, index) => (
           <li
             key={index}
-            className="mb-1 flex gap-3 items-center justify-center text-xs"
+            className="mb-1 flex gap-3 items-center justify-center text-sm"
           >
             {/* <span className=" w-[6px] h-[6px] inline-block rounded-full bg-white "></span> */}
             {item}
@@ -132,7 +132,7 @@ const SingleTicket = ({
         ))}
         <li
           onClick={handleView}
-          className="text-center mt-1 w-full inline-block text-gray-300 text-xs cursor-pointer "
+          className="text-center w-full inline-block text-gray-300 text-sm cursor-pointer "
         >
           see more
         </li>

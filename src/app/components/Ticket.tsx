@@ -26,9 +26,16 @@ const Ticket = () => {
       </p>
       <p
         data-aos="fade-up"
-        className="text-center mb-14 selection:bg-zaama_red/50"
+        className="text-center mb-2 selection:bg-zaama_red/50"
       >
         We have uniquely crafted ticket packages for everyone
+      </p>
+      <p
+        data-aos="fade-up"
+        className="text-center mb-10 flex justify-center items-center gap-4 text-sm selection:bg-zaama_red/50"
+      >
+        <span>+233 55 999 7488</span>
+        <span>+233 55 999 7726</span>
       </p>
 
       <div data-aos="fade-up">

@@ -23,7 +23,7 @@ export const ticketData: ITicketData[] = [
     perks: [
       "Party Bands",
       "Access to Bar Area",
-      "Merge area access",
+      "Merch area access",
       "Priority access to book buss",
       "Access to Cocktail Area",
       "Water",

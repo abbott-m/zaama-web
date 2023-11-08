@@ -19,7 +19,7 @@ const Hero = () => {
         <source src="/video/hero-bg.mp4" type="video/mp4" />
       </video>
 
-      <Image
+      {/* <Image
         src="/images/zaama-3d-new.png"
         alt="Zaama-logo"
         width={260}
@@ -28,6 +28,15 @@ const Hero = () => {
         className="mx-auto mb-16 mt-14 bg-transparent animate-little_bounce"
         data-aos="zoom-in-up"
         data-aos-duration="500"
+      /> */}
+      <Image
+        src="/GIF/hero-logo-anim.gif"
+        alt="zaama-logo"
+        unoptimized
+        width={700}
+        height={200}
+        priority
+        className="mx-auto mb-5 mt-12  animate-little_bounce"
       />
 
       <Image
