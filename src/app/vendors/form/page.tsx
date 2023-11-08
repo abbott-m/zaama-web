@@ -315,7 +315,7 @@ const VendorForm = () => {
               </p>
               <InputField
                 name="company_name"
-                type="tel"
+                type="text"
                 value={vendorFields.company_name}
                 onChange={handleInputChange}
               />
