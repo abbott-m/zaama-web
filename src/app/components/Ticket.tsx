@@ -30,13 +30,14 @@ const Ticket = () => {
       >
         We have uniquely crafted ticket packages for everyone
       </p>
-      <p
-        data-aos="fade-up"
-        className="text-center mb-10 flex justify-center items-center gap-4 text-sm selection:bg-zaama_red/50"
-      >
-        <span>+233 55 999 7488</span>
-        <span>+233 55 999 7726</span>
-      </p>
+      <div className="text-sm mb-10 text-center selection:bg-zaama_red/50">
+        {/* <p className="mb-2">Ticket Support Numbers</p> */}
+        <p data-aos="fade-up" className="text-center  ">
+          Ticket Support Numbers:{" "}
+          <span className="text-sm">+233 55 999 7488,</span>
+          <span className="text-sm">+233 55 999 7726</span>
+        </p>
+      </div>
 
       <div data-aos="fade-up">
         <div className="flex justify-center items-center md:hidden">
