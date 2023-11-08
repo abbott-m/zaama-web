@@ -34,8 +34,8 @@ const Ticket = () => {
         {/* <p className="mb-2">Ticket Support Numbers</p> */}
         <p data-aos="fade-up" className="text-center  ">
           Ticket Support Numbers:{" "}
-          <span className="text-sm">+233 55 999 7488,</span>
-          <span className="text-sm">+233 55 999 7726</span>
+          <span className="text-sm whitespace-nowrap">+233 55 999 7488,</span>
+          <span className="text-sm whitespace-nowrap">+233 55 999 7726</span>
         </p>
       </div>
 
