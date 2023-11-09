@@ -28,7 +28,7 @@ const Vendors = () => {
         the spot.
       </p>
       <p className="policy-paragraph font-semibold">
-        VENDOR APPLICATION DEADLINE – September 30th, 2023
+        VENDOR APPLICATION DEADLINE – December 1st, 2023
       </p>
       <div>
         <p className="policy-subheading">Beverages</p>

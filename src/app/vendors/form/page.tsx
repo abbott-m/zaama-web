@@ -43,7 +43,7 @@ const VendorForm = () => {
   });
   const [isTermChecked, setIsTermChecked] = useState(false);
 
-  const [isMediaFormLoading, setIsMediaFormLoading] = useState(false);
+  const [isVendorFormLoading, setIsVendorFormLoading] = useState(false);
   const [response, setResponse] = useState({
     type: "",
     text: "",
@@ -59,7 +59,7 @@ const VendorForm = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    setIsMediaFormLoading(true);
+    setIsVendorFormLoading(true);
     let formData = new FormData();
 
     formData.append("primary_email", vendorFields.primary_email);
@@ -103,7 +103,7 @@ const VendorForm = () => {
       .then((res) => res.text())
       .then((data) => {
         // set button loading state to false
-        setIsMediaFormLoading(false);
+        setIsVendorFormLoading(false);
 
         // reset input fields to default
         setVendorFields({
@@ -135,11 +135,11 @@ const VendorForm = () => {
             type: "",
             text: "",
           });
-        }, 5000);
+        }, 10000);
       })
       .catch((error) => {
         // set button loading state to false
-        setIsMediaFormLoading(false);
+        setIsVendorFormLoading(false);
         setResponse({
           type: "fail",
           text: "An error occurred. Try again",
@@ -149,7 +149,7 @@ const VendorForm = () => {
             type: "",
             text: "",
           });
-        }, 5000);
+        }, 10000);
       });
   };
 
@@ -453,7 +453,7 @@ const VendorForm = () => {
                     !vendorFields.country_of_registration))
               }
             >
-              {isMediaFormLoading ? (
+              {isVendorFormLoading ? (
                 <ButtonLoader className="animate-spin mx-auto  " />
               ) : (
                 "Apply"
