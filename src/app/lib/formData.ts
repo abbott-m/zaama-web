@@ -212,4 +212,9 @@ export const vendorCategory: IOptions[] = [
     name: "Infused",
     value: "Infused",
   },
+  {
+    id: 7,
+    name: "Others",
+    value: "Others",
+  },
 ];

@@ -70,7 +70,7 @@ const Media = () => {
             type: "",
             text: "",
           });
-        }, 5000);
+        }, 10000);
       })
       .catch((error) => {
         // set button loading state to false
@@ -84,7 +84,7 @@ const Media = () => {
             type: "",
             text: "",
           });
-        }, 5000);
+        }, 10000);
       });
   };
 
