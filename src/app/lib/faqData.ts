@@ -3,7 +3,7 @@ export const homeFAQ = [
     id: 1,
     question: "How do I get the cashless wallet app?",
     answer:
-      "You can get the webapp by clicking on cashless on the event website. Also, you can scan the QR code at the venue to get the wallet link. Simple enter your mobile number to gain access to your wallet.",
+      "You can get the webapp by clicking on cashless on the event website. Also, you can scan the QR code at the venue to get the wallet link. Simply enter your mobile number to gain access to your wallet.",
   },
   {
     id: 2,
