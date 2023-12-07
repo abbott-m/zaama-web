@@ -12,6 +12,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import TicketModal from "./components/TicketModal";
 import { useTicketContext } from "./context/ticketContext";
+import { homeFAQ } from "./lib/faqData";
 const Home = () => {
   const [loading, setLoading] = useState(true);
   const { isTicketModalOpen, setIsTicketModalOpen, setTicketType, ticketType } =
@@ -52,7 +53,12 @@ const Home = () => {
           <About />
           <Store />
           <Sponsors />
-          {/* <FAQ /> */}
+          <div className="px-5 py-10 w-fit mx-auto sm:w-4/5 md:w-5/6 md:py-10 lg:w-d3/5">
+            <FAQ
+              faqData={homeFAQ}
+              headerText="FAQs for Cashless System at ZaamaDisco"
+            />
+          </div>
         </>
       )}
     </main>

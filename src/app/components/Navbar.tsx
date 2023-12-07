@@ -89,12 +89,6 @@ const Navbar = () => {
 
           {navLinks.map((item) => (
             <li key={item.id} onClick={() => setIsNavbarOpen(false)}>
-              {/* <a
-                href={item.path}
-                className="p-1 uppercase inline-block transition duration-150 hover:text-zaama_green"
-              >
-                {item.name}
-              </a> */}
               <Link
                 href={item.path}
                 className="p-1 uppercase inline-block transition duration-150 hover:text-zaama_green"
@@ -103,16 +97,16 @@ const Navbar = () => {
               </Link>
             </li>
           ))}
-
-          {/* get ticket button */}
-
-          {/* <li onClick={() => setIsNavbarOpen(false)} className="ml-5">
-          <Link href="/#tickets">
-            <button className="w-48 h-10 bg-[#a9151a] font-semibold rounded-full text-gray-300 transition duration-100 hover:bg-zaama_red/80">
-              Get Tickets
-            </button>
-          </Link>
-        </li> */}
+          <li>
+            <span
+              onClick={() =>
+                window.open("https://paystack.com/pay/zaamadisco ", "_blank")
+              }
+              className="p-1 uppercase inline-block transition duration-150 cursor-pointer hover:text-zaama_green"
+            >
+              Cashless
+            </span>
+          </li>
         </ul>
       )}
     </nav>
