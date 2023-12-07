@@ -99,9 +99,7 @@ const Navbar = () => {
           ))}
           <li>
             <span
-              onClick={() =>
-                window.open("https://paystack.com/pay/zaamadisco ", "_blank")
-              }
+              onClick={() => window.open("https://zaama.v-pay.co", "_blank")}
               className="p-1 uppercase inline-block transition duration-150 cursor-pointer hover:text-zaama_green"
             >
               Cashless

@@ -131,7 +131,7 @@ const Tables = () => {
     // </section>
 
     <section id="tickets" className="px-5 pt-20 pb-28 sm:px-10 lg:px-24">
-      {/* <p
+      <p
         data-aos="fade-up"
         className={`${blatant.className} text-center text-xl font-medium mb-4 text-zaama_yellow uppercase tracking-wider  md:text-2xl selection:bg-zaama_red/50`}
       >
@@ -142,8 +142,8 @@ const Tables = () => {
         className="text-center mb-14 selection:bg-zaama_red/50"
       >
         We have uniquely crafted table packages for you
-      </p> */}
-      {/* <div className="flex flex-col gap-5 items-center justify-center flex-wrap sm:flex-row">
+      </p>
+      <div className="flex flex-col gap-5 items-center justify-center flex-wrap sm:flex-row">
         {tableData.map((item, index) => (
           <SingleTable
             key={index}
@@ -153,8 +153,8 @@ const Tables = () => {
             perks={item.perks}
           />
         ))}
-      </div> */}
-      {/* 
+      </div>
+
       <div className="my-8 flex gap-8 items-start flex-wrap md:my-14 lg:justify-between">
         <div>
           <p className={`${blatant.className} text-lg mb-4`}>
@@ -231,13 +231,8 @@ const Tables = () => {
             <li className="text-sm mb-2 ">• CATERING</li>
           </ul>
         </div>
-      </div> */}
-      {/* <div className="w-full mb-16 md:bg-[#4c4c4c]/20 md:px-16 md:py-14 md:rounded-2xl md:inline-block  md:mx-auto  md:w-auto">
-        <p className={blatant.className}>
-          Table packages open on the 1st December
-        </p>
-      </div> */}
-      <div className=" my-10 text-center  md:min-w-[700px]">
+      </div>
+      {/* <div className=" my-10 text-center  md:min-w-[700px]">
         <Image
           src="/images/zaama-white-logo.png"
           alt="zaama-logo-white"
@@ -246,7 +241,7 @@ const Tables = () => {
           className="mx-auto mt-16 mb-8 animate-pulse"
         />
         <p className="mb-2">Table packages open on the 1st of December</p>
-      </div>
+      </div> */}
     </section>
   );
 };
