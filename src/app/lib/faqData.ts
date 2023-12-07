@@ -1,3 +1,53 @@
+export const homeFAQ = [
+  {
+    id: 1,
+    question: "How do I get the cashless wallet app?",
+    answer:
+      "You can get the webapp by clicking on cashless on the event website. Also, you can scan the QR code at the venue to get the wallet link. Simple enter your mobile number to gain access to your wallet.",
+  },
+  {
+    id: 2,
+    question: "Where can I top-up my wallet?",
+    answer:
+      "Top-up directly from the app or at the designated TOP-UP STATION with cash, MOMO, or bank card.",
+  },
+  {
+    id: 3,
+    question: "What payment methods are accepted for top-up?",
+    answer:
+      "You can pay for your top-up with CASH, MOMO (Mobile Money), and BANK CARD.",
+  },
+  {
+    id: 4,
+    question: "How do I pay for drinks and food?",
+    answer:
+      "Use your wallet app to SCAN TO PAY. It's quick, and you'll get served a lot faster.",
+  },
+  {
+    id: 5,
+    question: "Is the event entirely cashless?",
+    answer:
+      "Yes, enjoy a hassle-free event with cashless convenience for seamless transactions.",
+  },
+  {
+    id: 6,
+    question: "What if I encounter issues with the cashless system?",
+    answer:
+      "Seek assistance from event staff or visit the designated help desk(Top-Up station) for prompt support.",
+  },
+  {
+    id: 7,
+    question: "Can I top-up my wallet after entering the venue?",
+    answer:
+      "Yes, utilize the TOP-UP STATION at the venue to add funds to your wallet during the event.",
+  },
+  {
+    id: 8,
+    question: "What if i don't use up my wallet balance?",
+    answer:
+      "You can request for refund directly from the wallet 2 days after the event provided you have a balance of GHs 50 and above. You'll also be charged GHs 10 for the refund.",
+  },
+];
 export const vendorFAQ = [
   {
     id: 1,
