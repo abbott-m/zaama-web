@@ -50,13 +50,8 @@ const SingleTable = ({
         <span className="text-lg md:text-2xl">&#8373;</span> {cedi_price}
       </p>
 
-      <button
-        // onClick={() =>
-        //   window.open(
-        //     "https://vsprocessorpro.com/ev/BuyTicket?Id=1601&p=g&comid=1255",
-        //     "_blank"
-        //   )
-        // }
+      {/* <button
+     
         className={`${
           blatant.className
         }  tracking-widest rounded-sm text-sm w-28 h-10 outline-none font-semibold border   uppercase  select-none transition duration-150 md:w-32  ${
@@ -68,7 +63,11 @@ const SingleTable = ({
         } `}
       >
         Purchase
-      </button>
+      </button> */}
+      <div className="text-center text-sm">
+        <p className="mb-1">Table RSVP</p>
+        <p className="text-sm">+233 55 283 1168</p>
+      </div>
     </div>
   );
 };
