@@ -49,11 +49,6 @@ const Sponsors = () => {
       smallSize: true,
     },
     {
-      imageSrc: "/images/Rave.png",
-      alt: "Rave",
-      smallSize: false,
-    },
-    {
       imageSrc: "/images/RythmzsAfrica.png",
       alt: "RythmzsAfrica",
       smallSize: false,
@@ -72,6 +67,11 @@ const Sponsors = () => {
       imageSrc: "/images/road-boys-association.png",
       alt: "road-boys-association",
       smallSize: false,
+    },
+    {
+      imageSrc: "/images/musicians-union-of-ghana.png",
+      alt: "musicians-union-of-ghana",
+      smallSize: true,
     },
   ];
   return (
