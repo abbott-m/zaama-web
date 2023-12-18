@@ -50,11 +50,16 @@ const SingleTable = ({
         <span className="text-lg md:text-2xl">&#8373;</span> {cedi_price}
       </p>
 
-      {/* <button
-     
+      <button
+        onClick={() =>
+          window.open(
+            "https://vsprocessorpro.com/ev/BuyTicket?Id=1655&p=g&comid=1255",
+            "_blank"
+          )
+        }
         className={`${
           blatant.className
-        }  tracking-widest rounded-sm text-sm w-28 h-10 outline-none font-semibold border   uppercase  select-none transition duration-150 md:w-32  ${
+        }  tracking-widest rounded-sm text-sm w-28 h-10 mb-5 outline-none font-semibold border uppercase select-none transition duration-150 md:w-32  ${
           color === "red"
             ? "border-zaama_red/50 hover:bg-zaama_red/10"
             : color === "green"
@@ -63,7 +68,7 @@ const SingleTable = ({
         } `}
       >
         Purchase
-      </button> */}
+      </button>
       <div className="text-center text-sm">
         <p className="mb-1">Table RSVP</p>
         <p className="text-sm">+233 55 283 1168</p>
