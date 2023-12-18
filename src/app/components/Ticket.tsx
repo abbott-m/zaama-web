@@ -69,6 +69,7 @@ const Ticket = () => {
             ))}
           </Swiper>
         </div>
+
         <div className="hidden justify-center items-center px-28 md:flex lg:hidden">
           <Swiper
             loop={true}
@@ -89,7 +90,7 @@ const Ticket = () => {
                   color={item.color}
                   packageName={item.packageName}
                   dollar_price={item.dollar_price}
-                  cedi_price={item.dollar_price}
+                  cedi_price={item.cedi_price}
                   perks={item.perks}
                   available={item.available}
                   countDown={item.countDown}
@@ -99,6 +100,9 @@ const Ticket = () => {
             ))}
           </Swiper>
         </div>
+        <p className="text-sm text-center mt-5 italic md:hidden text-gray-300">
+          Swipe for more...
+        </p>
         <div className="hidden justify-center items-center lg:flex">
           <Swiper
             loop={true}
