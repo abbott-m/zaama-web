@@ -99,7 +99,7 @@ const TicketModal = () => {
             ))}
           </ul>
         </div>
-        {hasCountdown && (
+        {/* {hasCountdown && (
           <div className="text-center">
             <p className={`${blatant.className} text-lg mb-2`}>
               Ticket Increases In
@@ -111,7 +111,7 @@ const TicketModal = () => {
               {seconds.toString().padStart(2, "0")}
             </p>
           </div>
-        )}
+        )} */}
       </div>
     </div>
   );

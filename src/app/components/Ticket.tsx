@@ -30,8 +30,7 @@ const Ticket = () => {
       >
         We have uniquely crafted ticket packages for everyone
       </p>
-      <div className="text-sm mb-10 text-center selection:bg-zaama_red/50">
-        {/* <p className="mb-2">Ticket Support Numbers</p> */}
+      <div className="mb-10 text-center selection:bg-zaama_red/50">
         <p data-aos="fade-up" className="text-center  ">
           Ticket Support Numbers:{" "}
           <span className="text-sm whitespace-nowrap">+233 55 999 7488,</span>
