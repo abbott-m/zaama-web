@@ -11,7 +11,7 @@ export const ticketData: ITicketData[] = [
       "Food Court access",
       "General Admission Access",
     ],
-    available: false,
+    available: true,
     countDown: false,
   },
   {
@@ -19,7 +19,7 @@ export const ticketData: ITicketData[] = [
     color: "red",
     packageName: "General Access Plus",
     dollar_price: "20",
-    cedi_price: "300",
+    cedi_price: "200",
     perks: [
       "Party Bands",
       "Access to Bar Area",
@@ -30,7 +30,7 @@ export const ticketData: ITicketData[] = [
       "Access to Experiential Center",
       "Access to food court",
     ],
-    available: true,
+    available: false,
     countDown: false,
   },
   {
