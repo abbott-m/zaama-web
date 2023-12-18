@@ -11,7 +11,7 @@ export const ticketData: ITicketData[] = [
       "Food Court access",
       "General Admission Access",
     ],
-    available: true,
+    available: false,
     countDown: false,
   },
   {
@@ -19,7 +19,7 @@ export const ticketData: ITicketData[] = [
     color: "red",
     packageName: "General Access Plus",
     dollar_price: "20",
-    cedi_price: "200",
+    cedi_price: "300",
     perks: [
       "Party Bands",
       "Access to Bar Area",
@@ -31,7 +31,7 @@ export const ticketData: ITicketData[] = [
       "Access to food court",
     ],
     available: true,
-    countDown: true,
+    countDown: false,
   },
   {
     ticketType: 3,
@@ -51,6 +51,6 @@ export const ticketData: ITicketData[] = [
       "Unrestricted access to the front stage within arms reach with the artist",
     ],
     available: true,
-    countDown: true,
+    countDown: false,
   },
 ];
