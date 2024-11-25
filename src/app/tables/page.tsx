@@ -25,7 +25,7 @@ const SingleTable = ({
 }: singleTableProps) => {
   return (
     <div
-      className={`relative mx-auto w-72 h-[390px]  px-2 py-4 flex flex-col justify-center items-center rounded-2xl bg-transparent  transition duration-100 lg:w-80 hover:scale-105  hover:text-gray-200 selection:bg-zaama_red/50 
+      className={`relative mx-auto w-72 h-[390px]  px-2 py-4 flex flex-col justify-center items-center rounded-2xl bg-transparent  transition duration-100 lg:w-80 hover:scale-105  hover:text-gray-200 
  
   `}
     >
@@ -113,7 +113,7 @@ const Tables = () => {
     },
   ];
   return (
-    // <section className=" pt-20 pb-4 px-5 bg-[#161616] flex justify-center items-center md:px-8 md:pb-8  selection:bg-zaama_red/50">
+    // <section className=" pt-20 pb-4 px-5 bg-[#161616] flex justify-center items-center md:px-8 md:pb-8 ">
     //   <div className=" w-full mb-16 md:bg-[#4c4c4c]/20 md:px-16 md:py-14 md:rounded-2xl md:inline-block   md:w-auto ">
     //     <h1
     //       data-aos="fade-down"
@@ -137,14 +137,11 @@ const Tables = () => {
     <section id="tickets" className="px-5 pt-20 pb-28 sm:px-10 lg:px-24">
       <p
         data-aos="fade-up"
-        className={`${blatant.className} text-center text-xl font-medium mb-4 text-zaama_yellow uppercase tracking-wider  md:text-2xl selection:bg-zaama_red/50`}
+        className={`${blatant.className} text-center text-xl font-medium mb-4 text-zaama_yellow uppercase tracking-wider  md:text-2xl`}
       >
         Choose your package
       </p>
-      <p
-        data-aos="fade-up"
-        className="text-center mb-14 selection:bg-zaama_red/50"
-      >
+      <p data-aos="fade-up" className="text-center mb-14">
         We have uniquely crafted table packages for you
       </p>
       <div className="flex flex-col gap-5 items-center justify-center flex-wrap sm:flex-row">

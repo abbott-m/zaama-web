@@ -9,7 +9,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="relative bg-about-zaama-cover bg-cover bg-no-repeat bg-center bg-opacity-50 flex flex-col items-center gap-14 px-5 py-10 tracking-wider sm:px-10  sm:py-24 lg:flex-row  md:px-20 lg:px-28 selection:bg-zaama_red/50"
+      className="relative bg-about-zaama-cover bg-cover bg-no-repeat bg-center bg-opacity-50 flex flex-col items-center gap-14 px-5 py-10 tracking-wider sm:px-10  sm:py-24 lg:flex-row  md:px-20 lg:px-28"
     >
       <div className="absolute top-0 left-0 h-full w-full bg-black/70"></div>
       <div

@@ -53,11 +53,11 @@ const TicketModal = () => {
 
   return (
     <div className="fixed z-20 h-screen w-screen top-0 left-0 ">
-      <div className="absolute w-full h-full bg-black/70"></div>
+      <div className="absolute w-full h-full bg-black/60"></div>
       <div
         ref={modalRef}
         className="absolute z-30 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 w-[95%] 
-       rounded-xl px-5 pt-16 pb-10 bg-[#1a1a1a] text-gray-200 sm:px-8 md:w-4/5 md:px-10 lg:px-20 lg:w-3/5 selection:bg-zaama_red/50"
+       rounded-xl px-5 pt-16 pb-10 bg-[#1a1a1a] text-gray-200 sm:px-8 md:w-4/5 md:px-10 lg:px-20 lg:w-3/5"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -91,7 +91,7 @@ const TicketModal = () => {
         </div>
         <div>
           <p className={`${blatant.className} text-lg mb-2`}>Benefits</p>
-          <ul className=" text-sm mb-5 selection:bg-gray-200">
+          <ul className=" text-sm mb-5">
             {ticket?.perks.map((item, index) => (
               <li key={index} className="mb-1 flex gap-3 items-center text-sm ">
                 - {item}

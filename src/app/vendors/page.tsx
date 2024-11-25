@@ -15,7 +15,7 @@ const Vendors = () => {
   return (
     <section className="py-16 px-5 md:px-16 ">
       <h2
-        className={`${blatantBold.className} text-xl text-zaama_yellow uppercase tracking-wide font-medium mb-7 text-center selection:bg-zaama_red/50 md:text-2xl `}
+        className={`${blatantBold.className} text-xl text-zaama_yellow uppercase tracking-wide font-medium mb-7 text-center md:text-2xl `}
       >
         ZAAMA DISCO VENDOR
       </h2>

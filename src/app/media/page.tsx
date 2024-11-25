@@ -89,7 +89,7 @@ const Media = () => {
   };
 
   return (
-    <section className="pt-20 pb-4 px-5 bg-[#161616] flex justify-center items-center md:px-8 md:pb-8  selection:bg-zaama_red/50">
+    <section className="pt-20 pb-4 px-5 bg-[#161616] flex justify-center items-center md:px-8 md:pb-8">
       {response.text &&
         (response.type === "success" ? (
           <ToastNotification type="success" text={response.text} />

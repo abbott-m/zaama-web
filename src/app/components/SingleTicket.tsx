@@ -67,14 +67,8 @@ const SingleTicket = ({
   };
   return (
     <div
-      className={`relative mx-auto w-72 h-[390px] text-gray-200 px-2 py-3 flex flex-col justify-center items-center rounded-2xl bg-transparent  transition duration-100 lg:w-80 hover:scale-105  hover:text-gray-200 selection:bg-zaama_red/50 
-       ${
-         color === "red"
-           ? "hoverr:bg-zaama_red/60"
-           : color === "green"
-           ? "hoverr:bg-zaama_green/60"
-           : "hoverr:bg-zaama_orange/60"
-       }
+      className={`relative mx-auto w-72 h-[390px] text-gray-200 px-2 py-3 flex flex-col justify-center items-center rounded-2xl bg-transparent  transition duration-100 lg:w-80 
+      
        ${
          !available &&
          "grayscale opacity-60 text-gray-400 select-none pointer-events-none"
@@ -108,6 +102,7 @@ const SingleTicket = ({
       >
         <span className="text-lg md:text-2xl"> &#8373; </span> {cedi_price}
       </p>
+
       {/* {countDown && timeLeft > 0 ? (
         <div className={`${blatant.className} mb-10 w-2/3 text-center`}>
           <p className="">Ticket Available In</p>
@@ -120,7 +115,8 @@ const SingleTicket = ({
         </div>
       ) : (
       )} */}
-      <ul className=" text-sm mb-5 selection:bg-gray-200">
+
+      <ul className=" text-sm mb-5 selection:bg-inherit">
         {perks.slice(0, 3).map((item, index) => (
           <li
             key={index}
@@ -139,10 +135,7 @@ const SingleTicket = ({
       </ul>
       <button
         onClick={() =>
-          window.open(
-            "https://vsprocessorpro.com/ev/BuyTicket?Id=1601&p=g&comid=1255",
-            "_blank"
-          )
+          window.open("https://echolive.live/buy-tickets", "_blank")
         }
         className={`${
           blatant.className

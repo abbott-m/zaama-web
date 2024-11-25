@@ -140,7 +140,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#1c1c1c]   px-4 py-10  sm:px-28 sm:py-16  selection:bg-zaama_red/50">
+    <footer className="bg-[#1c1c1c]   px-4 py-10  sm:px-28 sm:py-16">
       <div className="flex flex-col  justify-center items-center gap-16   sm:flex-row  sm:items-start sm:flex-wrap  md:gap-24 lg:gap-28">
         <div className="text-center ">
           <Link href="/" className="mb-6 inline-block py-2 ">

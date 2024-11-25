@@ -23,7 +23,7 @@ const FAQ = ({ faqData, headerText }: FAQProps) => {
   };
 
   return (
-    <div className="w-full mb-16  md:px-20 md:py-14 md:rounded-2xl md:inline-block  md:mx-auto  md:w-auto selection:bg-zaama_red/50">
+    <div className="w-full mb-16  md:px-20 md:py-14 md:rounded-2xl md:inline-block  md:mx-auto  md:w-auto">
       <p
         data-aos="fade-down"
         className={`${blatantBold.className} text-center text-xl font-medium mb-8 tracking-wider text-zaama_yellow uppercase md:text-2xl md:mb-10`}
