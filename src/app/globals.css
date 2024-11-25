@@ -2,7 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
-*,
+/* *,
 body {
   scroll-behavior: smooth;
+} */
+
+/* .swiper-wrapper {
+  @apply pb-14;
+} */
+/* .swiper-pagination-bullet {
+  @apply w-40 h-40 bg-green-300 rounded-none;
+} */
+
+@layer base {
+  /* custom scrollbar for firefox */
+  .dropdown {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  /* custom scrollbar for chrome */
+
+  .dropdown::-webkit-scrollbar {
+    width: 0.3vw;
+  }
+  .dropdown::-webkit-scrollbar-thumb {
+    background-color: rgb(140, 140, 140);
+    border-radius: 10px;
+  }
+  .dropdown::-webkit-scrollbar-track {
+    background-color: rgb(0, 0, 0, 0.2);
+  }
+
+  /* custom styling for input autofill */
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-text-fill-color: #ffffff !important;
+    -webkit-box-shadow: 0 0 0 30px #5b5b5b inset !important;
+  }
+
+  /* remove input[number] arrow for Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* remove input[number] arrow for Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+}
+
+.policy-paragraph {
+  @apply mb-3 text-gray-300 text-sm selection:bg-zaama_red/50;
+}
+.policy-subheading {
+  @apply font-semibold uppercase mt-5 mb-2  selection:bg-zaama_red/50;
+}
+.policy-list {
+  @apply ml-2  selection:bg-zaama_red/50;
 }

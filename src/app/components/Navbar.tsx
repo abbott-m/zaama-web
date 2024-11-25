@@ -1,162 +1,110 @@
 "use client";
-import Image from "next/image";
 import React, { useState } from "react";
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-// import required modules
-import { Autoplay } from "swiper/modules";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
 import Link from "next/link";
 
 const Navbar = () => {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
+
+  const navLinks: navLinks = [
+    {
+      id: 1,
+      name: "home",
+      sectionId: "",
+      path: "/",
+    },
+
+    {
+      id: 2,
+      name: "vendors",
+      sectionId: "vendors",
+      path: "/vendors",
+    },
+    {
+      id: 3,
+      name: "volunteers",
+      sectionId: "volunteers",
+      path: "/volunteers",
+    },
+
+    {
+      id: 4,
+      name: "tables",
+      sectionId: "table",
+      path: "/tables",
+    },
+    {
+      id: 5,
+      name: "media",
+      sectionId: "media",
+      path: "/media",
+    },
+    {
+      id: 6,
+      name: "policy",
+      sectionId: "policy",
+      path: "/policy",
+    },
+  ];
+
   return (
-    <nav className="p-4 md:py-10">
-      {/* <Swiper
-        loop={true}
-        speed={1200}
-        slidesPerView={3}
-        spaceBetween={5}
-        autoplay={{
-          delay: 200,
-          pauseOnMouseEnter: true,
-        }}
-        modules={[Autoplay]}
-        className="mySwiper"
-      >
-        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item, index) => (
-          <SwiperSlide key={index}>
-            <Image
-              src="/Disco.png"
-              width={130}
-              height={40}
-              alt="zaama logo"
-              unoptimized
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper> */}
+    <nav className="absolute z-10 w-full flex gap-3 justify-center items-center p-2 md:p-1 md:px-10 lg:px-20 ">
+      {!isNavbarOpen ? (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="#dedede"
+          className="w-8 h-8 inline cursor-pointer transition-all duration-150 hover:stroke-zaama_green"
+          onClick={() => setIsNavbarOpen(true)}
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+      ) : (
+        <ul
+          className={`fixed top-0 left-0 z-10 pt-16 bg-[#111111] w-screen h-screen gap-7 items-center select-none  ${
+            isNavbarOpen ? "flex flex-col" : "hidden "
+          }`}
+        >
+          <li onClick={() => setIsNavbarOpen(false)} className="mb-7">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="#dedede"
+              className="w-8 h-8 inline cursor-pointer transition-all duration-150 hover:stroke-zaama_green"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </li>
 
-      {/* <article className="flex whitespace-no-wrap overflow-x-hidden">
-        <div className="relative">
-          <ul className="flex animate-marquee">
-            {[1, 2, 3, 4, 5].map(() => (
-              <li className="mx-4">
-                {" "}
-                <Image
-                  src="/Disco.png"
-                  width={130}
-                  height={40}
-                  alt="zaama logo"
-                  unoptimized
-                />
-              </li>
-            ))}
-          </ul>
-          <ul className="flex absolute top-0 animate-marquee2">
-            {[1, 2, 3, 4, 5].map(() => (
-              <li className="mx-4">
-                {" "}
-                <Image
-                  src="/Disco.png"
-                  width={130}
-                  height={40}
-                  alt="zaama logo"
-                  unoptimized
-                />
-              </li>
-            ))}
-          </ul>
-        </div>
-      </article> */}
-
-      {/* <ul className="my-3">
-        <Image
-          src="/zaama-logo.gif"
-          width={50}
-          height={50}
-          alt="zaama logo"
-          unoptimized
-        />
-      </ul> */}
-      <div className="text-center mb-2">
-        {!isNavbarOpen ? (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="#00C986"
-            className="w-8 h-8  inline cursor-pointer"
-            onClick={() => setIsNavbarOpen(true)}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-            />
-          </svg>
-        ) : (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="#00C986"
-            className="w-8 h-8  inline cursor-pointer"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M6 18L18 6M6 6l12 12"
-              onClick={() => setIsNavbarOpen(false)}
-            />
-          </svg>
-        )}
-      </div>
-      {/* <p className="text-white">{JSON.stringify(isNavbarOpen)}</p> */}
-      {isNavbarOpen && (
-        <ul className="text-center  mt-5">
-          <li className="text-white uppercase mb-3 text-lg">
-            <Link
-              href="#about"
-              className="transition duration-100 hover:text-[#95f4d4]"
+          {navLinks.map((item) => (
+            <li key={item.id} onClick={() => setIsNavbarOpen(false)}>
+              <Link
+                href={item.path}
+                className="p-1 uppercase inline-block transition duration-150 hover:text-zaama_green"
+              >
+                {item.name}
+              </Link>
+            </li>
+          ))}
+          <li>
+            <span
+              onClick={() => window.open("https://zaama.v-pay.co", "_blank")}
+              className="p-1 uppercase inline-block transition duration-150 cursor-pointer hover:text-zaama_green"
             >
-              About{" "}
-            </Link>
+              Cashless
+            </span>
           </li>
-          <li className="text-white uppercase mb-3 text-lg">
-            {" "}
-            <Link
-              href="#store"
-              className="transition duration-100 hover:text-[#95f4d4]"
-            >
-              Store{" "}
-            </Link>
-          </li>
-          <li className="text-white uppercase mb-3 text-lg">
-            {" "}
-            <Link
-              href="#sponsors"
-              className="transition duration-100 hover:text-[#95f4d4]"
-            >
-              Sponsors{" "}
-            </Link>
-          </li>
-          <li className="text-white uppercase mb-3 text-lg">
-            {" "}
-            <Link
-              href="#FAQ"
-              className="transition duration-100 hover:text-[#95f4d4]"
-            >
-              FAQ{" "}
-            </Link>
-          </li>
-          <li className="text-white uppercase mb-3 text-lg"> ...</li>
         </ul>
       )}
     </nav>

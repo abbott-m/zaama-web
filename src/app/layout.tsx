@@ -1,12 +1,25 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Syne_Mono } from "next/font/google";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import CarouselLabel from "./components/CarouselLabel";
+import { TicketProvider } from "./context/ticketContext";
 
 const syneMono = Syne_Mono({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
-  title: "Zaama",
-  description: "",
+  metadataBase: new URL("https://i.postimg.cc"),
+  title: "Zaama Disco",
+  description:
+    "An annual event that seeks to drive the Ghanaian youth and youths around the world with one voice for change through entertainment.",
+  openGraph: {
+    title: "Zaama Disco",
+    description:
+      "An annual event that seeks to drive the Ghanaian youth and youths around the world with one voice for change through entertainment.",
+    images: "/9M1jmk6c/open-graph.png",
+    url: "https://zaamadisco.com/",
+  },
 };
 
 export default function RootLayout({
@@ -15,8 +28,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={`${syneMono.className} bg-black/90`}>{children}</body>
+    <html lang="en" className="scroll-smooth">
+      <body
+        className={`${syneMono.className}  bg-[#161616] text-gray-200 pt-3 max-w-[2200px] md:pt-1 lg:mx-auto`}
+      >
+        <CarouselLabel word="Zaama Disco: The Rave" />
+
+        <Navbar />
+        <TicketProvider>{children}</TicketProvider>
+        <Footer />
+      </body>
     </html>
   );
 }

@@ -9,22 +9,31 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "about-zaama-cover": "url(/images/about-zaama-bg.png)",
+        "bg-three": "url(/images/bg-3.png)",
+        "zaama-code": "url(/images/zaama-code-bg.png)",
+        "bg-four": "url(/images/bg-4.png)",
+        "hero-bg": "url(/GIF/hero.GIF)",
+      },
+      colors: {
+        zaama_green: "#00C986",
+        zaama_red: "#E91C24",
+        zaama_yellow: "#FFE4AE",
+        zaama_orange: "#FF7700",
       },
       animation: {
-        marquee: "marquee 30s linear infinite",
-        marquee2: "marquee2 30s linear infinite",
+        carousel: "carousel 30s linear infinite ",
+        "bounce-slow": "bounce 2s linear infinite",
+        little_bounce: "little_bounce 1s linear infinite",
       },
       keyframes: {
-        marquee: {
+        carousel: {
           "0%": { transform: "translateX(0%)" },
           "100%": { transform: "translateX(-100%)" },
         },
-        marquee2: {
-          "0%": { transform: "translateX(100%)" },
-          "100%": { transform: "translateX(0%)" },
+        little_bounce: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
         },
       },
     },

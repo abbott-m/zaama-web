@@ -1,26 +1,56 @@
+"use client";
 import Image from "next/image";
-import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
+import handleScroll from "../lib/handleScroll";
 
 const Hero = () => {
+  useEffect(() => {
+    handleScroll({ sectionId: window.location.hash.substring(1) });
+  }, []);
   return (
-    <section className="text-center">
+    <section className="relative text-center  px-5 pt-10 select-none sm:px-10  md:px-20  ">
+      <div className="h-full w-full fixed top-0 left-0 bg-black/50 -z-[5]"></div>
+      <video
+        autoPlay
+        loop
+        muted
+        className=" h-full w-full absolute top-0 left-0 object-cover -z-10 md:h-full"
+      >
+        <source src="/video/hero-bg.mp4" type="video/mp4" />
+      </video>
+
+      {/* <Image
+        src="/images/zaama-3d-new.png"
+        alt="Zaama-logo"
+        width={260}
+        height={200}
+        priority
+        className="mx-auto mb-16 mt-14 bg-transparent animate-little_bounce"
+        data-aos="zoom-in-up"
+        data-aos-duration="500"
+      /> */}
       <Image
-        src="/zaama-logo.gif"
-        alt="saama-logo"
-        width={300}
-        height={400}
-        className="mx-auto"
+        src="/GIF/hero-logo-anim.gif"
+        alt="zaama-logo"
+        unoptimized
+        width={700}
+        height={200}
+        priority
+        className="mx-auto mb-5 mt-12  animate-little_bounce"
       />
-      <Link href="/#about">
-        <Image
-          src="/zaama-arrow-down.png"
-          alt="saama-logo"
-          width={100}
-          height={400}
-          className="mx-auto"
-        />
-      </Link>
+
+      <Image
+        onClick={(e) =>
+          handleScroll({
+            sectionId: "tickets",
+          })
+        }
+        src="/images/zaama-arrow-down.png"
+        alt="arrow-down"
+        width={50}
+        height={50}
+        className="mx-auto transition duration-150 animate-bounce mt-20 cursor-pointer "
+      />
     </section>
   );
 };
