@@ -77,7 +77,7 @@ const Volunteers = () => {
     formData.append("social_handle", volunteerFields.social_handle);
 
     fetch(
-      "https://script.google.com/macros/s/AKfycbxN0nSk7Okb9U0uVK3y5InqcbBFPgY2ShbJho4OtgR3ovMkWYHn3QijZl47pSclFesHmw/exec",
+      "https://script.google.com/macros/s/AKfycbxCmu3NXdHThg6JPg4iM5TPf9MgxCptvnJSXwQn8hilKM6fnifFPx8Smu80AIVl16ZbLg/exec",
       {
         method: "POST",
         body: formData,
@@ -156,7 +156,7 @@ const Volunteers = () => {
 
         <form
           onSubmit={handleSubmit}
-          className="w-full pt-5  md:mx-auto md:block md:w-auto"
+          className="w-full pt-5 md:mx-auto md:block md:w-auto"
         >
           <div className="flex flex-col justify-center gap-7 mb-7 md:mb-8 md:flex-row md:gap-6 lg:gap-10 lg:mb-8">
             <label className="w-full md:w-[350px]">

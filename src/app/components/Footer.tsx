@@ -113,7 +113,7 @@ const Footer = () => {
 
     formData.append("email_address", emailAddress);
     fetch(
-      "https://script.google.com/macros/s/AKfycbxM34PZhfjtBJTjkRXEnStrNrU766ZF7wWfi-nBCUKNwNGNLjwba0JPKXdMPFatsART3A/exec",
+      "https://script.google.com/macros/s/AKfycbwI7S37EVWj2V86v1HE62RomftV4F604EZC-7meyL-6J9wiQpvfRNdKtwNSFZT3Ly_aSA/exec",
       {
         method: "POST",
         body: formData,

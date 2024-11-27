@@ -22,7 +22,7 @@ const TextAreaField = ({
       placeholder={placeholder}
       onChange={onChange}
       maxLength={maxLength}
-      className="rounded-[10px] bg-[#3a3a3a]  w-full h-28 resize-none py-3 px-[14px] text-sm border-none outline-none  focus:outline-1 focus:outline-[#bc6161] "
+      className="rounded-[10px] bg-[#3a3a3a]  w-full h-28 resize-none py-3 px-[14px] text-sm border-none outline-none  focus:outline-1 focus:outline-primary"
     ></textarea>
   );
 };

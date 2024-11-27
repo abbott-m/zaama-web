@@ -43,7 +43,7 @@ const DropdownField = ({
         onClick={() => setIsDropdownOpen(!isDropdownOpen)}
         className={`relative z-0 w-full h-full bg-[#3a3a3a] flex rounded-md justify-between items-center py-3 px-4  cursor-pointer transition duration-150 text-sm  
         hover:bg-[#464646] ${
-          isDropdownOpen && "outline outline-1 outline-[#bc6161]"
+          isDropdownOpen && "outline outline-1 outline-primary"
         }`}
       >
         <span className="select-none">
