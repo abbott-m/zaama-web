@@ -32,7 +32,7 @@ export default function RootLayout({
       <body
         className={`${syneMono.className}  bg-[#000000] text-gray-200 pt-3 selection:bg-primary/25 md:pt-1 2xl:max-w-screen-2xl 2xl:mx-auto`}
       >
-        <CarouselLabel word="Zaama Disco: The Rave" />
+        <CarouselLabel word="Zaama Disco: NVSP Edition" />
 
         <Navbar />
         <TicketProvider>{children}</TicketProvider>
