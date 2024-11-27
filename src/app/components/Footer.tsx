@@ -274,7 +274,7 @@ const Footer = () => {
               </span>
               <br />
               <span className="inline-block mt-1 text-gray-300">
-                +233 55 283 1168
+                +233 24 447 5597
               </span>
             </p>
           </div>

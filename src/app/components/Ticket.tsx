@@ -33,8 +33,8 @@ const Ticket = () => {
       <div className="mb-10 text-center">
         <p data-aos="fade-up" className="text-center ">
           Ticket Support Numbers:{" "}
-          <span className="text-sm whitespace-nowrap">+233 55 999 7488,</span>
-          <span className="text-sm whitespace-nowrap">+233 55 999 7726</span>
+          <span className="text-sm whitespace-nowrap">+233 24 832 5314,</span>
+          <span className="text-sm whitespace-nowrap">+233 24 138 3766</span>
         </p>
       </div>
 
