@@ -139,13 +139,9 @@ const SingleTicket = ({
         }
         className={`${
           blatant.className
-        }  tracking-widest rounded-sm text-sm w-40 h-10 outline-none font-semibold border   uppercase  select-none transition duration-150  ${
-          color === "red"
-            ? "border-zaama_red/50 hover:bg-zaama_red/10"
-            : color === "green"
-            ? "border-zaama_green/50 hover:bg-zaama_green/10"
-            : "border-zaama_yellow/50 hover:bg-zaama_yellow/10"
-        } ${!countDown && "mb-11"} `}
+        }  tracking-widest rounded-sm text-sm w-40 h-10 outline-none font-semibold border uppercase select-none transition duration-150 border-gray-200/50 hover:bg-gray-200/10  ${
+          !countDown && "mb-11"
+        } `}
       >
         Get Ticket
       </button>

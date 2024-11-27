@@ -26,12 +26,12 @@ const Navbar = () => {
       path: "/volunteers",
     },
 
-    {
-      id: 4,
-      name: "tables",
-      sectionId: "table",
-      path: "/tables",
-    },
+    // {
+    //   id: 4,
+    //   name: "tables",
+    //   sectionId: "table",
+    //   path: "/tables",
+    // },
     {
       id: 5,
       name: "media",
