@@ -282,7 +282,7 @@ const Footer = () => {
       </div>
       <p className="text-sm text-center mt-14">
         {" "}
-        Created with <span className="mx-1 text-red-500">&#10084;</span> by{" "}
+        Created with <span className="mx-1 text-primary">&#10084;</span> by{" "}
         <Link
           href="https://blacheinc.com/"
           target="_blank"
