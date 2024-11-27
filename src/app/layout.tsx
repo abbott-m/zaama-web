@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${syneMono.className}  bg-[#161616] text-gray-200 pt-3 selection:bg-zaama_red/20 md:pt-1 2xl:max-w-screen-2xl 2xl:mx-auto`}
+        className={`${syneMono.className}  bg-[#161616] text-gray-200 pt-3 selection:bg-primary/25 md:pt-1 2xl:max-w-screen-2xl 2xl:mx-auto`}
       >
         <CarouselLabel word="Zaama Disco: The Rave" />
 

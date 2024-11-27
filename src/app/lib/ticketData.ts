@@ -40,7 +40,7 @@ export const ticketData: ITicketData[] = [
       "Access to VIP Bar",
       "Autograph signing",
       "Priority entry",
-      "Access to priority car Packing",
+      "Access to priority car packing",
       "Unrestricted access to the front stage within arms reach with the artist",
       "Access to the zaama artist lounge",
       "Luxury serviced toilets",

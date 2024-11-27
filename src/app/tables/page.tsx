@@ -32,10 +32,10 @@ const SingleTable = ({
       <Image
         src={
           color === "green"
-            ? "/images/ticket-1.svg"
+            ? "/SVG/ticket-1.svg"
             : color === "red"
-            ? "/images/ticket-2.svg"
-            : "/images/ticket-3.svg"
+            ? "/SVG/ticket-2.svg"
+            : "/SVG/ticket-3.svg"
         }
         alt="zaama ticket"
         fill
@@ -69,7 +69,7 @@ const SingleTable = ({
       >
         Purchase
       </button>
-      <div className="text-center text-sm">
+      <div className="text-sm text-center">
         <p className="mb-1">Table RSVP</p>
         <p className="text-sm">+233 55 283 1168</p>
       </div>
@@ -137,14 +137,14 @@ const Tables = () => {
     <section id="tickets" className="px-5 pt-20 pb-28 sm:px-10 lg:px-24">
       <p
         data-aos="fade-up"
-        className={`${blatant.className} text-center text-xl font-medium mb-4 text-zaama_yellow uppercase tracking-wider  md:text-2xl`}
+        className={`${blatant.className} text-center text-xl font-medium mb-4 text-zaama_yellowf text-primary uppercase tracking-wider  md:text-2xl`}
       >
         Choose your package
       </p>
       <p data-aos="fade-up" className="text-center mb-14">
         We have uniquely crafted table packages for you
       </p>
-      <div className="flex flex-col gap-5 items-center justify-center flex-wrap sm:flex-row">
+      <div className="flex flex-col flex-wrap items-center justify-center gap-5 sm:flex-row">
         {tableData.map((item, index) => (
           <SingleTable
             key={index}
@@ -156,34 +156,34 @@ const Tables = () => {
         ))}
       </div>
 
-      <div className="my-8 flex gap-8 items-start flex-wrap md:my-14 lg:justify-between">
+      <div className="flex flex-wrap items-start gap-8 my-8 md:my-14 lg:justify-between">
         <div>
           <p className={`${blatant.className} text-lg mb-4`}>
             YAYA K.K – ( GHS 30,000.00 )
           </p>
           <ul className="text-gray-300">
-            <li className="text-sm mb-2 ">• SPECIAL GIFT BOX PACKAGE</li>
-            <li className="text-sm mb-2 ">• TABLE VIP ENTRY FOR 12 PEOPLE</li>
-            <li className="text-sm mb-2 ">• 7 MERGE ITEMS</li>
-            <li className="text-sm mb-2 ">• VIP SITTING LOUNGE PACK</li>
-            <li className="text-sm mb-2 ">• SPECIAL 2 DEDICATED SECURITY</li>
-            <li className="text-sm mb-2 ">• SPECIAL 2 DEDICATED SHAPRONS</li>
-            <li className="text-sm mb-2 ">• SPECIAL DEDICATED USHER</li>
-            <li className="text-sm mb-2 ">• CAR PACKING AREA WITH SECURITY</li>
-            <li className="text-sm mb-2 ">• DEDICATED CLEANER</li>
-            <li className="text-sm mb-2 ">• ACCESS TO ARTIST LOUNGE</li>
-            <li className="text-sm mb-2 ">• BAR</li>
-            <li className="text-sm mb-2 ">• CHAMPAGNE</li>
-            <li className="text-sm mb-2 ">• COGNAC</li>
-            <li className="text-sm mb-2 ">• WHISKEY</li>
-            <li className="text-sm mb-2 ">• VODKA</li>
-            <li className="text-sm mb-2 ">• TEQUILA</li>
-            <li className="text-sm mb-2 ">• SPARKLING WINE / PRASECCO</li>
-            <li className="text-sm mb-2 ">• MIXERS/ ENERGY DRINK</li>
-            <li className="text-sm mb-2 ">• JUICE</li>
-            <li className="text-sm mb-2 ">• UNLIMITED WATER</li>
-            <li className="text-sm mb-2 ">• SHISHA</li>
-            <li className="text-sm mb-2 ">• CATERING</li>
+            <li className="mb-2 text-sm ">• SPECIAL GIFT BOX PACKAGE</li>
+            <li className="mb-2 text-sm ">• TABLE VIP ENTRY FOR 12 PEOPLE</li>
+            <li className="mb-2 text-sm ">• 7 MERGE ITEMS</li>
+            <li className="mb-2 text-sm ">• VIP SITTING LOUNGE PACK</li>
+            <li className="mb-2 text-sm ">• SPECIAL 2 DEDICATED SECURITY</li>
+            <li className="mb-2 text-sm ">• SPECIAL 2 DEDICATED SHAPRONS</li>
+            <li className="mb-2 text-sm ">• SPECIAL DEDICATED USHER</li>
+            <li className="mb-2 text-sm ">• CAR PACKING AREA WITH SECURITY</li>
+            <li className="mb-2 text-sm ">• DEDICATED CLEANER</li>
+            <li className="mb-2 text-sm ">• ACCESS TO ARTIST LOUNGE</li>
+            <li className="mb-2 text-sm ">• BAR</li>
+            <li className="mb-2 text-sm ">• CHAMPAGNE</li>
+            <li className="mb-2 text-sm ">• COGNAC</li>
+            <li className="mb-2 text-sm ">• WHISKEY</li>
+            <li className="mb-2 text-sm ">• VODKA</li>
+            <li className="mb-2 text-sm ">• TEQUILA</li>
+            <li className="mb-2 text-sm ">• SPARKLING WINE / PRASECCO</li>
+            <li className="mb-2 text-sm ">• MIXERS/ ENERGY DRINK</li>
+            <li className="mb-2 text-sm ">• JUICE</li>
+            <li className="mb-2 text-sm ">• UNLIMITED WATER</li>
+            <li className="mb-2 text-sm ">• SHISHA</li>
+            <li className="mb-2 text-sm ">• CATERING</li>
           </ul>
         </div>
         <div>
@@ -191,22 +191,22 @@ const Tables = () => {
             SIMMER DOWN ( GHS 20,000.00 )
           </p>
           <ul className="text-gray-300">
-            <li className="text-sm mb-2 ">• TABLE VIP ENTRY FOR 10 PEOPLE</li>
-            <li className="text-sm mb-2 ">• 5 MERGE ITEMS</li>
-            <li className="text-sm mb-2 ">• VIP SITTING LOUNGE PACK</li>
-            <li className="text-sm mb-2 ">• SPECIAL 1 DEDICATED SECURITY </li>
-            <li className="text-sm mb-2 ">• SPECIAL DEDICATED SHAPRONS</li>
-            <li className="text-sm mb-2 ">• SPECIAL DEDICATED USHER</li>
-            <li className="text-sm mb-2 ">• BAR</li>
-            <li className="text-sm mb-2 ">• CHAMPAGNE</li>
-            <li className="text-sm mb-2 ">• COGNAC</li>
-            <li className="text-sm mb-2 ">• TEQUILA</li>
-            <li className="text-sm mb-2 ">• SPARKLING WINE / PRASECCO</li>
-            <li className="text-sm mb-2 ">• MIXERS/ ENERGY DRINK</li>
-            <li className="text-sm mb-2 ">• JUICE</li>
-            <li className="text-sm mb-2 ">• UNLIMITED WATER</li>
-            <li className="text-sm mb-2 ">• SHISHA</li>
-            <li className="text-sm mb-2 ">• CATERING</li>
+            <li className="mb-2 text-sm ">• TABLE VIP ENTRY FOR 10 PEOPLE</li>
+            <li className="mb-2 text-sm ">• 5 MERGE ITEMS</li>
+            <li className="mb-2 text-sm ">• VIP SITTING LOUNGE PACK</li>
+            <li className="mb-2 text-sm ">• SPECIAL 1 DEDICATED SECURITY </li>
+            <li className="mb-2 text-sm ">• SPECIAL DEDICATED SHAPRONS</li>
+            <li className="mb-2 text-sm ">• SPECIAL DEDICATED USHER</li>
+            <li className="mb-2 text-sm ">• BAR</li>
+            <li className="mb-2 text-sm ">• CHAMPAGNE</li>
+            <li className="mb-2 text-sm ">• COGNAC</li>
+            <li className="mb-2 text-sm ">• TEQUILA</li>
+            <li className="mb-2 text-sm ">• SPARKLING WINE / PRASECCO</li>
+            <li className="mb-2 text-sm ">• MIXERS/ ENERGY DRINK</li>
+            <li className="mb-2 text-sm ">• JUICE</li>
+            <li className="mb-2 text-sm ">• UNLIMITED WATER</li>
+            <li className="mb-2 text-sm ">• SHISHA</li>
+            <li className="mb-2 text-sm ">• CATERING</li>
           </ul>
         </div>
         <div>
@@ -214,22 +214,22 @@ const Tables = () => {
             COUNTRY SIDE ( GHS 10,000.00 )
           </p>
           <ul className="text-gray-300">
-            <li className="text-sm mb-2 ">• TABLE VIP ENTRY FOR 8 PEOPLE</li>
-            <li className="text-sm mb-2 ">• 3 MERGE ITEMS</li>
-            <li className="text-sm mb-2 ">• VIP SITTING LOUNGE PACK</li>
-            <li className="text-sm mb-2 ">• SPECIAL 1 DEDICATED SECURITY </li>
-            <li className="text-sm mb-2 ">• SPECIAL DEDICATED SHAPRONS</li>
-            <li className="text-sm mb-2 ">• SPECIAL DEDICATED USHER</li>
-            <li className="text-sm mb-2 ">• BAR</li>
-            <li className="text-sm mb-2 ">• CHAMPAGNE</li>
-            <li className="text-sm mb-2 ">• COGNAC</li>
-            <li className="text-sm mb-2 ">• TEQUILA</li>
-            <li className="text-sm mb-2 ">• SPARKLING WINE / PRASECCO</li>
-            <li className="text-sm mb-2 ">• MIXERS/ ENERGY DRINK</li>
-            <li className="text-sm mb-2 ">• JUICE</li>
-            <li className="text-sm mb-2 ">• UNLIMITED WATER</li>
-            <li className="text-sm mb-2 ">• SHISHA</li>
-            <li className="text-sm mb-2 ">• CATERING</li>
+            <li className="mb-2 text-sm ">• TABLE VIP ENTRY FOR 8 PEOPLE</li>
+            <li className="mb-2 text-sm ">• 3 MERGE ITEMS</li>
+            <li className="mb-2 text-sm ">• VIP SITTING LOUNGE PACK</li>
+            <li className="mb-2 text-sm ">• SPECIAL 1 DEDICATED SECURITY </li>
+            <li className="mb-2 text-sm ">• SPECIAL DEDICATED SHAPRONS</li>
+            <li className="mb-2 text-sm ">• SPECIAL DEDICATED USHER</li>
+            <li className="mb-2 text-sm ">• BAR</li>
+            <li className="mb-2 text-sm ">• CHAMPAGNE</li>
+            <li className="mb-2 text-sm ">• COGNAC</li>
+            <li className="mb-2 text-sm ">• TEQUILA</li>
+            <li className="mb-2 text-sm ">• SPARKLING WINE / PRASECCO</li>
+            <li className="mb-2 text-sm ">• MIXERS/ ENERGY DRINK</li>
+            <li className="mb-2 text-sm ">• JUICE</li>
+            <li className="mb-2 text-sm ">• UNLIMITED WATER</li>
+            <li className="mb-2 text-sm ">• SHISHA</li>
+            <li className="mb-2 text-sm ">• CATERING</li>
           </ul>
         </div>
       </div>

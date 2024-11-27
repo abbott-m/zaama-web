@@ -53,7 +53,7 @@ const Home = () => {
           <About />
           <Store />
           <Sponsors />
-          <div className="px-5 py-10 w-fit mx-auto sm:w-4/5 md:w-5/6 md:py-10 lg:w-d3/5">
+          <div className="px-5 py-10 mx-auto w-fit sm:w-4/5 md:w-5/6 md:py-10 lg:w-d3/5">
             <FAQ
               faqData={homeFAQ}
               headerText="FAQs for Cashless System at ZaamaDisco"

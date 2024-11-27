@@ -20,6 +20,8 @@ const config: Config = {
         zaama_red: "#E91C24",
         zaama_yellow: "#FFE4AE",
         zaama_orange: "#FF7700",
+        primary: "#A7CCFF",
+        secondary: "#0064CA",
       },
       animation: {
         carousel: "carousel 30s linear infinite ",

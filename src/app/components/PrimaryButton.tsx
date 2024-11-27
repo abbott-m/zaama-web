@@ -22,7 +22,7 @@ const PrimaryButton = ({
       type={type}
       disabled={disabled}
       onClick={handleClick}
-      className={`${blatantBold.className} tracking-wide w-full h-full block  bg-zaama_red rounded-md transition duration-100 select-none enabled:hover:bg-[#b21717] disabled:bg-[#413939]`}
+      className={`${blatantBold.className} tracking-wide w-full h-full block  bg-zaama_redf  rounded-md transition duration-150 select-none enabled:hover:bg-[#b21717]f enabled:bg-secondary disabled:bg-[#413939]f disabled:bg-[#373e48]`}
     >
       {children}
     </button>

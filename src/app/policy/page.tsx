@@ -8,9 +8,9 @@ const blatantBold = localFont({
 
 const Policy = () => {
   return (
-    <section className="py-16 px-5 md:px-16 ">
+    <section className="px-5 py-16 md:px-16 ">
       <h2
-        className={`${blatantBold.className} text-xl text-zaama_yellow uppercase tracking-wide font-medium mb-7 text-center md:text-2xl `}
+        className={`${blatantBold.className} text-xl text-zaama_yellowf text-primary uppercase tracking-wide font-medium mb-7 text-center md:text-2xl `}
       >
         TICKETS POLICY{" "}
       </h2>
@@ -400,7 +400,7 @@ const Policy = () => {
       </p>
 
       <h2
-        className={`${blatantBold.className} text-xl text-zaama_yellow uppercase tracking-wide font-medium my-8 text-center md:text-2xl `}
+        className={`${blatantBold.className} text-xl text-zaama_yellowf text-primary uppercase tracking-wide font-medium my-8 text-center md:text-2xl `}
       >
         HEALTH AND SECURITY POLICIES
       </h2>

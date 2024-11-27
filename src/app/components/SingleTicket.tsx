@@ -79,10 +79,10 @@ const SingleTicket = ({
       <Image
         src={
           color === "green"
-            ? "/images/ticket-1.svg"
+            ? "/SVG/ticket-1.svg"
             : color === "red"
-            ? "/images/ticket-2.svg"
-            : "/images/ticket-3.svg"
+            ? "/SVG/ticket-2.svg"
+            : "/SVG/ticket-3.svg"
         }
         alt="zaama ticket"
         fill
@@ -116,11 +116,11 @@ const SingleTicket = ({
       ) : (
       )} */}
 
-      <ul className=" text-sm mb-5 selection:bg-inherit">
+      <ul className="mb-5 text-sm  selection:bg-inherit">
         {perks.slice(0, 3).map((item, index) => (
           <li
             key={index}
-            className="mb-1 flex gap-3 items-center justify-center text-sm"
+            className="flex items-center justify-center gap-3 mb-1 text-sm"
           >
             {/* <span className=" w-[6px] h-[6px] inline-block rounded-full bg-white "></span> */}
             {item}
@@ -128,7 +128,7 @@ const SingleTicket = ({
         ))}
         <li
           onClick={handleView}
-          className="text-center w-full inline-block text-gray-300 text-sm cursor-pointer "
+          className="inline-block w-full text-sm text-center text-gray-300 cursor-pointer "
         >
           see more
         </li>

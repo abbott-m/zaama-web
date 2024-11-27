@@ -143,7 +143,7 @@ const Volunteers = () => {
       <div className="w-full mb-16 md:bg-[#4c4c4c]/20 md:px-16 md:py-14 md:rounded-2xl md:inline-block  md:mx-auto  md:w-auto">
         <h1
           data-aos="fade-down"
-          className={`${blatantBold.className} text-xl text-zaama_yellow uppercase tracking-wide font-medium mb-5 text-center md:text-2xl `}
+          className={`${blatantBold.className} text-xl text-zaama_yellowf text-primary uppercase tracking-wide font-medium mb-5 text-center md:text-2xl `}
         >
           Become a volunteer
         </h1>
@@ -156,11 +156,11 @@ const Volunteers = () => {
 
         <form
           onSubmit={handleSubmit}
-          className="  w-full pt-5 md:mx-auto md:block md:w-auto"
+          className="w-full pt-5  md:mx-auto md:block md:w-auto"
         >
-          <div className="flex flex-col gap-7 justify-center mb-7 md:mb-8 md:flex-row md:gap-6 lg:gap-10 lg:mb-8">
+          <div className="flex flex-col justify-center gap-7 mb-7 md:mb-8 md:flex-row md:gap-6 lg:gap-10 lg:mb-8">
             <label className="w-full md:w-[350px]">
-              <p className="text-gray-300 font-medium mb-3"> Name</p>
+              <p className="mb-3 font-medium text-gray-300"> Name</p>
               <InputField
                 name="name"
                 type="text"
@@ -169,7 +169,7 @@ const Volunteers = () => {
               />
             </label>
             <label className="w-full md:w-[350px]">
-              <p className="text-gray-300 font-medium mb-3">Email</p>
+              <p className="mb-3 font-medium text-gray-300">Email</p>
               <InputField
                 name="email"
                 type="email"
@@ -178,9 +178,9 @@ const Volunteers = () => {
               />
             </label>
           </div>
-          <div className="flex flex-col gap-7 justify-center mb-7 md:flex-row md:gap-6 lg:gap-10 lg:mb-8">
+          <div className="flex flex-col justify-center gap-7 mb-7 md:flex-row md:gap-6 lg:gap-10 lg:mb-8">
             <label className="w-full md:w-[350px]">
-              <p className="text-gray-300 font-medium mb-3 capitalize">
+              <p className="mb-3 font-medium text-gray-300 capitalize">
                 Phone Number{" "}
               </p>
               <InputField
@@ -191,7 +191,7 @@ const Volunteers = () => {
               />
             </label>
             <label className="w-full md:w-[350px]">
-              <p className="text-gray-300 font-medium mb-3 capitalize">
+              <p className="mb-3 font-medium text-gray-300 capitalize">
                 Social Media Handle
               </p>
               <InputField
@@ -202,9 +202,9 @@ const Volunteers = () => {
               />
             </label>
           </div>
-          <div className="flex flex-col gap-7 justify-center mb-7 md:flex-row md:gap-6 lg:gap-10 lg:mb-8">
+          <div className="flex flex-col justify-center gap-7 mb-7 md:flex-row md:gap-6 lg:gap-10 lg:mb-8">
             <div className="w-full md:w-[350px]">
-              <p className="text-gray-300 font-medium mb-3 capitalize select-none">
+              <p className="mb-3 font-medium text-gray-300 capitalize select-none">
                 Category
               </p>
               <DropdownField
@@ -220,7 +220,7 @@ const Volunteers = () => {
               />
             </div>
             <div className="w-full md:w-[350px]">
-              <p className="text-gray-300 font-medium mb-3 capitalize select-none">
+              <p className="mb-3 font-medium text-gray-300 capitalize select-none">
                 Age
               </p>
               <DropdownField
@@ -236,9 +236,9 @@ const Volunteers = () => {
               />
             </div>
           </div>
-          <div className="flex flex-col gap-7 justify-center mb-7 md:flex-row md:gap-6 lg:gap-10 lg:mb-8">
+          <div className="flex flex-col justify-center gap-7 mb-7 md:flex-row md:gap-6 lg:gap-10 lg:mb-8">
             <div className="w-full md:w-[350px]">
-              <p className="text-gray-300 font-medium mb-3 capitalize select-none">
+              <p className="mb-3 font-medium text-gray-300 capitalize select-none">
                 Educational Level
               </p>
               <DropdownField
@@ -254,7 +254,7 @@ const Volunteers = () => {
               />
             </div>
             <div className="w-full md:w-[350px]">
-              <p className="text-gray-300 font-medium mb-3 capitalize select-none">
+              <p className="mb-3 font-medium text-gray-300 capitalize select-none">
                 Do you want to be paid or learn?
               </p>
               <DropdownField
@@ -270,9 +270,9 @@ const Volunteers = () => {
               />
             </div>
           </div>
-          <div className="flex flex-col gap-7 justify-center mb-7 md:flex-row md:gap-6 lg:gap-10 lg:mb-8">
+          <div className="flex flex-col justify-center gap-7 mb-7 md:flex-row md:gap-6 lg:gap-10 lg:mb-8">
             <div className="w-full md:w-[350px]">
-              <p className="text-gray-300 font-medium mb-3 capitalize select-none">
+              <p className="mb-3 font-medium text-gray-300 capitalize select-none">
                 What's your health status
               </p>
               <DropdownField
@@ -288,7 +288,7 @@ const Volunteers = () => {
               />
             </div>
             <div className="w-full md:w-[350px]">
-              <p className="text-gray-300 font-medium mb-3 capitalize select-none">
+              <p className="mb-3 font-medium text-gray-300 capitalize select-none">
                 What's your past experience on event?
               </p>
               <DropdownField
@@ -306,7 +306,7 @@ const Volunteers = () => {
           </div>
           <div className="mb-7 ">
             <div className="w-full md:w-[350px]">
-              <p className="text-gray-300 font-medium mb-3 capitalize select-none">
+              <p className="mb-3 font-medium text-gray-300 capitalize select-none">
                 What's your favorite genre of music
               </p>
               <DropdownField
@@ -323,9 +323,9 @@ const Volunteers = () => {
             </div>
           </div>
           <div className="mb-7">
-            <div className="flex justify-between items-center">
+            <div className="flex items-center justify-between">
               {" "}
-              <p className="text-gray-300  font-medium mb-3 capitalize select-none">
+              <p className="mb-3 font-medium text-gray-300 capitalize select-none">
                 What are your interest?
               </p>
               <span className="text-gray-400">
@@ -341,9 +341,9 @@ const Volunteers = () => {
             />
           </div>
           <div>
-            <div className="flex justify-between items-center">
+            <div className="flex items-center justify-between">
               {" "}
-              <p className="text-gray-300  font-medium mb-3 capitalize select-none">
+              <p className="mb-3 font-medium text-gray-300 capitalize select-none">
                 What's your Expectation for Zaama Disco ?
               </p>
               <span className="text-gray-400">
@@ -358,13 +358,13 @@ const Volunteers = () => {
               onChange={handleInputChange}
             />
           </div>
-          <div className="h-11 w-64 mx-auto mt-16">
+          <div className="w-64 mx-auto mt-16 h-11">
             <PrimaryButton
               type="submit"
               disabled={Object.values(volunteerFields).some((value) => !value)}
             >
               {isMediaFormLoading ? (
-                <ButtonLoader className="animate-spin mx-auto  " />
+                <ButtonLoader className="mx-auto animate-spin " />
               ) : (
                 "Register"
               )}

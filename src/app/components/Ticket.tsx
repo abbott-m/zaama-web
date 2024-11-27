@@ -19,19 +19,19 @@ const Ticket = () => {
   return (
     <section
       id="tickets"
-      className="relative w-full overflow-hiddenf px-5 pt-14 pb-28  sm:py-10 lg:px-16 "
+      className="relative w-full px-5 overflow-hiddenf pt-14 pb-28 sm:py-10 lg:px-16 "
     >
       <p
         data-aos="fade-up"
-        className={`${blatantBold.className} text-center text-xl font-medium mb-4 text-zaama_yellow uppercase tracking-wider  md:text-2xl`}
+        className={`${blatantBold.className} text-center text-xl font-medium mb-4 text-primary uppercase tracking-wider  md:text-2xl`}
       >
         Choose your package
       </p>
-      <p data-aos="fade-up" className="text-center mb-2">
+      <p data-aos="fade-up" className="mb-2 text-center">
         We have uniquely crafted ticket packages for everyone
       </p>
       <div className="mb-10 text-center">
-        <p data-aos="fade-up" className="text-center  ">
+        <p data-aos="fade-up" className="text-center ">
           Ticket Support Numbers:{" "}
           <span className="text-sm whitespace-nowrap">+233 55 999 7488,</span>
           <span className="text-sm whitespace-nowrap">+233 55 999 7726</span>
@@ -39,7 +39,7 @@ const Ticket = () => {
       </div>
 
       <div data-aos="fade-up">
-        <div className="flexf justify-center items-center ">
+        <div className="items-center justify-center flexf ">
           <Swiper
             loop={true}
             speed={1200}
@@ -80,7 +80,7 @@ const Ticket = () => {
           </Swiper>
         </div>
 
-        <p className="text-sm text-center mt-5 italic md:hidden text-gray-300">
+        <p className="mt-5 text-sm italic text-center text-gray-300 md:hidden">
           Swipe for more...
         </p>
       </div>

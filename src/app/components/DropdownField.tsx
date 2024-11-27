@@ -37,7 +37,7 @@ const DropdownField = ({
   }, [closeDropdown]);
 
   return (
-    <div ref={dropdownRef} className="w-full h-12 relative">
+    <div ref={dropdownRef} className="relative w-full h-12">
       <div
         tabIndex={0}
         onClick={() => setIsDropdownOpen(!isDropdownOpen)}
@@ -46,7 +46,7 @@ const DropdownField = ({
           isDropdownOpen && "outline outline-1 outline-[#bc6161]"
         }`}
       >
-        <span className="text-primary select-none">
+        <span className="select-none">
           {selectedOption
             ? options.find((item) => item.value === selectedOption)?.name
             : placeholder}
@@ -70,7 +70,7 @@ const DropdownField = ({
               value: "",
             })
           }
-          className={`text-primary py-3 px-4 rounded-lg mb-1 text-sm hover:cursor-pointer hover:bg-[#363636]`}
+          className={`py-3 px-4 rounded-lg mb-1 text-sm hover:cursor-pointer hover:bg-[#363636]`}
         >
           {placeholder}
         </li>
@@ -78,7 +78,7 @@ const DropdownField = ({
           <li
             key={item.id}
             onClick={() => handleOptionClick(item)}
-            className={`text-primary py-3 px-4 rounded-lg mb-1 text-sm hover:cursor-pointer   ${
+            className={`py-3 px-4 rounded-lg mb-1 text-sm hover:cursor-pointer   ${
               item.value === selectedOption
                 ? "bg-[#454545]"
                 : "hover:bg-[#363636]"

@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useCallback } from "react";
 import localFont from "next/font/local";
 import handleScroll from "../lib/handleScroll";
 import ZaamaLogo from "../../../public/SVG/zaama-logo.svg";
@@ -21,6 +21,7 @@ const blatant = localFont({
 const Footer = () => {
   const [isSubscriptionLoading, setIsSubscriptionLoading] = useState(false);
   const [emailAddress, setEmailAddress] = useState("");
+  const [isValidEmail, setIsValidEmail] = useState(false);
   const [response, setResponse] = useState({
     type: "",
     text: "",
@@ -32,42 +33,42 @@ const Footer = () => {
     {
       id: 1,
       icon: (
-        <Twitter className="stroke-gray-200 w-4 h-4 shadow-md hover:fill-gray-300" />
+        <Twitter className="w-4 h-4 shadow-md stroke-gray-200 hover:fill-gray-300" />
       ),
       path: "https://x.com/zaamadisco?s=11&t=2z9CU3pe6dNz1Gfd4639Dg",
     },
     {
       id: 2,
       icon: (
-        <Instagram className="stroke-gray-100 stroke-2 w-4 h-4 shadow-md hover:stroke-gray-300" />
+        <Instagram className="w-4 h-4 shadow-md stroke-2 stroke-gray-100 hover:stroke-gray-300" />
       ),
       path: "https://instagram.com/zaamadisco?igshid=MzRlODBiNWFlZA==",
     },
     {
       id: 3,
       icon: (
-        <Facebook className="fill-gray-200 w-4 h-4 shadow-md hover:fill-gray-300" />
+        <Facebook className="w-4 h-4 shadow-md fill-gray-200 hover:fill-gray-300" />
       ),
       path: "https://www.facebook.com/blacksherifmusic?mibextid=LQQJ4d",
     },
     {
       id: 4,
       icon: (
-        <Tiktok className="fill-gray-200 w-4 h-4 shadow-md hover:fill-gray-300" />
+        <Tiktok className="w-4 h-4 shadow-md fill-gray-200 hover:fill-gray-300" />
       ),
       path: "https://www.tiktok.com/@zaamadisco?_t=8gpyYgQzFmo&_r=1",
     },
     {
       id: 5,
       icon: (
-        <Snapchat className="fill-gray-200 w-5 h-5 shadow-md hover:fill-gray-300" />
+        <Snapchat className="w-5 h-5 shadow-md fill-gray-200 hover:fill-gray-300" />
       ),
       path: "https://www.snapchat.com/add/zaamadisco?share_id=1hefNEEWN3o&locale=en-GB",
     },
     {
       id: 6,
       icon: (
-        <Youtube className="fill-gray-200 w-5 h-5 shadow-md hover:fill-gray-300" />
+        <Youtube className="w-5 h-5 shadow-md fill-gray-200 hover:fill-gray-300" />
       ),
       path: "https://youtube.com/@ZaamaDisco?si=bruBWtV5GdWjRclI",
     },
@@ -89,6 +90,20 @@ const Footer = () => {
       path: "/policy",
     },
   ];
+  const validateEmail = useCallback((email: string) => {
+    // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+    return emailRegex.test(email);
+  }, []);
+
+  const handleEmailChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      const newEmail = e.target.value;
+      setEmailAddress(newEmail);
+      setIsValidEmail(validateEmail(newEmail));
+    },
+    [validateEmail]
+  );
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -141,14 +156,14 @@ const Footer = () => {
 
   return (
     <footer className="bg-[#1c1c1c]   px-4 py-10  sm:px-28 sm:py-16">
-      <div className="flex flex-col  justify-center items-center gap-16   sm:flex-row  sm:items-start sm:flex-wrap  md:gap-24 lg:gap-28">
+      <div className="flex flex-col items-center justify-center gap-16 sm:flex-row sm:items-start sm:flex-wrap md:gap-24 lg:gap-28">
         <div className="text-center ">
-          <Link href="/" className="mb-6 inline-block py-2 ">
+          <Link href="/" className="inline-block py-2 mb-6 ">
             <ZaamaLogo className="w-32" />
           </Link>
           <div>
             {isSubscriptionLoading ? (
-              <div className="w-64 h-32 flex justify-center items-center ">
+              <div className="flex items-center justify-center w-64 h-32 ">
                 <Image
                   src="/images/zaama-white-logo.png"
                   alt="zaama-logo"
@@ -165,7 +180,7 @@ const Footer = () => {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="w-14 h-14 mx-auto mb-2"
+                  className="mx-auto mb-2 w-14 h-14"
                 >
                   <path
                     strokeLinecap="round"
@@ -189,12 +204,12 @@ const Footer = () => {
                     name="email"
                     required
                     value={emailAddress}
-                    onChange={(e) => setEmailAddress(e.target.value)}
+                    onChange={handleEmailChange}
                     placeholder="Email address"
                     className=" w-64 h-10 text-sm outline-none bg-[#272727] rounded-md px-4 mb-3 "
                   />
-                  <div className="h-10 w-64">
-                    <PrimaryButton type="submit" disabled={!emailAddress}>
+                  <div className="w-64 h-10">
+                    <PrimaryButton type="submit" disabled={!isValidEmail}>
                       Subscribe
                     </PrimaryButton>
                   </div>
@@ -252,13 +267,13 @@ const Footer = () => {
             Support
           </p>
           <div className="text-gray-400">
-            <p className="text-sm mb-3 ">
+            <p className="mb-3 text-sm ">
               For more enquiry or information: <br />
-              <span className="text-gray-300 mt-1 inline-block">
+              <span className="inline-block mt-1 text-gray-300">
                 info@zaamadisco.com{" "}
               </span>
               <br />
-              <span className="text-gray-300 mt-1 inline-block">
+              <span className="inline-block mt-1 text-gray-300">
                 +233 55 283 1168
               </span>
             </p>
@@ -267,7 +282,7 @@ const Footer = () => {
       </div>
       <p className="text-sm text-center mt-14">
         {" "}
-        Created with <span className="text-red-500 mx-1">&#10084;</span> by{" "}
+        Created with <span className="mx-1 text-red-500">&#10084;</span> by{" "}
         <Link
           href="https://blacheinc.com/"
           target="_blank"

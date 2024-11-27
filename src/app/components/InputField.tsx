@@ -22,7 +22,7 @@ const InputField = ({
       value={value}
       placeholder={placeholder}
       onChange={onChange}
-      className="rounded-md text-primary w-full h-12 py-3 px-[14px] bg-[#3a3a3a] text-sm border-none outline-none focus:outline-1 focus:outline-[#bc6161] placeholder:text-primary/80 md:placeholder:text-sm"
+      className="rounded-md w-full h-12 py-3 px-[14px] bg-[#3a3a3a] text-sm border-none outline-none focus:outline-1 focus:outline-[#bc6161]f focus:outline-primary  md:placeholder:text-sm"
     />
   );
 };
