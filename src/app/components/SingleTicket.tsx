@@ -35,7 +35,7 @@ const SingleTicket = ({
 }: singleTicketProps) => {
   const router = useRouter();
 
-  const startDate = new Date("2023-12-01T00:00:00"); // countdown timer stops at Nov 10, 2023
+  const startDate = new Date("2024-12-01T00:00:00"); // countdown timer stops at Nov 10, 2024
   const [timeLeft, setTimeLeft] = useState<number>(0);
   const {
     isTicketModalOpen,
