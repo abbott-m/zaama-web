@@ -17,14 +17,14 @@ const CarouselLabel = ({ word }: CarouselLabel) => {
   const duplicatedWords = Array.from({ length: 40 }, (_, index) => (
     <span
       key={index}
-      className="text-sm uppercase text-zaama_green whitespace-nowrap "
+      className="text-sm uppercase text-zaama_greenf text-primary whitespace-nowrap "
     >
       {word}
     </span>
   ));
   return (
-    <div className="overflow-hidden selection:bg-zaama_red/50">
-      <div className="animate-carousel flex gap-7 py-3">
+    <div className="overflow-hidden">
+      <div className="flex py-3 animate-carousel gap-7">
         {duplicatedWords}
         {duplicatedWords}
         {duplicatedWords}

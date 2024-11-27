@@ -42,7 +42,7 @@ const Media = () => {
       mediaFields.phone_number.replace(/\s/g, "")
     );
     fetch(
-      "https://script.google.com/macros/s/AKfycbwaxDrFiS99c9AKTVzg3mMFWu7iL3BjvXSZKq9sYN2MPOvh7XbFy7KnlvYJNmScsI-Gmw/exec",
+      "https://script.google.com/macros/s/AKfycbyTYtzFVCdCbVoCz4HMXkioITcjsmlNjragPPt3-MmNIil79p3ORaUOYutoy2cgyGUK9w/exec",
       {
         method: "POST",
         body: formData,
@@ -89,7 +89,7 @@ const Media = () => {
   };
 
   return (
-    <section className="pt-20 pb-4 px-5 bg-[#161616] flex justify-center items-center md:px-8 md:pb-8  selection:bg-zaama_red/50">
+    <section className="pt-20 pb-4 px-5 bg-[#161616] flex justify-center items-center md:px-8 md:pb-8">
       {response.text &&
         (response.type === "success" ? (
           <ToastNotification type="success" text={response.text} />
@@ -99,18 +99,18 @@ const Media = () => {
       <div className=" w-full mb-16 md:bg-[#4c4c4c]/20 md:px-16 md:py-14 md:rounded-2xl md:inline-block  md:mx- md:w-auto ">
         <h1
           data-aos="fade-down"
-          className={`${blatantBold.className} text-xl text-zaama_yellow uppercase tracking-wide font-medium mb-5 text-center md:text-2xl `}
+          className={`${blatantBold.className} text-xl text-zaama_yellowf text-primary uppercase tracking-wide font-medium mb-5 text-center md:text-2xl `}
         >
           Register your media
         </h1>
 
         <form
           onSubmit={handleSubmit}
-          className=" w-full block pt-5 md:mx-auto md:block md:w-auto"
+          className="block w-full pt-5 md:mx-auto md:block md:w-auto"
         >
-          <div className=" flex flex-col gap-7 justify-center mb-7 md:mb-8 md:flex-row md:gap-6 lg:gap-10 lg:mb-8">
+          <div className="flex flex-col justify-center gap-7 mb-7 md:mb-8 md:flex-row md:gap-6 lg:gap-10 lg:mb-8">
             <label className="w-full md:w-[350px] ">
-              <p className="text-gray-300  font-medium mb-3">Media Name</p>
+              <p className="mb-3 font-medium text-gray-300">Media Name</p>
               <InputField
                 name="media_name"
                 type="text"
@@ -119,7 +119,7 @@ const Media = () => {
               />
             </label>
             <label className="w-full md:w-[350px]">
-              <p className="text-gray-300  font-medium mb-3">Email</p>
+              <p className="mb-3 font-medium text-gray-300">Email</p>
               <InputField
                 name="email"
                 type="email"
@@ -128,9 +128,9 @@ const Media = () => {
               />
             </label>
           </div>
-          <div className="flex flex-col gap-7 justify-center mb-7 md:mb-8 md:flex-row md:gap-6 lg:gap-10 lg:mb-8">
+          <div className="flex flex-col justify-center gap-7 mb-7 md:mb-8 md:flex-row md:gap-6 lg:gap-10 lg:mb-8">
             <label className="w-full md:w-[350px]">
-              <p className="text-gray-300  font-medium mb-3 capitalize">
+              <p className="mb-3 font-medium text-gray-300 capitalize">
                 Phone Number{" "}
               </p>
               <InputField
@@ -141,7 +141,7 @@ const Media = () => {
               />
             </label>
             <label className="w-full md:w-[350px]">
-              <p className="text-gray-300  font-medium mb-3 capitalize">
+              <p className="mb-3 font-medium text-gray-300 capitalize">
                 Number of team
               </p>
               <InputField
@@ -152,13 +152,13 @@ const Media = () => {
               />
             </label>
           </div>
-          <div className="h-11 w-64 mx-auto my-10">
+          <div className="w-64 mx-auto my-10 h-11">
             <PrimaryButton
               type="submit"
               disabled={Object.values(mediaFields).some((value) => !value)}
             >
               {isMediaFormLoading ? (
-                <ButtonLoader className="animate-spin mx-auto  " />
+                <ButtonLoader className="mx-auto animate-spin " />
               ) : (
                 "Register"
               )}

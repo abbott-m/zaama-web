@@ -47,7 +47,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="absolute z-10 w-full flex gap-3 justify-center items-center p-2 md:p-1 md:px-10 lg:px-20 ">
+    <nav className="absolute z-10 flex items-center justify-center w-full gap-3 p-2 md:p-1 md:px-10 lg:px-20 ">
       {!isNavbarOpen ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -55,7 +55,7 @@ const Navbar = () => {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="#dedede"
-          className="w-8 h-8 inline cursor-pointer transition-all duration-150 hover:stroke-zaama_green"
+          className="inline w-8 h-8 transition-all duration-150 cursor-pointer hover:stroke-zaama_greenf hover:stroke-primary"
           onClick={() => setIsNavbarOpen(true)}
         >
           <path
@@ -77,7 +77,7 @@ const Navbar = () => {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="#dedede"
-              className="w-8 h-8 inline cursor-pointer transition-all duration-150 hover:stroke-zaama_green"
+              className="inline w-8 h-8 transition-all duration-150 cursor-pointer hover:stroke-zaama_greenf hover:stroke-primary"
             >
               <path
                 strokeLinecap="round"
@@ -91,20 +91,12 @@ const Navbar = () => {
             <li key={item.id} onClick={() => setIsNavbarOpen(false)}>
               <Link
                 href={item.path}
-                className="p-1 uppercase inline-block transition duration-150 hover:text-zaama_green"
+                className="inline-block p-1 uppercase transition duration-150 hover:text-zaama_greenf hover:text-primary"
               >
                 {item.name}
               </Link>
             </li>
           ))}
-          <li>
-            <span
-              onClick={() => window.open("https://zaama.v-pay.co", "_blank")}
-              className="p-1 uppercase inline-block transition duration-150 cursor-pointer hover:text-zaama_green"
-            >
-              Cashless
-            </span>
-          </li>
         </ul>
       )}
     </nav>

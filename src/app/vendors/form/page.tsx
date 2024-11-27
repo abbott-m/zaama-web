@@ -94,7 +94,7 @@ const VendorForm = () => {
     formData.append("terms_accepted", isTermChecked ? "yes" : "no");
 
     fetch(
-      "https://script.google.com/macros/s/AKfycbweg39cc_xO7baeDfhfmdYLpkVumWR4kL0hWS08eleR9XeZaOaAoYFUgwp-7vnhdVVpGA/exec",
+      "https://script.google.com/macros/s/AKfycbwuUrsdrmon1c6OC6NyB09qMJS60UMHJzFWlI3wX_zN6rIzFW_cpn628SPHGgzvezEpcA/exec",
       {
         method: "POST",
         body: formData,
@@ -154,7 +154,7 @@ const VendorForm = () => {
   };
 
   return (
-    <section className="pt-20 pb-4 px-5 bg-[#161616] flex justify-center items-center md:px-8 md:pb-8 selection:bg-zaama_red/50">
+    <section className="pt-20 pb-4 px-5 bg-[#161616] flex justify-center items-center md:px-8 md:pb-8">
       {response.text &&
         (response.type === "success" ? (
           <ToastNotification type="success" text={response.text} />
@@ -164,7 +164,7 @@ const VendorForm = () => {
       <div className="w-full mb-16 md:bg-[#4c4c4c]/20 md:px-16 md:py-14 md:rounded-2xl md:inline-block  md:mx-auto  md:w-auto">
         <h1
           data-aos="fade-down"
-          className={`${blatantBold.className} text-xl text-zaama_yellow uppercase tracking-wide font-medium mb-5 text-center md:text-2xl `}
+          className={`${blatantBold.className} text-xl text-zaama_yellowf text-primary uppercase tracking-wide font-medium mb-5 text-center md:text-2xl `}
         >
           Vendor Application Form
         </h1>
@@ -172,7 +172,7 @@ const VendorForm = () => {
           Please ensure you have reviewed our{" "}
           <span
             onClick={() => router.push("/vendors")}
-            className="underline underline-offset-2 cursor-pointer hover:text-gray-300"
+            className="underline cursor-pointer underline-offset-2 hover:text-gray-300"
           >
             policy
           </span>{" "}
@@ -181,16 +181,16 @@ const VendorForm = () => {
         </p>
         <form
           onSubmit={handleSubmit}
-          className="  w-full pt-5 md:mx-auto md:block md:w-auto"
+          className="w-full pt-5 md:mx-auto md:block md:w-auto"
         >
           <p
             className={`${blatantRegular.className} text-gray-200 text-lg mb-7 text-center`}
           >
             Primary Contact Details
           </p>
-          <div className="flex flex-col gap-7 justify-center mb-7 md:mb-8 md:flex-row md:gap-6 lg:gap-10 lg:mb-8">
+          <div className="flex flex-col justify-center gap-7 mb-7 md:mb-8 md:flex-row md:gap-6 lg:gap-10 lg:mb-8">
             <label className="w-full md:w-[350px]">
-              <p className="text-gray-300 font-medium mb-3"> First Name</p>
+              <p className="mb-3 font-medium text-gray-300"> First Name</p>
               <InputField
                 name="primary_first_name"
                 type="text"
@@ -199,7 +199,7 @@ const VendorForm = () => {
               />
             </label>
             <label className="w-full md:w-[350px]">
-              <p className="text-gray-300 font-medium mb-3">Last Name</p>
+              <p className="mb-3 font-medium text-gray-300">Last Name</p>
               <InputField
                 name="primary_last_name"
                 type="text"
@@ -208,9 +208,9 @@ const VendorForm = () => {
               />
             </label>
           </div>
-          <div className="flex flex-col gap-7 justify-center mb-7 md:flex-row md:gap-6 lg:gap-10 lg:mb-8">
+          <div className="flex flex-col justify-center gap-7 mb-7 md:flex-row md:gap-6 lg:gap-10 lg:mb-8">
             <label className="w-full md:w-[350px]">
-              <p className="text-gray-300 font-medium mb-3 capitalize">
+              <p className="mb-3 font-medium text-gray-300 capitalize">
                 Country
               </p>
               <InputField
@@ -221,7 +221,7 @@ const VendorForm = () => {
               />
             </label>{" "}
             <label className="w-full md:w-[350px]">
-              <p className="text-gray-300 font-medium mb-3 capitalize">
+              <p className="mb-3 font-medium text-gray-300 capitalize">
                 Phone Number{" "}
               </p>
               <InputField
@@ -232,9 +232,9 @@ const VendorForm = () => {
               />
             </label>
           </div>
-          <div className="flex justify-between items-center mb-7 lg:mb-8">
+          <div className="flex items-center justify-between mb-7 lg:mb-8">
             <label className="w-full ">
-              <p className="text-gray-300 font-medium mb-3">Email</p>
+              <p className="mb-3 font-medium text-gray-300">Email</p>
               <InputField
                 name="primary_email"
                 type="email"
@@ -248,9 +248,9 @@ const VendorForm = () => {
           >
             Secondary Contact Details
           </p>
-          <div className="flex flex-col gap-7 justify-center mb-7 md:mb-8 md:flex-row md:gap-6 lg:gap-10 lg:mb-8">
+          <div className="flex flex-col justify-center gap-7 mb-7 md:mb-8 md:flex-row md:gap-6 lg:gap-10 lg:mb-8">
             <label className="w-full md:w-[350px]">
-              <p className="text-gray-300 font-medium mb-3"> First Name</p>
+              <p className="mb-3 font-medium text-gray-300"> First Name</p>
               <InputField
                 name="secondary_first_name"
                 type="text"
@@ -259,7 +259,7 @@ const VendorForm = () => {
               />
             </label>
             <label className="w-full md:w-[350px]">
-              <p className="text-gray-300 font-medium mb-3">Last Name</p>
+              <p className="mb-3 font-medium text-gray-300">Last Name</p>
               <InputField
                 name="secondary_last_name"
                 type="text"
@@ -268,9 +268,9 @@ const VendorForm = () => {
               />
             </label>
           </div>
-          <div className="flex flex-col gap-7 justify-center mb-7 md:flex-row md:gap-6 lg:gap-10 lg:mb-8">
+          <div className="flex flex-col justify-center gap-7 mb-7 md:flex-row md:gap-6 lg:gap-10 lg:mb-8">
             <label className="w-full md:w-[350px]">
-              <p className="text-gray-300 font-medium mb-3 capitalize">
+              <p className="mb-3 font-medium text-gray-300 capitalize">
                 Country
               </p>
               <InputField
@@ -281,7 +281,7 @@ const VendorForm = () => {
               />
             </label>{" "}
             <label className="w-full md:w-[350px]">
-              <p className="text-gray-300 font-medium mb-3 capitalize">
+              <p className="mb-3 font-medium text-gray-300 capitalize">
                 Phone Number{" "}
               </p>
               <InputField
@@ -292,9 +292,9 @@ const VendorForm = () => {
               />
             </label>
           </div>
-          <div className="flex justify-between items-center mb-7 lg:mb-8">
+          <div className="flex items-center justify-between mb-7 lg:mb-8">
             <label className="w-full ">
-              <p className="text-gray-300 font-medium mb-3">Email</p>
+              <p className="mb-3 font-medium text-gray-300">Email</p>
               <InputField
                 name="secondary_email"
                 type="email"
@@ -308,9 +308,9 @@ const VendorForm = () => {
           >
             Other Details
           </p>
-          <div className="flex flex-col gap-7 justify-center mb-7 md:flex-row md:gap-6 lg:gap-10 lg:mb-8">
+          <div className="flex flex-col justify-center gap-7 mb-7 md:flex-row md:gap-6 lg:gap-10 lg:mb-8">
             <label className="w-full md:w-[350px]">
-              <p className="text-gray-300 font-medium mb-3 capitalize">
+              <p className="mb-3 font-medium text-gray-300 capitalize">
                 Company Name
               </p>
               <InputField
@@ -321,7 +321,7 @@ const VendorForm = () => {
               />
             </label>
             <div className="w-full md:w-[350px]">
-              <p className="text-gray-300 font-medium mb-3 capitalize select-none">
+              <p className="mb-3 font-medium text-gray-300 capitalize select-none">
                 Is the company registered?
               </p>
               <DropdownField
@@ -337,10 +337,10 @@ const VendorForm = () => {
               />
             </div>
           </div>
-          <div className="flex flex-col gap-7 justify-center mb-7 md:flex-row md:gap-6 lg:gap-10 lg:mb-8">
+          <div className="flex flex-col justify-center gap-7 mb-7 md:flex-row md:gap-6 lg:gap-10 lg:mb-8">
             <div className="w-full md:w-[350px]">
               <label className="w-full ">
-                <p className="text-gray-300 font-medium mb-3">
+                <p className="mb-3 font-medium text-gray-300">
                   If yes, what country?
                 </p>
                 <InputField
@@ -353,7 +353,7 @@ const VendorForm = () => {
             </div>
             <div className="w-full md:w-[350px]">
               <label className="w-full ">
-                <p className="text-gray-300 font-medium mb-3"> Tax ID Number</p>
+                <p className="mb-3 font-medium text-gray-300"> Tax ID Number</p>
                 <InputField
                   name="tax_id"
                   type="text"
@@ -363,9 +363,9 @@ const VendorForm = () => {
               </label>
             </div>
           </div>
-          <div className="flex flex-col gap-7 justify-center mb-7 md:flex-row md:gap-6 lg:gap-10 lg:mb-8">
+          <div className="flex flex-col justify-center gap-7 mb-7 md:flex-row md:gap-6 lg:gap-10 lg:mb-8">
             <div className="w-full md:w-[350px]">
-              <p className="text-gray-300 font-medium mb-3 capitalize select-none">
+              <p className="mb-3 font-medium text-gray-300 capitalize select-none">
                 Vendor Category
               </p>
               <DropdownField
@@ -382,7 +382,7 @@ const VendorForm = () => {
             </div>
             <div className="w-full md:w-[350px]">
               <label className="w-full ">
-                <p className="text-gray-300 font-medium mb-3">
+                <p className="mb-3 font-medium text-gray-300">
                   {" "}
                   Other category?
                 </p>
@@ -395,9 +395,9 @@ const VendorForm = () => {
               </label>
             </div>
           </div>
-          <div className=" mb-7 ">
+          <div className=" mb-7">
             <div className="w-full md:w-[350px]">
-              <p className="text-gray-300 font-medium mb-3 capitalize select-none">
+              <p className="mb-3 font-medium text-gray-300 capitalize select-none">
                 Booth Size
               </p>
               <DropdownField
@@ -413,7 +413,7 @@ const VendorForm = () => {
               />
             </div>
           </div>
-          <div className="w-full flex gap-3 md:items-center text-gray-300 ">
+          <div className="flex w-full gap-3 text-gray-300 md:items-center ">
             <CustomCheckbox
               name="Terms"
               handleInputChange={() => setIsTermChecked(!isTermChecked)}
@@ -429,7 +429,7 @@ const VendorForm = () => {
             </span>
           </div>
           {/* {JSON.stringify(isTermChecked)} */}
-          <div className="h-11 w-64 mx-auto mt-16">
+          <div className="w-64 mx-auto mt-16 h-11">
             <PrimaryButton
               type="submit"
               disabled={
@@ -454,7 +454,7 @@ const VendorForm = () => {
               }
             >
               {isVendorFormLoading ? (
-                <ButtonLoader className="animate-spin mx-auto  " />
+                <ButtonLoader className="mx-auto animate-spin " />
               ) : (
                 "Apply"
               )}

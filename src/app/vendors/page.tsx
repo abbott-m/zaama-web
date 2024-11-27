@@ -13,9 +13,9 @@ const Vendors = () => {
   const router = useRouter();
   const [isTermChecked, setIsTermChecked] = useState(false);
   return (
-    <section className="py-16 px-5 md:px-16 ">
+    <section className="px-5 py-16 md:px-16 ">
       <h2
-        className={`${blatantBold.className} text-xl text-zaama_yellow uppercase tracking-wide font-medium mb-7 text-center selection:bg-zaama_red/50 md:text-2xl `}
+        className={`${blatantBold.className} text-xl text-zaama_yellowf text-primary uppercase tracking-wide font-medium mb-7 text-center md:text-2xl `}
       >
         ZAAMA DISCO VENDOR
       </h2>
@@ -27,7 +27,7 @@ const Vendors = () => {
         comply with these policies and procedures will result in termination on
         the spot.
       </p>
-      <p className="policy-paragraph font-semibold">
+      <p className="font-semibold policy-paragraph">
         VENDOR APPLICATION DEADLINE – December 1st, 2023
       </p>
       <div>
@@ -186,7 +186,7 @@ const Vendors = () => {
       >
         Read frequently asked questions
       </p>
-      <div className="w-full flex gap-3 md:items-center text-gray-300 my-7">
+      <div className="flex w-full gap-3 text-gray-300 cursor-pointer md:items-center my-7">
         <CustomCheckbox
           name="Terms"
           handleInputChange={() => setIsTermChecked(!isTermChecked)}
@@ -200,7 +200,7 @@ const Vendors = () => {
           Zaama Disco Vendor Terms and Condition and agree to abide by them
         </span>
       </div>
-      <div className="h-11 w-64 mx-auto ">
+      <div className="w-64 mx-auto h-11 ">
         <PrimaryButton
           type="button"
           disabled={!isTermChecked}

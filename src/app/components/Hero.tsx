@@ -2,44 +2,35 @@
 import Image from "next/image";
 import React, { useEffect } from "react";
 import handleScroll from "../lib/handleScroll";
+import ArrowDownIcon from "../../../public/SVG/arrow-down.svg";
 
 const Hero = () => {
   useEffect(() => {
     handleScroll({ sectionId: window.location.hash.substring(1) });
   }, []);
   return (
-    <section className="relative text-center  px-5 pt-10 select-none sm:px-10  md:px-20  ">
+    <section className="relative px-5 pt-10 text-center select-none sm:px-10 md:px-20 ">
       <div className="h-full w-full fixed top-0 left-0 bg-black/50 -z-[5]"></div>
       <video
         autoPlay
         loop
         muted
-        className=" h-full w-full absolute top-0 left-0 object-cover -z-10 md:h-full"
+        className="absolute top-0 left-0 object-cover w-full h-full -z-10 md:h-full"
       >
         <source src="/video/hero-bg.mp4" type="video/mp4" />
       </video>
 
-      {/* <Image
-        src="/images/zaama-3d-new.png"
-        alt="Zaama-logo"
-        width={260}
-        height={200}
-        priority
-        className="mx-auto mb-16 mt-14 bg-transparent animate-little_bounce"
-        data-aos="zoom-in-up"
-        data-aos-duration="500"
-      /> */}
       <Image
-        src="/GIF/hero-logo-anim.gif"
+        src="/GIF/hero-logo-anim-2.gif"
         alt="zaama-logo"
         unoptimized
         width={700}
         height={200}
         priority
-        className="mx-auto mb-5 mt-12  animate-little_bounce"
+        className="mx-auto mt-12 mb-5 animate-little_bounce"
       />
 
-      <Image
+      {/* <Image
         onClick={(e) =>
           handleScroll({
             sectionId: "tickets",
@@ -49,7 +40,15 @@ const Hero = () => {
         alt="arrow-down"
         width={50}
         height={50}
-        className="mx-auto transition duration-150 animate-bounce mt-20 cursor-pointer "
+        className="mx-auto mt-20 transition duration-150 cursor-pointer animate-bounce "
+      /> */}
+      <ArrowDownIcon
+        onClick={() =>
+          handleScroll({
+            sectionId: "tickets",
+          })
+        }
+        className="inline-block w-12 mx-auto mt-20 transition duration-150 cursor-pointer animate-bounce text-primary"
       />
     </section>
   );
