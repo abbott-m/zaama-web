@@ -28,7 +28,7 @@ const Vendors = () => {
         the spot.
       </p>
       <p className="font-semibold policy-paragraph">
-        VENDOR APPLICATION DEADLINE – December 1st, 2023
+        VENDOR APPLICATION DEADLINE – December 1st, 2024
       </p>
       <div>
         <p className="policy-subheading">Beverages</p>
@@ -71,11 +71,11 @@ const Vendors = () => {
             vendor space by registration deadline will get priority.
           </li>
           <li className="policy-paragraph policy-list">
-            ⁃ No applications will be accepted after November 10th, 2023.
+            ⁃ No applications will be accepted after November 10th, 2024.
           </li>
           <li className="policy-paragraph policy-list">
             ⁃ Vendors will be notified of booth assignments on November 20th ,
-            2023 via email, calls or text.
+            2024 via email, calls or text.
           </li>
         </ul>
         <p className="policy-paragraph">

@@ -155,7 +155,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#1c1c1c]   px-4 py-10  sm:px-28 sm:py-16">
+    <footer className="bg-[#0e0e0e]   px-4 py-10  sm:px-28 sm:py-16">
       <div className="flex flex-col items-center justify-center gap-16 sm:flex-row sm:items-start sm:flex-wrap md:gap-24 lg:gap-28">
         <div className="text-center ">
           <Link href="/" className="inline-block py-2 mb-6 ">
