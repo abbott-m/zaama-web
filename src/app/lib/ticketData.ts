@@ -38,7 +38,6 @@ export const ticketData: ITicketData[] = [
     cedi_price: "500",
     perks: [
       "Access to VIP Bar",
-      "Autograph signing",
       "Priority entry",
       "Access to priority car packing",
       "Unrestricted access to the front stage within arms reach with the artist",

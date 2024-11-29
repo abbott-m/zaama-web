@@ -123,7 +123,7 @@ const Sponsors = () => {
               <SwiperSlide key={index}>
                 <div
                   key={index}
-                  className="w-36 h-36 bg- bg-gradient-to-tr from-[#4a5463] to-[#4a4a4a] rounded-full flex justify-center items-center p-2 shadow-md shadow-[#6e6e6e] mx-auto mb-1"
+                  className="w-36 h-36 bg- bg-gradient-to-tr from-[#1b222c] to-[#2d2d2d] rounded-full flex justify-center items-center p-2 shadow-md shadow-[#6e6e6e] mx-auto mb-1"
                 >
                   <Image
                     src={item.imageSrc}
