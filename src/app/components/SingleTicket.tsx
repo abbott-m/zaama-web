@@ -126,12 +126,14 @@ const SingleTicket = ({
             {item}
           </li>
         ))}
-        <li
-          onClick={handleView}
-          className="inline-block w-full text-sm text-center text-gray-300 cursor-pointer "
-        >
-          see more
-        </li>
+        {perks?.length > 3 && (
+          <li
+            onClick={handleView}
+            className="inline-block w-full text-sm text-center text-gray-300 cursor-pointer "
+          >
+            see more
+          </li>
+        )}
       </ul>
       <button
         onClick={() =>
