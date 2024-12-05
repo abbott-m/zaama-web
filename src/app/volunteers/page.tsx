@@ -77,7 +77,7 @@ const Volunteers = () => {
     formData.append("social_handle", volunteerFields.social_handle);
 
     fetch(
-      "https://script.google.com/macros/s/AKfycbxCmu3NXdHThg6JPg4iM5TPf9MgxCptvnJSXwQn8hilKM6fnifFPx8Smu80AIVl16ZbLg/exec",
+      "https://script.google.com/macros/s/AKfycbxwZrd7tXoOV-239D62S2C_tRafbUITM1514C9MUtttFL3qOITtT4EAWsSzPQlwvyV4EQ/exec",
       {
         method: "POST",
         body: formData,
