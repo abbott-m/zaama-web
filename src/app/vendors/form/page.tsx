@@ -94,7 +94,7 @@ const VendorForm = () => {
     formData.append("terms_accepted", isTermChecked ? "yes" : "no");
 
     fetch(
-      "https://script.google.com/macros/s/AKfycbwuUrsdrmon1c6OC6NyB09qMJS60UMHJzFWlI3wX_zN6rIzFW_cpn628SPHGgzvezEpcA/exec",
+      "https://script.google.com/macros/s/AKfycbybeECCjaoLdtEcqx8swNmoVXqrJbL2JB9UNa2u0IhC37jkKk5Ai5Eb83QPDGeBQTXhZA/exec",
       {
         method: "POST",
         body: formData,
