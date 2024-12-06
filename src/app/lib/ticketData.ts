@@ -4,7 +4,7 @@ export const ticketData: ITicketData[] = [
     color: "yellow",
     packageName: "General Access",
     dollar_price: "10",
-    cedi_price: "100",
+    cedi_price: "300",
     perks: ["Bands", "Experience avenue", "Food Court access"],
     available: true,
     countDown: false,
@@ -14,7 +14,7 @@ export const ticketData: ITicketData[] = [
     color: "red",
     packageName: "General Access Plus",
     dollar_price: "20",
-    cedi_price: "300",
+    cedi_price: "500",
     perks: [
       "Bands",
       "Merch Area access",
@@ -30,7 +30,7 @@ export const ticketData: ITicketData[] = [
     color: "green",
     packageName: "VIP",
     dollar_price: "40",
-    cedi_price: "500",
+    cedi_price: "700",
     perks: [
       "Access to VIP Bar",
       "Priority entry",
