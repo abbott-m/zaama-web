@@ -25,7 +25,7 @@ const Ticket = () => {
         data-aos="fade-up"
         className={`${blatantBold.className} text-center text-xl font-medium mb-4 text-primary uppercase tracking-wider  md:text-2xl`}
       >
-        Choose your package (Early Birds)
+        Choose your package
       </p>
       <p data-aos="fade-up" className="mb-2 text-center">
         We have uniquely crafted ticket packages for everyone
