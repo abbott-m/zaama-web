@@ -39,7 +39,7 @@ const Ticket = () => {
       </div>
 
       <div data-aos="fade-up">
-        <div className="items-center justify-center flexf ">
+        <div className="">
           <Swiper
             loop={true}
             speed={1200}
@@ -65,7 +65,6 @@ const Ticket = () => {
             {ticketData.map((item, index) => (
               <SwiperSlide key={index} className="">
                 <SingleTicket
-                  key={index}
                   color={item.color}
                   packageName={item.packageName}
                   dollar_price={item.dollar_price}
