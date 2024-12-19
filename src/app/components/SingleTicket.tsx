@@ -67,7 +67,7 @@ const SingleTicket = ({
   };
   return (
     <div
-      className={`relative mx-auto w-72 h-[390px] text-gray-200 px-2 py-3 flex flex-col justify-center items-center rounded-2xl bg-transparent  transition duration-100 lg:w-80 
+      className={`cursor-pointer relative mx-auto w-72 h-[390px] text-gray-200 px-2 py-3 flex flex-col justify-center items-center rounded-2xl bg-transparent  transition duration-200 lg:w-80 lg:hover:scale-105  lg:hover:text-gray-200
       
        ${
          !available &&
@@ -116,7 +116,7 @@ const SingleTicket = ({
       ) : (
       )} */}
 
-      <ul className="mb-5 text-sm  selection:bg-inherit">
+      <ul className="mb-5 text-sm selection:bg-inherit">
         {perks.slice(0, 3).map((item, index) => (
           <li
             key={index}

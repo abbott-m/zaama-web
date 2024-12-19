@@ -2,13 +2,20 @@
 import React from "react";
 import localFont from "next/font/local";
 import Image from "next/image";
-import SingleTicket from "../components/SingleTicket";
+import { Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
-type singleTableProps = {
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { tableData } from "../lib/ticketData";
+
+type SingleTableProps = {
   color: string;
   packageName: string;
   cedi_price: string;
-  perks: string[];
+  tag: string;
 };
 const blatant = localFont({
   src: "../blatant-font/OTF/Blatant.otf",
@@ -21,11 +28,11 @@ const SingleTable = ({
   color,
   packageName,
   cedi_price,
-  perks,
-}: singleTableProps) => {
+  tag,
+}: SingleTableProps) => {
   return (
     <div
-      className={`relative mx-auto w-72 h-[390px]  px-2 py-4 flex flex-col justify-center items-center rounded-2xl bg-transparent  transition duration-100 lg:w-80 hover:scale-105  hover:text-gray-200 
+      className={`cursor-pointer relative mx-auto w-72 h-[390px]  px-2 py-4 flex flex-col justify-center items-center rounded-2xl bg-transparent transition duration-200 lg:w-80 lg:hover:scale-105  lg:hover:text-gray-200 
  
   `}
     >
@@ -45,73 +52,19 @@ const SingleTable = ({
         {packageName}
       </p>
       <p
-        className={`${blatantBold.className} text-center text-4xl mb-10 md:text-5xl`}
+        className={`${blatantBold.className} text-center text-4xl mb-14 md:text-5xl`}
       >
         <span className="text-lg md:text-2xl">&#8373;</span> {cedi_price}
       </p>
 
-      <button
-        onClick={() =>
-          window.open(
-            "https://vsprocessorpro.com/ev/BuyTicket?Id=1655&p=g&comid=1255",
-            "_blank"
-          )
-        }
-        className={`${
-          blatant.className
-        }  tracking-widest rounded-sm text-sm w-28 h-10 mb-5 outline-none font-semibold border uppercase select-none transition duration-150 md:w-32  ${
-          color === "red"
-            ? "border-zaama_red/50 hover:bg-zaama_red/10"
-            : color === "green"
-            ? "border-zaama_green/50 hover:bg-zaama_green/10"
-            : "border-zaama_yellow/50 hover:bg-zaama_yellow/10"
-        } `}
-      >
-        Purchase
-      </button>
-      <div className="text-sm text-center">
-        <p className="mb-1">Table RSVP</p>
-        <p className="text-sm">+233 55 283 1168</p>
-      </div>
+      <p className={`${blatantBold.className} uppercase mb-20 text-lg`}>
+        ( {tag} )
+      </p>
     </div>
   );
 };
 
 const Tables = () => {
-  const tableData = [
-    {
-      color: "yellow",
-      packageName: "YAYA K.K",
-      cedi_price: "30,000",
-      perks: [
-        "Experience avenue",
-        "Water and wristbands",
-        "Standard access",
-        "Cocktail area ",
-      ],
-    },
-    {
-      color: "red",
-      packageName: "SIMMER DOWN ",
-      cedi_price: "20,000",
-      perks: [
-        "Access to festival",
-        "Bars and Merch",
-        "Priority entry",
-        "Drinks",
-      ],
-    },
-    {
-      color: "green",
-      packageName: "COUNTRY SIDE",
-      cedi_price: "10,000",
-      perks: [
-        "Unrestricted access",
-        "Priority entry",
-        "Access to the VIP lounge",
-      ],
-    },
-  ];
   return (
     // <section className=" pt-20 pb-4 px-5 bg-[#161616] flex justify-center items-center md:px-8 md:pb-8 ">
     //   <div className=" w-full mb-16 md:bg-[#4c4c4c]/20 md:px-16 md:py-14 md:rounded-2xl md:inline-block   md:w-auto ">
@@ -139,110 +92,57 @@ const Tables = () => {
         data-aos="fade-up"
         className={`${blatant.className} text-center text-xl font-medium mb-4 text-zaama_yellowf text-primary uppercase tracking-wider  md:text-2xl`}
       >
-        Choose your package
+        Choose your table package
       </p>
-      <p data-aos="fade-up" className="text-center mb-14">
-        We have uniquely crafted table packages for you
+      <p data-aos="fade-up" className="mb-2 text-center">
+        We have uniquely crafted table packages for everyone
       </p>
-      <div className="flex flex-col flex-wrap items-center justify-center gap-5 sm:flex-row">
-        {tableData.map((item, index) => (
-          <SingleTable
-            key={index}
-            color={item.color}
-            packageName={item.packageName}
-            cedi_price={item.cedi_price}
-            perks={item.perks}
-          />
-        ))}
+      <div className="mb-10 text-center">
+        <p data-aos="fade-up" className="text-center ">
+          Ticket Support Numbers:{" "}
+          <span className="text-sm whitespace-nowrap">+233 24 832 5314,</span>
+          <span className="text-sm whitespace-nowrap">+233 24 138 3766</span>
+        </p>
+      </div>
+      <div>
+        <Swiper
+          loop={true}
+          speed={1200}
+          slidesPerView={1}
+          spaceBetween={10}
+          autoplay={{
+            delay: 2700,
+            pauseOnMouseEnter: true,
+          }}
+          modules={[Autoplay]}
+          breakpoints={{
+            // when window width is >= 640px (tablet)
+            768: {
+              slidesPerView: 2,
+            },
+            // when window width is >= 1024px (desktop)
+            1024: {
+              slidesPerView: 3,
+            },
+          }}
+          className="mySwiper"
+        >
+          {tableData.map((item, index) => (
+            <SwiperSlide key={index} className="">
+              <SingleTable
+                color={item.color}
+                packageName={item.packageName}
+                cedi_price={item.cedi_price}
+                tag={item.tag}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
 
-      <div className="flex flex-wrap items-start gap-8 my-8 md:my-14 lg:justify-between">
-        <div>
-          <p className={`${blatant.className} text-lg mb-4`}>
-            YAYA K.K – ( GHS 30,000.00 )
-          </p>
-          <ul className="text-gray-300">
-            <li className="mb-2 text-sm ">• SPECIAL GIFT BOX PACKAGE</li>
-            <li className="mb-2 text-sm ">• TABLE VIP ENTRY FOR 12 PEOPLE</li>
-            <li className="mb-2 text-sm ">• 7 MERGE ITEMS</li>
-            <li className="mb-2 text-sm ">• VIP SITTING LOUNGE PACK</li>
-            <li className="mb-2 text-sm ">• SPECIAL 2 DEDICATED SECURITY</li>
-            <li className="mb-2 text-sm ">• SPECIAL 2 DEDICATED SHAPRONS</li>
-            <li className="mb-2 text-sm ">• SPECIAL DEDICATED USHER</li>
-            <li className="mb-2 text-sm ">• CAR PACKING AREA WITH SECURITY</li>
-            <li className="mb-2 text-sm ">• DEDICATED CLEANER</li>
-            <li className="mb-2 text-sm ">• ACCESS TO ARTIST LOUNGE</li>
-            <li className="mb-2 text-sm ">• BAR</li>
-            <li className="mb-2 text-sm ">• CHAMPAGNE</li>
-            <li className="mb-2 text-sm ">• COGNAC</li>
-            <li className="mb-2 text-sm ">• WHISKEY</li>
-            <li className="mb-2 text-sm ">• VODKA</li>
-            <li className="mb-2 text-sm ">• TEQUILA</li>
-            <li className="mb-2 text-sm ">• SPARKLING WINE / PRASECCO</li>
-            <li className="mb-2 text-sm ">• MIXERS/ ENERGY DRINK</li>
-            <li className="mb-2 text-sm ">• JUICE</li>
-            <li className="mb-2 text-sm ">• UNLIMITED WATER</li>
-            <li className="mb-2 text-sm ">• SHISHA</li>
-            <li className="mb-2 text-sm ">• CATERING</li>
-          </ul>
-        </div>
-        <div>
-          <p className={`${blatant.className} text-lg mb-4`}>
-            SIMMER DOWN ( GHS 20,000.00 )
-          </p>
-          <ul className="text-gray-300">
-            <li className="mb-2 text-sm ">• TABLE VIP ENTRY FOR 10 PEOPLE</li>
-            <li className="mb-2 text-sm ">• 5 MERGE ITEMS</li>
-            <li className="mb-2 text-sm ">• VIP SITTING LOUNGE PACK</li>
-            <li className="mb-2 text-sm ">• SPECIAL 1 DEDICATED SECURITY </li>
-            <li className="mb-2 text-sm ">• SPECIAL DEDICATED SHAPRONS</li>
-            <li className="mb-2 text-sm ">• SPECIAL DEDICATED USHER</li>
-            <li className="mb-2 text-sm ">• BAR</li>
-            <li className="mb-2 text-sm ">• CHAMPAGNE</li>
-            <li className="mb-2 text-sm ">• COGNAC</li>
-            <li className="mb-2 text-sm ">• TEQUILA</li>
-            <li className="mb-2 text-sm ">• SPARKLING WINE / PRASECCO</li>
-            <li className="mb-2 text-sm ">• MIXERS/ ENERGY DRINK</li>
-            <li className="mb-2 text-sm ">• JUICE</li>
-            <li className="mb-2 text-sm ">• UNLIMITED WATER</li>
-            <li className="mb-2 text-sm ">• SHISHA</li>
-            <li className="mb-2 text-sm ">• CATERING</li>
-          </ul>
-        </div>
-        <div>
-          <p className={`${blatant.className} text-lg mb-4`}>
-            COUNTRY SIDE ( GHS 10,000.00 )
-          </p>
-          <ul className="text-gray-300">
-            <li className="mb-2 text-sm ">• TABLE VIP ENTRY FOR 8 PEOPLE</li>
-            <li className="mb-2 text-sm ">• 3 MERGE ITEMS</li>
-            <li className="mb-2 text-sm ">• VIP SITTING LOUNGE PACK</li>
-            <li className="mb-2 text-sm ">• SPECIAL 1 DEDICATED SECURITY </li>
-            <li className="mb-2 text-sm ">• SPECIAL DEDICATED SHAPRONS</li>
-            <li className="mb-2 text-sm ">• SPECIAL DEDICATED USHER</li>
-            <li className="mb-2 text-sm ">• BAR</li>
-            <li className="mb-2 text-sm ">• CHAMPAGNE</li>
-            <li className="mb-2 text-sm ">• COGNAC</li>
-            <li className="mb-2 text-sm ">• TEQUILA</li>
-            <li className="mb-2 text-sm ">• SPARKLING WINE / PRASECCO</li>
-            <li className="mb-2 text-sm ">• MIXERS/ ENERGY DRINK</li>
-            <li className="mb-2 text-sm ">• JUICE</li>
-            <li className="mb-2 text-sm ">• UNLIMITED WATER</li>
-            <li className="mb-2 text-sm ">• SHISHA</li>
-            <li className="mb-2 text-sm ">• CATERING</li>
-          </ul>
-        </div>
-      </div>
-      {/* <div className=" my-10 text-center  md:min-w-[700px]">
-        <Image
-          src="/images/zaama-white-logo.png"
-          alt="zaama-logo-white"
-          width={160}
-          height={160}
-          className="mx-auto mt-16 mb-8 animate-pulse"
-        />
-        <p className="mb-2">Table packages open on the 1st of December</p>
-      </div> */}
+      <p className="mt-5 text-sm italic text-center text-gray-300 md:mt-10">
+        Swipe for more...
+      </p>
     </section>
   );
 };

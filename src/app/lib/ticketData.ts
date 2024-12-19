@@ -36,10 +36,36 @@ export const ticketData: ITicketData[] = [
       "Priority entry",
       "Access to priority car packing",
       "Within arms reach with the artist",
-      "Luxury serviced toilets",
       "After party experience",
     ],
     available: true,
     countDown: false,
+  },
+];
+
+export const tableData = [
+  {
+    color: "yellow",
+    packageName: "Gold Package",
+    cedi_price: "30,000",
+    tag: "Rebel Music",
+  },
+  {
+    color: "red",
+    packageName: "Silver Package",
+    cedi_price: "20,000",
+    tag: "Kilos Milos",
+  },
+  {
+    color: "yellow",
+    packageName: "Bronze Package",
+    cedi_price: "10,000",
+    tag: "January 9th",
+  },
+  {
+    color: "green",
+    packageName: "Squad Package",
+    cedi_price: "1,000",
+    tag: "Group of 4",
   },
 ];
