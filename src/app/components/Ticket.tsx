@@ -67,6 +67,7 @@ const Ticket = () => {
                 <SingleTicket
                   color={item.color}
                   packageName={item.packageName}
+                  packageSubName={item.packageSubName}
                   dollar_price={item.dollar_price}
                   cedi_price={item.cedi_price}
                   perks={item.perks}

@@ -41,6 +41,18 @@ export const ticketData: ITicketData[] = [
     available: true,
     countDown: false,
   },
+
+  {
+    ticketType: 4,
+    color: "red",
+    packageName: "Squad Package",
+    packageSubName: "Group of 4",
+    dollar_price: "10",
+    cedi_price: "1,000",
+    perks: ["Bands", "Experience avenue", "Food Court access"],
+    available: true,
+    countDown: false,
+  },
 ];
 
 export const tableData = [
@@ -61,11 +73,5 @@ export const tableData = [
     packageName: "Bronze Package",
     cedi_price: "10,000",
     tag: "January 9th",
-  },
-  {
-    color: "green",
-    packageName: "Squad Package",
-    cedi_price: "1,000",
-    tag: "Group of 4",
   },
 ];
