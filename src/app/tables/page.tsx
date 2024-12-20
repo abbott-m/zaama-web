@@ -140,7 +140,7 @@ const Tables = () => {
         </Swiper>
       </div>
 
-      <p className="mt-5 text-sm italic text-center text-gray-300 md:mt-10">
+      <p className="mt-5 text-sm italic text-center text-gray-300 md:mt-10 md:hidden">
         Swipe for more...
       </p>
     </section>
