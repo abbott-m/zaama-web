@@ -30,6 +30,7 @@ interface ITicketData {
   ticketType: number;
   color: string;
   packageName: string;
+  packageSubName?: string;
   dollar_price: string;
   cedi_price: string;
   perks: string[];

@@ -12,9 +12,10 @@ const blatantBold = localFont({
   src: "../blatant-font/OTF/Blatant-Bold.otf",
 });
 
-type singleTicketProps = {
+type SingleTicketProps = {
   color: string;
   packageName: string;
+  packageSubName?: string;
   dollar_price: string;
   cedi_price: string;
   perks: string[];
@@ -26,13 +27,14 @@ type singleTicketProps = {
 const SingleTicket = ({
   color,
   packageName,
+  packageSubName,
   dollar_price,
   cedi_price,
   perks,
   available,
   countDown,
   ticketID,
-}: singleTicketProps) => {
+}: SingleTicketProps) => {
   const router = useRouter();
 
   const startDate = new Date("2024-12-01T00:00:00"); // countdown timer stops at Nov 10, 2024
@@ -88,9 +90,12 @@ const SingleTicket = ({
         fill
         className="-z-10"
       />
-      <p className={`${blatant.className} uppercase text-lg text-center mb-3`}>
-        {packageName}
-      </p>
+      <div
+        className={`${blatant.className} uppercase text-lg text-center mb-3`}
+      >
+        <p>{packageName}</p>
+        {!!packageSubName && <p> ({packageSubName})</p>}
+      </div>
       {/* <p
         className={`${blatant.className} text-center text-2xl mb-5 md:text-4xl`}
       >
