@@ -80,7 +80,7 @@ const Ticket = () => {
           </Swiper>
         </div>
 
-        <p className="mt-5 text-sm italic text-center text-gray-300 md:hidden">
+        <p className="mt-5 text-sm italic text-center text-gray-300 md:mt-10">
           Swipe for more...
         </p>
       </div>
