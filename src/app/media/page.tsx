@@ -42,7 +42,7 @@ const Media = () => {
       mediaFields.phone_number.replace(/\s/g, "")
     );
     fetch(
-      "https://script.google.com/macros/s/AKfycbxyss-ZNbZcvUdgDNgS86k3fCJhcqx3zOjpTpOIeb2mD3GAqSrgaX5mkpskky98lGQIjw/exec",
+      "https://script.google.com/macros/s/AKfycbzCUDy5wW8U7lUA5nhJBy5Z697TRNX9Rpaw2_L8rc4G12_jGXUIff3zQed-HNGpIhxOFg/exec",
       {
         method: "POST",
         body: formData,

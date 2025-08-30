@@ -71,7 +71,7 @@ const SponsorshipInquiry = () => {
 
     // Using same endpoint as general inquiry - you may want to create a separate one
     fetch(
-      "https://script.google.com/macros/s/AKfycbyo9UhprKh_h3JVeCKqiIR12YsYXDDVGIU250WO03jecHqY5ez1CP-nyDo1xGrcJOHmZQ/exec",
+      "https://script.google.com/macros/s/AKfycbyYaT3CoBL_Eah5SRXUIfy1nAZjlQSOLH7Sbr07Ip_EcZKb3eovwCjGZpv19vVMGLyZ/exec",
       {
         method: "POST",
         body: formData,

@@ -44,7 +44,7 @@ const GeneralInquiry = () => {
     });
 
     fetch(
-      "https://script.google.com/macros/s/AKfycbyo9UhprKh_h3JVeCKqiIR12YsYXDDVGIU250WO03jecHqY5ez1CP-nyDo1xGrcJOHmZQ/exec",
+      "https://script.google.com/macros/s/AKfycbw5LSIpaO9hPWOGfTAUefbb50mOg428qehQjgYRmT5fEY5AnsV_GEh5aSSD8KowqYbCfg/exec",
       {
         method: "POST",
         body: formData,

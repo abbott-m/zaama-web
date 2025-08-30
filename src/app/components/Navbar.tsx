@@ -44,12 +44,24 @@ const Navbar = () => {
     },
     {
       id: 7,
+      name: "sponsor",
+      sectionId: "sponsorship",
+      path: "/register/sponsorship",
+    },
+    {
+      id: 8,
+      name: "contact",
+      sectionId: "general",
+      path: "/register/general",
+    },
+    {
+      id: 9,
       name: "foundation",
       sectionId: "foundation",
       path: "/#foundation",
     },
     {
-      id: 8,
+      id: 10,
       name: "policy",
       sectionId: "policy",
       path: "/policy",
