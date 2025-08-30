@@ -1,53 +1,61 @@
 export const homeFAQ = [
   {
     id: 1,
-    question: "How do I get the cashless wallet app?",
-    answer:
-      "You can get the webapp by clicking on cashless on the event website. Also, you can scan the QR code at the venue to get the wallet link. Simply enter your mobile number to gain access to your wallet.",
+    question: "Where can I buy tickets?",
+    answer: "Tickets are available only on our official website and approved ticketing partners. Don't buy from unauthorized sellers—protect your money and vibe.",
   },
   {
     id: 2,
-    question: "Where can I top-up my wallet?",
-    answer:
-      "Top-up directly from the app or at the designated TOP-UP STATION with cash, MOMO, or bank card.",
+    question: "Can I buy tickets at the gate?",
+    answer: "Yes, but we recommend buying online in advance as tickets may sell out before the event.",
   },
   {
     id: 3,
-    question: "What payment methods are accepted for top-up?",
-    answer:
-      "You can pay for your top-up with CASH, MOMO (Mobile Money), and BANK CARD.",
+    question: "What is the age limit?",
+    answer: "Zaama Disco is open to all ages 18+. Please bring a valid ID for entry.",
   },
   {
     id: 4,
-    question: "How do I pay for drinks and food?",
-    answer:
-      "Use your wallet app to SCAN TO PAY. It's quick, and you'll get served a lot faster.",
+    question: "What should I bring?",
+    answer: "A valid ticket (printed or digital), a valid photo ID, comfortable outfit to dance, vibe & shine in, and cashless payment options (for food, drinks, and merch).",
   },
   {
     id: 5,
-    question: "Is the event entirely cashless?",
-    answer:
-      "Yes, enjoy a hassle-free event with cashless convenience for seamless transactions.",
+    question: "Is re-entry allowed?",
+    answer: "Re-entry is not allowed once you leave the venue. Plan ahead.",
   },
   {
     id: 6,
-    question: "What if I encounter issues with the cashless system?",
-    answer:
-      "Seek assistance from event staff or visit the designated help desk(Top-Up station) for prompt support.",
+    question: "Will there be food and drinks?",
+    answer: "Yes! Expect a wide variety of food, cocktails, and beverages from local and international vendors.",
   },
   {
     id: 7,
-    question: "Can I top-up my wallet after entering the venue?",
-    answer:
-      "Yes, utilize the TOP-UP STATION at the venue to add funds to your wallet during the event.",
+    question: "What's the security like?",
+    answer: "Your safety is our top priority. There will be tight security, bag checks, and emergency services on site.",
   },
   {
     id: 8,
-    question: "What if i don't use up my wallet balance?",
-    answer:
-      "You can request for refund directly from the wallet 2 days after the event provided you have a balance of GHs 50 and above. You'll also be charged GHs 10 for the refund.",
+    question: "Can I refund or transfer my ticket?",
+    answer: "All sales are final. However, you may transfer your ticket through our official platform if you can't make it.",
+  },
+  {
+    id: 9,
+    question: "Will there be official Zaama Disco merch?",
+    answer: "Absolutely! Limited-edition Blacko Tribe merch will be available at the event and online.",
+  },
+  {
+    id: 10,
+    question: "Is there parking available?",
+    answer: "Yes, but spaces are limited. We recommend ride-sharing or arriving early.",
+  },
+  {
+    id: 11,
+    question: "Will the event be streamed online?",
+    answer: "Yes! For those outside Accra, Zaama Disco will be streamed on major platforms. Details coming soon.",
   },
 ];
+
 export const vendorFAQ = [
   {
     id: 1,
@@ -58,7 +66,7 @@ export const vendorFAQ = [
   },
   {
     id: 2,
-    question: "Does your company provide” and set” dinnerware?",
+    question: "Does your company provide and set dinnerware?",
     answer: "No we do not.",
   },
   {
@@ -110,6 +118,7 @@ export const vendorFAQ = [
     answer: "Yes",
   },
 ];
+
 export const volunteerFAQ = [
   {
     id: 1,

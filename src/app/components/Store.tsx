@@ -6,45 +6,88 @@ const blatantBold = localFont({
   src: "../blatant-font/OTF/Blatant-Bold.otf",
 });
 
+const blatant = localFont({
+  src: "../blatant-font/OTF/Blatant.otf",
+});
+
 const Store = () => {
   const scrollToBottom = () => {
     window.scrollTo(0, document.body.scrollHeight);
   };
+
   return (
     <section
       id="store"
-      className=" bg-gradient-to-br from-[#09192e] via-[#1f2122] to-[#020a15] px-5 py-20 sm:px-10 sm:py-20 md:py-4 md:px-20 md:flex md:items-center md:justify-center md:gap-10 lg:px-24"
+      className="bg-gradient-to-br from-[#09192e] via-[#1f2122] to-[#020a15] px-5 py-20 sm:px-10 sm:py-20 md:py-4 md:px-20 md:flex md:items-center md:justify-center md:gap-10 lg:px-24"
     >
-      <div className=" md:w-5/12">
-        <div className="mb-10 md:text-left ">
+      <div className="md:w-5/12">
+        <div className="mb-10 md:text-left">
           <p
             data-aos="fade-down"
             className={`${blatantBold.className} text-center text-xl font-medium mb-5 text-zaama_yellowf text-primary uppercase tracking-wider md:text-2xl md:text-left`}
           >
-            Our Store
+            Zaama Disco App
           </p>
 
           <p
             data-aos="fade-right"
-            className="leading-7 text-center  sm:mx-auto md:text-left md:mx-0"
+            className="leading-7 text-center sm:mx-auto md:text-left md:mx-0 mb-6"
           >
-            Zaama Disco app coming soon, subscribe to our{" "}
+            The official Zaama Disco app is coming soon! Get ready for an enhanced festival experience with:
+          </p>
+
+          {/* App Features */}
+          <div data-aos="fade-up" className="mb-8">
+            <ul className="space-y-3 text-sm text-gray-300">
+              <li className="flex items-center gap-3">
+                <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0"></span>
+                <span>Live festival schedule and artist lineup</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0"></span>
+                <span>Interactive venue map and navigation</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0"></span>
+                <span>Cashless payment system integration</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0"></span>
+                <span>Exclusive Blacko Tribe member content</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0"></span>
+                <span>Social sharing and festival memories</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0"></span>
+                <span>Real-time notifications and updates</span>
+              </li>
+            </ul>
+          </div>
+
+          <p
+            data-aos="fade-right"
+            className="leading-7 text-center sm:mx-auto md:text-left md:mx-0 text-sm text-gray-400 mb-6"
+          >
+            Subscribe to our{" "}
             <span
               onClick={scrollToBottom}
-              className="underline underline-offset-2 cursor-pointer transition duration-150 hover:text-[#b0b0b0]"
+              className="underline underline-offset-2 cursor-pointer transition duration-150 hover:text-[#b0b0b0] text-primary"
             >
               newsletter
             </span>{" "}
-            to stay updated
+            to be the first to know when the app launches!
           </p>
         </div>
+
         <div
           data-aos="fade-up"
-          className="flex flex-col items-center justify-center gap-5 text-gray-800 select-none  sm:flex-row md:justify-start"
+          className="flex flex-col items-center justify-center gap-5 text-gray-800 select-none sm:flex-row md:justify-start"
         >
           <button
             onClick={scrollToBottom}
-            className="inline-flex items-center w-48 px-5 py-2 bg-gray-100 rounded-lg outline-none hover:bg-gray-200"
+            className="inline-flex items-center w-48 px-5 py-2 bg-gray-100 rounded-lg outline-none hover:bg-gray-200 transition-colors duration-200"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -56,16 +99,17 @@ const Store = () => {
             </svg>
             <span className="flex flex-col items-start ml-4 leading-none">
               <span className="mb-1 text-xs font-semibold whitespace-nowrap">
-                GET IT ON
+                COMING TO
               </span>
-              <span className="font-semibold  whitespace-nowrap">
+              <span className="font-semibold whitespace-nowrap">
                 Google Play
               </span>
             </span>
           </button>
+
           <button
             onClick={scrollToBottom}
-            className="inline-flex items-center w-48 px-5 py-2 font-semibold bg-gray-100 rounded-lg outline-none hover:bg-gray-200"
+            className="inline-flex items-center w-48 px-5 py-2 font-semibold bg-gray-100 rounded-lg outline-none hover:bg-gray-200 transition-colors duration-200"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -78,26 +122,57 @@ const Store = () => {
             </svg>
             <span className="flex flex-col items-start ml-4 leading-none">
               <span className="mb-1 text-xs font-semibold text-gray-700 whitespace-nowrap">
-                Download on the
+                COMING TO
               </span>
-              <span className="font-semibold  whitespace-nowrap">
+              <span className="font-semibold whitespace-nowrap">
                 App Store
               </span>
             </span>
           </button>
         </div>
+
+        {/* Early Access Signup */}
+        <div data-aos="fade-up" data-aos-delay="200" className="mt-8 text-center md:text-left">
+          <div className="bg-primary/10 border border-primary/20 rounded-xl p-6">
+            <h3 className={`${blatant.className} text-lg font-semibold text-primary mb-3`}>
+              🚀 Get Early Access
+            </h3>
+            <p className="text-sm text-gray-300 mb-4">
+              Be among the first 1,000 users to download the app and unlock exclusive features!
+            </p>
+            <button
+              onClick={() => window.open('mailto:info@zaamadisco.com?subject=Early Access - Zaama Disco App', '_blank')}
+              className="bg-primary text-black px-6 py-2 rounded-lg font-semibold hover:bg-secondary transition-colors duration-200"
+            >
+              Join Early Access List
+            </button>
+          </div>
+        </div>
       </div>
+
       <div
         data-aos="fade-left"
-        className="hidden select-none  animate-little_bounce md:w-5/12 md:block"
+        className="hidden select-none animate-little_bounce md:w-5/12 md:block"
       >
-        <Image
-          src="/images/zaama-mobile.png"
-          alt="zaama-mobile"
-          width={250}
-          height={200}
-          className="mx-auto"
-        />
+        <div className="relative">
+          <Image
+            src="/images/zaama-mobile.png"
+            alt="zaama-mobile-app"
+            width={250}
+            height={200}
+            className="mx-auto"
+          />
+          {/* App Features Floating Cards */}
+          <div className="absolute -top-4 -left-8 bg-primary/20 backdrop-blur-sm border border-primary/30 rounded-lg p-3 animate-pulse">
+            <p className="text-xs text-primary font-semibold">📱 Live Updates</p>
+          </div>
+          <div className="absolute top-1/2 -right-12 bg-secondary/20 backdrop-blur-sm border border-secondary/30 rounded-lg p-3 animate-pulse">
+            <p className="text-xs text-secondary font-semibold">💳 Cashless Pay</p>
+          </div>
+          <div className="absolute -bottom-8 left-8 bg-green-500/20 backdrop-blur-sm border border-green-500/30 rounded-lg p-3 animate-pulse">
+            <p className="text-xs text-green-400 font-semibold">🗺️ Venue Map</p>
+          </div>
+        </div>
       </div>
     </section>
   );

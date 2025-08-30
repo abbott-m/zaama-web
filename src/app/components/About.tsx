@@ -33,26 +33,33 @@ const About = () => {
           About Zaama
         </p>
         <div data-aos="fade-up">
-          <p className="mb-3 leading-7 ">
-            Zaama Disco is an art of LIFE for the youth of Ghana and beyond the
-            world. A combination of ARTS, FASHION, AND MUSIC from different
-            backgrounds forming the army of Blacko Tribe. Zaama Disco is also
-            intended to inculcate a spirit of adventure, co-operation, creation
-            of excellence in the domain of art and culture and feelings of
-            fraternity, patriotism, unity and brotherhood.
+          <p className="mb-4 leading-7">
+            Zaama Disco isn't just an event—it's a movement. A fusion of music, fashion, art, and raw energy, Zaama Disco is where Ghana's youth and culture and the world come alive to celebrate creativity and culture. It's the heartbeat of the Blacko Tribe, a community built on freedom, unity, and unapologetic self-expression.
           </p>
-          <p className="mb-3 leading-7 ">
-            We are putting together a fantastic production and visual experience
-            planned along with a power packed line up of professionals and best
-            artists across west Africa and the world. We will stream it in all
-            virtual platforms with an aim to entertain, network with their
-            people, uplift their spirit in the comfort of their homes and
-            encourage the social distancing rules.
+          <p className="mb-4 leading-7">
+            This year, we're leveling up with a mind-blowing production—an immersive world of lights, sound, and visuals backed by the hottest performers across West Africa and beyond. Expect bold fashion, electrifying music, and art that tells the story of our generation.
           </p>
-          <p className="leading-7 ">
-            Our aim is simply to bring together different people of different
-            culture under one platform to celebrate their unique lifestyles
-            whiles engaging amongst each other.
+          <div className="mb-4">
+            <p className="mb-3 leading-7 font-semibold">
+              Zaama Disco is more than a Concert. It's:
+            </p>
+            <ul className="list-none space-y-2 ml-4">
+              <li className="flex items-start gap-3">
+                <span className="w-2 h-2 rounded-full bg-primary mt-2.5 flex-shrink-0"></span>
+                <span className="leading-7">A stage for the bold and the fearless</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="w-2 h-2 rounded-full bg-primary mt-2.5 flex-shrink-0"></span>
+                <span className="leading-7">A platform to connect with people who move like you, dream like you, and live like you</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="w-2 h-2 rounded-full bg-primary mt-2.5 flex-shrink-0"></span>
+                <span className="leading-7">A once-in-a-lifetime experience that brings together thousands under one rhythm</span>
+              </li>
+            </ul>
+          </div>
+          <p className="leading-7">
+            Whether you're on the dance floor, catching the vibes virtually, or repping the Blacko Tribe lifestyle, Zaama Disco is your place to belong.
           </p>
         </div>
       </div>

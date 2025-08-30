@@ -73,6 +73,7 @@ const Footer = () => {
       path: "https://youtube.com/@ZaamaDisco?si=bruBWtV5GdWjRclI",
     },
   ];
+
   const quickLinks: quickLinks = [
     {
       id: 1,
@@ -89,9 +90,19 @@ const Footer = () => {
       name: "Policy",
       path: "/policy",
     },
+    {
+      id: 4,
+      name: "Media Registration",
+      path: "/media",
+    },
+    {
+      id: 5,
+      name: "Tables",
+      path: "/tables",
+    },
   ];
+
   const validateEmail = useCallback((email: string) => {
-    // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
     return emailRegex.test(email);
   }, []);
@@ -122,12 +133,8 @@ const Footer = () => {
     )
       .then((res) => res.text())
       .then((data) => {
-        // set button loading state to false
         setIsSubscriptionLoading(false);
-
-        // reset input fields to default
         setEmailAddress("");
-
         setResponse({
           type: "success",
           text: data,
@@ -140,7 +147,6 @@ const Footer = () => {
         }, 4000);
       })
       .catch((error) => {
-        // set button loading state to false
         setIsSubscriptionLoading(false);
         setResponse({
           type: "fail",
@@ -156,25 +162,25 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#0e0e0e]   px-4 py-10  sm:px-28 sm:py-16">
+    <footer className="bg-[#0e0e0e] px-4 py-10 sm:px-28 sm:py-16">
       <div className="flex flex-col items-center justify-center gap-16 sm:flex-row sm:items-start sm:flex-wrap md:gap-24 lg:gap-28">
-        <div className="text-center ">
-          <Link href="/" className="inline-block py-2 mb-6 ">
+        <div className="text-center">
+          <Link href="/" className="inline-block py-2 mb-6">
             <ZaamaLogo className="w-32" />
           </Link>
           <div>
             {isSubscriptionLoading ? (
-              <div className="flex items-center justify-center w-64 h-32 ">
+              <div className="flex items-center justify-center w-64 h-32">
                 <Image
                   src="/images/zaama-white-logo.png"
                   alt="zaama-logo"
                   width={30}
                   height={30}
-                  className="opacity-10 animate-pulse "
+                  className="opacity-10 animate-pulse"
                 />
               </div>
             ) : response.type === "success" ? (
-              <div className="w-64 h-32 ">
+              <div className="w-64 h-32">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -189,13 +195,12 @@ const Footer = () => {
                     d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                   />
                 </svg>
-
                 <p className="text-lg">Subscribed!</p>
               </div>
             ) : (
               <form ref={formRef} onSubmit={handleSubmit}>
                 <p
-                  className={`${blatant.className} font-medium  uppercase mb-4  tracking-wide whitespace-nowrap text-center `}
+                  className={`${blatant.className} font-medium uppercase mb-4 tracking-wide whitespace-nowrap text-center`}
                 >
                   Join our newsletter
                 </p>
@@ -207,7 +212,7 @@ const Footer = () => {
                     value={emailAddress}
                     onChange={handleEmailChange}
                     placeholder="Email address"
-                    className=" w-64 h-10 text-sm outline-none bg-[#272727] rounded-md px-4 mb-3 "
+                    className="w-64 h-10 text-sm outline-none bg-[#272727] rounded-md px-4 mb-3"
                   />
                   <div className="w-64 h-10">
                     <PrimaryButton type="submit" disabled={!isValidEmail}>
@@ -220,14 +225,13 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="text-center ">
+        <div className="text-center">
           <p
             className={`${blatant.className} font-medium text-lg uppercase mb-4 tracking-wide whitespace-nowrap`}
           >
             Quick Links
           </p>
           <ul>
-            {" "}
             {quickLinks.map((item) => (
               <li
                 key={item.id}
@@ -240,20 +244,20 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="text-center ">
+        <div className="text-center">
           <p
             className={`${blatant.className} font-medium text-lg uppercase mb-4 tracking-wide whitespace-nowrap`}
           >
             Connect
           </p>
-          <ul className="flex gap-3 items-center justify-center flex-wrap max-w-[180px] ">
+          <ul className="flex gap-3 items-center justify-center flex-wrap max-w-[180px]">
             {socialLinks.map((item) => (
               <li key={item.id}>
                 <Link
                   href={item.path}
                   target="_blank"
                   rel="noopener"
-                  className="bg-[#3a3a3a] w-10 h-10  rounded-full shadow-sm shadow-white/30 inline-flex justify-center items-center transition duration-150 hover:bg-[#2e2e2e]"
+                  className="bg-[#3a3a3a] w-10 h-10 rounded-full shadow-sm shadow-white/30 inline-flex justify-center items-center transition duration-150 hover:bg-[#2e2e2e]"
                 >
                   {item.icon}
                 </Link>
@@ -261,6 +265,7 @@ const Footer = () => {
             ))}
           </ul>
         </div>
+
         <div className="text-center max-w-[180px]">
           <p
             className={`${blatant.className} font-medium text-lg uppercase mb-4 tracking-wide whitespace-nowrap`}
@@ -268,21 +273,31 @@ const Footer = () => {
             Support
           </p>
           <div className="text-gray-400">
-            <p className="mb-3 text-sm ">
-              For more enquiry or information: <br />
+            <p className="mb-3 text-sm">
+              For enquiries or information: <br />
               <span className="inline-block mt-1 text-gray-300">
-                info@zaamadisco.com{" "}
+                info@zaamadisco.com
               </span>
               <br />
               <span className="inline-block mt-1 text-gray-300">
                 +233 24 447 5597
               </span>
             </p>
+            <p className="mb-3 text-sm">
+              Ticket Support: <br />
+              <span className="inline-block mt-1 text-gray-300">
+                +233 24 832 5314
+              </span>
+              <br />
+              <span className="inline-block mt-1 text-gray-300">
+                +233 24 138 3766
+              </span>
+            </p>
           </div>
         </div>
       </div>
+      
       <p className="text-sm text-center mt-14">
-        {" "}
         Created with <span className="mx-1 text-primary">&#10084;</span> by{" "}
         <Link
           href="https://blacheinc.com/"
