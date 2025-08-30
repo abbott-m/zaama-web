@@ -18,7 +18,7 @@ export const ticketData: ITicketData[] = [
     perks: [
       "Bands",
       "Merch Area access",
-      "After Party Access",
+      "After Party Access (T&C Apply)",
       "Apocalypse Club Access",
       "Experential Area Access",
     ],
@@ -36,7 +36,7 @@ export const ticketData: ITicketData[] = [
       "Priority entry",
       "Access to priority car packing",
       "Within arms reach with the artist",
-      "After party experience",
+      "After party experience (T&C Apply)",
     ],
     available: true,
     countDown: false,
