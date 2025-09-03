@@ -38,7 +38,7 @@ const WhatToBringSection = () => {
     "Stay hydrated (water is your best friend)",
     "Meet new people—Zaama Disco is about unity + tribe",
     "Save some energy for the After-Party (if you've got Plus or VIP)",
-    "Tag us on socials with #ZaamaDisco to get featured on the live festival wall",
+    "Tag us on socials with #ZaamaDisco to get featured on the live concert wall",
     "Roll with your squad for maximum fun (and discounts)",
     "Don't just come for the music—the fashion, art, and visuals will blow your mind"
   ];
@@ -50,7 +50,7 @@ const WhatToBringSection = () => {
           data-aos="fade-down"
           className={`${blatantBold.className} text-center text-xl font-medium mb-12 tracking-wider text-primary uppercase md:text-2xl`}
         >
-          Festival Guide
+          Concert Guide
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -125,7 +125,7 @@ const WhatToBringSection = () => {
               <li>• Do bring your ID & ticket</li>
               <li>• Do wear comfortable + stylish clothes</li>
               <li>• Do stay hydrated & eat well</li>
-              <li>• Do explore every area of the festival</li>
+              <li>• Do explore every area of the concert</li>
               <li>• Do spread good vibes & connect with new people</li>
             </ul>
           </div>

@@ -16,9 +16,9 @@ const Policy = () => {
       </h2>
 
       <p className="policy-paragraph">
-        Please read these Festival Ticket Terms ("Terms" or "Agreement")
+        Please read these Concert Ticket Terms ("Terms" or "Agreement")
         carefully, as they affect your future legal rights. These Terms apply to
-        the event or festival described on this website (the "Event").
+        the event or concert described on this website (the "Event").
       </p>
       <p className="policy-paragraph">
         All Event tickets, wristbands, passes, permissions, authorizations and
@@ -359,7 +359,7 @@ const Policy = () => {
         days after the date User signs this Agreement. User must send his or her
         request to info@zaamadisco.com. The request must include User's full
         name, address, invoice number, and the statement "I reject the
-        Arbitration Agreement contained in the Festival Ticket Terms." If User
+        Arbitration Agreement contained in the Concert Ticket Terms." If User
         exercises his/her right to reject arbitration, the other terms of this
         Agreement shall remain in full force and effect as if User had not
         rejected arbitration.
@@ -424,19 +424,19 @@ const Policy = () => {
         COVID-19 is an extremely contagious disease that can lead to severe
         illness and death. There is an inherent and elevated risk of exposure to
         COVID-19 in any public place or place where people are present and there
-        is no guarantee, express or implied, that those attending the festival
+        is no guarantee, express or implied, that those attending the concert
         will not be exposed to COVID-19.
       </p>
       <h3 className="policy-subheading">
         Attendee Promise & Health Acknowledgement
       </h3>
       <p className="policy-paragraph">
-        All attendees agree to follow festival policies (including health and
-        safety policies) and posted instructions while at the festival.
+        All attendees agree to follow concert policies (including health and
+        safety policies) and posted instructions while at the concert.
         According to the CDC, older adults and people of all ages with serious
         underlying medical conditions may be at higher risk of death or severe
         illness from COVID-19. All attendees should evaluate their risk in
-        determining whether to attend the festival. By entering the festival,
+        determining whether to attend the concert. By entering the concert,
         attendees voluntarily assume all risks related to exposure to COVID-19
         and confirm that they will adhere to local quarantine mandates and the
         CDC quarantine requirements, available{" "}
@@ -456,23 +456,23 @@ const Policy = () => {
         staff and performers, and dog sweeps.
       </p>
       <p className="policy-paragraph">
-        Please note that we will implement searches upon festival entry. Please
+        Please note that we will implement searches upon concert entry. Please
         arrive early and note the Prohibited Items list, these will be
         confiscated / surrendered upon entry. Face coverings are recommended to
         protect against desert dust. In the event of an emergency, information
         may be relayed on the video screens, over the audio system, and/or
         through mobile notifications. If you, or a friend, require medical
-        assistance please locate your nearest medical tent or alert festival
+        assistance please locate your nearest medical tent or alert concert
         personnel.
       </p>
       <p className="policy-paragraph">
         And remember: if you see something, say something. Flag down any
-        festival personnel if you notice something that doesn’t seem quite
+        concert personnel if you notice something that doesn’t seem quite
         right.
       </p>
       <h3 className="policy-subheading">Allowed In Venue</h3>
       <p className="policy-paragraph">
-        Festival reserves the right, in its sole discretion, to amend the list
+        Concert reserves the right, in its sole discretion, to amend the list
         of acceptable or prohibited items at any time
       </p>
       <ul>
@@ -545,8 +545,8 @@ const Policy = () => {
       </ul>
       <h3 className="policy-subheading">Not Allowed In Venue</h3>
       <p className="policy-paragraph">
-        In addition to the list below, any item deemed inappropriate by festival
-        personnel will not be allowed into the venue/festival and must be either
+        In addition to the list below, any item deemed inappropriate by concert
+        personnel will not be allowed into the venue/concert and must be either
         returned to your vehicle or disposed (as appropriate).
       </p>
       <ul>
@@ -645,7 +645,7 @@ const Policy = () => {
       </ul>
       <p className="policy-paragraph">
         * In the event of a medical emergency, please go to a medical tent or
-        find a festival staff member with a radio.
+        find a concert staff member with a radio.
       </p>
       <p>&copy; 2024</p>
     </section>

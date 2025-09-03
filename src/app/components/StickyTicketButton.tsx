@@ -25,7 +25,7 @@ const StickyTicketButton = () => {
   }, []);
 
   const handleTicketPurchase = () => {
-    window.open("https://echolive.live/buy-tickets", "_blank");
+    window.open("https://ticket.live/buy-tickets", "_blank");
   };
 
   if (!isVisible) return null;
@@ -43,7 +43,7 @@ const StickyTicketButton = () => {
       </div>
 
       {/* Desktop Sticky Button */}
-      <div className="fixed bottom-8 right-8 z-50 hidden md:block">
+      {/* <div className="fixed bottom-8 right-8 z-50 hidden md:block">
         <button
           onClick={handleTicketPurchase}
           className={`${blatant.className} bg-primary text-black px-8 py-4 rounded-full font-bold uppercase tracking-wide shadow-2xl hover:bg-secondary transition-all duration-300 transform hover:scale-105 flex items-center gap-3`}
@@ -54,7 +54,7 @@ const StickyTicketButton = () => {
             <span className="text-lg">TICKETS</span>
           </div>
         </button>
-      </div>
+      </div> */}
     </>
   );
 };

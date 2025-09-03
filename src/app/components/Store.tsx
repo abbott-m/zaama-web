@@ -33,7 +33,7 @@ const Store = () => {
             data-aos="fade-right"
             className="leading-7 text-center sm:mx-auto md:text-left md:mx-0 mb-6"
           >
-            The official Zaama Disco app is coming soon! Get ready for an enhanced festival experience with:
+            The official Zaama Disco app is coming soon! Get ready for an enhanced concert experience with:
           </p>
 
           {/* App Features */}
@@ -41,7 +41,7 @@ const Store = () => {
             <ul className="space-y-3 text-sm text-gray-300">
               <li className="flex items-center gap-3">
                 <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0"></span>
-                <span>Live festival schedule and artist lineup</span>
+                <span>Live concert schedule and artist lineup</span>
               </li>
               <li className="flex items-center gap-3">
                 <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0"></span>
@@ -57,7 +57,7 @@ const Store = () => {
               </li>
               <li className="flex items-center gap-3">
                 <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0"></span>
-                <span>Social sharing and festival memories</span>
+                <span>Social sharing and concert memories</span>
               </li>
               <li className="flex items-center gap-3">
                 <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0"></span>

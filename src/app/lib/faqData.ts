@@ -100,7 +100,7 @@ export const vendorFAQ = [
   {
     id: 8,
     question: "Do you have a cuisine speciality?",
-    answer: "No, but cuisines should be festival-friendly",
+    answer: "No, but cuisines should be concert-friendly",
   },
   {
     id: 9,

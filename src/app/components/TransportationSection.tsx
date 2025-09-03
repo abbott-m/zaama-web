@@ -90,10 +90,10 @@ const TransportationSection = () => {
           </div>
         </div>
 
-        {/* Leaving the Festival */}
+        {/* Leaving the Concert */}
         <div data-aos="fade-up" className="bg-gradient-to-r from-red-900/20 to-orange-900/20 rounded-xl p-8 border border-red-500/20">
           <h3 className={`${blatant.className} text-xl font-semibold text-red-400 uppercase tracking-wide mb-6 text-center`}>
-            🌙 Leaving the Festival
+            🌙 Leaving the Concert
           </h3>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
@@ -130,7 +130,7 @@ const TransportationSection = () => {
           </h4>
           <p className="text-sm text-gray-300 leading-relaxed">
             Always share your transportation details with someone you trust. Stay aware of your surroundings, 
-            keep your belongings secure, and don't hesitate to ask festival staff for assistance if needed.
+            keep your belongings secure, and don't hesitate to ask concert staff for assistance if needed.
           </p>
         </div>
       </div>

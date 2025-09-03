@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title: "Zaama Disco - Iron Boy Returns",
   description:
     "Zaama Disco isn't just an event—it's a movement. Join us for one night, one city, one legend as Iron Boy takes the stage in Ghana's biggest cultural celebration.",
-  keywords: "Zaama Disco, Iron Boy, Black Sherif, Ghana music festival, Accra events, Blacko Tribe",
+  keywords: "Zaama Disco, Iron Boy, Black Sherif, Ghana music concert, Accra events, Blacko Tribe",
   openGraph: {
     title: "Zaama Disco - Iron Boy Returns",
     description:
@@ -78,7 +78,7 @@ export default function RootLayout({
               },
               "offers": {
                 "@type": "Offer",
-                "url": "https://echolive.live/buy-tickets",
+                "url": "https://ticket.live/buy-tickets",
                 "price": "300",
                 "priceCurrency": "GHS",
                 "availability": "https://schema.org/InStock"

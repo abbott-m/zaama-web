@@ -65,8 +65,8 @@ export const ticketData: ITicketData[] = [
     cedi_price: "1,000",
     perks: [
       "Discounted Group Pricing (buy 4, get 1 free OR % off)",
-      "Squad Shoutout on Festival Screens & Social Wall",
-      "One Squad Pack (festival stickers, badges & digital AR filters)",
+      "Squad Shoutout on Concert Screens & Social Wall",
+      "One Squad Pack (concert stickers, badges & digital AR filters)",
       "Early Access to After-Party Tickets (T&Cs Apply)",
       "Concert Entry Wristband for all members",
       "Access to Main Concert Grounds",

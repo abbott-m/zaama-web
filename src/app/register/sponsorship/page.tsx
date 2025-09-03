@@ -129,7 +129,7 @@ const SponsorshipInquiry = () => {
           Become a Sponsor
         </h1>
         <p className="text-center text-gray-300 mb-8 max-w-2xl mx-auto">
-          Partner with Zaama Disco to reach thousands of engaged festival-goers and support Ghana's biggest cultural celebration. 
+          Partner with Zaama Disco to reach thousands of engaged concert-goers and support Ghana's biggest cultural celebration. 
           Let's create something amazing together!
         </p>
 

@@ -18,6 +18,9 @@ const Navbar = () => {
       sectionId: "tickets",
       path: "/#tickets",
     },
+    { id: 3, name: "Concert Guide", path: "/concert-guide", sectionId: "" },
+    { id: 4, name: "Shop", path: "/shop", sectionId: "" },
+    { id: 5, name: "Partners", path: "/partners", sectionId: "" },
     {
       id: 3,
       name: "vendors",
@@ -111,8 +114,8 @@ const Navbar = () => {
           </li>
 
           {navLinks.map((item) => (
-            <li 
-              key={item.id} 
+            <li
+              key={item.id}
               onClick={() => setIsNavbarOpen(false)}
               className="transform transition-all duration-300 hover:scale-110"
             >

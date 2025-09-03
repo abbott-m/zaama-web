@@ -33,6 +33,31 @@ body {
     background-color: rgb(0, 0, 0, 0.2);
   }
 
+  /* Custom scrollbar for ticket perks */
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    transition: background 0.2s ease;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+  }
+
   /* custom styling for input autofill */
   input:-webkit-autofill,
   input:-webkit-autofill:hover,
@@ -55,6 +80,10 @@ body {
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .policy-paragraph {
   @apply mb-3 text-gray-300 text-sm;
 }
@@ -64,3 +93,141 @@ body {
 .policy-list {
   @apply ml-2;
 }
+
+/* Ticket animation enhancements */
+@keyframes glow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.ticket-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* Add these styles to your existing globals.css */
+
+/* Futuristic scrollbar for ticket perks */
+.futuristic-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(34, 197, 94, 0.6) rgba(0, 0, 0, 0.2);
+}
+
+.futuristic-scroll::-webkit-scrollbar {
+  width: 3px;
+}
+
+.futuristic-scroll::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.futuristic-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(34, 197, 94, 0.8), rgba(34, 197, 94, 0.4));
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(34, 197, 94, 0.5);
+}
+
+.futuristic-scroll::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, rgba(34, 197, 94, 1), rgba(34, 197, 94, 0.6));
+  box-shadow: 0 0 8px rgba(34, 197, 94, 0.8);
+}
+
+/* Futuristic glow animations */
+@keyframes scanner {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(500%);
+    opacity: 0;
+  }
+}
+
+.scanner-line {
+  animation: scanner 2s ease-in-out infinite;
+}
+
+/* Enhanced ticket hover effects */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(34, 197, 94, 0.6), 0 0 60px rgba(34, 197, 94, 0.3);
+  }
+}
+
+.ticket-glow-green:hover {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow-red {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(239, 68, 68, 0.6), 0 0 60px rgba(239, 68, 68, 0.3);
+  }
+}
+
+.ticket-glow-red:hover {
+  animation: pulse-glow-red 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow-yellow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(251, 191, 36, 0.6), 0 0 60px rgba(251, 191, 36, 0.3);
+  }
+}
+
+.ticket-glow-yellow:hover {
+  animation: pulse-glow-yellow 2s ease-in-out infinite;
+}
+
+/* Futuristic text effects */
+.cyber-text {
+  text-shadow: 0 0 10px currentColor;
+}
+
+/* Button hover effects */
+.cyber-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.cyber-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s;
+}
+
+.cyber-button:hover::before {
+  left: 100%;
+}
+

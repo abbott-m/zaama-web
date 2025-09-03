@@ -39,7 +39,7 @@ const MerchStoreSection = () => {
     },
     {
       id: 4,
-      name: "Festival Tote Bag",
+      name: "Concert Tote Bag",
       price: "₵60",
       image: "/images/merch-tote.jpg",
       category: "Accessories",
@@ -185,7 +185,7 @@ const MerchStoreSection = () => {
             Get Exclusive Access
           </h3>
           <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-            Be the first to know about new drops, limited editions, and special festival-day exclusives. 
+            Be the first to know about new drops, limited editions, and special concert-day exclusives. 
             Join the Blacko Tribe and never miss out!
           </p>
           
@@ -206,24 +206,24 @@ const MerchStoreSection = () => {
           </div>
         </div>
 
-        {/* Festival Day Info */}
+        {/* Concert Day Info */}
         <div data-aos="fade-up" data-aos-delay="200" className="mt-12 text-center">
           <h4 className={`${blatant.className} text-lg font-semibold text-white mb-4`}>
-            📍 Festival Day Shopping
+            📍 Concert Day Shopping
           </h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             <div className="bg-gray-800/30 rounded-xl p-6 border border-gray-700/30">
               <h5 className="font-semibold text-primary mb-2">At the Venue</h5>
               <p className="text-sm text-gray-300">
-                Visit our official merch booths throughout the festival grounds. 
-                Exclusive festival-day items available!
+                Visit our official merch booths throughout the concert grounds. 
+                Exclusive concert-day items available!
               </p>
             </div>
             
             <div className="bg-gray-800/30 rounded-xl p-6 border border-gray-700/30">
               <h5 className="font-semibold text-primary mb-2">Cashless Payments</h5>
               <p className="text-sm text-gray-300">
-                Use the festival's cashless system for quick and easy purchases. 
+                Use the concert's cashless system for quick and easy purchases. 
                 No cash needed!
               </p>
             </div>
