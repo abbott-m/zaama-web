@@ -1,179 +1,189 @@
 "use client";
-import React from "react";
-import SingleTicket from "./SingleTicket"; // Your updated component
+import React, { useEffect } from "react";
+import SingleTicket from "./SingleTicket";
 import { ticketData } from "../lib/ticketData";
 import localFont from "next/font/local";
-import { Autoplay, EffectCards } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/effect-cards";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const blatant = localFont({
   src: "../blatant-font/OTF/Blatant.otf",
 });
 
-const Ticket = () => {
-  return (
-    <section id="tickets" className="px-5 pt-20 pb-28 bg-black relative overflow-hidden sm:px-10 lg:px-24">
-      {/* Futuristic Background Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-1 h-full bg-gradient-to-b from-transparent via-green-400/20 to-transparent"></div>
-        <div className="absolute top-0 right-1/4 w-1 h-full bg-gradient-to-b from-transparent via-yellow-400/20 to-transparent"></div>
-        <div className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-red-400/10 to-transparent"></div>
-        
-        {/* Animated scanning lines */}
-        <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-green-400 to-transparent scanner-line"></div>
-      </div>
+const blatantBold = localFont({
+  src: "../blatant-font/OTF/Blatant-Bold.otf",
+});
 
+const Ticket = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: 'ease-out-cubic',
+    });
+  }, []);
+
+  return (
+    <section id="tickets" className="px-5 py-20 bg-gradient-to-b from-black to-gray-900 sm:px-10 lg:px-20">
       {/* Header */}
-      <div className="relative z-10 text-center mb-16">
+      <div className="text-center mb-16">
         <h2
           data-aos="fade-up"
-          className={`${blatant.className} text-center text-xl font-medium mb-4 text-primary uppercase tracking-wider md:text-2xl cyber-text`}
+          className={`${blatantBold.className} text-4xl md:text-5xl font-bold text-primary mb-6 tracking-wide uppercase`}
         >
-          Choose your ticket package
+          Choose Your Experience
         </h2>
-        <p data-aos="fade-up" data-aos-delay="200" className="mb-2 text-center opacity-80">
-          We have uniquely crafted ticket packages for everyone
+        <p 
+          data-aos="fade-up" 
+          data-aos-delay="200"
+          className="text-xl text-gray-300 mb-4 max-w-2xl mx-auto"
+        >
+          From general admission to VIP luxury - we have the perfect ticket for your Zaama Disco experience
         </p>
-        <div className="mb-10 text-center" data-aos="fade-up" data-aos-delay="400">
-          <p className="text-center text-sm opacity-60">
-            Ticket Support Numbers:{" "}
-            <span className="text-sm whitespace-nowrap text-green-400 hover:text-green-300 transition-colors">
-              +233 24 832 5314
-            </span>
-            {", "}
-            <span className="text-sm whitespace-nowrap text-yellow-400 hover:text-yellow-300 transition-colors">
-              +233 24 138 3766
-            </span>
-          </p>
-        </div>
-
-        {/* Futuristic Divider */}
-        <div className="flex items-center justify-center mb-12" data-aos="fade-up" data-aos-delay="600">
-          <div className="w-12 h-0.5 bg-gradient-to-r from-transparent to-green-400"></div>
-          <div className="w-2 h-2 bg-green-400 rounded-full mx-4 animate-pulse"></div>
-          <div className="w-24 h-0.5 bg-gradient-to-r from-green-400 via-yellow-400 to-red-400"></div>
-          <div className="w-2 h-2 bg-red-400 rounded-full mx-4 animate-pulse"></div>
-          <div className="w-12 h-0.5 bg-gradient-to-l from-transparent to-red-400"></div>
-        </div>
-      </div>
-
-      {/* Tickets Display */}
-      <div className="relative z-10">
-        {/* Desktop: Grid Layout */}
-        <div className="hidden md:block">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center max-w-7xl mx-auto">
-            {ticketData.map((ticket, index) => (
-              <div
-                key={ticket.ticketType}
-                data-aos="zoom-in"
-                data-aos-delay={index * 100}
-                className={`ticket-glow-${ticket.color}`}
-              >
-                <SingleTicket
-                  color={ticket.color}
-                  packageName={ticket.packageName}
-                  packageSubName={ticket.packageSubName}
-                  dollar_price={ticket.dollar_price}
-                  cedi_price={ticket.cedi_price}
-                  perks={ticket.perks}
-                  available={ticket.available}
-                  countDown={ticket.countDown}
-                  ticketType={ticket.ticketType}
-                />
-              </div>
-            ))}
+        
+        <div 
+          data-aos="fade-up" 
+          data-aos-delay="400"
+          className="flex flex-wrap justify-center gap-4 text-sm text-gray-400 mb-8"
+        >
+          <div className="flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+            <span>Secure Payment</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+            <span>Instant Delivery</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-purple-400 animate-pulse"></span>
+            <span>Mobile Tickets</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+            <span>24/7 Support</span>
           </div>
         </div>
 
-        {/* Mobile: Swiper with Card Effect */}
-        <div className="block md:hidden">
-          <Swiper
-            effect={'cards'}
-            grabCursor={true}
-            loop={true}
-            speed={800}
-            autoplay={{
-              delay: 3000,
-              pauseOnMouseEnter: true,
-              disableOnInteraction: false,
-            }}
-            modules={[EffectCards, Autoplay]}
-            className="w-80 h-[540px]"
-          >
-            {ticketData.map((ticket) => (
-              <SwiperSlide key={ticket.ticketType} className="bg-transparent rounded-2xl">
-                <SingleTicket
-                  color={ticket.color}
-                  packageName={ticket.packageName}
-                  packageSubName={ticket.packageSubName}
-                  dollar_price={ticket.dollar_price}
-                  cedi_price={ticket.cedi_price}
-                  perks={ticket.perks}
-                  available={ticket.available}
-                  countDown={ticket.countDown}
-                  ticketType={ticket.ticketType}
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
+        {/* Support Numbers */}
+        <div data-aos="fade-up" data-aos-delay="600" className="text-center text-gray-400">
+          <p className="text-sm">
+            Ticket Support: 
+            <span className="text-primary ml-2 font-semibold hover:text-primary/80 transition-colors">+233 24 832 5314</span> | 
+            <span className="text-primary ml-1 font-semibold hover:text-primary/80 transition-colors">+233 24 138 3766</span>
+          </p>
         </div>
       </div>
 
-      {/* Mobile Swipe Indicator */}
-      <p className="mt-5 text-sm italic text-center text-gray-500 md:hidden opacity-60">
-        Swipe for more tickets...
-      </p>
+      {/* Tickets Grid */}
+      <div className="max-w-7xl mx-auto">
+        {/* Desktop: Grid, Mobile: Stack */}
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 justify-items-center">
+          {ticketData.map((ticket, index) => (
+            <div
+              key={ticket.ticketType}
+              data-aos="zoom-in"
+              data-aos-delay={index * 100}
+              className={`w-full max-w-sm ticket-card-hover ${
+                ticket.ticketType === 3 ? 'ticket-premium-glow' : 'ticket-primary-glow'
+              }`}
+            >
+              <SingleTicket
+                color={ticket.color} // Still pass for compatibility, but won't be used for colors
+                packageName={ticket.packageName}
+                packageSubName={ticket.packageSubName}
+                dollar_price={ticket.dollar_price}
+                cedi_price={ticket.cedi_price}
+                perks={ticket.perks}
+                available={ticket.available}
+                countDown={ticket.countDown}
+                ticketType={ticket.ticketType}
+              />
+            </div>
+          ))}
+        </div>
 
-      {/* Call to Action */}
-      <div className="relative z-10 text-center mt-16" data-aos="fade-up" data-aos-delay="800">
-        <div className="bg-gradient-to-r from-black/50 via-gray-900/50 to-black/50 rounded-2xl p-8 max-w-2xl mx-auto backdrop-blur-sm border border-gray-700/50">
-          <h3 className={`${blatant.className} text-xl font-bold text-primary mb-4 uppercase tracking-wide cyber-text`}>
-            Secure Your Spot
-          </h3>
-          <p className="text-gray-300 mb-6 text-sm leading-relaxed">
-            Join thousands of music lovers for Ghana's biggest cultural celebration. 
-            Tickets are selling fast - don't miss out on this legendary experience!
+        {/* Additional Info */}
+        <div 
+          data-aos="fade-up" 
+          data-aos-delay="800"
+          className="mt-16 text-center"
+        >
+          <div className="bg-gradient-to-r from-primary/5 to-blue-500/5 rounded-2xl p-8 max-w-4xl mx-auto border border-primary/20 backdrop-blur-sm">
+            <h3 className={`${blatantBold.className} text-2xl font-bold text-primary mb-4`}>
+              Important Information
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+              <div>
+                <h4 className="font-semibold text-white mb-3 flex items-center">
+                  <span className="text-primary mr-2">📅</span>
+                  Event Details
+                </h4>
+                <ul className="text-gray-300 text-sm space-y-2">
+                  <li>• Date: December 31st, 2024</li>
+                  <li>• Doors Open: 4:00 PM</li>
+                  <li>• Age Requirement: 18+</li>
+                  <li>• Venue: Accra, Ghana</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold text-white mb-3 flex items-center">
+                  <span className="text-primary mr-2">🎫</span>
+                  Ticket Policy
+                </h4>
+                <ul className="text-gray-300 text-sm space-y-2">
+                  <li>• All sales are final</li>
+                  <li>• Transfers available through platform</li>
+                  <li>• Valid ID required for entry</li>
+                  <li>• No re-entry allowed</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Call to Action */}
+        <div 
+          data-aos="fade-up" 
+          data-aos-delay="1000"
+          className="text-center mt-12"
+        >
+          <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            Don't wait - tickets are selling fast! Join thousands of music lovers for Ghana's biggest cultural celebration.
           </p>
-          
           <button
             onClick={() => window.open("https://echolive.live/buy-tickets", "_blank")}
             className={`
-              ${blatant.className} cyber-button
-              px-8 py-3 bg-gradient-to-r from-green-500 via-yellow-500 to-red-500 
-              text-black font-bold text-sm uppercase tracking-widest rounded-xl 
-              hover:scale-105 transition-all duration-300 transform
-              shadow-lg hover:shadow-2xl
-              relative overflow-hidden
+              ${blatantBold.className}
+              px-8 py-4 bg-gradient-to-r from-primary to-blue-400 
+              text-black font-bold text-lg rounded-2xl 
+              hover:scale-105 transition-all duration-200 
+              shadow-lg hover:shadow-xl transform
+              inline-flex items-center gap-2
+              theme-button
             `}
           >
-            <span className="relative z-10">⚡ Get Tickets Now ⚡</span>
+            <span>🎵</span>
+            Buy Tickets Now
+            <span className="animate-bounce">→</span>
           </button>
-          
-          <div className="flex items-center justify-center mt-4 gap-6 text-xs text-gray-400">
-            <div className="flex items-center gap-1">
-              <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></span>
-              <span>Secure Payment</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <span className="w-1.5 h-1.5 bg-yellow-400 rounded-full animate-pulse"></span>
-              <span>Instant Delivery</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <span className="w-1.5 h-1.5 bg-red-400 rounded-full animate-pulse"></span>
-              <span>24/7 Support</span>
-            </div>
-          </div>
         </div>
       </div>
 
-      {/* Additional Futuristic Elements */}
-      <div className="absolute bottom-10 left-10 w-6 h-6 border border-green-400/30 rotate-45 animate-spin opacity-20"></div>
-      <div className="absolute top-1/2 right-10 w-4 h-4 border border-yellow-400/30 rotate-45 animate-ping opacity-20"></div>
-      <div className="absolute top-20 left-1/2 w-8 h-8 border border-red-400/20 rounded-full animate-pulse opacity-20"></div>
+      {/* Background Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Subtle grid pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(167, 204, 255, 0.3) 1px, transparent 0)`,
+            backgroundSize: '50px 50px'
+          }}></div>
+        </div>
+        
+        {/* Floating orbs */}
+        <div className="absolute top-20 left-10 w-32 h-32 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-24 h-24 bg-blue-400/5 rounded-full blur-2xl animate-pulse"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-primary/3 rounded-full blur-3xl"></div>
+      </div>
     </section>
   );
 };

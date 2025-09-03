@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import React, { useState, useRef, useCallback } from "react";
 import localFont from "next/font/local";
 import handleScroll from "../lib/handleScroll";
-import ZaamaLogo from "../../../public/SVG/zaama-logo.svg";
+import ZaamaLogo from "../../../public/images/zaama-logo-2.png";
 import Facebook from "../../../public/SVG/facebook-logo.svg";
 import Snapchat from "../../../public/SVG/snapchat-logo.svg";
 import Twitter from "../../../public/SVG/twitter-logo.svg";
@@ -166,7 +166,12 @@ const Footer = () => {
       <div className="flex flex-col items-center justify-center gap-16 sm:flex-row sm:items-start sm:flex-wrap md:gap-24 lg:gap-28">
         <div className="text-center">
           <Link href="/" className="inline-block py-2 mb-6">
-            <ZaamaLogo className="w-32" />
+            <Image
+              src={ZaamaLogo}
+              alt="Zaama Logo"
+              className="w-32"
+              priority
+            />
           </Link>
           <div>
             {isSubscriptionLoading ? (
@@ -296,7 +301,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      
+
       <p className="text-sm text-center mt-14">
         Created with <span className="mx-1 text-primary">&#10084;</span> by{" "}
         <Link

@@ -37,7 +37,7 @@ const Partners = () => {
             data-aos-delay="200"
             className="text-xl md:text-2xl text-gray-300 mb-8"
           >
-            Amazing brands and organizations making Zaama Disco possible
+            Amazing brands and organizations supporting Zaama Disco through sponsorship and collaboration
           </p>
           <div 
             data-aos="fade-up"

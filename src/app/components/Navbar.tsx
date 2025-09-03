@@ -61,7 +61,7 @@ const Navbar = () => {
       id: 9,
       name: "foundation",
       sectionId: "foundation",
-      path: "/#foundation",
+      path: "/foundation",
     },
     {
       id: 10,

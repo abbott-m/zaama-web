@@ -2,63 +2,79 @@
 @tailwind components;
 @tailwind utilities;
 
-/* *,
+/* ================================================================
+   GLOBAL STYLES & BEHAVIOR
+   ================================================================ */
+
+/* Smooth scrolling behavior */
+*,
 body {
   scroll-behavior: smooth;
-} */
+}
 
-/* .swiper-wrapper {
-  @apply pb-14;
-} */
-/* .swiper-pagination-bullet {
-  @apply w-40 h-40 bg-green-300 rounded-none;
-} */
+/* Enhanced smooth scrolling with custom timing */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+/* Momentum scrolling for iOS */
+body {
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+}
+
+/* Respect user preferences for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  body,
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Slower scroll for specific elements */
+  .slow-scroll {
+    scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
+  }
+  
+  /* Even smoother for sections */
+  section {
+    scroll-margin-top: 2rem;
+  }
+}
+
+/* ================================================================
+   TAILWIND BASE LAYER CUSTOMIZATIONS
+   ================================================================ */
 
 @layer base {
-  /* custom scrollbar for firefox */
+  /* Custom dropdown scrollbar styles */
   .dropdown {
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
-  /* custom scrollbar for chrome */
 
   .dropdown::-webkit-scrollbar {
     width: 0.3vw;
   }
+  
   .dropdown::-webkit-scrollbar-thumb {
     background-color: rgb(140, 140, 140);
     border-radius: 10px;
   }
+  
   .dropdown::-webkit-scrollbar-track {
     background-color: rgb(0, 0, 0, 0.2);
   }
 
-  /* Custom scrollbar for ticket perks */
-  .custom-scrollbar {
-    scrollbar-width: thin;
-    scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
-  }
-  
-  .custom-scrollbar::-webkit-scrollbar {
-    width: 4px;
-  }
-  
-  .custom-scrollbar::-webkit-scrollbar-track {
-    background: transparent;
-    border-radius: 10px;
-  }
-  
-  .custom-scrollbar::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
-    transition: background 0.2s ease;
-  }
-  
-  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.5);
-  }
-
-  /* custom styling for input autofill */
+  /* Input autofill styling */
   input:-webkit-autofill,
   input:-webkit-autofill:hover,
   input:-webkit-autofill:focus,
@@ -67,34 +83,277 @@ body {
     -webkit-box-shadow: 0 0 0 30px #5b5b5b inset !important;
   }
 
-  /* remove input[number] arrow for Chrome, Safari, Edge, Opera */
+  /* Remove input number arrows */
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
   }
 
-  /* remove input[number] arrow for Firefox */
   input[type="number"] {
     -moz-appearance: textfield;
   }
 }
 
-html {
+/* ================================================================
+   CUSTOM SCROLLBARS
+   ================================================================ */
+
+/* Theme-based custom scrollbar for ticket perks */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(167, 204, 255, 0.3) transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(167, 204, 255, 0.3);
+  border-radius: 10px;
+  transition: background 0.2s ease;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(167, 204, 255, 0.5);
+}
+
+/* Futuristic scrollbar variant */
+.futuristic-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(167, 204, 255, 0.6) rgba(0, 0, 0, 0.2);
+}
+
+.futuristic-scroll::-webkit-scrollbar {
+  width: 3px;
+}
+
+.futuristic-scroll::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.futuristic-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(167, 204, 255, 0.8), rgba(167, 204, 255, 0.4));
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(167, 204, 255, 0.5);
+}
+
+.futuristic-scroll::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, rgba(167, 204, 255, 1), rgba(167, 204, 255, 0.6));
+  box-shadow: 0 0 8px rgba(167, 204, 255, 0.8);
+}
+
+/* Custom scroll container with controlled speed */
+.custom-scroll-container {
+  overflow-y: auto;
   scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(167, 204, 255, 0.3) transparent;
 }
 
-.policy-paragraph {
-  @apply mb-3 text-gray-300 text-sm;
-}
-.policy-subheading {
-  @apply font-semibold uppercase mt-5 mb-2;
-}
-.policy-list {
-  @apply ml-2;
+.custom-scroll-container::-webkit-scrollbar {
+  width: 6px;
 }
 
-/* Ticket animation enhancements */
+.custom-scroll-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scroll-container::-webkit-scrollbar-thumb {
+  background: rgba(167, 204, 255, 0.3);
+  border-radius: 3px;
+  transition: background 0.2s ease;
+}
+
+.custom-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(167, 204, 255, 0.5);
+}
+
+/* ================================================================
+   TICKET COMPONENT STYLES
+   ================================================================ */
+
+/* Enhanced ticket hover effects using theme colors */
+@keyframes primary-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(167, 204, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(167, 204, 255, 0.4), 0 0 60px rgba(167, 204, 255, 0.2);
+  }
+}
+
+.ticket-primary-glow:hover {
+  animation: primary-glow 2s ease-in-out infinite;
+}
+
+/* Premium glow for VIP tickets */
+@keyframes premium-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(167, 204, 255, 0.3), 0 0 40px rgba(147, 197, 253, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(167, 204, 255, 0.5), 0 0 60px rgba(147, 197, 253, 0.3), 0 0 80px rgba(167, 204, 255, 0.1);
+  }
+}
+
+.ticket-premium-glow:hover {
+  animation: premium-glow 2.5s ease-in-out infinite;
+}
+
+/* Card hover effects */
+.ticket-card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ticket-card-hover:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 30px rgba(167, 204, 255, 0.2);
+}
+
+/* Glassmorphism effect enhancements */
+.ticket-glass {
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(167, 204, 255, 0.1);
+}
+
+.ticket-glass:hover {
+  background: rgba(0, 0, 0, 0.3);
+  border-color: rgba(167, 204, 255, 0.3);
+  backdrop-filter: blur(15px);
+}
+
+/* Theme-based gradient overlays */
+.theme-gradient-1 {
+  background: linear-gradient(135deg, rgba(167, 204, 255, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%);
+}
+
+.theme-gradient-2 {
+  background: linear-gradient(135deg, rgba(167, 204, 255, 0.15) 0%, rgba(59, 130, 246, 0.1) 100%);
+}
+
+.theme-gradient-3 {
+  background: linear-gradient(135deg, rgba(167, 204, 255, 0.2) 0%, rgba(147, 197, 253, 0.1) 50%, rgba(59, 130, 246, 0.05) 100%);
+}
+
+/* Button enhancements */
+.theme-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s;
+}
+
+.theme-button:hover::before {
+  left: 100%;
+}
+
+/* Status badge styles */
+.status-badge {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(167, 204, 255, 0.2);
+}
+
+/* Premium badge for VIP */
+.premium-badge {
+  background: linear-gradient(135deg, rgba(167, 204, 255, 0.9) 0%, rgba(147, 197, 253, 0.9) 100%);
+  box-shadow: 0 2px 10px rgba(167, 204, 255, 0.3);
+}
+
+/* Group badge for Squad Package */
+.group-badge {
+  background: rgba(167, 204, 255, 0.8);
+  box-shadow: 0 2px 8px rgba(167, 204, 255, 0.2);
+}
+
+/* Loading animation for tickets */
+@keyframes ticket-shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+.ticket-loading {
+  background: linear-gradient(90deg, transparent, rgba(167, 204, 255, 0.1), transparent);
+  background-size: 200px 100%;
+  animation: ticket-shimmer 2s infinite;
+}
+
+/* ================================================================
+   FUTURISTIC ELEMENTS
+   ================================================================ */
+
+/* Futuristic glow animations */
+@keyframes scanner {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(500%);
+    opacity: 0;
+  }
+}
+
+.scanner-line {
+  animation: scanner 2s ease-in-out infinite;
+}
+
+/* Futuristic text effects */
+.cyber-text {
+  text-shadow: 0 0 10px currentColor;
+}
+
+/* Cyber button effects */
+.cyber-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.cyber-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s;
+}
+
+.cyber-button:hover::before {
+  left: 100%;
+}
+
+/* ================================================================
+   GENERAL ANIMATIONS
+   ================================================================ */
+
+/* Standard glow animation */
 @keyframes glow {
   0%, 100% {
     opacity: 1;
@@ -118,116 +377,206 @@ html {
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
 
-/* Add these styles to your existing globals.css */
+/* ================================================================
+   COMPONENT-SPECIFIC STYLES
+   ================================================================ */
 
-/* Futuristic scrollbar for ticket perks */
-.futuristic-scroll {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(34, 197, 94, 0.6) rgba(0, 0, 0, 0.2);
+/* Policy page styles */
+.policy-paragraph {
+  @apply mb-3 text-gray-300 text-sm;
 }
 
-.futuristic-scroll::-webkit-scrollbar {
-  width: 3px;
+.policy-subheading {
+  @apply font-semibold uppercase mt-5 mb-2;
 }
 
-.futuristic-scroll::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
+.policy-list {
+  @apply ml-2;
 }
 
-.futuristic-scroll::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, rgba(34, 197, 94, 0.8), rgba(34, 197, 94, 0.4));
-  border-radius: 10px;
-  box-shadow: 0 0 5px rgba(34, 197, 94, 0.5);
-}
-
-.futuristic-scroll::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, rgba(34, 197, 94, 1), rgba(34, 197, 94, 0.6));
-  box-shadow: 0 0 8px rgba(34, 197, 94, 0.8);
-}
-
-/* Futuristic glow animations */
-@keyframes scanner {
-  0% {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(500%);
-    opacity: 0;
-  }
-}
-
-.scanner-line {
-  animation: scanner 2s ease-in-out infinite;
-}
-
-/* Enhanced ticket hover effects */
-@keyframes pulse-glow {
-  0%, 100% {
-    box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 40px rgba(34, 197, 94, 0.6), 0 0 60px rgba(34, 197, 94, 0.3);
-  }
-}
-
-.ticket-glow-green:hover {
-  animation: pulse-glow 2s ease-in-out infinite;
-}
-
-@keyframes pulse-glow-red {
-  0%, 100% {
-    box-shadow: 0 0 20px rgba(239, 68, 68, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 40px rgba(239, 68, 68, 0.6), 0 0 60px rgba(239, 68, 68, 0.3);
-  }
-}
-
-.ticket-glow-red:hover {
-  animation: pulse-glow-red 2s ease-in-out infinite;
-}
-
-@keyframes pulse-glow-yellow {
-  0%, 100% {
-    box-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 40px rgba(251, 191, 36, 0.6), 0 0 60px rgba(251, 191, 36, 0.3);
-  }
-}
-
-.ticket-glow-yellow:hover {
-  animation: pulse-glow-yellow 2s ease-in-out infinite;
-}
-
-/* Futuristic text effects */
-.cyber-text {
-  text-shadow: 0 0 10px currentColor;
-}
-
-/* Button hover effects */
-.cyber-button {
+/* Hero video container */
+.hero-video-container {
   position: relative;
   overflow: hidden;
+  border-radius: 1rem;
 }
 
-.cyber-button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: left 0.6s;
+/* Hero video styling */
+.hero-video {
+  transition: all 0.3s ease;
+  filter: brightness(1.1) contrast(1.1);
+  will-change: transform;
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 
-.cyber-button:hover::before {
-  left: 100%;
+.hero-video:hover {
+  transform: scale(1.02);
+  filter: brightness(1.2) contrast(1.2);
 }
 
+/* Video loading state */
+.video-loading {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.hero-video-container video[data-loaded="true"] + .video-loading {
+  opacity: 0;
+}
+
+/* Optional: Glow effect for video */
+.hero-video-glow {
+  box-shadow: 0 0 50px rgba(167, 204, 255, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+.hero-video-glow:hover {
+  box-shadow: 0 0 80px rgba(167, 204, 255, 0.5);
+}
+
+/* ================================================================
+   RESPONSIVE DESIGN
+   ================================================================ */
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .hero-video {
+    max-width: 300px;
+  }
+  
+  .ticket-card-hover:hover {
+    transform: translateY(-4px) scale(1.01);
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-video {
+    max-width: 250px;
+  }
+}
+
+/* ================================================================
+   DARK THEME ENHANCEMENTS
+   ================================================================ */
+
+@media (prefers-color-scheme: dark) {
+  .ticket-glass {
+    background: rgba(0, 0, 0, 0.4);
+    border-color: rgba(167, 204, 255, 0.15);
+  }
+  
+  .ticket-glass:hover {
+    background: rgba(0, 0, 0, 0.5);
+    border-color: rgba(167, 204, 255, 0.25);
+  }
+}
+
+/* ================================================================
+   ACCESSIBILITY
+   ================================================================ */
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .ticket-card-hover:hover {
+    transform: none;
+  }
+  
+  .primary-glow,
+  .premium-glow,
+  .scanner-line,
+  .ticket-glow {
+    animation: none;
+  }
+  
+  .hero-video:hover {
+    transform: none;
+  }
+}
+
+/* Focus states for accessibility */
+.ticket-card-hover:focus-visible {
+  outline: 2px solid rgba(167, 204, 255, 0.8);
+  outline-offset: 2px;
+}
+
+button:focus-visible {
+  outline: 2px solid rgba(167, 204, 255, 0.8);
+  outline-offset: 2px;
+}
+
+/* High contrast support */
+@media (prefers-contrast: high) {
+  .ticket-glass {
+    border-color: rgba(167, 204, 255, 0.8);
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(167, 204, 255, 0.8);
+  }
+}
+
+/* ================================================================
+   UTILITY CLASSES
+   ================================================================ */
+
+/* Quick fade in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Pulse animation */
+.pulse-slow {
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Smooth section transitions */
+.smooth-section {
+  scroll-margin-top: 100px;
+  transition: all 0.3s ease;
+}
+
+/* Background pattern utility */
+.dot-pattern {
+  background-image: radial-gradient(circle at 1px 1px, rgba(167, 204, 255, 0.3) 1px, transparent 0);
+  background-size: 20px 20px;
+}
+
+.grid-pattern {
+  background-image: 
+    linear-gradient(rgba(167, 204, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(167, 204, 255, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* ================================================================
+   PERFORMANCE OPTIMIZATIONS
+   ================================================================ */
+
+/* Will-change for animated elements */
+.animate-element {
+  will-change: transform, opacity;
+}
+
+/* GPU acceleration for smooth animations */
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
