@@ -12,7 +12,7 @@ type MouseEventCallback = (e: MouseEvent) => void;
 const TicketModal = () => {
   const { isTicketModalOpen, setIsTicketModalOpen, hasCountdown, ticketType } =
     useTicketContext();
-  const startDate = new Date("2024-12-01T00:00:00"); // countdown timer stops at Nov 10, 2024
+  const startDate = new Date("2025-12-01T00:00:00"); // countdown timer stops at Nov 10, 2025
   const [timeLeft, setTimeLeft] = useState<number>(0);
 
   useEffect(() => {

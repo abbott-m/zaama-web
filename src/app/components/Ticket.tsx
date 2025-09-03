@@ -119,10 +119,10 @@ const Ticket = () => {
                   Event Details
                 </h4>
                 <ul className="text-gray-300 text-sm space-y-2">
-                  <li>• Date: December 31st, 2024</li>
-                  <li>• Doors Open: 4:00 PM</li>
+                  <li>• Date: December 21st, 2025</li>
+                  <li>• Doors Open: 2:00 PM</li>
                   <li>• Age Requirement: 18+</li>
-                  <li>• Venue: Accra, Ghana</li>
+                  <li>• Venue: Untamed Empire</li>
                 </ul>
               </div>
               <div>
@@ -135,6 +135,7 @@ const Ticket = () => {
                   <li>• Transfers available through platform</li>
                   <li>• Valid ID required for entry</li>
                   <li>• No re-entry allowed</li>
+                  <li>• No refunds</li>
                 </ul>
               </div>
             </div>

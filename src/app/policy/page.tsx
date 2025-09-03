@@ -647,7 +647,7 @@ const Policy = () => {
         * In the event of a medical emergency, please go to a medical tent or
         find a concert staff member with a radio.
       </p>
-      <p>&copy; 2024</p>
+      <p>&copy; 2025</p>
     </section>
   );
 };

@@ -41,7 +41,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <head>
         {/* Additional Meta Tags */}
-        <meta name="theme-color" content="#A7CCFF" />
+        <meta name="theme-color" content="#AAE1F6" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <link rel="manifest" href="/manifest.json" />
@@ -57,7 +57,7 @@ export default function RootLayout({
               "name": "Zaama Disco - Iron Boy Returns",
               "description": "Ghana's biggest cultural celebration featuring Iron Boy (Black Sherif)",
               "image": "https://zaamadisco.com/images/zaama-white-logo.png",
-              "startDate": "2024-12-31T20:00:00+00:00",
+              "startDate": "2025-12-21T20:00:00+00:00",
               "location": {
                 "@type": "Place",
                 "name": "Accra, Ghana",

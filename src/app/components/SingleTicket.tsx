@@ -153,7 +153,7 @@ const SingleTicket: React.FC<SingleTicketProps> = ({
           </span>
         </div>
         <p className="text-xs text-gray-400">
-          Best value for your festival experience
+          Best value for your concert experience
         </p>
       </div>
 

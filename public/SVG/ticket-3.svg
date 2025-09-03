@@ -15,7 +15,7 @@
       .st0, .st1, .st2, .st3, .st4, .st5, .st6, .st8, .st9, .st10, .st11, .st13, .st14, .st15 {
         fill: none;
         isolation: isolate;
-        stroke: #a7ccff;
+        stroke: #AAE1F6;
       }
 
       .st1 {

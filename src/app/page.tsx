@@ -73,13 +73,13 @@ const Home = () => {
               </h2>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {/* Festival Guide */}
-                <Link href="/festival-guide" className="group">
+                {/* Concert Guide */}
+                <Link href="/concert-guide" className="group">
                   <div className="bg-[#4c4c4c]/20 rounded-2xl p-8 hover:bg-[#4c4c4c]/30 transition-all duration-200 transform group-hover:scale-105">
                     <div className="text-4xl mb-4">🎪</div>
-                    <h3 className="text-xl font-bold text-primary mb-3">Festival Guide</h3>
+                    <h3 className="text-xl font-bold text-primary mb-3">Concert Guide</h3>
                     <p className="text-gray-300 text-sm">
-                      Everything you need to know - what to bring, transportation, and essential tips for the perfect festival experience.
+                      Everything you need to know - what to bring, transportation, and essential tips for the perfect concert experience.
                     </p>
                   </div>
                 </Link>
@@ -112,7 +112,7 @@ const Home = () => {
                     <div className="text-4xl mb-4">🏪</div>
                     <h3 className="text-xl font-bold text-primary mb-3">Become a Vendor</h3>
                     <p className="text-gray-300 text-sm">
-                      Join our marketplace and showcase your business to thousands of festival attendees.
+                      Join our marketplace and showcase your business to thousands of concert attendees.
                     </p>
                   </div>
                 </Link>
@@ -170,7 +170,7 @@ const Home = () => {
                 </button>
                 
                 <Link
-                  href="/festival-guide"
+                  href="/concert-guide"
                   className="px-8 py-4 bg-transparent border-2 border-primary text-primary font-bold text-lg rounded-lg hover:bg-primary/10 transition-colors duration-200 text-center"
                 >
                   Learn More

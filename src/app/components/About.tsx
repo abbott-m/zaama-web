@@ -30,7 +30,7 @@ const About = () => {
           data-aos="fade-down"
           className={`${blatantBold.className} text-xl text-zaama_yellowf text-primary uppercase tracking-wide font-medium mb-5 text-center md:text-2xl `}
         >
-          About Zaama
+          About Zaama Disco
         </p>
         <div data-aos="fade-up">
           <p className="mb-4 leading-7">
