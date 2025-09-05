@@ -7,6 +7,8 @@ declare global {
     packageSubName?: string;
     dollar_price: string;
     cedi_price: string;
+    earlyBirdPrice?: string;
+    mainPrice?: string;
     perks: string[];
     available: boolean;
     countDown: boolean;
@@ -87,6 +89,18 @@ declare global {
     doors: string;
     ageLimit: string;
     dress: string;
+  }
+
+  interface WeatherInfo {
+    date: string;
+    temperature: {
+      high: string;
+      low: string;
+    };
+    humidity: string;
+    rainfall: string;
+    sunshine: string;
+    description: string;
   }
 }
 

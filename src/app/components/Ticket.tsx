@@ -118,7 +118,7 @@ const Ticket = () => {
             </div>
             
             <div>
-              <h4 className="font-semibold text-white mb-2">studeImportant Notes:</h4>
+              <h4 className="font-semibold text-white mb-2">Important Notes:</h4>
               <ul className="space-y-1 text-gray-300">
                 <li>• No re-entry once you leave the venue</li>
                 <li>• All sales are final - no refunds</li>

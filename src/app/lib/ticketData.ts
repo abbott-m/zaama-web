@@ -4,7 +4,9 @@ export const ticketData: ITicketData[] = [
     color: "yellow",
     packageName: "General Admission",
     dollar_price: "10",
-    cedi_price: "300",
+    cedi_price: "279.99", // Early Bird Price
+    earlyBirdPrice: "279.99",
+    mainPrice: "500",
     perks: [
       "Concert Entry Wristband",
       "Access to Main Concert Grounds",
@@ -22,7 +24,9 @@ export const ticketData: ITicketData[] = [
     color: "red",
     packageName: "General Access Plus",
     dollar_price: "20",
-    cedi_price: "500",
+    cedi_price: "479.99", // Early Bird Price
+    earlyBirdPrice: "479.99",
+    mainPrice: "700",
     perks: [
       "Bands",
       "Merch Area Access & Signing",
@@ -40,7 +44,9 @@ export const ticketData: ITicketData[] = [
     color: "green", 
     packageName: "VIP",
     dollar_price: "40",
-    cedi_price: "700",
+    cedi_price: "679.99", // Early Bird Price
+    earlyBirdPrice: "679.99",
+    mainPrice: "1,000",
     perks: [
       "All General Access Plus benefits",
       "Fast-Track Entry (skip the lines)",
@@ -63,6 +69,8 @@ export const ticketData: ITicketData[] = [
     packageSubName: "Group of 4",
     dollar_price: "10",
     cedi_price: "1,000",
+    earlyBirdPrice: "1,000",
+    mainPrice: "1,500",
     perks: [
       "Discounted Group Pricing (buy 4, get 1 free OR % off)",
       "Squad Shoutout on Concert Screens & Social Wall",

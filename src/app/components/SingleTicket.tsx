@@ -106,7 +106,7 @@ const SingleTicket = ({
       {/* Middle content container */}
       <div className="relative z-10 px-4 w-full flex flex-col justify-center items-center flex-grow">
         <p
-          className={`${logikBold.className} text-center text-1xl mb-6 md:text-1xl lg:text-2xl w-32 mx-auto`}
+          className={`${logikBold.className} text-center text-lg mb-6 md:text-lg lg:text-1xl w-32 mx-auto`}
         >
           <span className="text-base md:text-lg lg:text-xl"> &#8373; </span> {cedi_price}
         </p>
