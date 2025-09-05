@@ -31,9 +31,6 @@ const Hero = () => {
 
   return (
     <section className="relative px-5 text-center select-none sm:px-10 md:px-20 min-h-screen flex flex-col justify-between">
-      {/* Dark overlay */}
-      <div className="h-full w-full fixed top-0 left-0 bg-black/50 -z-[5]"></div>
-
       {/* Background video */}
       <video
         autoPlay
@@ -47,9 +44,9 @@ const Hero = () => {
 
       {/* Bottom section with messages + arrow */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-full px-4">
-        <p className="text-lg md:text-xl font-semibold text-primary animate-pulse transition-opacity duration-1000 mb-6">
+        {/* <p className="text-lg md:text-xl font-semibold text-primary animate-pulse transition-opacity duration-1000 mb-6">
           {heroMessages[currentMessageIndex]}
-        </p>
+        </p> */}
 
         <ArrowDownIcon
           className="inline-block w-12 mx-auto cursor-pointer animate-bounce text-primary"

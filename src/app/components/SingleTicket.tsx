@@ -111,7 +111,7 @@ const SingleTicket = ({
           <span className="text-sm md:text-base lg:text-lg"> &#8373; </span> {cedi_price}
         </p>
 
-        <ul className="mb-6 text-sm selection:bg-inherit max-h-36 overflow-y-auto w-44 md:w-56 mx-auto">
+        <ul className="mb-6 text-sm selection:bg-inherit max-h-46 overflow-y-auto w-44 md:w-56 mx-auto">
           {perks.slice(0, 3).map((item, index) => (
             <li
               key={index}
