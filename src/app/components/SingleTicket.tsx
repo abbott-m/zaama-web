@@ -69,7 +69,7 @@ const SingleTicket = ({
 
   return (
     <div
-      className={`cursor-pointer relative mx-auto w-80 h-[480px] text-gray-200 flex flex-col justify-between items-center rounded-2xl bg-transparent transition duration-200 lg:w-96 lg:h-[620px] lg:hover:text-gray-200 overflow-hidden
+      className={`cursor-pointer relative mx-auto w-80 h-full text-gray-200 flex flex-col justify-between items-center rounded-2xl bg-transparent transition duration-200 lg:w-96 lg:h-[620px] lg:hover:text-gray-200 overflow-hidden
       
        ${
          !available &&

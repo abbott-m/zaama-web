@@ -41,7 +41,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <head>
         {/* Additional Meta Tags */}
-        <meta name="theme-color" content="#AAE1F6" />
+        <meta name="theme-color" content="#90bafa" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <link rel="manifest" href="/manifest.json" />

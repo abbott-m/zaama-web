@@ -20,7 +20,7 @@ const config: Config = {
         zaama_red: "#E91C24",
         zaama_yellow: "#FFE4AE",
         zaama_orange: "#FF7700",
-        primary: "#AAE1F6",
+        primary: "#90bafa",
         secondary: "#0064CA",
       },
       animation: {
