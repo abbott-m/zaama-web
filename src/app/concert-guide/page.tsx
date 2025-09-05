@@ -78,7 +78,7 @@ const ConcertGuide = () => {
                   <div>
                     <h4 className="font-bold text-white mb-1">Date & Time</h4>
                     <p className="text-gray-400">Saturday, December 21st, 2025</p>
-                    <p className="text-gray-400">Doors open: 4:00 PM | Show starts: 8:00 PM</p>
+                    <p className="text-gray-400">Doors open: 2:00 PM | Doors close: 12:00 AM</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
