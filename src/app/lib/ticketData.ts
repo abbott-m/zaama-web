@@ -90,19 +90,19 @@ export const tableData = [
   {
     color: "yellow",
     packageName: "Gold Package",
-    cedi_price: "30,000",
-    tag: "Rebel Music",
+    cedi_price: "30k",
+    tag: "Sacrifice",
   },
   {
     color: "red",
     packageName: "Silver Package", 
-    cedi_price: "20,000",
-    tag: "Kilos Milos",
+    cedi_price: "20k",
+    tag: "Top of The Morning",
   },
   {
     color: "yellow",
     packageName: "Bronze Package",
-    cedi_price: "10,000", 
-    tag: "January 9th",
+    cedi_price: "10k", 
+    tag: "Where Dem Boyz",
   },
 ];

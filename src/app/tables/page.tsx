@@ -48,16 +48,16 @@ const SingleTable = ({
         fill
         className="-z-10"
       />
-      <p className={`${logik.className} uppercase text-sm text-center mb-12`}>
+      <p className={`${logik.className} uppercase text-xs md:text-sm text-center mb-12`}>
         {packageName}
       </p>
       <p
-        className={`${logikBold.className} text-center text-4xl mb-14 md:text-2xl`}
+        className={`${logikBold.className} text-center text-2xl mb-14 md:text-2xl`}
       >
-        <span className="text-lg md:text-2xl">&#8373;</span> {cedi_price}
+        <span className="text-lg md:text-lg">&#8373;</span> {cedi_price}
       </p>
 
-      <p className={`${logikBold.className} uppercase mb-20 text-sm`}>
+      <p className={`${logikBold.className} uppercase mb-20 text-[10px] mb:text-xs`}>
         ( {tag} )
       </p>
     </div>
