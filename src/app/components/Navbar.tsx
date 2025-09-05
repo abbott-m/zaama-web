@@ -22,49 +22,49 @@ const Navbar = () => {
     { id: 4, name: "Shop", path: "/shop", sectionId: "" },
     { id: 5, name: "Partners", path: "/partners", sectionId: "" },
     {
-      id: 3,
+      id: 6,
       name: "vendors",
       sectionId: "vendors",
       path: "/vendors",
     },
     {
-      id: 4,
+      id: 7,
       name: "volunteers",
       sectionId: "volunteers",
       path: "/volunteers",
     },
     {
-      id: 5,
+      id: 8,
       name: "tables",
       sectionId: "table",
       path: "/tables",
     },
     {
-      id: 6,
+      id: 9,
       name: "media",
       sectionId: "media",
       path: "/media",
     },
     {
-      id: 7,
+      id: 10,
       name: "sponsor",
       sectionId: "sponsorship",
       path: "/register/sponsorship",
     },
     {
-      id: 8,
+      id: 11,
       name: "contact",
       sectionId: "general",
       path: "/register/general",
     },
     {
-      id: 9,
+      id: 12,
       name: "foundation",
       sectionId: "foundation",
       path: "/foundation",
     },
     {
-      id: 10,
+      id: 13,
       name: "policy",
       sectionId: "policy",
       path: "/policy",
@@ -72,24 +72,32 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="absolute z-10 w-full flex justify-center items-center p-4 md:p-2 md:px-10 lg:px-20">
+    <>
       {!isNavbarOpen ? (
-        <div className="flex justify-center w-full">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="#dedede"
-            className="w-8 h-8 transition-all duration-150 cursor-pointer hover:stroke-zaama_greenf hover:stroke-primary"
-            onClick={() => setIsNavbarOpen(true)}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-            />
-          </svg>
+        <div 
+          className="fixed top-4 md:top-2 z-10"
+          style={{
+            left: '50%',
+            transform: 'translateX(-50%)',
+          }}
+        >
+          <div className="bg-black/80 backdrop-blur-sm rounded-full p-3 transition-all duration-150 hover:bg-black/90">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="#dedede"
+              className="w-8 h-8 transition-all duration-150 cursor-pointer hover:stroke-zaama_greenf hover:stroke-primary"
+              onClick={() => setIsNavbarOpen(true)}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </div>
         </div>
       ) : (
         <ul
@@ -129,7 +137,7 @@ const Navbar = () => {
           ))}
         </ul>
       )}
-    </nav>
+    </>
   );
 };
 
