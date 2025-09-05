@@ -26,7 +26,7 @@ const Ticket = () => {
         data-aos="fade-up"
         className={`${logikBold.className} text-center text-xl font-medium mb-4 text-primary uppercase tracking-wider md:text-2xl`}
       >
-        Choose your package
+        Choose your package - Early Bird
       </p>
       <p data-aos="fade-up" className="mb-2 text-center">
         We have uniquely crafted ticket packages for everyone
