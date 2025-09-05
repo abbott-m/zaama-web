@@ -26,10 +26,10 @@ export const ticketData: ITicketData[] = [
     perks: [
       "Bands",
       "Merch Area Access & Signing",
-      "After Party Access (T&Cs Apply)",
+      "Super Pop Up experience inside General Access",
+      "After Party Access (Terms & Conditions Apply)",
       "Experiential Area Access", 
       "Access to General Bar and Food",
-      "Super Pop Up experience inside General Access",
       "Multiple Entry Access"
     ],
     available: true,

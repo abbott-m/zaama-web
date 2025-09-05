@@ -29,7 +29,7 @@ const ConcertGuide = () => {
             data-aos="fade-up"
             className={`${blatantBold.className} text-4xl md:text-6xl font-bold text-primary mb-6`}
           >
-            FESTIVAL GUIDE
+            CONCERT GUIDE
           </h1>
           <p 
             data-aos="fade-up"

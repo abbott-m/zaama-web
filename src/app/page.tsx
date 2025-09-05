@@ -163,7 +163,7 @@ const Home = () => {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <button
-                  onClick={() => window.open("https://echolive.live/buy-tickets", "_blank")}
+                  onClick={() => window.open("https://ticket.live/buy-tickets", "_blank")}
                   className="px-8 py-4 bg-primary text-black font-bold text-lg rounded-lg hover:bg-secondary transition-colors duration-200 transform hover:scale-105"
                 >
                   🎫 Get Tickets Now

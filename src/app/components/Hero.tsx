@@ -6,7 +6,7 @@ import ArrowDownIcon from "../../../public/SVG/arrow-down.svg";
 
 const Hero = () => {
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
-  
+
   const heroMessages = [
     "IRON BOY RETURNS Zaama Disco One Night. One City. One Legend. • Tickets live now",
     "Black Sherif (Iron Boy) takes Zaama Disco by storm • Early Bird almost gone • Grab yours",
@@ -21,7 +21,7 @@ const Hero = () => {
 
   useEffect(() => {
     const messageInterval = setInterval(() => {
-      setCurrentMessageIndex((prevIndex) => 
+      setCurrentMessageIndex((prevIndex) =>
         (prevIndex + 1) % heroMessages.length
       );
     }, 4000);
@@ -30,42 +30,31 @@ const Hero = () => {
   }, [heroMessages.length]);
 
   return (
-    <section className="relative px-5 pt-10 text-center select-none sm:px-10 md:px-20 ">
+    <section className="relative px-5 text-center select-none sm:px-10 md:px-20 min-h-screen flex flex-col justify-between">
+      {/* Dark overlay */}
       <div className="h-full w-full fixed top-0 left-0 bg-black/50 -z-[5]"></div>
+
+      {/* Background video */}
       <video
         autoPlay
         loop
         muted
-        className="absolute top-0 left-0 object-cover w-full h-full -z-10 md:h-full"
+        playsInline
+        className="absolute top-0 left-0 object-cover w-full h-full -z-10"
       >
         <source src="/video/hero-bg.mp4" type="video/mp4" />
       </video>
 
-      <Image
-        src="/GIF/hero-logo-anim-2.gif"
-        alt="zaama-logo"
-        unoptimized
-        width={700}
-        height={200}
-        priority
-        className="mx-auto mt-12 mb-5 animate-little_bounce"
-      />
-
-      {/* Rotating Hero Messages */}
-      <div className="mb-8 px-4">
-        <p className="text-lg md:text-xl font-semibold text-primary animate-pulse transition-opacity duration-1000">
+      {/* Bottom section with messages + arrow */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-full px-4">
+        <p className="text-lg md:text-xl font-semibold text-primary animate-pulse transition-opacity duration-1000 mb-6">
           {heroMessages[currentMessageIndex]}
         </p>
-      </div>
 
-      <ArrowDownIcon
-        onClick={() =>
-          handleScroll({
-            sectionId: "tickets",
-          })
-        }
-        className="inline-block w-12 mx-auto mt-12 transition duration-150 cursor-pointer animate-bounce text-primary"
-      />
+        <ArrowDownIcon
+          className="inline-block w-12 mx-auto cursor-pointer animate-bounce text-primary"
+        />
+      </div>
     </section>
   );
 };
