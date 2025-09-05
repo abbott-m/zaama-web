@@ -58,11 +58,11 @@ const Home = () => {
           <Hero />
           
           {/* Tickets Section */}
-          <CarouselLabel word="tickets • iron boy • blacko tribe" />
+          <CarouselLabel word="Zaama Disco – Where Music, Fashion & Food Collide! Join the movement. Get your tickets now" />
           <Ticket />
           
           {/* About Section */}
-          <CarouselLabel word="about zaama disco • the movement" />
+          <CarouselLabel word="Step into the Exclusive Experience ! Zaama Disco brings you the ultimate fusion of culture, style & sound" />
           <About />
           
           {/* Quick Links Section */}
