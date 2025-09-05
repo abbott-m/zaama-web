@@ -9,8 +9,8 @@ import PrimaryButton from "../../components/PrimaryButton";
 import ButtonLoader from "../../../../public/SVG/loader.svg";
 import ToastNotification from "../../components/ToastNotification";
 
-const blatantBold = localFont({
-  src: "../../blatant-font/OTF/Blatant-Bold.otf",
+const logikBold = localFont({
+  src: "../../Logik-font//Logik-Bold.otf",
 });
 
 const SponsorshipInquiry = () => {
@@ -124,7 +124,7 @@ const SponsorshipInquiry = () => {
 
       <div className="w-full mb-16 md:bg-[#4c4c4c]/20 md:px-16 md:py-14 md:rounded-2xl md:inline-block md:mx-auto md:w-auto">
         <h1
-          className={`${blatantBold.className} text-xl text-primary uppercase tracking-wide font-medium mb-5 text-center md:text-2xl`}
+          className={`${logikBold.className} text-xl text-primary uppercase tracking-wide font-medium mb-5 text-center md:text-2xl`}
         >
           Become a Sponsor
         </h1>

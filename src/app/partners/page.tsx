@@ -8,8 +8,8 @@ import Link from "next/link";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const blatantBold = localFont({
-  src: "../blatant-font/OTF/Blatant-Bold.otf",
+const logikBold = localFont({
+  src: "../Logik-font//Logik-Bold.otf",
 });
 
 const Partners = () => {
@@ -28,7 +28,7 @@ const Partners = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h1 
             data-aos="fade-up"
-            className={`${blatantBold.className} text-4xl md:text-6xl font-bold text-primary mb-6`}
+            className={`${logikBold.className} text-4xl md:text-6xl font-bold text-primary mb-6`}
           >
             OUR PARTNERS
           </h1>
@@ -69,7 +69,7 @@ const Partners = () => {
         <div className="max-w-6xl mx-auto">
           <h2 
             data-aos="fade-up"
-            className={`${blatantBold.className} text-2xl md:text-3xl font-bold text-primary mb-12 text-center`}
+            className={`${logikBold.className} text-2xl md:text-3xl font-bold text-primary mb-12 text-center`}
           >
             WHY PARTNER WITH ZAAMA DISCO?
           </h2>
@@ -117,7 +117,7 @@ const Partners = () => {
         <div className="max-w-6xl mx-auto">
           <h2 
             data-aos="fade-up"
-            className={`${blatantBold.className} text-2xl md:text-3xl font-bold text-primary mb-12 text-center`}
+            className={`${logikBold.className} text-2xl md:text-3xl font-bold text-primary mb-12 text-center`}
           >
             PARTNERSHIP OPPORTUNITIES
           </h2>
@@ -202,7 +202,7 @@ const Partners = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h2 
             data-aos="fade-up"
-            className={`${blatantBold.className} text-2xl md:text-3xl font-bold text-primary mb-12`}
+            className={`${logikBold.className} text-2xl md:text-3xl font-bold text-primary mb-12`}
           >
             PARTNERSHIP SUCCESS STORIES
           </h2>
@@ -228,7 +228,7 @@ const Partners = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h2 
             data-aos="fade-up"
-            className={`${blatantBold.className} text-2xl md:text-3xl font-bold text-primary mb-6`}
+            className={`${logikBold.className} text-2xl md:text-3xl font-bold text-primary mb-6`}
           >
             READY TO PARTNER WITH US?
           </h2>

@@ -1,12 +1,12 @@
 import React from "react";
 import localFont from "next/font/local";
 
-const blatantBold = localFont({
-  src: "../blatant-font/OTF/Blatant-Bold.otf",
+const logikBold = localFont({
+  src: "../Logik-font//Logik-Bold.otf",
 });
 
-const blatant = localFont({
-  src: "../blatant-font/OTF/Blatant.otf",
+const logik = localFont({
+  src: "../Logik-font//Logik.otf",
 });
 
 const WhatToBringSection = () => {
@@ -48,7 +48,7 @@ const WhatToBringSection = () => {
       <div className="max-w-6xl mx-auto">
         <p
           data-aos="fade-down"
-          className={`${blatantBold.className} text-center text-xl font-medium mb-12 tracking-wider text-primary uppercase md:text-2xl`}
+          className={`${logikBold.className} text-center text-xl font-medium mb-12 tracking-wider text-primary uppercase md:text-2xl`}
         >
           Concert Guide
         </p>
@@ -56,7 +56,7 @@ const WhatToBringSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* What to Wear */}
           <div data-aos="fade-up" data-aos-delay="100" className="space-y-4">
-            <h3 className={`${blatant.className} text-lg font-semibold text-zaama_yellowf text-primary uppercase tracking-wide`}>
+            <h3 className={`${logik.className} text-lg font-semibold text-zaama_yellowf text-primary uppercase tracking-wide`}>
               What to Wear
             </h3>
             <ul className="space-y-3">
@@ -71,7 +71,7 @@ const WhatToBringSection = () => {
 
           {/* What to Bring */}
           <div data-aos="fade-up" data-aos-delay="200" className="space-y-4">
-            <h3 className={`${blatant.className} text-lg font-semibold text-zaama_yellowf text-primary uppercase tracking-wide`}>
+            <h3 className={`${logik.className} text-lg font-semibold text-zaama_yellowf text-primary uppercase tracking-wide`}>
               What to Bring
             </h3>
             <ul className="space-y-3">
@@ -86,7 +86,7 @@ const WhatToBringSection = () => {
 
           {/* What NOT to Bring */}
           <div data-aos="fade-up" data-aos-delay="300" className="space-y-4">
-            <h3 className={`${blatant.className} text-lg font-semibold text-zaama_redf text-zaama_red uppercase tracking-wide`}>
+            <h3 className={`${logik.className} text-lg font-semibold text-zaama_redf text-zaama_red uppercase tracking-wide`}>
               What NOT to Bring
             </h3>
             <ul className="space-y-3">
@@ -101,7 +101,7 @@ const WhatToBringSection = () => {
 
           {/* How to Vibe Like a Pro */}
           <div data-aos="fade-up" data-aos-delay="400" className="space-y-4">
-            <h3 className={`${blatant.className} text-lg font-semibold text-zaama_orangef text-zaama_orange uppercase tracking-wide`}>
+            <h3 className={`${logik.className} text-lg font-semibold text-zaama_orangef text-zaama_orange uppercase tracking-wide`}>
               Vibe Like a Pro
             </h3>
             <ul className="space-y-2">
@@ -118,7 +118,7 @@ const WhatToBringSection = () => {
         {/* Quick Do's & Don'ts */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
           <div data-aos="fade-right" className="bg-green-900/20 rounded-xl p-6 border border-green-500/20">
-            <h3 className={`${blatant.className} text-lg font-semibold text-green-400 uppercase tracking-wide mb-4`}>
+            <h3 className={`${logik.className} text-lg font-semibold text-green-400 uppercase tracking-wide mb-4`}>
               ✓ DO's
             </h3>
             <ul className="space-y-2 text-sm">
@@ -131,7 +131,7 @@ const WhatToBringSection = () => {
           </div>
 
           <div data-aos="fade-left" className="bg-red-900/20 rounded-xl p-6 border border-red-500/20">
-            <h3 className={`${blatant.className} text-lg font-semibold text-red-400 uppercase tracking-wide mb-4`}>
+            <h3 className={`${logik.className} text-lg font-semibold text-red-400 uppercase tracking-wide mb-4`}>
               ✗ DON'Ts
             </h3>
             <ul className="space-y-2 text-sm">

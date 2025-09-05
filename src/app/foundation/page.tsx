@@ -7,8 +7,8 @@ import Link from "next/link";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const blatantBold = localFont({
-  src: "../blatant-font/OTF/Blatant-Bold.otf",
+const logikBold = localFont({
+  src: "../Logik-font//Logik-Bold.otf",
 });
 
 const Foundation = () => {
@@ -27,7 +27,7 @@ const Foundation = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h1 
             data-aos="fade-up"
-            className={`${blatantBold.className} text-4xl md:text-6xl font-bold text-primary mb-6`}
+            className={`${logikBold.className} text-4xl md:text-6xl font-bold text-primary mb-6`}
           >
             ZAAMA DISCO FOUNDATION
           </h1>
@@ -68,7 +68,7 @@ const Foundation = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div data-aos="fade-right">
-              <h2 className={`${blatantBold.className} text-2xl md:text-3xl font-bold text-primary mb-6`}>
+              <h2 className={`${logikBold.className} text-2xl md:text-3xl font-bold text-primary mb-6`}>
                 OUR MISSION
               </h2>
               <p className="text-gray-300 text-lg leading-relaxed mb-6">
@@ -102,7 +102,7 @@ const Foundation = () => {
             </div>
 
             <div data-aos="fade-left">
-              <h2 className={`${blatantBold.className} text-2xl md:text-3xl font-bold text-primary mb-6`}>
+              <h2 className={`${logikBold.className} text-2xl md:text-3xl font-bold text-primary mb-6`}>
                 OUR VISION
               </h2>
               <p className="text-gray-300 text-lg leading-relaxed mb-8">
@@ -144,7 +144,7 @@ const Foundation = () => {
         <div className="max-w-6xl mx-auto">
           <h2 
             data-aos="fade-up"
-            className={`${blatantBold.className} text-2xl md:text-3xl font-bold text-primary mb-12 text-center`}
+            className={`${logikBold.className} text-2xl md:text-3xl font-bold text-primary mb-12 text-center`}
           >
             OUR PROGRAMS & INITIATIVES
           </h2>
@@ -248,7 +248,7 @@ const Foundation = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h2 
             data-aos="fade-up"
-            className={`${blatantBold.className} text-2xl md:text-3xl font-bold text-primary mb-12`}
+            className={`${logikBold.className} text-2xl md:text-3xl font-bold text-primary mb-12`}
           >
             SUCCESS STORIES
           </h2>
@@ -298,7 +298,7 @@ const Foundation = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h2 
             data-aos="fade-up"
-            className={`${blatantBold.className} text-2xl md:text-3xl font-bold text-primary mb-6`}
+            className={`${logikBold.className} text-2xl md:text-3xl font-bold text-primary mb-6`}
           >
             GET INVOLVED
           </h2>

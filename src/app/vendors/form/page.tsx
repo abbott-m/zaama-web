@@ -14,11 +14,11 @@ import ToastNotification from "../../components/ToastNotification";
 import CustomCheckbox from "@/app/components/form/CustomCheckbox";
 import { useRouter } from "next/navigation";
 
-const blatantRegular = localFont({
-  src: "../../blatant-font/OTF/Blatant.otf",
+const logikRegular = localFont({
+  src: "../../Logik-font//Logik.otf",
 });
-const blatantBold = localFont({
-  src: "../../blatant-font/OTF/Blatant-Bold.otf",
+const logikBold = localFont({
+  src: "../../Logik-font//Logik-Bold.otf",
 });
 const VendorForm = () => {
   const router = useRouter();
@@ -164,7 +164,7 @@ const VendorForm = () => {
       <div className="w-full mb-16 md:bg-[#4c4c4c]/20 md:px-16 md:py-14 md:rounded-2xl md:inline-block  md:mx-auto  md:w-auto">
         <h1
           data-aos="fade-down"
-          className={`${blatantBold.className} text-xl text-zaama_yellowf text-primary uppercase tracking-wide font-medium mb-5 text-center md:text-2xl `}
+          className={`${logikBold.className} text-xl text-zaama_yellowf text-primary uppercase tracking-wide font-medium mb-5 text-center md:text-2xl `}
         >
           Vendor Application Form
         </h1>
@@ -184,7 +184,7 @@ const VendorForm = () => {
           className="w-full pt-5 md:mx-auto md:block md:w-auto"
         >
           <p
-            className={`${blatantRegular.className} text-gray-200 text-lg mb-7 text-center`}
+            className={`${logikRegular.className} text-gray-200 text-lg mb-7 text-center`}
           >
             Primary Contact Details
           </p>
@@ -244,7 +244,7 @@ const VendorForm = () => {
             </label>
           </div>
           <p
-            className={`${blatantRegular.className} text-gray-200 text-lg mb-7 text-center`}
+            className={`${logikRegular.className} text-gray-200 text-lg mb-7 text-center`}
           >
             Secondary Contact Details
           </p>
@@ -304,7 +304,7 @@ const VendorForm = () => {
             </label>
           </div>
           <p
-            className={`${blatantRegular.className} text-gray-200 text-lg mb-7 text-center`}
+            className={`${logikRegular.className} text-gray-200 text-lg mb-7 text-center`}
           >
             Other Details
           </p>

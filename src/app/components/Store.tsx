@@ -2,12 +2,12 @@ import Image from "next/image";
 import React from "react";
 import localFont from "next/font/local";
 
-const blatantBold = localFont({
-  src: "../blatant-font/OTF/Blatant-Bold.otf",
+const logikBold = localFont({
+  src: "../Logik-font//Logik-Bold.otf",
 });
 
-const blatant = localFont({
-  src: "../blatant-font/OTF/Blatant.otf",
+const logik = localFont({
+  src: "../Logik-font//Logik.otf",
 });
 
 const Store = () => {
@@ -24,7 +24,7 @@ const Store = () => {
         <div className="mb-10 md:text-left">
           <p
             data-aos="fade-down"
-            className={`${blatantBold.className} text-center text-xl font-medium mb-5 text-zaama_yellowf text-primary uppercase tracking-wider md:text-2xl md:text-left`}
+            className={`${logikBold.className} text-center text-xl font-medium mb-5 text-zaama_yellowf text-primary uppercase tracking-wider md:text-2xl md:text-left`}
           >
             Zaama Disco App
           </p>
@@ -134,7 +134,7 @@ const Store = () => {
         {/* Early Access Signup */}
         <div data-aos="fade-up" data-aos-delay="200" className="mt-8 text-center md:text-left">
           <div className="bg-primary/10 border border-primary/20 rounded-xl p-6">
-            <h3 className={`${blatant.className} text-lg font-semibold text-primary mb-3`}>
+            <h3 className={`${logik.className} text-lg font-semibold text-primary mb-3`}>
               🚀 Get Early Access
             </h3>
             <p className="text-sm text-gray-300 mb-4">

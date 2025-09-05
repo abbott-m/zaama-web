@@ -5,11 +5,11 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useTicketContext } from "../context/ticketContext";
 
-const blatant = localFont({
-  src: "../blatant-font/OTF/Blatant.otf",
+const logik = localFont({
+  src: "../Logik-font//Logik.otf",
 });
-const blatantBold = localFont({
-  src: "../blatant-font/OTF/Blatant-Bold.otf",
+const logikBold = localFont({
+  src: "../Logik-font//Logik-Bold.otf",
 });
 
 type SingleTicketProps = {
@@ -96,7 +96,7 @@ const SingleTicket = ({
       {/* Package Name at the very top */}
       <div className="relative z-10 px-4 pt-20 w-full">
         <div
-          className={`${blatant.className} uppercase text-lg text-center w-48 mx-auto`}
+          className={`${logik.className} uppercase text-sm text-center w-48 mx-auto`}
         >
           <p>{packageName}</p>
           {!!packageSubName && <p className="text-sm">({packageSubName})</p>}
@@ -106,7 +106,7 @@ const SingleTicket = ({
       {/* Middle content container */}
       <div className="relative z-10 px-4 w-full flex flex-col justify-center items-center flex-grow">
         <p
-          className={`${blatantBold.className} text-center text-2xl mb-6 md:text-3xl lg:text-4xl w-32 mx-auto`}
+          className={`${logikBold.className} text-center text-1xl mb-6 md:text-1xl lg:text-2xl w-32 mx-auto`}
         >
           <span className="text-base md:text-lg lg:text-xl"> &#8373; </span> {cedi_price}
         </p>
@@ -138,14 +138,14 @@ const SingleTicket = ({
           onClick={() =>
             window.open("https://ticket.live/buy-tickets", "_blank")
           }
-          className={`${blatant.className} tracking-widest rounded-sm text-sm w-64 h-12 outline-none font-semibold border select-none transition duration-150 border-gray-200/50 hover:bg-gray-200/10 text-black`}
+          className={`${logik.className} tracking-widest rounded-sm text-sm w-64 h-12 outline-none font-semibold border select-none transition duration-150 border-gray-200/50 hover:bg-gray-200/10 text-black`}
           style={{ backgroundColor: '#90bafa' }}
         >
           Select This Ticket
         </button>
 
         {countDown && timeLeft > 0 && (
-          <div className={`${blatant.className} mt-3 w-2/3 text-center`}>
+          <div className={`${logik.className} mt-3 w-2/3 text-center`}>
             <p className="text-sm tracking-wide">Ticket Increases In</p>
             <p className="text-xl">
               {days.toString().padStart(2, "0")} :{" "}

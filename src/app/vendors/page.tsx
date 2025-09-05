@@ -5,8 +5,8 @@ import CustomCheckbox from "../components/form/CustomCheckbox";
 import PrimaryButton from "../components/PrimaryButton";
 import { useRouter } from "next/navigation";
 
-const blatantBold = localFont({
-  src: "../blatant-font/OTF/Blatant-Bold.otf",
+const logikBold = localFont({
+  src: "../Logik-font//Logik-Bold.otf",
 });
 
 const Vendors = () => {
@@ -15,7 +15,7 @@ const Vendors = () => {
   return (
     <section className="px-5 py-16 md:px-16 ">
       <h2
-        className={`${blatantBold.className} text-xl text-zaama_yellowf text-primary uppercase tracking-wide font-medium mb-7 text-center md:text-2xl `}
+        className={`${logikBold.className} text-xl text-zaama_yellowf text-primary uppercase tracking-wide font-medium mb-7 text-center md:text-2xl `}
       >
         ZAAMA DISCO VENDOR
       </h2>

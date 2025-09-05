@@ -2,8 +2,8 @@ import Image from "next/image";
 import React from "react";
 import localFont from "next/font/local";
 
-const blatantBold = localFont({
-  src: "../blatant-font/OTF/Blatant-Bold.otf",
+const logikBold = localFont({
+  src: "../Logik-font//Logik-Bold.otf",
 });
 const About = () => {
   return (
@@ -17,7 +17,7 @@ const About = () => {
         className="relative w-full h-56 sm:w-3/4 sm:h-64 md:h-72 lg:h-80 lg:w-1/2 "
       >
         <Image
-          src="/images/about-zaama.png"
+          src="/GIF/z-logo.gif"
           alt="about-zaama"
           fill
           objectFit="contain"
@@ -28,7 +28,7 @@ const About = () => {
       <div className="relative text-justify lg:w-3/4">
         <p
           data-aos="fade-down"
-          className={`${blatantBold.className} text-xl text-zaama_yellowf text-primary uppercase tracking-wide font-medium mb-5 text-center md:text-2xl `}
+          className={`${logikBold.className} text-xl text-zaama_yellowf text-primary uppercase tracking-wide font-medium mb-5 text-center md:text-2xl `}
         >
           About Zaama Disco
         </p>

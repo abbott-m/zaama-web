@@ -18,8 +18,8 @@ import TextAreaField from "../components/TextAreaField";
 import ToastNotification from "../components/ToastNotification";
 import { useRouter } from "next/navigation";
 
-const blatantBold = localFont({
-  src: "../blatant-font/OTF/Blatant-Bold.otf",
+const logikBold = localFont({
+  src: "../Logik-font//Logik-Bold.otf",
 });
 const Volunteers = () => {
   const [volunteerFields, setVolunteerFields] = useState({
@@ -143,7 +143,7 @@ const Volunteers = () => {
       <div className="w-full mb-16 md:bg-[#4c4c4c]/20 md:px-16 md:py-14 md:rounded-2xl md:inline-block  md:mx-auto  md:w-auto">
         <h1
           data-aos="fade-down"
-          className={`${blatantBold.className} text-xl text-zaama_yellowf text-primary uppercase tracking-wide font-medium mb-5 text-center md:text-2xl `}
+          className={`${logikBold.className} text-xl text-zaama_yellowf text-primary uppercase tracking-wide font-medium mb-5 text-center md:text-2xl `}
         >
           Become a volunteer
         </h1>

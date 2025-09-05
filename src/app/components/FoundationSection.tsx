@@ -2,12 +2,12 @@ import React from "react";
 import localFont from "next/font/local";
 import PrimaryButton from "./PrimaryButton";
 
-const blatantBold = localFont({
-  src: "../blatant-font/OTF/Blatant-Bold.otf",
+const logikBold = localFont({
+  src: "../Logik-font//Logik-Bold.otf",
 });
 
-const blatant = localFont({
-  src: "../blatant-font/OTF/Blatant.otf",
+const logik = localFont({
+  src: "../Logik-font//Logik.otf",
 });
 
 const FoundationSection = () => {
@@ -47,13 +47,13 @@ const FoundationSection = () => {
         <div className="text-center mb-12">
           <p
             data-aos="fade-down"
-            className={`${blatantBold.className} text-xl font-medium mb-4 tracking-wider text-primary uppercase md:text-2xl`}
+            className={`${logikBold.className} text-xl font-medium mb-4 tracking-wider text-primary uppercase md:text-2xl`}
           >
             Foundation & Donations
           </p>
           <p
             data-aos="fade-up"
-            className={`${blatant.className} text-2xl md:text-3xl font-bold mb-6 text-white`}
+            className={`${logik.className} text-2xl md:text-3xl font-bold mb-6 text-white`}
           >
             Support Mothers. Nurture Babies. Build the Future.
           </p>
@@ -89,10 +89,10 @@ const FoundationSection = () => {
 
               <div className="relative z-10">
                 <div className="text-4xl mb-4 text-center">{tier.icon}</div>
-                <div className={`${blatant.className} text-2xl font-bold mb-2 text-center`}>
+                <div className={`${logik.className} text-2xl font-bold mb-2 text-center`}>
                   {tier.amount}
                 </div>
-                <h3 className={`${blatant.className} text-lg font-semibold mb-4 text-center uppercase tracking-wide`}>
+                <h3 className={`${logik.className} text-lg font-semibold mb-4 text-center uppercase tracking-wide`}>
                   {tier.title}
                 </h3>
                 <p className="text-sm text-white/90 leading-relaxed mb-6 text-center">
@@ -114,7 +114,7 @@ const FoundationSection = () => {
 
         {/* Impact Statement */}
         <div data-aos="fade-up" className="bg-gradient-to-r from-yellow-900/30 to-orange-900/30 rounded-2xl p-8 border border-yellow-500/20 text-center">
-          <h3 className={`${blatant.className} text-xl font-semibold text-yellow-400 uppercase tracking-wide mb-4`}>
+          <h3 className={`${logik.className} text-xl font-semibold text-yellow-400 uppercase tracking-wide mb-4`}>
             Your Impact
           </h3>
           <p className="text-gray-200 leading-relaxed md:text-lg mb-6">
@@ -148,7 +148,7 @@ const FoundationSection = () => {
 
         {/* Call to Action */}
         <div data-aos="fade-up" data-aos-delay="200" className="text-center mt-12">
-          <p className={`${blatant.className} text-xl md:text-2xl font-bold mb-6 text-primary`}>
+          <p className={`${logik.className} text-xl md:text-2xl font-bold mb-6 text-primary`}>
             Your kindness is the reason a mother will smile and a baby will thrive.
           </p>
           

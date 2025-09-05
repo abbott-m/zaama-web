@@ -7,8 +7,8 @@ import localFont from "next/font/local";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const blatantBold = localFont({
-  src: "../blatant-font/OTF/Blatant-Bold.otf",
+const logikBold = localFont({
+  src: "../Logik-font//Logik-Bold.otf",
 });
 
 const Shop = () => {
@@ -27,7 +27,7 @@ const Shop = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h1 
             data-aos="fade-up"
-            className={`${blatantBold.className} text-4xl md:text-6xl font-bold text-primary mb-6`}
+            className={`${logikBold.className} text-4xl md:text-6xl font-bold text-primary mb-6`}
           >
             SHOP ZAAMA
           </h1>
@@ -76,7 +76,7 @@ const Shop = () => {
         <div className="max-w-6xl mx-auto">
           <h2 
             data-aos="fade-up"
-            className={`${blatantBold.className} text-2xl md:text-3xl font-bold text-primary mb-12 text-center`}
+            className={`${logikBold.className} text-2xl md:text-3xl font-bold text-primary mb-12 text-center`}
           >
             WHY SHOP WITH US?
           </h2>
@@ -120,7 +120,7 @@ const Shop = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h2 
             data-aos="fade-up"
-            className={`${blatantBold.className} text-2xl md:text-3xl font-bold text-primary mb-12`}
+            className={`${logikBold.className} text-2xl md:text-3xl font-bold text-primary mb-12`}
           >
             APP EXCLUSIVE FEATURES
           </h2>
@@ -158,7 +158,7 @@ const Shop = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h2 
             data-aos="fade-up"
-            className={`${blatantBold.className} text-2xl md:text-3xl font-bold text-primary mb-6`}
+            className={`${logikBold.className} text-2xl md:text-3xl font-bold text-primary mb-6`}
           >
             JOIN THE BLACKO TRIBE
           </h2>

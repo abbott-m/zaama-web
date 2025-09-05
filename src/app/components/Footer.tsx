@@ -14,8 +14,8 @@ import Youtube from "../../../public/SVG/youtube-logo.svg";
 import Tiktok from "../../../public/SVG/tiktok-logo.svg";
 import PrimaryButton from "./PrimaryButton";
 
-const blatant = localFont({
-  src: "../blatant-font/OTF/Blatant.otf",
+const logik = localFont({
+  src: "../Logik-font//Logik.otf",
 });
 
 const Footer = () => {
@@ -205,7 +205,7 @@ const Footer = () => {
             ) : (
               <form ref={formRef} onSubmit={handleSubmit}>
                 <p
-                  className={`${blatant.className} font-medium uppercase mb-4 tracking-wide whitespace-nowrap text-center`}
+                  className={`${logik.className} font-medium uppercase mb-4 tracking-wide whitespace-nowrap text-center`}
                 >
                   Join our newsletter
                 </p>
@@ -232,7 +232,7 @@ const Footer = () => {
 
         <div className="text-center">
           <p
-            className={`${blatant.className} font-medium text-lg uppercase mb-4 tracking-wide whitespace-nowrap`}
+            className={`${logik.className} font-medium text-lg uppercase mb-4 tracking-wide whitespace-nowrap`}
           >
             Quick Links
           </p>
@@ -251,7 +251,7 @@ const Footer = () => {
 
         <div className="text-center">
           <p
-            className={`${blatant.className} font-medium text-lg uppercase mb-4 tracking-wide whitespace-nowrap`}
+            className={`${logik.className} font-medium text-lg uppercase mb-4 tracking-wide whitespace-nowrap`}
           >
             Connect
           </p>
@@ -273,7 +273,7 @@ const Footer = () => {
 
         <div className="text-center max-w-[180px]">
           <p
-            className={`${blatant.className} font-medium text-lg uppercase mb-4 tracking-wide whitespace-nowrap`}
+            className={`${logik.className} font-medium text-lg uppercase mb-4 tracking-wide whitespace-nowrap`}
           >
             Support
           </p>

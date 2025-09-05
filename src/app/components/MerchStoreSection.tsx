@@ -3,12 +3,12 @@ import React from "react";
 import localFont from "next/font/local";
 import Image from "next/image";
 
-const blatantBold = localFont({
-  src: "../blatant-font/OTF/Blatant-Bold.otf",
+const logikBold = localFont({
+  src: "../Logik-font//Logik-Bold.otf",
 });
 
-const blatant = localFont({
-  src: "../blatant-font/OTF/Blatant.otf",
+const logik = localFont({
+  src: "../Logik-font//Logik.otf",
 });
 
 const MerchStoreSection = () => {
@@ -83,7 +83,7 @@ const MerchStoreSection = () => {
         <div className="text-center mb-12">
           <p
             data-aos="fade-down"
-            className={`${blatantBold.className} text-xl font-medium mb-4 tracking-wider text-primary uppercase md:text-2xl`}
+            className={`${logikBold.className} text-xl font-medium mb-4 tracking-wider text-primary uppercase md:text-2xl`}
           >
             Official Merch Store
           </p>
@@ -129,10 +129,10 @@ const MerchStoreSection = () => {
               {/* Product Details */}
               <div className="p-6">
                 <div className="flex justify-between items-start mb-4">
-                  <h3 className={`${blatant.className} text-lg font-semibold text-white`}>
+                  <h3 className={`${logik.className} text-lg font-semibold text-white`}>
                     {item.name}
                   </h3>
-                  <span className={`${blatant.className} text-xl font-bold text-primary`}>
+                  <span className={`${logik.className} text-xl font-bold text-primary`}>
                     {item.price}
                   </span>
                 </div>
@@ -155,7 +155,7 @@ const MerchStoreSection = () => {
 
         {/* Categories */}
         <div data-aos="fade-up" className="mb-12">
-          <h3 className={`${blatant.className} text-xl font-semibold text-primary text-center mb-8`}>
+          <h3 className={`${logik.className} text-xl font-semibold text-primary text-center mb-8`}>
             Shop by Category
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -181,7 +181,7 @@ const MerchStoreSection = () => {
 
         {/* Call to Action */}
         <div data-aos="fade-up" className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-8 border border-primary/20 text-center">
-          <h3 className={`${blatant.className} text-2xl font-bold text-primary mb-4`}>
+          <h3 className={`${logik.className} text-2xl font-bold text-primary mb-4`}>
             Get Exclusive Access
           </h3>
           <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
@@ -208,7 +208,7 @@ const MerchStoreSection = () => {
 
         {/* Concert Day Info */}
         <div data-aos="fade-up" data-aos-delay="200" className="mt-12 text-center">
-          <h4 className={`${blatant.className} text-lg font-semibold text-white mb-4`}>
+          <h4 className={`${logik.className} text-lg font-semibold text-white mb-4`}>
             📍 Concert Day Shopping
           </h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">

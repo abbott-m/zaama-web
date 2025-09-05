@@ -4,8 +4,8 @@ import localFont from "next/font/local";
 import { ticketData } from "../lib/ticketData";
 import { useTicketContext } from "../context/ticketContext";
 
-const blatant = localFont({
-  src: "../blatant-font/OTF/Blatant.otf",
+const logik = localFont({
+  src: "../Logik-font//Logik.otf",
 });
 type MouseEventCallback = (e: MouseEvent) => void;
 
@@ -77,11 +77,11 @@ const TicketModal = () => {
 
         <div className="flex justify-between items-center gap-5 flex-wrap mb-5 md:flex-wrap">
           <div>
-            <p className={`${blatant.className} text-lg mb-2`}>Package Name</p>
+            <p className={`${logik.className} text-lg mb-2`}>Package Name</p>
             <p className="font-medium text-lg ">{ticket?.packageName}</p>
           </div>
           <div>
-            <p className={`${blatant.className} text-lg mb-2`}>Ticket Price</p>
+            <p className={`${logik.className} text-lg mb-2`}>Ticket Price</p>
             <p className="font-medium text-lg">
               {" "}
               <span className=" text-sm"> &#8373; </span>
@@ -90,7 +90,7 @@ const TicketModal = () => {
           </div>
         </div>
         <div>
-          <p className={`${blatant.className} text-lg mb-2`}>Benefits</p>
+          <p className={`${logik.className} text-lg mb-2`}>Benefits</p>
           <ul className=" text-sm mb-5">
             {ticket?.perks.map((item, index) => (
               <li key={index} className="mb-1 flex gap-3 items-center text-sm ">
@@ -101,10 +101,10 @@ const TicketModal = () => {
         </div>
         {/* {hasCountdown && (
           <div className="text-center">
-            <p className={`${blatant.className} text-lg mb-2`}>
+            <p className={`${logik.className} text-lg mb-2`}>
               Ticket Increases In
             </p>
-            <p className={`${blatant.className} text-2xl`}>
+            <p className={`${logik.className} text-2xl`}>
               {days.toString().padStart(2, "0")} :{" "}
               {hours.toString().padStart(2, "0")} :{" "}
               {minutes.toString().padStart(2, "0")} :{" "}

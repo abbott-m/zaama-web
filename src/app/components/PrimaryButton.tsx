@@ -8,8 +8,8 @@ type PrimaryButtonTypes = {
   handleClick?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 };
 
-const blatantBold = localFont({
-  src: "../blatant-font/OTF/Blatant.otf",
+const logikBold = localFont({
+  src: "../Logik-font//Logik.otf",
 });
 const PrimaryButton = ({
   disabled,
@@ -22,7 +22,7 @@ const PrimaryButton = ({
       type={type}
       disabled={disabled}
       onClick={handleClick}
-      className={`${blatantBold.className} tracking-wide w-full h-full block  bg-zaama_redf  rounded-md transition duration-150 select-none enabled:hover:bg-[#b21717]f enabled:bg-secondary disabled:bg-[#413939]f disabled:bg-[#373e48]`}
+      className={`${logikBold.className} tracking-wide w-full h-full block  bg-zaama_redf  rounded-md transition duration-150 select-none enabled:hover:bg-[#b21717]f enabled:bg-secondary disabled:bg-[#413939]f disabled:bg-[#373e48]`}
     >
       {children}
     </button>

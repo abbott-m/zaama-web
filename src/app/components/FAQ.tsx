@@ -2,8 +2,8 @@
 import React, { useEffect, useState } from "react";
 import localFont from "next/font/local";
 
-const blatantBold = localFont({
-  src: "../blatant-font/OTF/Blatant-Bold.otf",
+const logikBold = localFont({
+  src: "../Logik-font//Logik-Bold.otf",
 });
 type FAQProps = {
   faqData: faq;
@@ -26,7 +26,7 @@ const FAQ = ({ faqData, headerText }: FAQProps) => {
     <div className="w-full mb-16 md:px-20 md:py-14 md:rounded-2xl md:inline-block md:mx-auto md:w-auto">
       <p
         data-aos="fade-down"
-        className={`${blatantBold.className} text-center text-xl font-medium mb-8 tracking-wider text-zaama_yellowf text-primary uppercase md:text-2xl md:mb-10`}
+        className={`${logikBold.className} text-center text-xl font-medium mb-8 tracking-wider text-zaama_yellowf text-primary uppercase md:text-2xl md:mb-10`}
       >
         {headerText}
       </p>

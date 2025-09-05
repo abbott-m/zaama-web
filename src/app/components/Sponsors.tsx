@@ -17,8 +17,8 @@ type SponsorData = {
   alt: string;
   smallSize: boolean;
 };
-const blatantBold = localFont({
-  src: "../blatant-font/OTF/Blatant-Bold.otf",
+const logikBold = localFont({
+  src: "../Logik-font//Logik-Bold.otf",
 });
 
 const Sponsors = () => {
@@ -82,7 +82,7 @@ const Sponsors = () => {
       <div className="absolute top-0 left-0 w-full h-full bg-black/20"></div>
       <p
         data-aos="fade-down"
-        className={`${blatantBold.className} text-center text-xl font-medium mb-8 tracking-wider text-zaama_yellowf text-primary uppercase md:text-2xl md:mb-10`}
+        className={`${logikBold.className} text-center text-xl font-medium mb-8 tracking-wider text-zaama_yellowf text-primary uppercase md:text-2xl md:mb-10`}
       >
         Our Sponsors and Partners
       </p>

@@ -17,11 +17,11 @@ type SingleTableProps = {
   cedi_price: string;
   tag: string;
 };
-const blatant = localFont({
-  src: "../blatant-font/OTF/Blatant.otf",
+const logik = localFont({
+  src: "../Logik-font//Logik.otf",
 });
-const blatantBold = localFont({
-  src: "../blatant-font/OTF/Blatant-Bold.otf",
+const logikBold = localFont({
+  src: "../Logik-font//Logik-Bold.otf",
 });
 
 const SingleTable = ({
@@ -39,25 +39,25 @@ const SingleTable = ({
       <Image
         src={
           color === "green"
-            ? "/SVG/ticket-1.svg"
+            ? "/images/ticket-1-.png"
             : color === "red"
-            ? "/SVG/ticket-2.svg"
-            : "/SVG/ticket-3.svg"
+            ? "/images/ticket-1-.png"
+            : "/images/ticket-1-.png"
         }
         alt="zaama ticket"
         fill
         className="-z-10"
       />
-      <p className={`${blatant.className} uppercase text-lg text-center mb-3`}>
+      <p className={`${logik.className} uppercase text-sm text-center mb-12`}>
         {packageName}
       </p>
       <p
-        className={`${blatantBold.className} text-center text-4xl mb-14 md:text-5xl`}
+        className={`${logikBold.className} text-center text-4xl mb-14 md:text-2xl`}
       >
         <span className="text-lg md:text-2xl">&#8373;</span> {cedi_price}
       </p>
 
-      <p className={`${blatantBold.className} uppercase mb-20 text-lg`}>
+      <p className={`${logikBold.className} uppercase mb-20 text-sm`}>
         ( {tag} )
       </p>
     </div>
@@ -70,7 +70,7 @@ const Tables = () => {
     //   <div className=" w-full mb-16 md:bg-[#4c4c4c]/20 md:px-16 md:py-14 md:rounded-2xl md:inline-block   md:w-auto ">
     //     <h1
     //       data-aos="fade-down"
-    //       className={`${blatantBold.className} text-xl text-zaama_yellow uppercase tracking-wide font-medium mb-7 text-center md:text-2xl `}
+    //       className={`${logikBold.className} text-xl text-zaama_yellow uppercase tracking-wide font-medium mb-7 text-center md:text-2xl `}
     //     >
     //       Table
     //     </h1>
@@ -90,7 +90,7 @@ const Tables = () => {
     <section id="tickets" className="px-5 pt-20 pb-28 sm:px-10 lg:px-24">
       <p
         data-aos="fade-up"
-        className={`${blatant.className} text-center text-xl font-medium mb-4 text-zaama_yellowf text-primary uppercase tracking-wider  md:text-2xl`}
+        className={`${logik.className} text-center text-xl font-medium mb-4 text-zaama_yellowf text-primary uppercase tracking-wider  md:text-2xl`}
       >
         Choose your table package
       </p>

@@ -2,15 +2,15 @@ import React from "react";
 import localFont from "next/font/local";
 import Link from "next/link";
 
-const blatantBold = localFont({
-  src: "../blatant-font/OTF/Blatant-Bold.otf",
+const logikBold = localFont({
+  src: "../Logik-font//Logik-Bold.otf",
 });
 
 const Policy = () => {
   return (
     <section className="px-5 py-16 md:px-16 ">
       <h2
-        className={`${blatantBold.className} text-xl text-zaama_yellowf text-primary uppercase tracking-wide font-medium mb-7 text-center md:text-2xl `}
+        className={`${logikBold.className} text-xl text-zaama_yellowf text-primary uppercase tracking-wide font-medium mb-7 text-center md:text-2xl `}
       >
         TICKETS POLICY{" "}
       </h2>
@@ -400,7 +400,7 @@ const Policy = () => {
       </p>
 
       <h2
-        className={`${blatantBold.className} text-xl text-zaama_yellowf text-primary uppercase tracking-wide font-medium my-8 text-center md:text-2xl `}
+        className={`${logikBold.className} text-xl text-zaama_yellowf text-primary uppercase tracking-wide font-medium my-8 text-center md:text-2xl `}
       >
         HEALTH AND SECURITY POLICIES
       </h2>

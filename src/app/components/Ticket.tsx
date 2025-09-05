@@ -12,8 +12,8 @@ import "swiper/css/navigation";
 import localFont from "next/font/local";
 import { ticketData } from "../lib/ticketData";
 
-const blatantBold = localFont({
-  src: "../blatant-font/OTF/Blatant-Bold.otf",
+const logikBold = localFont({
+  src: "../Logik-font//Logik-Bold.otf",
 });
 
 const Ticket = () => {
@@ -24,7 +24,7 @@ const Ticket = () => {
     >
       <p
         data-aos="fade-up"
-        className={`${blatantBold.className} text-center text-xl font-medium mb-4 text-primary uppercase tracking-wider md:text-2xl`}
+        className={`${logikBold.className} text-center text-xl font-medium mb-4 text-primary uppercase tracking-wider md:text-2xl`}
       >
         Choose your package
       </p>
@@ -102,7 +102,7 @@ const Ticket = () => {
       {/* Additional ticket info */}
       <div className="mt-16 max-w-4xl mx-auto">
         <div data-aos="fade-up" className="bg-gradient-to-r from-gray-800/30 to-gray-900/30 rounded-xl p-6 border border-gray-700/30">
-          <h3 className={`${blatantBold.className} text-lg font-semibold text-primary uppercase tracking-wide mb-4 text-center`}>
+          <h3 className={`${logikBold.className} text-lg font-semibold text-primary uppercase tracking-wide mb-4 text-center`}>
             Important Ticket Information
           </h3>
           
@@ -118,7 +118,7 @@ const Ticket = () => {
             </div>
             
             <div>
-              <h4 className="font-semibold text-white mb-2">Important Notes:</h4>
+              <h4 className="font-semibold text-white mb-2">studeImportant Notes:</h4>
               <ul className="space-y-1 text-gray-300">
                 <li>• No re-entry once you leave the venue</li>
                 <li>• All sales are final - no refunds</li>

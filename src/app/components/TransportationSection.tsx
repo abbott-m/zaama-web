@@ -1,12 +1,12 @@
 import React from "react";
 import localFont from "next/font/local";
 
-const blatantBold = localFont({
-  src: "../blatant-font/OTF/Blatant-Bold.otf",
+const logikBold = localFont({
+  src: "../Logik-font//Logik-Bold.otf",
 });
 
-const blatant = localFont({
-  src: "../blatant-font/OTF/Blatant.otf",
+const logik = localFont({
+  src: "../Logik-font//Logik.otf",
 });
 
 const TransportationSection = () => {
@@ -15,7 +15,7 @@ const TransportationSection = () => {
       <div className="max-w-6xl mx-auto">
         <p
           data-aos="fade-down"
-          className={`${blatantBold.className} text-center text-xl font-medium mb-12 tracking-wider text-primary uppercase md:text-2xl`}
+          className={`${logikBold.className} text-center text-xl font-medium mb-12 tracking-wider text-primary uppercase md:text-2xl`}
         >
           Getting There & Leaving
         </p>
@@ -27,7 +27,7 @@ const TransportationSection = () => {
               <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
                 🚗
               </div>
-              <h3 className={`${blatant.className} text-lg font-semibold text-primary uppercase tracking-wide`}>
+              <h3 className={`${logik.className} text-lg font-semibold text-primary uppercase tracking-wide`}>
                 Parking
               </h3>
             </div>
@@ -44,7 +44,7 @@ const TransportationSection = () => {
               <div className="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center">
                 🚕
               </div>
-              <h3 className={`${blatant.className} text-lg font-semibold text-green-400 uppercase tracking-wide`}>
+              <h3 className={`${logik.className} text-lg font-semibold text-green-400 uppercase tracking-wide`}>
                 Ride-Sharing
               </h3>
             </div>
@@ -61,7 +61,7 @@ const TransportationSection = () => {
               <div className="w-10 h-10 rounded-full bg-orange-500/20 flex items-center justify-center">
                 🚌
               </div>
-              <h3 className={`${blatant.className} text-lg font-semibold text-orange-400 uppercase tracking-wide`}>
+              <h3 className={`${logik.className} text-lg font-semibold text-orange-400 uppercase tracking-wide`}>
                 Shuttles
               </h3>
             </div>
@@ -78,7 +78,7 @@ const TransportationSection = () => {
               <div className="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center">
                 🚶
               </div>
-              <h3 className={`${blatant.className} text-lg font-semibold text-purple-400 uppercase tracking-wide`}>
+              <h3 className={`${logik.className} text-lg font-semibold text-purple-400 uppercase tracking-wide`}>
                 Walking
               </h3>
             </div>
@@ -92,7 +92,7 @@ const TransportationSection = () => {
 
         {/* Leaving the Concert */}
         <div data-aos="fade-up" className="bg-gradient-to-r from-red-900/20 to-orange-900/20 rounded-xl p-8 border border-red-500/20">
-          <h3 className={`${blatant.className} text-xl font-semibold text-red-400 uppercase tracking-wide mb-6 text-center`}>
+          <h3 className={`${logik.className} text-xl font-semibold text-red-400 uppercase tracking-wide mb-6 text-center`}>
             🌙 Leaving the Concert
           </h3>
           
@@ -125,7 +125,7 @@ const TransportationSection = () => {
 
         {/* Safety Notice */}
         <div data-aos="fade-up" data-aos-delay="200" className="mt-8 bg-blue-900/20 rounded-xl p-6 border border-blue-500/20 text-center">
-          <h4 className={`${blatant.className} text-lg font-semibold text-blue-400 uppercase tracking-wide mb-3`}>
+          <h4 className={`${logik.className} text-lg font-semibold text-blue-400 uppercase tracking-wide mb-3`}>
             Safety First
           </h4>
           <p className="text-sm text-gray-300 leading-relaxed">
