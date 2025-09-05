@@ -55,7 +55,7 @@ const MerchStoreSection = () => {
     },
     {
       id: 6,
-      name: "Blacko Tribe Wristband Set",
+      name: "Blacko Tribe Phone Case",
       price: "₵30",
       image: "/images/merch-wristband.jpg",
       category: "Accessories",
