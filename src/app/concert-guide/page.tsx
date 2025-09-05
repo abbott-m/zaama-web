@@ -78,7 +78,7 @@ const ConcertGuide = () => {
                   <div>
                     <h4 className="font-bold text-white mb-1">Date & Time</h4>
                     <p className="text-gray-400">Saturday, December 21st, 2025</p>
-                    <p className="text-gray-400">Doors open: 2:00 PM | Doors close: 12:00 AM</p>
+                    <p className="text-gray-400">Doors open: 4:00 PM | Show starts: 8:00 PM</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -288,6 +288,127 @@ const ConcertGuide = () => {
                 <li>• Meet & greet opportunities</li>
                 <li>• Professional photo/video zones</li>
               </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Security Measures */}
+      <section className="px-5 py-16 bg-gradient-to-r from-blue-900/20 to-indigo-900/20 sm:px-10 md:px-20">
+        <div className="max-w-6xl mx-auto">
+          <h2 
+            data-aos="fade-up"
+            className={`${logikBold.className} text-2xl md:text-3xl font-bold text-primary mb-8 text-center`}
+          >
+            SECURITY & SAFETY MEASURES
+          </h2>
+          
+          <div data-aos="fade-up" data-aos-delay="200" className="bg-[#4c4c4c]/20 rounded-2xl p-8 mb-8">
+            <p className="text-gray-300 text-center mb-6">
+              Security and safety are of utmost importance at Zaama Disco. We work hand in hand with 
+              law enforcement and public safety agencies to ensure the safety of all attendees.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div data-aos="fade-up" data-aos-delay="100" className="bg-[#4c4c4c]/20 rounded-2xl p-6">
+              <div className="flex items-center mb-4">
+                <span className="text-2xl mr-3">🔍</span>
+                <h3 className="text-lg font-bold text-primary">Entry Security</h3>
+              </div>
+              <ul className="space-y-2 text-gray-300 text-sm">
+                <li>• Mandatory bag checks for all attendees</li>
+                <li>• Walk-through metal detectors (magnetometers)</li>
+                <li>• Security screening for staff and performers</li>
+                <li>• Valid ID verification required</li>
+              </ul>
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="200" className="bg-[#4c4c4c]/20 rounded-2xl p-6">
+              <div className="flex items-center mb-4">
+                <span className="text-2xl mr-3">🐕</span>
+                <h3 className="text-lg font-bold text-primary">Detection Units</h3>
+              </div>
+              <ul className="space-y-2 text-gray-300 text-sm">
+                <li>• Specialized dog sweeps of venue</li>
+                <li>• Continuous security patrols</li>
+                <li>• Professional law enforcement presence</li>
+                <li>• Emergency response teams on standby</li>
+              </ul>
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="300" className="bg-[#4c4c4c]/20 rounded-2xl p-6">
+              <div className="flex items-center mb-4">
+                <span className="text-2xl mr-3">📹</span>
+                <h3 className="text-lg font-bold text-primary">Monitoring</h3>
+              </div>
+              <ul className="space-y-2 text-gray-300 text-sm">
+                <li>• CCTV surveillance throughout venue</li>
+                <li>• Security personnel with radio communication</li>
+                <li>• Emergency information via video screens</li>
+                <li>• Audio system emergency announcements</li>
+              </ul>
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="400" className="bg-[#4c4c4c]/20 rounded-2xl p-6">
+              <div className="flex items-center mb-4">
+                <span className="text-2xl mr-3">⚠️</span>
+                <h3 className="text-lg font-bold text-primary">Safety Protocol</h3>
+              </div>
+              <ul className="space-y-2 text-gray-300 text-sm">
+                <li>• Arrive early to allow time for security checks</li>
+                <li>• Face masks recommended for dust protection</li>
+                <li>• Report suspicious activity to security</li>
+                <li>• Follow all staff instructions promptly</li>
+              </ul>
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="500" className="bg-[#4c4c4c]/20 rounded-2xl p-6">
+              <div className="flex items-center mb-4">
+                <span className="text-2xl mr-3">🚫</span>
+                <h3 className="text-lg font-bold text-primary">Prohibited Items</h3>
+              </div>
+              <ul className="space-y-2 text-gray-300 text-sm">
+                <li>• Weapons of any kind</li>
+                <li>• Glass bottles or containers</li>
+                <li>• Professional cameras with detachable lenses</li>
+                <li>• Outside food and beverages</li>
+              </ul>
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="600" className="bg-[#4c4c4c]/20 rounded-2xl p-6">
+              <div className="flex items-center mb-4">
+                <span className="text-2xl mr-3">📱</span>
+                <h3 className="text-lg font-bold text-primary">Emergency Communication</h3>
+              </div>
+              <ul className="space-y-2 text-gray-300 text-sm">
+                <li>• Mobile notifications for emergencies</li>
+                <li>• Designated security staff locations</li>
+                <li>• Clear emergency exit signage</li>
+                <li>• 24/7 event hotline support</li>
+              </ul>
+            </div>
+          </div>
+
+          <div data-aos="fade-up" data-aos-delay="700" className="mt-8 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-6">
+            <h3 className="text-lg font-bold text-primary mb-4 text-center">🛡️ Your Safety is Our Priority</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-300">
+              <div>
+                <p className="font-medium text-white mb-2">If you see something, say something:</p>
+                <ul className="space-y-1">
+                  <li>• Flag down any concert personnel immediately</li>
+                  <li>• Look for staff wearing official Zaama Disco gear</li>
+                  <li>• Security staff carry radios for instant communication</li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-medium text-white mb-2">What to expect:</p>
+                <ul className="space-y-1">
+                  <li>• Professional, courteous security screening</li>
+                  <li>• Quick and efficient entry process</li>
+                  <li>• Visible security presence throughout event</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

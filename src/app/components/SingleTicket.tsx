@@ -93,52 +93,52 @@ const SingleTicket = ({
         priority
       />
       
-      {/* Package Name at the very top */}
-      <div className="relative z-10 px-4 pt-20 w-full">
+      {/* Package Name at the very top - Smaller on mobile */}
+      <div className="relative z-10 px-4 pt-14 md:pt-20 w-full">
         <div
-          className={`${logik.className} uppercase text-sm text-center w-48 mx-auto`}
+          className={`${logik.className} uppercase text-xs md:text-sm text-center w-48 mx-auto`}
         >
           <p>{packageName}</p>
-          {!!packageSubName && <p className="text-sm">({packageSubName})</p>}
+          {!!packageSubName && <p className="text-xs md:text-sm">({packageSubName})</p>}
         </div>
       </div>
 
-      {/* Middle content container */}
+      {/* Middle content container - Smaller price on mobile */}
       <div className="relative z-10 px-4 w-full flex flex-col justify-center items-center flex-grow">
         <p
-          className={`${logikBold.className} text-center text-lg mb-6 md:text-lg lg:text-1xl w-32 mx-auto`}
+          className={`${logikBold.className} text-center text-base md:text-lg lg:text-xl mb-6 w-24 md:w-32 mx-auto`}
         >
-          <span className="text-base md:text-lg lg:text-xl"> &#8373; </span> {cedi_price}
+          <span className="text-sm md:text-base lg:text-lg"> &#8373; </span> {cedi_price}
         </p>
 
-        <ul className="mb-6 text-sm selection:bg-inherit max-h-36 overflow-y-auto w-56 mx-auto">
-          {perks.slice(0, 4).map((item, index) => (
+        <ul className="mb-6 text-sm selection:bg-inherit max-h-36 overflow-y-auto w-44 md:w-56 mx-auto">
+          {perks.slice(0, 3).map((item, index) => (
             <li
               key={index}
-              className="flex items-start justify-start gap-2 mb-2 text-xs text-left leading-tight"
+              className="flex items-start justify-start gap-2 mb-2 text-[10px] md:text-xs text-left leading-tight"
             >
               <span className="w-1 h-1 rounded-full bg-white inline-block flex-shrink-0 mt-1.5"></span>
               <span className="break-words">{item}</span>
             </li>
           ))}
-          {perks?.length > 4 && (
+          {perks?.length > 3 && (
             <li
               onClick={handleView}
               className="inline-block w-full text-xs text-center text-gray-300 cursor-pointer hover:text-white transition-colors"
             >
-              +{perks.length - 4} more benefits...
+              +{perks.length - 3} more benefits...
             </li>
           )}
         </ul>
       </div>
 
-      {/* Bottom content container - Button and Countdown positioned very low */}
-      <div className="relative z-10 px-3 pb-9 w-full flex flex-col items-center">
+      {/* Bottom content container - Smaller button on mobile */}
+      <div className="relative z-10 px-3 pb-6 md:pb-9 w-full flex flex-col items-center">
          <button
           // onClick={() =>
           //   window.open("", "_blank")
           // }
-          className={`${logik.className} tracking-widest rounded-sm text-sm w-64 h-12 outline-none font-semibold border select-none transition duration-150 border-gray-200/50 hover:bg-gray-200/10 text-black`}
+          className={`${logik.className} tracking-widest rounded-sm text-xs md:text-sm w-52 md:w-64 h-10 md:h-12 outline-none font-semibold border select-none transition duration-150 border-gray-200/50 hover:bg-gray-200/10 text-black`}
           style={{ backgroundColor: '#90bafa' }}
         >
           Select This Ticket
@@ -146,8 +146,8 @@ const SingleTicket = ({
 
         {countDown && timeLeft > 0 && (
           <div className={`${logik.className} mt-3 w-2/3 text-center`}>
-            <p className="text-sm tracking-wide">Ticket Increases In</p>
-            <p className="text-xl">
+            <p className="text-xs md:text-sm tracking-wide">Ticket Increases In</p>
+            <p className="text-lg md:text-xl">
               {days.toString().padStart(2, "0")} :{" "}
               {hours.toString().padStart(2, "0")} :{" "}
               {minutes.toString().padStart(2, "0")} :{" "}

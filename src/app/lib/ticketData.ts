@@ -51,7 +51,7 @@ export const ticketData: ITicketData[] = [
       "All General Access Plus benefits",
       "Fast-Track Entry (skip the lines)",
       "Dedicated VIP Lounge (luxury seating, exclusive vibes)",
-      "Complimentary Welcome Drink",
+      "Complimentary Welcome Drink For Early Arrivals",
       "Close-Up Stage Viewing Zone",
       "Exclusive Photo Moments (VIP-only media wall & meet spot)",
       "VIP Merch Pack and Brand Souvenir lucky wins",

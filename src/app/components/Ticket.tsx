@@ -40,7 +40,7 @@ const Ticket = () => {
           <span className="text-sm whitespace-nowrap">+233 24 138 3766</span>
         </p>
         <p data-aos="fade-up" className="text-center text-sm text-gray-400">
-          All tickets available at{" "}
+          Early bird tickets{" "}
           <a 
             href="" 
             target="_blank" 
@@ -112,7 +112,7 @@ const Ticket = () => {
               <ul className="space-y-1 text-gray-300">
                 <li>• Age requirement: 18+ (Valid ID required)</li>
                 <li>• Entry wristband for all ticket types</li>
-                <li>• Access to main festival grounds</li>
+                <li>• Access to main cencert grounds</li>
                 <li>• Live performances from top West African artists</li>
               </ul>
             </div>
