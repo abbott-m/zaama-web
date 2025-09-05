@@ -135,9 +135,9 @@ const SingleTicket = ({
       {/* Bottom content container - Button and Countdown positioned very low */}
       <div className="relative z-10 px-3 pb-9 w-full flex flex-col items-center">
          <button
-          onClick={() =>
-            window.open("https://ticket.live/buy-tickets", "_blank")
-          }
+          // onClick={() =>
+          //   window.open("", "_blank")
+          // }
           className={`${logik.className} tracking-widest rounded-sm text-sm w-64 h-12 outline-none font-semibold border select-none transition duration-150 border-gray-200/50 hover:bg-gray-200/10 text-black`}
           style={{ backgroundColor: '#90bafa' }}
         >

@@ -25,7 +25,7 @@ const StickyTicketButton = () => {
   }, []);
 
   const handleTicketPurchase = () => {
-    window.open("https://ticket.live/buy-tickets", "_blank");
+    window.open("", "_blank");
   };
 
   if (!isVisible) return null;

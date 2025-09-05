@@ -78,7 +78,7 @@ export default function RootLayout({
               },
               "offers": {
                 "@type": "Offer",
-                "url": "https://ticket.live/buy-tickets",
+                "url": "",
                 "price": "300",
                 "priceCurrency": "GHS",
                 "availability": "https://schema.org/InStock"

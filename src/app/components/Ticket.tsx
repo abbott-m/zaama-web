@@ -42,12 +42,12 @@ const Ticket = () => {
         <p data-aos="fade-up" className="text-center text-sm text-gray-400">
           All tickets available at{" "}
           <a 
-            href="https://ticket.live/buy-tickets" 
+            href="" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-primary hover:underline"
           >
-            ticket.live/buy-tickets
+            Coming Soon
           </a>
         </p>
       </div>
