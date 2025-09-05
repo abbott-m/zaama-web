@@ -76,7 +76,7 @@ const Home = () => {
                 {/* Concert Guide */}
                 <Link href="/concert-guide" className="group">
                   <div className="bg-[#4c4c4c]/20 rounded-2xl p-8 hover:bg-[#4c4c4c]/30 transition-all duration-200 transform group-hover:scale-105">
-                    <div className="text-4xl mb-4">🎪</div>
+                    {/* <div className="text-4xl mb-4">🎪</div> */}
                     <h3 className="text-xl font-bold text-primary mb-3">Concert Guide</h3>
                     <p className="text-gray-300 text-sm">
                       Everything you need to know - what to bring, transportation, and essential tips for the perfect concert experience.
@@ -87,7 +87,7 @@ const Home = () => {
                 {/* Shop */}
                 <Link href="/shop" className="group">
                   <div className="bg-[#4c4c4c]/20 rounded-2xl p-8 hover:bg-[#4c4c4c]/30 transition-all duration-200 transform group-hover:scale-105">
-                    <div className="text-4xl mb-4">🛍️</div>
+                    {/* <div className="text-4xl mb-4">🛍️</div> */}
                     <h3 className="text-xl font-bold text-primary mb-3">Shop</h3>
                     <p className="text-gray-300 text-sm">
                       Get the official Zaama Disco app and exclusive Blacko Tribe merchandise to show your support.
@@ -98,7 +98,7 @@ const Home = () => {
                 {/* Partners */}
                 <Link href="/partners" className="group">
                   <div className="bg-[#4c4c4c]/20 rounded-2xl p-8 hover:bg-[#4c4c4c]/30 transition-all duration-200 transform group-hover:scale-105">
-                    <div className="text-4xl mb-4">🤝</div>
+                    {/* <div className="text-4xl mb-4">🤝</div> */}
                     <h3 className="text-xl font-bold text-primary mb-3">Partners</h3>
                     <p className="text-gray-300 text-sm">
                       Meet our amazing sponsors and learn about the Zaama Disco Foundation's community impact.
@@ -109,7 +109,7 @@ const Home = () => {
                 {/* Vendors */}
                 <Link href="/vendors" className="group">
                   <div className="bg-[#4c4c4c]/20 rounded-2xl p-8 hover:bg-[#4c4c4c]/30 transition-all duration-200 transform group-hover:scale-105">
-                    <div className="text-4xl mb-4">🏪</div>
+                    {/* <div className="text-4xl mb-4">🏪</div> */}
                     <h3 className="text-xl font-bold text-primary mb-3">Become a Vendor</h3>
                     <p className="text-gray-300 text-sm">
                       Join our marketplace and showcase your business to thousands of concert attendees.
@@ -120,7 +120,7 @@ const Home = () => {
                 {/* Volunteers */}
                 <Link href="/volunteers" className="group">
                   <div className="bg-[#4c4c4c]/20 rounded-2xl p-8 hover:bg-[#4c4c4c]/30 transition-all duration-200 transform group-hover:scale-105">
-                    <div className="text-4xl mb-4">🙋‍♀️</div>
+                    {/* <div className="text-4xl mb-4">🙋‍♀️</div> */}
                     <h3 className="text-xl font-bold text-primary mb-3">Volunteer</h3>
                     <p className="text-gray-300 text-sm">
                       Be part of the team that makes Zaama Disco happen. Gain experience while contributing to something special.
@@ -131,7 +131,7 @@ const Home = () => {
                 {/* Tables */}
                 <Link href="/tables" className="group">
                   <div className="bg-[#4c4c4c]/20 rounded-2xl p-8 hover:bg-[#4c4c4c]/30 transition-all duration-200 transform group-hover:scale-105">
-                    <div className="text-4xl mb-4">🍾</div>
+                    {/* <div className="text-4xl mb-4">🍾</div> */}
                     <h3 className="text-xl font-bold text-primary mb-3">VIP Tables</h3>
                     <p className="text-gray-300 text-sm">
                       Upgrade your experience with premium table packages for you and your crew.
@@ -166,7 +166,7 @@ const Home = () => {
                   onClick={() => window.open("https://ticket.live/buy-tickets", "_blank")}
                   className="px-8 py-4 bg-primary text-black font-bold text-lg rounded-lg hover:bg-secondary transition-colors duration-200 transform hover:scale-105"
                 >
-                  🎫 Get Tickets Now
+                  Get Tickets Now
                 </button>
                 
                 <Link
@@ -179,7 +179,7 @@ const Home = () => {
               
               <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-gray-400">
                 <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-green-400"></span>
+                  <span className="w-2 h-2 rounded-full bg-blue-400"></span>
                   <span>Ages 18+</span>
                 </div>
                 <div className="flex items-center gap-2">
@@ -187,11 +187,11 @@ const Home = () => {
                   <span>Cashless Event</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-purple-400"></span>
+                  <span className="w-2 h-2 rounded-full bg-blue-400"></span>
                   <span>Live Streaming Available</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-yellow-400"></span>
+                  <span className="w-2 h-2 rounded-full bg-blue-400"></span>
                   <span>No Re-entry</span>
                 </div>
               </div>

@@ -16,21 +16,21 @@ const FoundationSection = () => {
       amount: "GHS 20",
       title: "A seed of hope",
       description: "Provides basic healthcare support and hygiene essentials for a mother and her baby.",
-      color: "from-green-600 to-green-800",
+      color: "from-blue-400 to-blue-600",
       icon: "🌱"
     },
     {
       amount: "GHS 30", 
       title: "A gift of comfort",
       description: "Helps supply baby food, diapers, and postnatal needs for newborns.",
-      color: "from-blue-600 to-blue-800",
+      color: "from-blue-400 to-blue-600",
       icon: "🎁"
     },
     {
       amount: "GHS 100+",
       title: "A foundation of love",
       description: "Supports critical maternal healthcare, safe delivery kits, and community programs for mothers in need.",
-      color: "from-purple-600 to-purple-800",
+      color: "from-blue-400 to-blue-600",
       icon: "❤️"
     }
   ];
@@ -156,7 +156,7 @@ const FoundationSection = () => {
             <div className="w-48 h-12">
               <button
                 onClick={() => handleDonate("Custom Amount")}
-                className="w-full h-full bg-primary hover:bg-secondary rounded-lg transition-colors duration-200 font-semibold text-white"
+                className="w-full h-full bg-primary hover:bg-secondary rounded-lg transition-colors duration-200 font-semibold text-black"
               >
                 Make Custom Donation
               </button>

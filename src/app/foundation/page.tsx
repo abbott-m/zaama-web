@@ -44,7 +44,7 @@ const Foundation = () => {
             className="flex flex-wrap justify-center gap-6 text-sm text-gray-400"
           >
             <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-green-400"></span>
+              <span className="w-2 h-2 rounded-full bg-blue-400"></span>
               <span>Community Impact</span>
             </div>
             <div className="flex items-center gap-2">
@@ -52,11 +52,11 @@ const Foundation = () => {
               <span>Educational Programs</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-purple-400"></span>
+              <span className="w-2 h-2 rounded-full bg-blue-400"></span>
               <span>Cultural Preservation</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-yellow-400"></span>
+              <span className="w-2 h-2 rounded-full bg-blue-400"></span>
               <span>Youth Development</span>
             </div>
           </div>
@@ -115,7 +115,7 @@ const Foundation = () => {
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center bg-primary/10 rounded-2xl p-4">
                   <div className="text-3xl font-bold text-primary mb-2">500+</div>
-                  <div className="text-sm text-gray-400">Students Reached</div>
+                  <div className="text-sm text-gray-400">Mothers Reached</div>
                 </div>
                 <div className="text-center bg-primary/10 rounded-2xl p-4">
                   <div className="text-3xl font-bold text-primary mb-2">25</div>
@@ -151,7 +151,7 @@ const Foundation = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div data-aos="fade-up" data-aos-delay="100" className="bg-[#4c4c4c]/20 rounded-2xl p-8">
-              <div className="text-4xl mb-4">🎸</div>
+              {/* <div className="text-4xl mb-4">🎸</div> */}
               <h3 className="text-xl font-bold text-primary mb-4">Music Scholarship Program</h3>
               <p className="text-gray-300 text-sm mb-4">
                 Providing full scholarships for talented students to attend music schools and workshops, 
@@ -166,7 +166,7 @@ const Foundation = () => {
             </div>
 
             <div data-aos="fade-up" data-aos-delay="200" className="bg-[#4c4c4c]/20 rounded-2xl p-8">
-              <div className="text-4xl mb-4">🏫</div>
+              {/* <div className="text-4xl mb-4">🏫</div> */}
               <h3 className="text-xl font-bold text-primary mb-4">School Outreach Program</h3>
               <p className="text-gray-300 text-sm mb-4">
                 Bringing music education directly to underserved schools across Ghana, 
@@ -181,7 +181,7 @@ const Foundation = () => {
             </div>
 
             <div data-aos="fade-up" data-aos-delay="300" className="bg-[#4c4c4c]/20 rounded-2xl p-8">
-              <div className="text-4xl mb-4">🎤</div>
+              {/* <div className="text-4xl mb-4">🎤</div> */}
               <h3 className="text-xl font-bold text-primary mb-4">Community Talent Showcase</h3>
               <p className="text-gray-300 text-sm mb-4">
                 Regular community events that provide platforms for local artists to showcase their talents 
@@ -196,7 +196,7 @@ const Foundation = () => {
             </div>
 
             <div data-aos="fade-up" data-aos-delay="400" className="bg-[#4c4c4c]/20 rounded-2xl p-8">
-              <div className="text-4xl mb-4">📚</div>
+              {/* <div className="text-4xl mb-4">📚</div> */}
               <h3 className="text-xl font-bold text-primary mb-4">Cultural Documentation Project</h3>
               <p className="text-gray-300 text-sm mb-4">
                 Recording and preserving traditional Ghanaian music and stories from elders 
@@ -211,7 +211,7 @@ const Foundation = () => {
             </div>
 
             <div data-aos="fade-up" data-aos-delay="500" className="bg-[#4c4c4c]/20 rounded-2xl p-8">
-              <div className="text-4xl mb-4">🛠️</div>
+              {/* <div className="text-4xl mb-4">🛠️</div> */}
               <h3 className="text-xl font-bold text-primary mb-4">Music Production Training</h3>
               <p className="text-gray-300 text-sm mb-4">
                 Teaching young people the technical skills needed in modern music production, 
@@ -226,7 +226,7 @@ const Foundation = () => {
             </div>
 
             <div data-aos="fade-up" data-aos-delay="600" className="bg-[#4c4c4c]/20 rounded-2xl p-8">
-              <div className="text-4xl mb-4">🤝</div>
+              {/* <div className="text-4xl mb-4">🤝</div> */}
               <h3 className="text-xl font-bold text-primary mb-4">Community Partnerships</h3>
               <p className="text-gray-300 text-sm mb-4">
                 Collaborating with local organizations, schools, and businesses to create 
@@ -313,7 +313,7 @@ const Foundation = () => {
           
           <div data-aos="fade-up" data-aos-delay="400" className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             <div className="bg-[#4c4c4c]/20 rounded-2xl p-6">
-              <div className="text-3xl mb-4">💝</div>
+              {/* <div className="text-3xl mb-4">💝</div> */}
               <h3 className="text-lg font-bold text-primary mb-3">Donate</h3>
               <p className="text-gray-300 text-sm">
                 Support our programs with a one-time donation or become a monthly supporter to sustain our impact.
@@ -321,7 +321,7 @@ const Foundation = () => {
             </div>
 
             <div className="bg-[#4c4c4c]/20 rounded-2xl p-6">
-              <div className="text-3xl mb-4">🙋‍♀️</div>
+              {/* <div className="text-3xl mb-4">🙋‍♀️</div> */}
               <h3 className="text-lg font-bold text-primary mb-3">Volunteer</h3>
               <p className="text-gray-300 text-sm">
                 Share your skills and time by volunteering with our programs, events, and community initiatives.
@@ -329,7 +329,7 @@ const Foundation = () => {
             </div>
 
             <div className="bg-[#4c4c4c]/20 rounded-2xl p-6">
-              <div className="text-3xl mb-4">🤝</div>
+              {/* <div className="text-3xl mb-4">🤝</div> */}
               <h3 className="text-lg font-bold text-primary mb-3">Partner</h3>
               <p className="text-gray-300 text-sm">
                 Collaborate with us as a corporate partner, school, or organization to expand our reach and impact.
@@ -342,14 +342,14 @@ const Foundation = () => {
               href="/register/general"
               className="px-8 py-4 bg-primary text-black font-bold text-lg rounded-lg hover:bg-primary/80 transition-colors duration-200 transform hover:scale-105"
             >
-              💝 Support Our Mission
+              Support Our Mission
             </Link>
             
             <Link
               href="/volunteers"
               className="px-8 py-4 bg-transparent border-2 border-primary text-primary font-bold text-lg rounded-lg hover:bg-primary/10 transition-colors duration-200"
             >
-              🙋‍♀️ Volunteer With Us
+              Volunteer With Us
             </Link>
           </div>
 
