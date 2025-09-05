@@ -53,25 +53,27 @@ const Home = () => {
       ) : (
         <>
           {isTicketModalOpen && <TicketModal />}
-          
+
           {/* Hero Section */}
           <Hero />
-          
+
           {/* Tickets Section */}
           <CarouselLabel word="Zaama Disco – Where Music, Fashion & Food Collide! Join the movement. Get your tickets now" />
           <Ticket />
-          
+
           {/* About Section */}
           <CarouselLabel word="Step into the Exclusive Experience ! Zaama Disco brings you the ultimate fusion of culture, style & sound" />
           <About />
-          
+
+          <CarouselLabel word="IRON BOY RETURNS • One Night. One City. One Legend." />
+
           {/* Quick Links Section */}
           <section className="px-5 py-16 bg-gradient-to-r from-gray-900 to-gray-800 sm:px-10 md:px-20">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-12">
                 Everything You Need
               </h2>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {/* Concert Guide */}
                 <Link href="/concert-guide" className="group">
@@ -141,7 +143,7 @@ const Home = () => {
               </div>
             </div>
           </section>
-          
+
           {/* FAQ Section */}
           <div className="px-5 py-10 mx-auto w-fit sm:w-4/5 md:w-5/6 md:py-10 lg:w-3/5">
             <FAQ
@@ -149,7 +151,7 @@ const Home = () => {
               headerText="Frequently Asked Questions"
             />
           </div>
-          
+
           {/* Call to Action */}
           <div className="px-5 py-16 bg-gradient-to-r from-primary/10 to-secondary/10 sm:px-10 md:px-20">
             <div className="max-w-4xl mx-auto text-center">
@@ -157,10 +159,10 @@ const Home = () => {
                 Ready to Join the Movement?
               </h2>
               <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
-                Don't just watch history—be part of it. Get your tickets now and experience 
+                Don't just watch history—be part of it. Get your tickets now and experience
                 the magic of Zaama Disco with Iron Boy and the Blacko Tribe.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <button
                   onClick={() => window.open("", "_blank")}
@@ -168,7 +170,7 @@ const Home = () => {
                 >
                   Get Tickets Now
                 </button>
-                
+
                 <Link
                   href="/concert-guide"
                   className="px-8 py-4 bg-transparent border-2 border-primary text-primary font-bold text-lg rounded-lg hover:bg-primary/10 transition-colors duration-200 text-center"
@@ -176,7 +178,7 @@ const Home = () => {
                   Learn More
                 </Link>
               </div>
-              
+
               <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-gray-400">
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-blue-400"></span>
