@@ -179,8 +179,8 @@ const Footer = () => {
                 <Image
                   src="/images/zaama-white-logo.png"
                   alt="zaama-logo"
-                  width={30}
-                  height={30}
+                  width={50}
+                  height={50}
                   className="opacity-10 animate-pulse"
                 />
               </div>
